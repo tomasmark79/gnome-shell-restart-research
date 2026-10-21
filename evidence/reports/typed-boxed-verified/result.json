@@ -1,0 +1,218 @@
+{
+  "classification": "RESEARCH PROTOTYPE",
+  "passed": true,
+  "cases": [
+    {
+      "mode": "plain",
+      "passed": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "privateProfileRemoved": true,
+      "events": [
+        {
+          "event": "realm-generation",
+          "generation": 0
+        },
+        {
+          "event": "realm-generation",
+          "generation": 1
+        },
+        {
+          "event": "realm-generation",
+          "generation": 2
+        },
+        {
+          "event": "realm-result",
+          "types": [
+            "absent",
+            "absent",
+            "absent"
+          ],
+          "gc": [
+            {
+              "globalCollected": true,
+              "markerCollected": true,
+              "tokenCollected": true
+            },
+            {
+              "globalCollected": true,
+              "markerCollected": true,
+              "tokenCollected": true
+            },
+            {
+              "globalCollected": true,
+              "markerCollected": true,
+              "tokenCollected": true
+            }
+          ],
+          "backendAlive": true,
+          "freshModuleGraphs": true,
+          "canonicalNativeBindings": true,
+          "esmBootstrap": true,
+          "promiseTimerCompleted": true,
+          "typedSignalCompleted": true
+        }
+      ],
+      "stderr": ""
+    },
+    {
+      "mode": "gtype",
+      "passed": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "privateProfileRemoved": true,
+      "events": [
+        {
+          "event": "realm-generation",
+          "generation": 0
+        },
+        {
+          "event": "realm-generation",
+          "generation": 1
+        },
+        {
+          "event": "realm-generation",
+          "generation": 2
+        },
+        {
+          "event": "realm-result",
+          "types": [
+            "registered",
+            "duplicate",
+            "duplicate"
+          ],
+          "gc": [
+            {
+              "globalCollected": false,
+              "markerCollected": false,
+              "tokenCollected": false
+            },
+            {
+              "globalCollected": true,
+              "markerCollected": true,
+              "tokenCollected": true
+            },
+            {
+              "globalCollected": true,
+              "markerCollected": true,
+              "tokenCollected": true
+            }
+          ],
+          "backendAlive": true,
+          "freshModuleGraphs": true,
+          "canonicalNativeBindings": true,
+          "esmBootstrap": true,
+          "promiseTimerCompleted": true,
+          "typedSignalCompleted": true
+        }
+      ],
+      "stderr": ""
+    },
+    {
+      "mode": "delegate",
+      "passed": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "privateProfileRemoved": true,
+      "events": [
+        {
+          "event": "realm-generation",
+          "generation": 0
+        },
+        {
+          "event": "realm-generation",
+          "generation": 1
+        },
+        {
+          "event": "realm-generation",
+          "generation": 2
+        },
+        {
+          "event": "realm-result",
+          "types": [
+            "delegated",
+            "delegated",
+            "delegated"
+          ],
+          "gc": [
+            {
+              "globalCollected": true,
+              "markerCollected": true,
+              "tokenCollected": true
+            },
+            {
+              "globalCollected": true,
+              "markerCollected": true,
+              "tokenCollected": true
+            },
+            {
+              "globalCollected": true,
+              "markerCollected": true,
+              "tokenCollected": true
+            }
+          ],
+          "backendAlive": true,
+          "freshModuleGraphs": true,
+          "canonicalNativeBindings": true,
+          "esmBootstrap": true,
+          "promiseTimerCompleted": true,
+          "typedSignalCompleted": true
+        }
+      ],
+      "stderr": ""
+    },
+    {
+      "mode": "delegate-held",
+      "passed": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "privateProfileRemoved": true,
+      "events": [
+        {
+          "event": "realm-generation",
+          "generation": 0
+        },
+        {
+          "event": "realm-generation",
+          "generation": 1
+        },
+        {
+          "event": "realm-generation",
+          "generation": 2
+        },
+        {
+          "event": "realm-result",
+          "types": [
+            "delegated",
+            "delegated",
+            "delegated"
+          ],
+          "gc": [
+            {
+              "globalCollected": true,
+              "markerCollected": true,
+              "tokenCollected": true
+            },
+            {
+              "globalCollected": true,
+              "markerCollected": true,
+              "tokenCollected": true
+            },
+            {
+              "globalCollected": false,
+              "markerCollected": false,
+              "tokenCollected": false
+            }
+          ],
+          "backendAlive": true,
+          "freshModuleGraphs": true,
+          "canonicalNativeBindings": true,
+          "esmBootstrap": true,
+          "promiseTimerCompleted": true,
+          "typedSignalCompleted": true
+        }
+      ],
+      "stderr": ""
+    }
+  ]
+}

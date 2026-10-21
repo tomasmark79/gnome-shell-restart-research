@@ -1,0 +1,328 @@
+{
+  "classification": "RESEARCH PROTOTYPE",
+  "passed": true,
+  "trueRestartDemonstrated": false,
+  "wholeShellReloadDemonstrated": false,
+  "privateSystemBus": true,
+  "mockLogind": true,
+  "welcomeTourAlreadyShown": true,
+  "shellBefore": {
+    "classification": "RESEARCH PROTOTYPE",
+    "scope": "extension-owned panel indicator only",
+    "pid": 1913162,
+    "runtimeEpoch": null,
+    "uiGeneration": null,
+    "uiReloadState": null,
+    "uiRegistrations": null,
+    "lastReleasedRegistrations": null,
+    "windowManagerPreserved": true,
+    "stageActions": [
+      "OSK show bottom drag",
+      "Overview swipe tracker",
+      "Window unfullscreen top drag",
+      "WorkspaceAnimation swipe tracker",
+      "reset-search"
+    ],
+    "windowGroupAttached": true,
+    "generation": 0,
+    "failures": 0,
+    "active": true,
+    "busy": false,
+    "actorsCreated": 1,
+    "actorsDestroyed": 0,
+    "liveOwnedActors": 1,
+    "panelEntryMatches": true,
+    "themeReloads": 0,
+    "shellState": {
+      "overview": true,
+      "modalCount": 0,
+      "startingUp": true,
+      "mode": "user"
+    },
+    "panel": {
+      "supported": false,
+      "lifecycle": null,
+      "replaced": false,
+      "containerCount": 1,
+      "focusGroupCount": 1,
+      "totalFocusGroups": 6,
+      "menuCount": 7,
+      "retainedIndicators": true
+    },
+    "desktop": {
+      "windows": [],
+      "focus": null,
+      "monitors": [
+        [
+          0,
+          0,
+          1280,
+          720
+        ]
+      ],
+      "workspace": 0
+    },
+    "shellRestartSupported": false,
+    "extensionCodeReloadSupported": false
+  },
+  "busOwner": ":1.11",
+  "desktopBefore": {
+    "windows": [
+      {
+        "id": 1,
+        "title": "Tgnome persistent connection probe",
+        "workspace": 0,
+        "frame": [
+          473,
+          328,
+          334,
+          96
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Tgnome persistent connection probe",
+        "workspace": 0,
+        "frame": [
+          551,
+          329,
+          178,
+          94
+        ]
+      }
+    ],
+    "focus": 1,
+    "monitors": [
+      [
+        0,
+        0,
+        1280,
+        720
+      ]
+    ],
+    "workspace": 0
+  },
+  "xwaylandBefore": [
+    {
+      "pid": 1913493,
+      "exe": "/nix/store/8irpj5qxxxjnr98lh3dcx83xa26qf44p-xwayland-24.1.14/bin/Xwayland",
+      "startTime": "14126502"
+    }
+  ],
+  "shellExecutable": "/nix/store/8m77m1b9n4z4lv00l7d5455lkfbqy5jg-gnome-shell-50.5/bin/.gnome-shell-wrapped",
+  "reloadAfter": {
+    "classification": "RESEARCH PROTOTYPE",
+    "scope": "extension-owned panel indicator only",
+    "pid": 1913162,
+    "runtimeEpoch": null,
+    "uiGeneration": null,
+    "uiReloadState": null,
+    "uiRegistrations": null,
+    "lastReleasedRegistrations": null,
+    "windowManagerPreserved": true,
+    "stageActions": [
+      "OSK show bottom drag",
+      "Overview swipe tracker",
+      "Window unfullscreen top drag",
+      "WorkspaceAnimation swipe tracker",
+      "reset-search"
+    ],
+    "windowGroupAttached": true,
+    "generation": 21,
+    "failures": 1,
+    "active": true,
+    "busy": false,
+    "actorsCreated": 23,
+    "actorsDestroyed": 22,
+    "liveOwnedActors": 1,
+    "panelEntryMatches": true,
+    "themeReloads": 1,
+    "shellState": {
+      "overview": true,
+      "modalCount": 1,
+      "startingUp": false,
+      "mode": "user"
+    },
+    "panel": {
+      "supported": false,
+      "lifecycle": null,
+      "replaced": false,
+      "containerCount": 1,
+      "focusGroupCount": 1,
+      "totalFocusGroups": 6,
+      "menuCount": 7,
+      "retainedIndicators": false
+    },
+    "desktop": {
+      "windows": [
+        {
+          "id": 1,
+          "title": "Tgnome persistent connection probe",
+          "workspace": 0,
+          "frame": [
+            473,
+            328,
+            334,
+            96
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Tgnome persistent connection probe",
+          "workspace": 0,
+          "frame": [
+            551,
+            329,
+            178,
+            94
+          ]
+        }
+      ],
+      "focus": 1,
+      "monitors": [
+        [
+          0,
+          0,
+          1280,
+          720
+        ]
+      ],
+      "workspace": 0
+    },
+    "shellRestartSupported": false,
+    "extensionCodeReloadSupported": false
+  },
+  "extensionLifecycleCycles": 3,
+  "wayland": {
+    "before": {
+      "pid": 1913482,
+      "backend": "wayland",
+      "fd": 3,
+      "inode": 6284435,
+      "windowId": 10,
+      "tick": 3,
+      "unsavedTextSha256": "161ffe682f0f991d97ec1ce2dbf334412b645268df2b5ec8cbe5c00634442bad"
+    },
+    "after": {
+      "pid": 1913482,
+      "backend": "wayland",
+      "fd": 3,
+      "inode": 6284435,
+      "windowId": 10,
+      "tick": 15,
+      "unsavedTextSha256": "161ffe682f0f991d97ec1ce2dbf334412b645268df2b5ec8cbe5c00634442bad"
+    },
+    "originalConnectionRoundTrips": true
+  },
+  "x11": {
+    "before": {
+      "pid": 1913491,
+      "backend": "x11",
+      "fd": 3,
+      "inode": 6284438,
+      "windowId": 2097156,
+      "tick": 1,
+      "unsavedTextSha256": "67bdb1384bd1af4fe7d3777e8bb1f8f018acb1f7de8897fe9bb9db349229e9d0"
+    },
+    "after": {
+      "pid": 1913491,
+      "backend": "x11",
+      "fd": 3,
+      "inode": 6284438,
+      "windowId": 2097156,
+      "tick": 13,
+      "unsavedTextSha256": "67bdb1384bd1af4fe7d3777e8bb1f8f018acb1f7de8897fe9bb9db349229e9d0"
+    },
+    "originalConnectionRoundTrips": true
+  },
+  "shellAfter": {
+    "classification": "RESEARCH PROTOTYPE",
+    "scope": "extension-owned panel indicator only",
+    "pid": 1913162,
+    "runtimeEpoch": null,
+    "uiGeneration": null,
+    "uiReloadState": null,
+    "uiRegistrations": null,
+    "lastReleasedRegistrations": null,
+    "windowManagerPreserved": true,
+    "stageActions": [
+      "OSK show bottom drag",
+      "Overview swipe tracker",
+      "Window unfullscreen top drag",
+      "WorkspaceAnimation swipe tracker",
+      "reset-search"
+    ],
+    "windowGroupAttached": true,
+    "generation": 0,
+    "failures": 0,
+    "active": true,
+    "busy": false,
+    "actorsCreated": 26,
+    "actorsDestroyed": 25,
+    "liveOwnedActors": 1,
+    "panelEntryMatches": true,
+    "themeReloads": 0,
+    "shellState": {
+      "overview": true,
+      "modalCount": 1,
+      "startingUp": false,
+      "mode": "user"
+    },
+    "panel": {
+      "supported": false,
+      "lifecycle": null,
+      "replaced": false,
+      "containerCount": 1,
+      "focusGroupCount": 1,
+      "totalFocusGroups": 6,
+      "menuCount": 7,
+      "retainedIndicators": true
+    },
+    "desktop": {
+      "windows": [
+        {
+          "id": 1,
+          "title": "Tgnome persistent connection probe",
+          "workspace": 0,
+          "frame": [
+            473,
+            328,
+            334,
+            96
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Tgnome persistent connection probe",
+          "workspace": 0,
+          "frame": [
+            551,
+            329,
+            178,
+            94
+          ]
+        }
+      ],
+      "focus": 1,
+      "monitors": [
+        [
+          0,
+          0,
+          1280,
+          720
+        ]
+      ],
+      "workspace": 0
+    },
+    "shellRestartSupported": false,
+    "extensionCodeReloadSupported": false
+  },
+  "xwaylandAfter": [
+    {
+      "pid": 1913493,
+      "exe": "/nix/store/8irpj5qxxxjnr98lh3dcx83xa26qf44p-xwayland-24.1.14/bin/Xwayland",
+      "startTime": "14126502"
+    }
+  ],
+  "xwaylandTested": true
+}

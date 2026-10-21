@@ -1,0 +1,93 @@
+{
+  "classification": "RESEARCH PROTOTYPE",
+  "passed": false,
+  "trueRestartDemonstrated": false,
+  "wholeShellReloadDemonstrated": false,
+  "shellBefore": {
+    "classification": "RESEARCH PROTOTYPE",
+    "scope": "extension-owned panel indicator only",
+    "pid": 1645629,
+    "generation": 0,
+    "failures": 0,
+    "active": true,
+    "busy": false,
+    "actorsCreated": 1,
+    "actorsDestroyed": 0,
+    "liveOwnedActors": 1,
+    "panelEntryMatches": true,
+    "themeReloads": 0,
+    "panel": {
+      "supported": true,
+      "lifecycle": {
+        "generation": 0,
+        "destroyed": 0,
+        "scope": "panel actor/layout/gestures/menu manager; indicator instances survive"
+      },
+      "replaced": false,
+      "containerCount": 1,
+      "focusGroupCount": 1,
+      "menuCount": 7,
+      "retainedIndicators": true
+    },
+    "desktop": {
+      "windows": [],
+      "focus": null,
+      "monitors": [
+        [
+          0,
+          0,
+          1280,
+          720
+        ]
+      ],
+      "workspace": 0
+    },
+    "shellRestartSupported": false,
+    "extensionCodeReloadSupported": false
+  },
+  "desktopBefore": {
+    "windows": [
+      {
+        "id": 1,
+        "title": "Tgnome persistent connection probe",
+        "workspace": 0,
+        "frame": [
+          473,
+          348,
+          334,
+          56
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Tgnome persistent connection probe",
+        "workspace": 0,
+        "frame": [
+          551,
+          349,
+          178,
+          54
+        ]
+      }
+    ],
+    "focus": 1,
+    "monitors": [
+      [
+        0,
+        0,
+        1280,
+        720
+      ]
+    ],
+    "workspace": 0
+  },
+  "xwaylandBefore": [
+    {
+      "pid": 1645993,
+      "exe": "/nix/store/8irpj5qxxxjnr98lh3dcx83xa26qf44p-xwayland-24.1.14/bin/Xwayland",
+      "startTime": "13526296"
+    }
+  ],
+  "shellExecutable": "/nix/store/rql54iqn2am62gk8jfc7ap0i6p8jcw7z-gnome-shell-50.5/bin/.gnome-shell-wrapped",
+  "error": "RuntimeError: Error: GDBus.Error:org.gnome.gjs.JSError.Error: Close menus and overview in an unlocked user session first"
+}

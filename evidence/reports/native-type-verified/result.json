@@ -1,0 +1,148 @@
+{
+  "classification": "RESEARCH PROTOTYPE",
+  "passed": true,
+  "cases": [
+    {
+      "mode": "native",
+      "passed": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "privateProfileRemoved": true,
+      "events": [
+        {
+          "event": "generation",
+          "generation": 1,
+          "native": "0x55555558d820",
+          "gtype": "NativeEnumerator",
+          "contextsFinalized": 1,
+          "globalCleared": true,
+          "markerCleared": true,
+          "callbackCleared": true,
+          "weakSweeps": 2,
+          "wrapperCleared": true,
+          "signalCallbackCleared": true,
+          "released": true
+        },
+        {
+          "event": "generation",
+          "generation": 2,
+          "native": "0x55555558d820",
+          "gtype": "NativeEnumerator",
+          "contextsFinalized": 2,
+          "globalCleared": true,
+          "markerCleared": true,
+          "callbackCleared": true,
+          "weakSweeps": 2,
+          "wrapperCleared": true,
+          "signalCallbackCleared": true,
+          "released": true
+        },
+        {
+          "event": "generation",
+          "generation": 3,
+          "native": "0x55555558d820",
+          "gtype": "NativeEnumerator",
+          "contextsFinalized": 3,
+          "globalCleared": true,
+          "markerCleared": true,
+          "callbackCleared": true,
+          "weakSweeps": 2,
+          "wrapperCleared": true,
+          "signalCallbackCleared": true,
+          "released": true
+        },
+        {
+          "event": "native-result",
+          "passed": true,
+          "contextsFinalized": 3,
+          "nativeFinalized": 1
+        }
+      ],
+      "stderr": "",
+      "stdout": "{\"event\":\"generation\",\"generation\":1,\"native\":\"0x55555558d820\",\"gtype\":\"NativeEnumerator\",\"contextsFinalized\":1,\"globalCleared\":true,\"markerCleared\":true,\"callbackCleared\":true,\"weakSweeps\":2,\"wrapperCleared\":true,\"signalCallbackCleared\":true,\"released\":true}\n{\"event\":\"generation\",\"generation\":2,\"native\":\"0x55555558d820\",\"gtype\":\"NativeEnumerator\",\"contextsFinalized\":2,\"globalCleared\":true,\"markerCleared\":true,\"callbackCleared\":true,\"weakSweeps\":2,\"wrapperCleared\":true,\"signalCallbackCleared\":true,\"released\":true}\n{\"event\":\"generation\",\"generation\":3,\"native\":\"0x55555558d820\",\"gtype\":\"NativeEnumerator\",\"contextsFinalized\":3,\"globalCleared\":true,\"markerCleared\":true,\"callbackCleared\":true,\"weakSweeps\":2,\"wrapperCleared\":true,\"signalCallbackCleared\":true,\"released\":true}\n{\"event\":\"native-result\",\"passed\":true,\"contextsFinalized\":3,\"nativeFinalized\":1}\n"
+    },
+    {
+      "mode": "native-valgrind",
+      "passed": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "privateProfileRemoved": true,
+      "events": [
+        {
+          "event": "generation",
+          "generation": 1,
+          "native": "0x96498e0",
+          "gtype": "NativeEnumerator",
+          "contextsFinalized": 1,
+          "globalCleared": true,
+          "markerCleared": true,
+          "callbackCleared": true,
+          "weakSweeps": 2,
+          "wrapperCleared": true,
+          "signalCallbackCleared": true,
+          "released": true
+        },
+        {
+          "event": "generation",
+          "generation": 2,
+          "native": "0x96498e0",
+          "gtype": "NativeEnumerator",
+          "contextsFinalized": 2,
+          "globalCleared": true,
+          "markerCleared": true,
+          "callbackCleared": true,
+          "weakSweeps": 2,
+          "wrapperCleared": true,
+          "signalCallbackCleared": true,
+          "released": true
+        },
+        {
+          "event": "generation",
+          "generation": 3,
+          "native": "0x96498e0",
+          "gtype": "NativeEnumerator",
+          "contextsFinalized": 3,
+          "globalCleared": true,
+          "markerCleared": true,
+          "callbackCleared": true,
+          "weakSweeps": 2,
+          "wrapperCleared": true,
+          "signalCallbackCleared": true,
+          "released": true
+        },
+        {
+          "event": "native-result",
+          "passed": true,
+          "contextsFinalized": 3,
+          "nativeFinalized": 1
+        }
+      ],
+      "stderr": "",
+      "stdout": "{\"event\":\"generation\",\"generation\":1,\"native\":\"0x96498e0\",\"gtype\":\"NativeEnumerator\",\"contextsFinalized\":1,\"globalCleared\":true,\"markerCleared\":true,\"callbackCleared\":true,\"weakSweeps\":2,\"wrapperCleared\":true,\"signalCallbackCleared\":true,\"released\":true}\n{\"event\":\"generation\",\"generation\":2,\"native\":\"0x96498e0\",\"gtype\":\"NativeEnumerator\",\"contextsFinalized\":2,\"globalCleared\":true,\"markerCleared\":true,\"callbackCleared\":true,\"weakSweeps\":2,\"wrapperCleared\":true,\"signalCallbackCleared\":true,\"released\":true}\n{\"event\":\"generation\",\"generation\":3,\"native\":\"0x96498e0\",\"gtype\":\"NativeEnumerator\",\"contextsFinalized\":3,\"globalCleared\":true,\"markerCleared\":true,\"callbackCleared\":true,\"weakSweeps\":2,\"wrapperCleared\":true,\"signalCallbackCleared\":true,\"released\":true}\n{\"event\":\"native-result\",\"passed\":true,\"contextsFinalized\":3,\"nativeFinalized\":1}\n"
+    },
+    {
+      "mode": "js-owned",
+      "passed": true,
+      "exitCode": -11,
+      "timedOut": false,
+      "privateProfileRemoved": true,
+      "events": [
+        {
+          "event": "negative-disposed",
+          "contextsFinalized": 1,
+          "globalCleared": true,
+          "callbackCleared": true
+        },
+        {
+          "event": "negative-wrap-entry"
+        },
+        {
+          "event": "negative-vfunc-entry"
+        }
+      ],
+      "stderr": "",
+      "stdout": "{\"event\":\"negative-disposed\",\"contextsFinalized\":1,\"globalCleared\":true,\"callbackCleared\":true}\n{\"event\":\"negative-wrap-entry\"}\n{\"event\":\"negative-vfunc-entry\"}\n",
+      "backtrace": "[Thread debugging using libthread_db enabled]\nUsing host libthread_db library \"/nix/store/fsd4vbp9zjd9iaicq2fb9lpc1h5j973y-glibc-2.42-100/lib/libthread_db.so.1\".\n[New Thread 0x7ffff31ff6c0 (LWP 122)]\n[Thread 0x7ffff31ff6c0 (LWP 122) exited]\n[New Thread 0x7ffff29fe6c0 (LWP 123)]\n[New Thread 0x7ffff27ff6c0 (LWP 124)]\n[New Thread 0x7ffff26006c0 (LWP 125)]\n[New Thread 0x7ffff24016c0 (LWP 126)]\n[New Thread 0x7ffff22026c0 (LWP 127)]\n[New Thread 0x7ffff20036c0 (LWP 128)]\n[New Thread 0x7ffff1e046c0 (LWP 129)]\n[New Thread 0x7ffff1c056c0 (LWP 130)]\n[New Thread 0x7ffff31ff6c0 (LWP 131)]\n[New Thread 0x7ffff18066c0 (LWP 132)]\n[New Thread 0x7ffff10056c0 (LWP 133)]\n{\"event\":\"negative-disposed\",\"contextsFinalized\":1,\"globalCleared\":true,\"callbackCleared\":true}\n{\"event\":\"negative-wrap-entry\"}\n{\"event\":\"negative-vfunc-entry\"}\n\nThread 1 \"tgnome-native-t\" received signal SIGSEGV, Segmentation fault.\n0x00007ffff78a839a in gi_callable_info_load_return_type () from /nix/store/pgc3a4xwls7lklxmhvdgrb0zh5yjnhxs-glib-2.88.3/lib/libgirepository-2.0.so.0\n#0  0x00007ffff78a839a in gi_callable_info_load_return_type () from /nix/store/pgc3a4xwls7lklxmhvdgrb0zh5yjnhxs-glib-2.88.3/lib/libgirepository-2.0.so.0\n#1  0x00007ffff7e66533 in GjsCallbackTrampoline::callback_closure(_GIArgument**, void*) [clone .localalias] () from /nix/store/k5p3ci05vz1kfqdxgq8nkkbp044yhv19-tgnome-native-type-gjs-1.88.1/lib/libgjs.so.0\n#2  0x00007ffff7e66b91 in GjsCallbackTrampoline::create_closure()::{lambda(ffi_cif*, void*, void**, void*)#1}::_FUN(ffi_cif*, void*, void**, void*) () from /nix/store/k5p3ci05vz1kfqdxgq8nkkbp044yhv19-tgnome-native-type-gjs-1.88.1/lib/libgjs.so.0\n#3  0x00007ffff7892035 in ffi_closure_unix64_inner () from /nix/store/hf8a95j1jr8bjmxb93np94xlqwqr492x-libffi-3.8.0/lib/libffi.so.8\n#4  0x00007ffff7893398 in ffi_closure_unix64 () from /nix/store/hf8a95j1jr8bjmxb93np94xlqwqr492x-libffi-3.8.0/lib/libffi.so.8\n#5  0x00007ffff7a7eeae in g_file_enumerator_next_file () from /nix/store/pgc3a4xwls7lklxmhvdgrb0zh5yjnhxs-glib-2.88.3/lib/libgio-2.0.so.0\n#6  0x0000555555557195 in expect_name (object=<optimized out>, name=...) at /nix/store/anys3cncm9lkdkwzlhb20dilqp1xnq1i-native-type-probe.cpp:131\n#7  0x0000555555556940 in negative () at /nix/store/anys3cncm9lkdkwzlhb20dilqp1xnq1i-native-type-probe.cpp:234\n#8  main (argc=<optimized out>, argv=<optimized out>) at /nix/store/anys3cncm9lkdkwzlhb20dilqp1xnq1i-native-type-probe.cpp:243\n"
+    }
+  ]
+}

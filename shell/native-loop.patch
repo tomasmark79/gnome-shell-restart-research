@@ -1,0 +1,74 @@
+--- a/src/main.c
++++ b/src/main.c
+@@ -29,6 +29,7 @@
+ #include "shell-global-private.h"
+ #include "shell-perf-log.h"
+ #include "st.h"
++#include "tgnome-runtime.h"
+ 
+ extern GType gnome_shell_plugin_get_type (void);
+ 
+@@ -601,6 +602,7 @@
+   GError *error = NULL;
+   int ecode = EXIT_SUCCESS;
+ 
++  tgnome_runtime_configure (argc, argv);
+   bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
+   bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
+   textdomain (GETTEXT_PACKAGE);
+@@ -687,9 +689,10 @@
+       return EXIT_FAILURE;
+     }
+ 
+-  /* init.js calls meta_context_start_main_loop(), gjs_context_eval_module_file()
+-   * will not return until Mutter is exited.
++  /* The laboratory init.js only queues UI startup. Native code below owns
++   * Mutter's long-lived loop, outside the lifetime of a GJS context.
+    */
++  tgnome_runtime_prepare ();
+   GjsContext *gjs_context = _shell_global_get_gjs_context (shell_global_get());
+   uint8_t status;
+   if (!gjs_context_eval_module_file (gjs_context,
+@@ -714,6 +717,16 @@
+       exit (1);
+     }
+ 
++  tgnome_runtime_start ();
++  if (!meta_context_run_main_loop (context, &error))
++    {
++      g_warning ("Native compositor loop failed: %s", error->message);
++      g_clear_error (&error);
++      ecode = EXIT_FAILURE;
++    }
++  tgnome_runtime_stop ();
++  tgnome_runtime_ui_shutdown ();
++
+   g_message ("Shutting down GNOME Shell");
+   _shell_global_notify_shutdown (shell_global_get ());
+   shell_profiler_shutdown ();
+--- a/js/ui/main.js
++++ b/js/ui/main.js
+@@ -264,6 +264,8 @@
+     timeLimitsDispatcher = new TimeLimitsManager.TimeLimitsDispatcher(timeLimitsManager);
+ 
+     global.connect('shutdown', () => {
++        if (global._tgnomeResetPrepared)
++            return;
+         // Block shutdown until the session history file has been written
+         const loop = new GLib.MainLoop(null, false);
+         const source = GLib.idle_source_new();
+--- a/js/ui/layout.js
++++ b/js/ui/layout.js
+@@ -795,6 +795,12 @@
+     }
+ 
+     async _startupAnimationSession() {
++        if (GLib.getenv('TGNOME_UI_RESTARTING') === '1') {
++            this.uiGroup.scale_x = this.uiGroup.scale_y = 1;
++            this.uiGroup.opacity = 255;
++            return;
++        }
++
+         if (Main.sessionMode.hasOverview) {
+             await Main.overview.runStartupAnimation();
+         } else {

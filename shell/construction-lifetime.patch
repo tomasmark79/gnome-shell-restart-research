@@ -1,0 +1,142 @@
+--- a/js/ui/main.js
++++ b/js/ui/main.js
+@@ -148,7 +148,7 @@
+ }
+ 
+ /** @returns {void} */
+-export async function start() {
++export async function start(candidate = null) {
+     globalThis.log = console.log;
+     globalThis.logError = function (err, msg) {
+         const args = [formatError(err)];
+@@ -183,7 +183,9 @@
+     // Initialize ParentalControlsManager before the UI
+     ParentalControlsManager.getDefault();
+ 
+-    await _initializeUI();
++    await waitTgnomeUiCandidate(candidate, _initializeUI(candidate));
++    await waitTgnomeStartupProbe(candidate);
++    checkTgnomeUiCandidate(candidate);
+ 
+     shellAccessDialogDBusService = new AccessDialog.AccessDialogDBus();
+     shellAudioSelectionDBusService = new AudioDeviceSelection.AudioDeviceSelectionDBus();
+@@ -199,7 +201,7 @@
+ }
+ 
+ /** @private */
+-async function _initializeUI() {
++async function _initializeUI(candidate = null) {
+     // Ensure ShellWindowTracker and ShellAppUsage are initialized; this will
+     // also initialize ShellAppSystem first. ShellAppSystem
+     // needs to load all the .desktop files, and ShellWindowTracker
+@@ -331,13 +333,17 @@
+     const {automationScript} = global;
+     if (automationScript) {
+         Scripting = await import('./scripting.js');
++        checkTgnomeUiCandidate(candidate);
+         perfModule = await import(automationScript.get_uri());
++        checkTgnomeUiCandidate(candidate);
+         if (perfModule.init)
+             perfModule.init();
+     }
+ 
+     layoutManager.connect('startup-complete', () => {
+-        if (actionMode === Shell.ActionMode.NONE)
++        if (candidate?.cancelled)
++            return;
++        if (actionMode === Shell.ActionMode.NONE && !candidate)
+             actionMode = Shell.ActionMode.NORMAL;
+ 
+         if (screenShield)
+--- a/js/ui/layout.js
++++ b/js/ui/layout.js
+@@ -188,6 +188,8 @@
+ }, class LayoutManager extends GObject.Object {
+     _init() {
+         super._init();
++        this._tgnomeCandidate = Main.getTgnomeUiCandidate();
++        this._tgnomeCandidate?.cancelHandlers.add(() => this.cancelTgnomeStartup());
+ 
+         this._rtl = Clutter.get_default_text_direction() === Clutter.TextDirection.RTL;
+         this.monitors = [];
+@@ -689,22 +691,29 @@
+ 
+     async _doStartupAnimation() {
+         await this._loadBackground();
++        if (this._tgnomeStartupCancelled())
++            return;
+ 
+         this._systemBackground.show();
+         global.stage.show();
+ 
+         try {
+             await this._prepareStartupAnimation();
++            if (this._tgnomeStartupCancelled())
++                return;
+             await this._startupAnimation();
+         } catch (e) {
+             logError(e);
+         } finally {
+-            this._startupAnimationComplete();
++            if (!this._tgnomeStartupCancelled())
++                this._startupAnimationComplete();
+         }
+     }
+ 
+     async _loadBackground() {
+         await this._ensurePrimaryMonitor();
++        if (this._tgnomeStartupCancelled())
++            return;
+ 
+         this._systemBackground = new Background.SystemBackground();
+         this._systemBackground.hide();
+@@ -720,10 +729,20 @@
+         const {promise, resolve} = Promise.withResolvers();
+         const signalId = this._systemBackground.connect('loaded', () => {
+             this._systemBackground.disconnect(signalId);
++            this._tgnomeSystemBgLoadedId = 0;
++            this._tgnomeSystemBgResolve = null;
+             resolve();
+         });
+ 
++        this._tgnomeSystemBgLoadedId = signalId;
++        this._tgnomeSystemBgResolve = resolve;
+         await promise;
++        try {
++            await Main.waitTgnomeStartupProbe(this._tgnomeCandidate, 'layout-wait');
++        } catch (error) {
++            if (!this._tgnomeStartupCancelled())
++                throw error;
++        }
+     }
+ 
+     // Startup Animations
+@@ -743,6 +762,8 @@
+ 
+     async _prepareStartupAnimation() {
+         await this._ensurePrimaryMonitor();
++        if (this._tgnomeStartupCancelled())
++            return;
+ 
+         // During the initial transition, add a simple actor to block all events,
+         // so they don't get delivered to X11 windows that have been transformed.
+@@ -781,6 +802,8 @@
+             global.window_group.set_clip(monitor.x, monitor.y, monitor.width, monitor.height);
+ 
+             await this._updateBackgrounds();
++            if (this._tgnomeStartupCancelled())
++                return;
+         }
+ 
+         // Hack: Work around grab issue when testing greeter UI in nested
+--- a/js/ui/screenshot.js
++++ b/js/ui/screenshot.js
+@@ -1145,6 +1145,8 @@
+         this._tgnomeScreencastCancellable = new Gio.Cancellable();
+         this.connect('destroy', () => {
+             this._tgnomeDestroyed = true;
++            this._screencastAreaIndicator?.destroy();
++            this._screencastAreaIndicator = null;
+             this._tgnomeScreencastCancellable.cancel();
+             if (this._tgnomeScreencastErrorId)
+                 this._screencastProxy.disconnectSignal(this._tgnomeScreencastErrorId);

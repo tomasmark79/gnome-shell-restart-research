@@ -1,0 +1,7 @@
+{
+  "classification": "RESEARCH PROTOTYPE",
+  "passed": false,
+  "trueRestartDemonstrated": false,
+  "wholeShellReloadDemonstrated": false,
+  "error": "RuntimeError: Timed out: Isolated Shell exited 1; see shell.log"
+}

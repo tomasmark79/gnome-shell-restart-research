@@ -1,0 +1,58 @@
+--- a/js/ui/calendar.js
++++ b/js/ui/calendar.js
+@@ -212,17 +212,23 @@
+         this._isLoading = false;
+ 
+         this._initialized = false;
++        this._destroyed = false;
++        this._initPending = true;
++        this._initCancellable = new Gio.Cancellable();
+         this._dbusProxy = new CalendarServer();
+         this._initProxy();
+     }
+ 
+     async _initProxy() {
++        const proxy = this._dbusProxy;
+         let loaded = false;
+ 
+         try {
+-            await this._dbusProxy.init_async(GLib.PRIORITY_DEFAULT, null);
++            await proxy.init_async(GLib.PRIORITY_DEFAULT, this._initCancellable);
+             loaded = true;
+         } catch (e) {
++            if (this._destroyed)
++                return;
+             // Ignore timeouts and install signals as normal, because with high
+             // probability the service will appear later on, and we will get a
+             // NameOwnerChanged which will finish loading
+@@ -234,7 +240,13 @@
+                 log(`Error loading calendars: ${e.message}`);
+                 return;
+             }
+-        }
++        } finally {
++            this._initPending = false;
++            if (this._destroyed)
++                proxy.run_dispose();
++        }
++        if (this._destroyed)
++            return;
+ 
+         this._dbusProxy.connectSignal('EventsAddedOrUpdated',
+             this._onEventsAddedOrUpdated.bind(this));
+@@ -262,7 +274,14 @@
+     }
+ 
+     destroy() {
+-        this._dbusProxy.run_dispose();
++        if (this._destroyed)
++            return;
++        this._destroyed = true;
++        this._initialized = false;
++        this._initCancellable.cancel();
++        // init_finish() must see a live proxy even after cancellation.
++        if (!this._initPending)
++            this._dbusProxy.run_dispose();
+     }
+ 
+     get hasCalendars() {

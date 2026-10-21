@@ -1,0 +1,558 @@
+--- a/js/ui/main.js
++++ b/js/ui/main.js
+@@ -170,11 +170,15 @@
+     if (!currentDesktop || !currentDesktop.split(':').includes('GNOME'))
+         GioUnix.DesktopAppInfo.set_desktop_env('GNOME');
+ 
+-    sessionMode = new SessionMode.SessionMode();
+-    sessionMode.connect('updated', _sessionUpdated);
+-
+-    St.Settings.get().connect('notify::high-contrast', _loadDefaultStylesheet);
+-    St.Settings.get().connect('notify::color-scheme', _loadDefaultStylesheet);
++    if (!sessionMode) {
++        sessionMode = new SessionMode.SessionMode();
++        sessionMode.connect('updated', _sessionUpdated);
++    }
++
++    St.Settings.get().connectObject(
++        'notify::high-contrast', _loadDefaultStylesheet,
++        'notify::color-scheme', _loadDefaultStylesheet,
++        sessionMode);
+ 
+     // Initialize ParentalControlsManager before the UI
+     ParentalControlsManager.getDefault();
+@@ -217,11 +221,13 @@
+ 
+     // Setup the stage hierarchy early
+     layoutManager = new Layout.LayoutManager();
++    layoutManager._tgnomeUiOwned = true;
+ 
+     // Various parts of the codebase still refer to Main.uiGroup
+     // instead of using the layoutManager. This keeps that code
+     // working until it's updated.
+     uiGroup = layoutManager.uiGroup;
++    tgnomeUiCheckpoint('after-layout');
+ 
+     padOsdService = new PadOsd.PadOsdService();
+     xdndHandler = new XdndHandler.XdndHandler();
+@@ -229,8 +235,11 @@
+     osdWindowManager = new OsdWindow.OsdWindowManager();
+     osdMonitorLabeler = new OsdMonitorLabeler.OsdMonitorLabeler();
+     overview = new Overview.Overview();
++    overview._tgnomeUiOwned = true;
+     kbdA11yDialog = new KbdA11yDialog.KbdA11yDialog();
+-    wm = new WindowManager.WindowManager();
++    if (!wm)
++        wm = global._tgnomeWithBackendLifetime(
++            () => new WindowManager.WindowManager());
+     magnifier = new Magnifier.Magnifier();
+     locatePointer = new LocatePointer.LocatePointer();
+ 
+@@ -249,10 +258,11 @@
+ 
+     messageTray = new MessageTray.MessageTray();
+     panel = new Panel.Panel();
++    tgnomeUiCheckpoint('after-panel');
+     keyboard = new Keyboard.KeyboardManager();
+     notificationDaemon = new NotificationDaemon.NotificationDaemon();
+     windowAttentionHandler = new WindowAttentionHandler.WindowAttentionHandler();
+-    componentManager = new Components.ComponentManager();
++    componentManager ??= new Components.ComponentManager();
+ 
+     introspectService = new Introspect.IntrospectService();
+ 
+--- a/js/misc/ibusManager.js
++++ b/js/misc/ibusManager.js
+@@ -46,7 +46,9 @@
+  */
+ export function getIBusManager() {
+     if (_ibusManager == null)
+-        _ibusManager = new IBusManager();
++        _ibusManager = global._tgnomeWithBackendLifetime(() => new IBusManager());
++    else if (_ibusManager._candidatePopup === null)
++        _ibusManager._createTgnomeCandidatePopup();
+     return _ibusManager;
+ }
+ 
+@@ -62,7 +64,7 @@
+         this._PRELOAD_ENGINES_DELAY_TIME = 30; // sec
+ 
+ 
+-        this._candidatePopup = new IBusCandidatePopup.CandidatePopup();
++        this._createTgnomeCandidatePopup();
+ 
+         this._panelService = null;
+         this._engines = new Map();
+@@ -145,11 +147,10 @@
+             this._preloadEnginesId = 0;
+         }
+ 
+-        if (this._panelService)
+-            this._panelService.destroy();
++        this._candidatePopup?.setPanelService(null);
++        this._panelService?.destroy();
+ 
+         this._panelService = null;
+-        this._candidatePopup.setPanelService(null);
+         this._engines.clear();
+         this._ready = false;
+         this._registerPropertiesId = 0;
+@@ -193,7 +194,7 @@
+             connection: this._ibus.get_connection(),
+             object_path: IBus.PATH_PANEL,
+         });
+-        this._candidatePopup.setPanelService(this._panelService);
++        this._candidatePopup?.setPanelService(this._panelService);
+         this._panelService.connect('update-property', this._updateProperty.bind(this));
+         this._panelService.connect('set-cursor-location', (ps, x, y, w, h) => {
+             const cursorLocation = {x, y, width: w, height: h};
+@@ -236,7 +237,7 @@
+             return;
+ 
+         this._currentEngineName = engineName;
+-        this._candidatePopup.close(BoxPointer.PopupAnimation.NONE);
++        this._candidatePopup?.close(BoxPointer.PopupAnimation.NONE);
+ 
+         if (this._registerPropertiesId !== 0)
+             return;
+--- a/js/misc/systemActions.js
++++ b/js/misc/systemActions.js
+@@ -37,7 +37,7 @@
+  */
+ export function getDefault() {
+     if (_singleton == null)
+-        _singleton = new SystemActions();
++        _singleton = global._tgnomeWithBackendLifetime(() => new SystemActions());
+ 
+     return _singleton;
+ }
+@@ -206,7 +206,8 @@
+             this._updateOrientationLock();
+             this._updateOrientationLockStatus();
+         });
+-        Main.layoutManager.connect('monitors-changed',
++        this._tgnomeLayout = Main.layoutManager;
++        this._tgnomeLayoutSignal = Main.layoutManager.connect('monitors-changed',
+             () => this._updateOrientationLock());
+         this._monitorManager.connect('notify::panel-orientation-managed',
+             () => this._updateOrientationLock());
+--- a/js/ui/status/keyboard.js
++++ b/js/ui/status/keyboard.js
+@@ -827,7 +827,8 @@
+  */
+ export function getInputSourceManager() {
+     if (_inputSourceManager == null)
+-        _inputSourceManager = new InputSourceManager();
++        _inputSourceManager = global._tgnomeWithBackendLifetime(
++            () => new InputSourceManager());
+     return _inputSourceManager;
+ }
+ 
+--- a/js/ui/ibusCandidatePopup.js
++++ b/js/ui/ibusCandidatePopup.js
+@@ -201,9 +201,13 @@
+     }
+ 
+     setPanelService(panelService) {
++        if (this._panelService)
++            this._panelService.disconnectObject(this);
+         this._panelService = panelService;
+         if (!panelService)
+             return;
++        const connect = (signal, callback) =>
++            panelService.connectObject(signal, callback, this);
+ 
+         panelService.connect('set-cursor-location', (ps, x, y, w, h) => {
+             const focusWindow = global.display.focus_window;
+--- a/js/ui/components.js
++++ b/js/ui/components.js
+@@ -40,7 +40,7 @@
+             return null;
+ 
+         const constructor = await this._importComponent(name);
+-        component = new constructor();
++        component = global._tgnomeWithBackendLifetime(() => new constructor());
+         this._allComponents[name] = component;
+         return component;
+     }
+@@ -48,7 +48,7 @@
+     async _enableComponent(name) {
+         const component = await this._ensureComponent(name);
+         if (component)
+-            component.enable();
++            global._tgnomeWithBackendLifetime(() => component.enable());
+     }
+ 
+     _disableComponent(name) {
+--- a/js/misc/signalTracker.js
++++ b/js/misc/signalTracker.js
+@@ -43,10 +43,8 @@
+     constructor() {
+         this._signalTrackers = new Map();
+ 
+-        global.connect_after('tgnome-ui-reset', () => {
+-            [...this._signalTrackers.values()].forEach(
+-                tracker => tracker.destroy());
+-            this._signalTrackers.clear();
++        global.connect('tgnome-ui-reset', () => {
++            clearTgnomeUiSignalTrackers(this);
+         });
+     }
+ 
+@@ -86,7 +84,7 @@
+      */
+     constructor(owner) {
+         if (_hasDestroySignal(owner))
+-            this._ownerDestroyId = owner.connect_after('destroy', () => this.clear());
++            this._ownerDestroyId = connectTgnomeEmitterDestroy(owner, () => this.clear());
+ 
+         this._owner = owner;
+         this._map = new Map();
+@@ -242,6 +240,7 @@
+ 
+     const obj = args.at(0) ?? globalThis;
+     const tracker = SignalManager.getDefault().getSignalTracker(thisObj);
++    trackTgnomeBackendOwner(obj);
+     tracker.track(obj, ...signalIds);
+ }
+ 
+--- a/js/ui/status/location.js
++++ b/js/ui/status/location.js
+@@ -50,7 +50,7 @@
+  */
+ export function getGeoclueAgent() {
+     if (_geoclueAgent === null)
+-        _geoclueAgent = new GeoclueAgent();
++        _geoclueAgent = global._tgnomeWithBackendLifetime(() => new GeoclueAgent());
+     return _geoclueAgent;
+ }
+ 
+--- a/js/ui/status/backgroundApps.js
++++ b/js/ui/status/backgroundApps.js
+@@ -160,7 +160,7 @@
+             DBUS_OBJECT_PATH,
+             proxy => {
+                 this._proxy = proxy;
+-                proxy?.connect('g-properties-changed', () => this._sync());
++                proxy?.connectObject('g-properties-changed', () => this._sync(), this);
+                 this._sync();
+             },
+             null,
+@@ -184,7 +184,7 @@
+         this.connect('popup-menu', () => this.menu.open());
+ 
+         this.menu.connect('open-state-changed', () => this._syncVisibility());
+-        Main.sessionMode.connect('updated', () => this._syncVisibility());
++        Main.sessionMode.connectObject('updated', () => this._syncVisibility(), this);
+     }
+ 
+     _syncVisibility() {
+--- a/js/ui/appFavorites.js
++++ b/js/ui/appFavorites.js
+@@ -158,6 +158,6 @@
+  */
+ export function getAppFavorites() {
+     if (appFavoritesInstance == null)
+-        appFavoritesInstance = new AppFavorites();
++        appFavoritesInstance = global._tgnomeWithBackendLifetime(() => new AppFavorites());
+     return appFavoritesInstance;
+ }
+--- a/js/ui/extensionSystem.js
++++ b/js/ui/extensionSystem.js
+@@ -41,12 +41,12 @@
+         this._extensionOrder = [];
+         this._checkVersion = false;
+ 
+-        St.Settings.get().connect('notify::color-scheme',
+-            () => this._reloadExtensionStylesheets());
+-
+-        Main.sessionMode.connect('updated', () => {
++        St.Settings.get().connectObject('notify::color-scheme',
++            () => this._reloadExtensionStylesheets(), this);
++
++        Main.sessionMode.connectObject('updated', () => {
+             this._sessionUpdated().catch(logError);
+-        });
++        }, this);
+     }
+ 
+     init() {
+--- a/js/ui/layout.js
++++ b/js/ui/layout.js
+@@ -217,6 +217,17 @@
+         global.connect('tgnome-ui-reset', () => {
+             const monitorManager = global.backend.get_monitor_manager();
+             monitorManager.disconnectObject(this);
++            this._tgnomeDestroying = true;
++            if (this._updateRegionIdle) {
++                global.compositor.get_laters().remove(this._updateRegionIdle);
++                this._updateRegionIdle = 0;
++            }
++            this._bgLoadCancellable?.cancel();
++            this._bgLoadCancellable = null;
++            for (const manager of this._bgManagers)
++                manager.destroy();
++            this._bgManagers = [];
++            this._backgroundGroup.destroy();
+ 
+             const adoptedUiGroupActors = [
+                 global.window_group,
+@@ -313,13 +324,13 @@
+             schema_id: 'org.gnome.desktop.interface',
+         });
+ 
+-        this._interfaceSettings.connect('changed::enable-hot-corners',
+-            this._updateHotCorners.bind(this));
++        this._interfaceSettings.connectObject('changed::enable-hot-corners',
++            this._updateHotCorners.bind(this), this);
+ 
+         // Need to update struts on new workspaces when they are added
+         const workspaceManager = global.workspace_manager;
+-        workspaceManager.connect('notify::n-workspaces',
+-            this._queueUpdateRegions.bind(this));
++        workspaceManager.connectObject('notify::n-workspaces',
++            this._queueUpdateRegions.bind(this), this);
+ 
+         const display = global.display;
+         display.connect('in-fullscreen-changed',
+@@ -341,7 +352,7 @@
+ 
+     // This is called by Main after everything else is constructed
+     init() {
+-        Main.sessionMode.connect('updated', this._sessionUpdated.bind(this));
++        Main.sessionMode.connectObject('updated', this._sessionUpdated.bind(this), this);
+ 
+         this._doStartupAnimation().catch(logError);
+     }
+@@ -1032,6 +1043,8 @@
+     }
+ 
+     _queueUpdateRegions() {
++        if (this._tgnomeDestroying)
++            return;
+         if (!this._updateRegionIdle) {
+             const laters = global.compositor.get_laters();
+             this._updateRegionIdle = laters.add(
+--- a/js/ui/keyboard.js
++++ b/js/ui/keyboard.js
+@@ -1049,19 +1049,20 @@
+ 
+         this._keyboard = null;
+         this._a11yApplicationsSettings = new Gio.Settings({schema_id: A11Y_APPLICATIONS_SCHEMA});
+-        this._a11yApplicationsSettings.connect('changed', this._syncEnabled.bind(this));
++        this._a11yApplicationsSettings.connectObject(
++            'changed', this._syncEnabled.bind(this), this);
+ 
+         this._seat = global.stage.context.get_backend().get_default_seat();
+-        this._seat.connect('notify::touch-mode', this._syncEnabled.bind(this));
++        this._seat.connectObject('notify::touch-mode', this._syncEnabled.bind(this), this);
+ 
+         this._lastDevice = null;
+-        global.backend.connect('last-device-changed', (backend, device) => {
++        global.backend.connectObject('last-device-changed', (backend, device) => {
+             if (device.device_type === Clutter.InputDeviceType.KEYBOARD_DEVICE)
+                 return;
+ 
+             this._lastDevice = device;
+             this._syncEnabled();
+-        });
++        }, this);
+ 
+         const allowedModes = Shell.ActionMode.ALL & ~Shell.ActionMode.LOCK_SCREEN;
+         const bottomDragGesture = new Shell.EdgeDragGesture({
+--- a/js/misc/inputMethod.js
++++ b/js/misc/inputMethod.js
+@@ -36,13 +36,13 @@
+         this._surroundingTextCursor = null;
+         this._surroundingTextAnchor = null;
+         this._ibus = IBus.Bus.new_async();
+-        this._ibus.connect('connected', this._onConnected.bind(this));
+-        this._ibus.connect('disconnected', this._clear.bind(this));
+-        this.connect('notify::can-show-preedit', this._updateCapabilities.bind(this));
++        this._ibus.connectObject('connected', this._onConnected.bind(this), this);
++        this._ibus.connectObject('disconnected', this._clear.bind(this), this);
++        this.connectObject('notify::can-show-preedit', this._updateCapabilities.bind(this), this);
+ 
+         this._inputSourceManager = Keyboard.getInputSourceManager();
+-        this._sourceChangedId = this._inputSourceManager.connect('current-source-changed',
+-            this._onSourceChanged.bind(this));
++        this._inputSourceManager.connectObject('current-source-changed',
++            this._onSourceChanged.bind(this), this);
+         this._currentSource = this._inputSourceManager.currentSource;
+ 
+         if (this._ibus.is_connected())
+--- a/js/ui/overview.js
++++ b/js/ui/overview.js
+@@ -112,8 +112,10 @@
+         this._initCalled = false;
+         this._visible = false;
+ 
+-        Main.sessionMode.connect('updated', this._sessionUpdated.bind(this));
++        Main.sessionMode.connectObject('updated', this._sessionUpdated.bind(this), this);
++        Main.registerTgnomeUiCandidate('overview', this);
+         this._sessionUpdated();
++        Main.tgnomeUiCheckpoint('overview-constructor');
+     }
+ 
+     get dash() {
+@@ -213,7 +215,7 @@
+         this._overview._delegate = this;
+         Main.layoutManager.overviewGroup.add_child(this._overview);
+ 
+-        Main.layoutManager.connect('monitors-changed', this._relayout.bind(this));
++        Main.layoutManager.connectObject('monitors-changed', this._relayout.bind(this), this);
+         this._relayout();
+ 
+         Main.wm.addKeybinding(
+--- a/js/ui/xdndHandler.js
++++ b/js/ui/xdndHandler.js
+@@ -18,9 +18,9 @@
+         this._dummy.hide();
+ 
+         const dnd = global.backend.get_dnd();
+-        dnd.connect('dnd-enter', this._onEnter.bind(this));
+-        dnd.connect('dnd-position-change', this._onPositionChanged.bind(this));
+-        dnd.connect('dnd-leave', this._onLeave.bind(this));
++        dnd.connectObject('dnd-enter', this._onEnter.bind(this), this);
++        dnd.connectObject('dnd-position-change', this._onPositionChanged.bind(this), this);
++        dnd.connectObject('dnd-leave', this._onLeave.bind(this), this);
+     }
+ 
+     // Called when the user cancels the drag (i.e release the button)
+--- a/js/ui/swipeTracker.js
++++ b/js/ui/swipeTracker.js
+@@ -394,7 +394,7 @@
+         this._panGesture.connect('end', this._endPanGesture.bind(this));
+         this._panGesture.connect('cancel', this._cancelPanGesture.bind(this));
+         this.bind_property('enabled', this._panGesture, 'enabled', 0);
+-        this.bind_property_full('orientation',
++        this._tgnomeOrientationBinding = this.bind_property_full('orientation',
+             this._panGesture, 'pan-axis',
+             GObject.BindingFlags.SYNC_CREATE,
+             (bind, source) => [
+@@ -718,6 +718,9 @@
+     }
+ 
+     destroy() {
++        this._tgnomeOrientationBinding?.unbind();
++        this._tgnomeOrientationBinding = null;
++
+         if (this._touchpadGesture) {
+             this._touchpadGesture.destroy();
+             delete this._touchpadGesture;
+--- a/js/ui/screenshot.js
++++ b/js/ui/screenshot.js
+@@ -1142,11 +1142,21 @@
+         this._screencastSupported = false;
+         this._currentMode = UIMode.SCREENSHOT;
+ 
++        this._tgnomeScreencastCancellable = new Gio.Cancellable();
++        this.connect('destroy', () => {
++            this._tgnomeDestroyed = true;
++            this._tgnomeScreencastCancellable.cancel();
++            if (this._tgnomeScreencastErrorId)
++                this._screencastProxy.disconnectSignal(this._tgnomeScreencastErrorId);
++        });
++
+         this._screencastProxy = new ScreencastProxy(
+             Gio.DBus.session,
+             'org.gnome.Shell.Screencast',
+             '/org/gnome/Shell/Screencast',
+             (object, error) => {
++                if (this._tgnomeDestroyed)
++                    return;
+                 if (error !== null) {
+                     log('Error connecting to the screencast service');
+                     return;
+@@ -1154,9 +1164,9 @@
+ 
+                 this._screencastSupported = this._screencastProxy.ScreencastSupported;
+                 this._syncCastButton();
+-            });
+-
+-        this._screencastProxy.connectSignal('Error', (proxy, sender, [errorName, message]) =>
++            }, this._tgnomeScreencastCancellable);
++
++        this._tgnomeScreencastErrorId = this._screencastProxy.connectSignal('Error', (proxy, sender, [errorName, message]) =>
+             this._screencastFailed(ScreencastPhase.RECORDING,
+                 Gio.DBusError.new_for_dbus_error(errorName, message)));
+ 
+@@ -1511,8 +1521,8 @@
+             }
+         );
+ 
+-        Main.sessionMode.connect('updated',
+-            () => this._sessionUpdated());
++        Main.sessionMode.connectObject('updated',
++            () => this._sessionUpdated(), this);
+         this._sessionUpdated();
+     }
+ 
+--- a/js/ui/messageTray.js
++++ b/js/ui/messageTray.js
+@@ -713,12 +713,25 @@
+             layout_manager: new Clutter.BinLayout(),
+         });
+ 
++        this._tgnomeActiveWatches = new Set();
++        this._tgnomePresenceCancellable = new Gio.Cancellable();
++        this.connect('destroy', () => {
++            this._tgnomeDestroyed = true;
++            this._tgnomePresenceCancellable.cancel();
++            if (this._tgnomePresenceStatusId)
++                this._presence.disconnectSignal(this._tgnomePresenceStatusId);
++            for (const id of this._tgnomeActiveWatches)
++                this.idleMonitor.remove_watch(id);
++            this._tgnomeActiveWatches.clear();
++        });
++
+         this._presence = new GnomeSession.Presence((proxy, _error) => {
+-            this._onStatusChanged(proxy.status);
+-        });
++            if (!this._tgnomeDestroyed)
++                this._onStatusChanged(proxy.status);
++        }, this._tgnomePresenceCancellable);
+         this._busy = false;
+         this._bannerBlocked = false;
+-        this._presence.connectSignal('StatusChanged', (proxy, senderName, [status]) => {
++        this._tgnomePresenceStatusId = this._presence.connectSignal('StatusChanged', (proxy, senderName, [status]) => {
+             this._onStatusChanged(status);
+         });
+ 
+@@ -776,7 +789,7 @@
+         global.display.connectObject('in-fullscreen-changed',
+             () => this._updateState(), this);
+ 
+-        Main.sessionMode.connect('updated', this._sessionUpdated.bind(this));
++        Main.sessionMode.connectObject('updated', this._sessionUpdated.bind(this), this);
+ 
+         Main.overview.connect('window-drag-begin',
+             this._onDragBegin.bind(this));
+@@ -866,10 +879,10 @@
+         // Register that we got a notification for this source
+         source.policy.store();
+ 
+-        source.policy.connect('notify::enable', () => {
++        source.policy.connectObject('notify::enable', () => {
+             this._onSourceEnableChanged(source.policy, source);
+-        });
+-        source.policy.connect('notify', this._updateState.bind(this));
++        }, this);
++        source.policy.connectObject('notify', this._updateState.bind(this), this);
+         this._onSourceEnableChanged(source.policy, source);
+     }
+ 
+@@ -1129,7 +1142,12 @@
+         if (!this._userActiveWhileNotificationShown) {
+             // If the user isn't active, set up a watch to let us know
+             // when the user becomes active.
+-            this.idleMonitor.add_user_active_watch(this._onIdleMonitorBecameActive.bind(this));
++            let watchId = 0;
++            watchId = this.idleMonitor.add_user_active_watch(() => {
++                this._tgnomeActiveWatches.delete(watchId);
++                this._onIdleMonitorBecameActive();
++            });
++            this._tgnomeActiveWatches.add(watchId);
+         }
+ 
+         this._banner = new MessageList.NotificationMessage(this._notification);

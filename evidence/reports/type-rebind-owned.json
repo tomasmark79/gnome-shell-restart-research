@@ -1,0 +1,50 @@
+{
+  "classification": "REATTACHED JS-REGISTERED GTYPE; NOT SHELL RESTART",
+  "passed": false,
+  "cases": [
+    {
+      "mode": "native",
+      "passed": false,
+      "privateProfileRemoved": true,
+      "exitCode": -6,
+      "timedOut": false,
+      "events": [
+        {
+          "generation": 1,
+          "contextsFinalized": 1,
+          "released": true,
+          "native": "0x55555572a970",
+          "gtype": 93824994589904,
+          "objectTypes": 94,
+          "bridges": 2,
+          "gapCalls": 1,
+          "nativeChildReaped": true
+        }
+      ],
+      "stdout": "{\"generation\":1,\"contextsFinalized\":1,\"released\":true,\"native\":\"0x55555572a970\",\"gtype\":93824994589904,\"objectTypes\":94,\"bridges\":2,\"gapCalls\":1,\"nativeChildReaped\":true}\nBail out! ERROR:/nix/store/4MZA2H117NA3D6ZC6BCLHQHP7PW988JJ-type-rebind-probe.cpp:113:int main(int, char**): assertion failed: (count == first_count && gjs_tgnome_rebind_bridge_count() == bridges)\n",
+      "stderr": "**\nERROR:/nix/store/4MZA2H117NA3D6ZC6BCLHQHP7PW988JJ-type-rebind-probe.cpp:113:int main(int, char**): assertion failed: (count == first_count && gjs_tgnome_rebind_bridge_count() == bridges)\n"
+    },
+    {
+      "mode": "valgrind",
+      "passed": false,
+      "privateProfileRemoved": true,
+      "exitCode": -6,
+      "timedOut": false,
+      "events": [
+        {
+          "generation": 1,
+          "contextsFinalized": 1,
+          "released": true,
+          "native": "0xcdbc040",
+          "gtype": 215632464,
+          "objectTypes": 94,
+          "bridges": 2,
+          "gapCalls": 1,
+          "nativeChildReaped": true
+        }
+      ],
+      "stdout": "{\"generation\":1,\"contextsFinalized\":1,\"released\":true,\"native\":\"0xcdbc040\",\"gtype\":215632464,\"objectTypes\":94,\"bridges\":2,\"gapCalls\":1,\"nativeChildReaped\":true}\nBail out! ERROR:/nix/store/4MZA2H117NA3D6ZC6BCLHQHP7PW988JJ-type-rebind-probe.cpp:113:int main(int, char**): assertion failed: (count == first_count && gjs_tgnome_rebind_bridge_count() == bridges)\n",
+      "stderr": "**\nERROR:/nix/store/4MZA2H117NA3D6ZC6BCLHQHP7PW988JJ-type-rebind-probe.cpp:113:int main(int, char**): assertion failed: (count == first_count && gjs_tgnome_rebind_bridge_count() == bridges)\n"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+/result*
+/__pycache__/
+/tests/__pycache__/
+/artifacts/
+__pycache__/
+*.pyc

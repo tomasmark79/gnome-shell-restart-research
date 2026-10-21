@@ -1,0 +1,20 @@
+name: Archive checks
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Evidence integrity
+        run: python3 tools/verify-evidence.py
+      - name: Safety and private supervisor tests
+        run: python3 -m unittest discover -s tests -p 'test_*.py'
+      - name: Python syntax
+        run: python3 -m compileall -q tgnome.py shell tests tools
+      - name: Patch whitespace
+        run: git show --format= --check HEAD

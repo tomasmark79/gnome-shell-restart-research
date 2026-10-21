@@ -1,0 +1,55 @@
+--- a/js/ui/panel.js
++++ b/js/ui/panel.js
+@@ -429,7 +429,7 @@
+ 
+ export const Panel = GObject.registerClass(
+ class Panel extends St.Widget {
+-    _init() {
++    _init(deferMount = false) {
+         super._init({
+             name: 'panel',
+             reactive: true,
+@@ -465,10 +465,12 @@
+             () => this.remove_style_pseudo_class('overview'),
+             this);
+ 
+-        Main.layoutManager.panelBox.add_child(this);
+-        Main.ctrlAltTabManager.addGroup(this,
+-            _('Top Bar'), 'shell-focus-top-bar-symbolic',
+-            {sortGroup: CtrlAltTab.SortGroup.TOP});
++        if (!deferMount) {
++            Main.layoutManager.panelBox.add_child(this);
++            Main.ctrlAltTabManager.addGroup(this,
++                _('Top Bar'), 'shell-focus-top-bar-symbolic',
++                {sortGroup: CtrlAltTab.SortGroup.TOP});
++        }
+ 
+         Main.sessionMode.connectObject('updated',
+             this._updatePanel.bind(this),
+@@ -477,7 +479,8 @@
+         global.display.connectObject('workareas-changed',
+             () => this.queue_relayout(),
+             this);
+-        this._updatePanel();
++        if (!deferMount)
++            this._updatePanel();
+     }
+ 
+     vfunc_get_preferred_width(_forHeight) {
+@@ -701,11 +704,11 @@
+ 
+         box.insert_child_at_index(container, position);
+         this.statusArea[role] = indicator;
+-        const destroyId = indicator.connect('destroy', emitter => {
+-            delete this.statusArea[role];
+-            emitter.disconnect(destroyId);
+-        });
+-        indicator.connect('menu-set', this._onMenuSet.bind(this));
++        indicator.disconnectObject(this);
++        indicator.connectObject(
++            'destroy', () => delete this.statusArea[role],
++            'menu-set', this._onMenuSet.bind(this),
++            this);
+         this._onMenuSet(indicator);
+     }
+ 

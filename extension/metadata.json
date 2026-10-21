@@ -1,0 +1,7 @@
+{
+  "uuid": "restart-island@tgnome.local",
+  "name": "Restartable UI Island Experiment",
+  "description": "Isolated lifecycle experiment; does not restart GNOME Shell",
+  "shell-version": ["50"],
+  "version": 1
+}

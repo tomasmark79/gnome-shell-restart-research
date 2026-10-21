@@ -1,0 +1,50 @@
+{
+  "classification": "RESEARCH PROTOTYPE",
+  "passed": false,
+  "trueRestartDemonstrated": false,
+  "wholeShellReloadDemonstrated": false,
+  "privateSystemBus": true,
+  "mockLogind": true,
+  "welcomeTourAlreadyShown": true,
+  "timeTrackingEnabled": true,
+  "error": "RuntimeError: Timed out: Error: GDBus.Error:org.gnome.gjs.JSError.ReferenceError: DateMenu is not defined",
+  "supervisor": {
+    "workerExitCode": 1,
+    "descendants": {
+      "terminated": [],
+      "killed": [],
+      "exitCodes": {
+        "3065414": -15,
+        "3065420": 1,
+        "3065521": 1,
+        "3065568": 1,
+        "3065574": 20,
+        "3065544": 0,
+        "3065534": 0,
+        "3065607": 0,
+        "3065523": -15,
+        "3065590": -15,
+        "3065636": -15,
+        "3065617": 0,
+        "3065655": -15,
+        "3065664": 0,
+        "3065666": -15,
+        "3065680": -15,
+        "3065686": -15,
+        "3065678": 0,
+        "3065696": -15,
+        "3065734": 1,
+        "3065592": 1,
+        "3065746": 1,
+        "3065755": 0,
+        "3065565": -15,
+        "3065502": 0,
+        "3065587": -9,
+        "3065563": 0,
+        "3065389": 0,
+        "3065583": 0
+      }
+    },
+    "privateProfileRemoved": true
+  }
+}

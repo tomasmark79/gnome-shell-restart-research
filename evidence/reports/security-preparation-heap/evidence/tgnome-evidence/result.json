@@ -1,0 +1,488 @@
+{
+  "classification": "RESEARCH PROTOTYPE",
+  "passed": false,
+  "authenticationFixtureOnly": false,
+  "trueRestartDemonstrated": false,
+  "desktopUiReloadDemonstrated": false,
+  "lockRace": "preparation",
+  "before": {
+    "pid": 987,
+    "locked": false,
+    "active": false,
+    "mode": "user",
+    "session": "1",
+    "starting": false
+  },
+  "sessionBefore": "Id=1\nUser=1000\nName=alice\nTimestamp=Wed 2026-10-21 00:45:23 UTC\nTimestampMonotonic=8439160\nVTNr=2\nSeat=seat0\nTTY=tty2\nRemote=no\nExtraDeviceAccess=render accel\nService=gdm-autologin\nScope=session-1.scope\nLeader=843\nLeaderPIDFDId=844\nAudit=1\nType=wayland\nClass=user\nActive=yes\nState=active\nIdleHint=no\nIdleSinceHint=0\nIdleSinceHintMonotonic=0\nCanIdle=yes\nCanLock=yes\nLockedHint=no\n",
+  "clientsBefore": {
+    "wayland": {
+      "pid": 1589,
+      "backend": "wayland",
+      "fd": 3,
+      "inode": 15779,
+      "windowId": 34,
+      "tick": 9,
+      "unsavedTextSha256": "a28cdd4a1a53ab1f55c5ace6f54bf1c64bc14932de1c1b1de13c08c4fee47a77",
+      "expectedTypedSha256": "9dbe0272f7b664cee2a555566105721f0e3cb6d11194ec2179a470609fc175e0"
+    },
+    "x11": {
+      "pid": 1686,
+      "backend": "x11",
+      "fd": 3,
+      "inode": 14739,
+      "windowId": 12582915,
+      "tick": 4,
+      "unsavedTextSha256": "1a48a27b37dd40ac43a92eb5681312d112d09b39291c7cbe4068091b07ac632e",
+      "expectedTypedSha256": "2e52fe4c4fa383d32b54758593ef4b03c23034ec6c494d0ac0a03fedad5ec24d"
+    }
+  },
+  "nativeBeforeReload": {
+    "attempts": 0,
+    "contextsFinalized": 0,
+    "state": "ready",
+    "registeredProbeTypes": 0,
+    "registeredObjectTypes": 980,
+    "newObjectTypes": [],
+    "uiFailures": 0,
+    "uiRetryAttempts": 0,
+    "uiCommits": 0,
+    "uiBuildSerial": 0,
+    "uiTimeouts": 0,
+    "uiQuarantined": false,
+    "uiQuarantines": 0,
+    "preparationFailures": 0,
+    "preparationTimeouts": 0,
+    "uiActive": false,
+    "securityVm": true,
+    "researchOnly": true
+  },
+  "reloadAccepted": "('{\"accepted\":true,\"classification\":\"SHELL RELOAD\",\"scope\":\"desktop UI reconstruction scheduled; compositor retained\",\"preparation\":{\"prepared\":true,\"releasedKeybindings\":15,\"forwardRecovered\":false,\"native\":{\"attempts\":1,\"contextsFinalized\":0,\"state\":\"scheduled\",\"registeredProbeTypes\":0,\"registeredObjectTypes\":980,\"newObjectTypes\":[],\"uiFailures\":0,\"uiRetryAttempts\":0,\"uiCommits\":0,\"uiBuildSerial\":0,\"uiTimeouts\":0,\"uiQuarantined\":false,\"uiQuarantines\":0,\"preparationFailures\":0,\"preparationTimeouts\":0,\"uiActive\":true,\"securityVm\":true,\"researchOnly\":true}},\"native\":{\"attempts\":1,\"contextsFinalized\":0,\"state\":\"scheduled\",\"registeredProbeTypes\":0,\"registeredObjectTypes\":980,\"newObjectTypes\":[],\"uiFailures\":0,\"uiRetryAttempts\":0,\"uiCommits\":0,\"uiBuildSerial\":0,\"uiTimeouts\":0,\"uiQuarantined\":false,\"uiQuarantines\":0,\"preparationFailures\":0,\"preparationTimeouts\":0,\"uiActive\":true,\"securityVm\":true,\"researchOnly\":true}}',)\n",
+  "nativeAfterReload": {
+    "attempts": 1,
+    "contextsFinalized": 0,
+    "state": "ui-ready",
+    "registeredProbeTypes": 0,
+    "registeredObjectTypes": 981,
+    "newObjectTypes": [
+      "GVfsMetadataProxy"
+    ],
+    "uiFailures": 0,
+    "uiRetryAttempts": 0,
+    "uiCommits": 1,
+    "uiBuildSerial": 1,
+    "uiTimeouts": 0,
+    "uiQuarantined": false,
+    "uiQuarantines": 0,
+    "preparationFailures": 0,
+    "preparationTimeouts": 0,
+    "uiActive": false,
+    "securityVm": true,
+    "researchOnly": true
+  },
+  "clientsAfterReload": {
+    "wayland": {
+      "pid": 1589,
+      "backend": "wayland",
+      "fd": 3,
+      "inode": 15779,
+      "windowId": 34,
+      "tick": 18,
+      "unsavedTextSha256": "a28cdd4a1a53ab1f55c5ace6f54bf1c64bc14932de1c1b1de13c08c4fee47a77",
+      "expectedTypedSha256": "9dbe0272f7b664cee2a555566105721f0e3cb6d11194ec2179a470609fc175e0"
+    },
+    "x11": {
+      "pid": 1686,
+      "backend": "x11",
+      "fd": 3,
+      "inode": 14739,
+      "windowId": 12582915,
+      "tick": 14,
+      "unsavedTextSha256": "1a48a27b37dd40ac43a92eb5681312d112d09b39291c7cbe4068091b07ac632e",
+      "expectedTypedSha256": "2e52fe4c4fa383d32b54758593ef4b03c23034ec6c494d0ac0a03fedad5ec24d"
+    }
+  },
+  "lockRacePreparing": {
+    "attempts": 2,
+    "contextsFinalized": 0,
+    "state": "ui-preparing",
+    "registeredProbeTypes": 0,
+    "registeredObjectTypes": 981,
+    "newObjectTypes": [
+      "GVfsMetadataProxy"
+    ],
+    "uiFailures": 0,
+    "uiRetryAttempts": 0,
+    "uiCommits": 1,
+    "uiBuildSerial": 1,
+    "uiTimeouts": 0,
+    "uiQuarantined": false,
+    "uiQuarantines": 0,
+    "preparationFailures": 0,
+    "preparationTimeouts": 0,
+    "uiActive": true,
+    "securityVm": true,
+    "researchOnly": true
+  },
+  "clientsWhileLocked": {
+    "wayland": {
+      "pid": 1589,
+      "backend": "wayland",
+      "fd": 3,
+      "inode": 15779,
+      "windowId": 34,
+      "tick": 22,
+      "unsavedTextSha256": "a28cdd4a1a53ab1f55c5ace6f54bf1c64bc14932de1c1b1de13c08c4fee47a77",
+      "expectedTypedSha256": "9dbe0272f7b664cee2a555566105721f0e3cb6d11194ec2179a470609fc175e0"
+    },
+    "x11": {
+      "pid": 1686,
+      "backend": "x11",
+      "fd": 3,
+      "inode": 14739,
+      "windowId": 12582915,
+      "tick": 17,
+      "unsavedTextSha256": "1a48a27b37dd40ac43a92eb5681312d112d09b39291c7cbe4068091b07ac632e",
+      "expectedTypedSha256": "2e52fe4c4fa383d32b54758593ef4b03c23034ec6c494d0ac0a03fedad5ec24d"
+    }
+  },
+  "lockRaceCancelled": {
+    "attempts": 2,
+    "contextsFinalized": 0,
+    "state": "ui-preparation-failed",
+    "registeredProbeTypes": 0,
+    "registeredObjectTypes": 987,
+    "newObjectTypes": [
+      "GMemoryOutputStream",
+      "GVfsMetadataProxy",
+      "MetaSelectionSourceMemory",
+      "MetaUnixInputStream",
+      "MetaX11SelectionOutputStream",
+      "ShellBlurEffect",
+      "ShellStack"
+    ],
+    "uiFailures": 0,
+    "uiRetryAttempts": 0,
+    "uiCommits": 1,
+    "uiBuildSerial": 1,
+    "uiTimeouts": 0,
+    "uiQuarantined": false,
+    "uiQuarantines": 0,
+    "preparationFailures": 1,
+    "preparationTimeouts": 0,
+    "uiActive": false,
+    "securityVm": true,
+    "researchOnly": true
+  },
+  "lockRaceError": "Error: GDBus.Error:org.gnome.Shell.Tgnome.ReloadFailed: Error: UI changed before preparation commit\n",
+  "lockedReloadRefusal": {
+    "public": "Error: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: Object does not exist at path \u201c/org/gnome/Shell/Extensions/Tgnome\u201d\n",
+    "native": "Error: GDBus.Error:org.gtk.GDBus.UnmappedGError.Quark._g_2dio_2derror_2dquark.Code0: UI is not prepared; request was not admitted\n"
+  },
+  "afterWrongPassword": {
+    "pid": 987,
+    "locked": true,
+    "active": true,
+    "mode": "unlock-dialog",
+    "session": "1",
+    "starting": false
+  },
+  "after": {
+    "pid": 987,
+    "locked": false,
+    "active": false,
+    "mode": "user",
+    "session": "1",
+    "starting": false
+  },
+  "clientsAfter": {
+    "wayland": {
+      "pid": 1589,
+      "backend": "wayland",
+      "fd": 3,
+      "inode": 15779,
+      "windowId": 34,
+      "tick": 72,
+      "unsavedTextSha256": "a28cdd4a1a53ab1f55c5ace6f54bf1c64bc14932de1c1b1de13c08c4fee47a77",
+      "expectedTypedSha256": "9dbe0272f7b664cee2a555566105721f0e3cb6d11194ec2179a470609fc175e0"
+    },
+    "x11": {
+      "pid": 1686,
+      "backend": "x11",
+      "fd": 3,
+      "inode": 14739,
+      "windowId": 12582915,
+      "tick": 68,
+      "unsavedTextSha256": "1a48a27b37dd40ac43a92eb5681312d112d09b39291c7cbe4068091b07ac632e",
+      "expectedTypedSha256": "2e52fe4c4fa383d32b54758593ef4b03c23034ec6c494d0ac0a03fedad5ec24d"
+    }
+  },
+  "retryAfterUnlockAccepted": "('{\"accepted\":true,\"classification\":\"SHELL RELOAD\",\"scope\":\"desktop UI reconstruction scheduled; compositor retained\",\"preparation\":{\"prepared\":true,\"releasedKeybindings\":15,\"forwardRecovered\":false,\"native\":{\"attempts\":3,\"contextsFinalized\":0,\"state\":\"scheduled\",\"registeredProbeTypes\":0,\"registeredObjectTypes\":993,\"newObjectTypes\":[\"ClutterTimeline\",\"CoglPixelBuffer\",\"CoglPrimitive\",\"GMemoryOutputStream\",\"GVfsMetadataProxy\",\"GdmManagerProxy\",\"GdmUserVerifierChoiceListProxy\",\"MetaSelectionSourceMemory\",\"MetaUnixInputStream\",\"MetaX11SelectionOutputStream\",\"ShellBlurEffect\",\"ShellStack\",\"StSpinnerContent\"],\"uiFailures\":0,\"uiRetryAttempts\":0,\"uiCommits\":1,\"uiBuildSerial\":1,\"uiTimeouts\":0,\"uiQuarantined\":false,\"uiQuarantines\":0,\"preparationFailures\":1,\"preparationTimeouts\":0,\"uiActive\":true,\"securityVm\":true,\"researchOnly\":true}},\"native\":{\"attempts\":3,\"contextsFinalized\":0,\"state\":\"scheduled\",\"registeredProbeTypes\":0,\"registeredObjectTypes\":993,\"newObjectTypes\":[\"ClutterTimeline\",\"CoglPixelBuffer\",\"CoglPrimitive\",\"GMemoryOutputStream\",\"GVfsMetadataProxy\",\"GdmManagerProxy\",\"GdmUserVerifierChoiceListProxy\",\"MetaSelectionSourceMemory\",\"MetaUnixInputStream\",\"MetaX11SelectionOutputStream\",\"ShellBlurEffect\",\"ShellStack\",\"StSpinnerContent\"],\"uiFailures\":0,\"uiRetryAttempts\":0,\"uiCommits\":1,\"uiBuildSerial\":1,\"uiTimeouts\":0,\"uiQuarantined\":false,\"uiQuarantines\":0,\"preparationFailures\":1,\"preparationTimeouts\":0,\"uiActive\":true,\"securityVm\":true,\"researchOnly\":true}}',)\n",
+  "nativeAfterExplicitRetry": {
+    "attempts": 3,
+    "contextsFinalized": 0,
+    "state": "ui-ready",
+    "registeredProbeTypes": 0,
+    "registeredObjectTypes": 993,
+    "newObjectTypes": [
+      "ClutterTimeline",
+      "CoglPixelBuffer",
+      "CoglPrimitive",
+      "GMemoryOutputStream",
+      "GVfsMetadataProxy",
+      "GdmManagerProxy",
+      "GdmUserVerifierChoiceListProxy",
+      "MetaSelectionSourceMemory",
+      "MetaUnixInputStream",
+      "MetaX11SelectionOutputStream",
+      "ShellBlurEffect",
+      "ShellStack",
+      "StSpinnerContent"
+    ],
+    "uiFailures": 0,
+    "uiRetryAttempts": 0,
+    "uiCommits": 2,
+    "uiBuildSerial": 2,
+    "uiTimeouts": 0,
+    "uiQuarantined": false,
+    "uiQuarantines": 0,
+    "preparationFailures": 1,
+    "preparationTimeouts": 0,
+    "uiActive": false,
+    "securityVm": true,
+    "researchOnly": true
+  },
+  "clientsAfterExplicitRetry": {
+    "wayland": {
+      "pid": 1589,
+      "backend": "wayland",
+      "fd": 3,
+      "inode": 15779,
+      "windowId": 34,
+      "tick": 77,
+      "unsavedTextSha256": "a28cdd4a1a53ab1f55c5ace6f54bf1c64bc14932de1c1b1de13c08c4fee47a77",
+      "expectedTypedSha256": "9dbe0272f7b664cee2a555566105721f0e3cb6d11194ec2179a470609fc175e0"
+    },
+    "x11": {
+      "pid": 1686,
+      "backend": "x11",
+      "fd": 3,
+      "inode": 14739,
+      "windowId": 12582915,
+      "tick": 72,
+      "unsavedTextSha256": "1a48a27b37dd40ac43a92eb5681312d112d09b39291c7cbe4068091b07ac632e",
+      "expectedTypedSha256": "2e52fe4c4fa383d32b54758593ef4b03c23034ec6c494d0ac0a03fedad5ec24d"
+    }
+  },
+  "retiredUi": [
+    {
+      "generation": 0,
+      "name": "unreferenced-control",
+      "collected": true,
+      "destroyed": null,
+      "expectedCollected": true
+    },
+    {
+      "generation": 0,
+      "name": "retained-backend-control",
+      "collected": false,
+      "destroyed": null,
+      "expectedCollected": false
+    },
+    {
+      "generation": 0,
+      "name": "panel",
+      "collected": true,
+      "destroyed": true,
+      "expectedCollected": true
+    },
+    {
+      "generation": 0,
+      "name": "layoutManager",
+      "collected": true,
+      "destroyed": null,
+      "expectedCollected": true
+    },
+    {
+      "generation": 0,
+      "name": "overview",
+      "collected": true,
+      "destroyed": null,
+      "expectedCollected": true
+    },
+    {
+      "generation": 0,
+      "name": "extensionManager",
+      "collected": true,
+      "destroyed": null,
+      "expectedCollected": true
+    },
+    {
+      "generation": 0,
+      "name": "inputMethod",
+      "collected": true,
+      "destroyed": null,
+      "expectedCollected": true
+    },
+    {
+      "generation": 0,
+      "name": "keyboard",
+      "collected": true,
+      "destroyed": null,
+      "expectedCollected": true
+    },
+    {
+      "generation": 0,
+      "name": "xdndHandler",
+      "collected": true,
+      "destroyed": null,
+      "expectedCollected": true
+    },
+    {
+      "generation": 0,
+      "name": "screenshotUI",
+      "collected": true,
+      "destroyed": true,
+      "expectedCollected": true
+    },
+    {
+      "generation": 0,
+      "name": "messageTray",
+      "collected": true,
+      "destroyed": true,
+      "expectedCollected": true
+    },
+    {
+      "generation": 0,
+      "name": "timeLimitsDispatcher",
+      "collected": true,
+      "destroyed": null,
+      "expectedCollected": true
+    },
+    {
+      "generation": 0,
+      "name": "screenShield",
+      "collected": true,
+      "destroyed": null,
+      "expectedCollected": true
+    },
+    {
+      "generation": 0,
+      "name": "screencastAreaIndicator",
+      "collected": true,
+      "destroyed": true,
+      "expectedCollected": true
+    },
+    {
+      "generation": 0,
+      "name": "quickSettings",
+      "collected": true,
+      "destroyed": true,
+      "expectedCollected": true
+    },
+    {
+      "generation": 1,
+      "name": "unreferenced-control",
+      "collected": true,
+      "destroyed": null,
+      "expectedCollected": true
+    },
+    {
+      "generation": 1,
+      "name": "retained-backend-control",
+      "collected": false,
+      "destroyed": null,
+      "expectedCollected": false
+    },
+    {
+      "generation": 1,
+      "name": "panel",
+      "collected": true,
+      "destroyed": true,
+      "expectedCollected": true
+    },
+    {
+      "generation": 1,
+      "name": "layoutManager",
+      "collected": false,
+      "destroyed": null,
+      "expectedCollected": true
+    },
+    {
+      "generation": 1,
+      "name": "overview",
+      "collected": true,
+      "destroyed": null,
+      "expectedCollected": true
+    },
+    {
+      "generation": 1,
+      "name": "extensionManager",
+      "collected": true,
+      "destroyed": null,
+      "expectedCollected": true
+    },
+    {
+      "generation": 1,
+      "name": "inputMethod",
+      "collected": true,
+      "destroyed": null,
+      "expectedCollected": true
+    },
+    {
+      "generation": 1,
+      "name": "keyboard",
+      "collected": true,
+      "destroyed": null,
+      "expectedCollected": true
+    },
+    {
+      "generation": 1,
+      "name": "xdndHandler",
+      "collected": true,
+      "destroyed": null,
+      "expectedCollected": true
+    },
+    {
+      "generation": 1,
+      "name": "screenshotUI",
+      "collected": false,
+      "destroyed": true,
+      "expectedCollected": true
+    },
+    {
+      "generation": 1,
+      "name": "messageTray",
+      "collected": false,
+      "destroyed": true,
+      "expectedCollected": true
+    },
+    {
+      "generation": 1,
+      "name": "timeLimitsDispatcher",
+      "collected": true,
+      "destroyed": null,
+      "expectedCollected": true
+    },
+    {
+      "generation": 1,
+      "name": "screenShield",
+      "collected": true,
+      "destroyed": null,
+      "expectedCollected": true
+    },
+    {
+      "generation": 1,
+      "name": "screencastAreaIndicator",
+      "collected": true,
+      "destroyed": true,
+      "expectedCollected": true
+    },
+    {
+      "generation": 1,
+      "name": "quickSettings",
+      "collected": true,
+      "destroyed": true,
+      "expectedCollected": true
+    }
+  ]
+}

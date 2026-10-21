@@ -1,0 +1,2161 @@
+{
+  "classification": "COMPLETE CONTEXT REPLACEMENT EXPERIMENT",
+  "passed": false,
+  "wholeShellReloadDemonstrated": false,
+  "privateSystemBus": true,
+  "mockLogind": true,
+  "welcomeTourAlreadyShown": true,
+  "shellBefore": {
+    "classification": "RESEARCH PROTOTYPE",
+    "scope": "extension-owned panel indicator only",
+    "pid": 3425990,
+    "runtimeEpoch": "9040d4f1-033c-4743-93ba-99a2e73e1c13",
+    "backendScopeDepth": null,
+    "nativeBackendScopeDepth": null,
+    "protectedBackendFixture": null,
+    "uiGeneration": 0,
+    "uiReloadState": null,
+    "uiFailures": [],
+    "uiBuildSerial": 0,
+    "lateUiOutcomes": [],
+    "cleanupWait": null,
+    "preparationFailures": [],
+    "latePreparationCompletions": 0,
+    "timeLimits": {
+      "nativeAddress": "0x555557b19890",
+      "retained": false,
+      "shutdownCalls": null,
+      "state": 1,
+      "transitions": [
+        {
+          "oldState": 0,
+          "newState": 1,
+          "wallTimeSecs": 1792566459
+        }
+      ],
+      "loginUserReady": true,
+      "clockSourceActive": true
+    },
+    "retiredUi": null,
+    "uiRegistrations": null,
+    "lastReleasedRegistrations": null,
+    "windowManagerPreserved": true,
+    "stageActions": [
+      "OSK show bottom drag",
+      "Overview swipe tracker",
+      "Window unfullscreen top drag",
+      "WorkspaceAnimation swipe tracker",
+      "reset-search"
+    ],
+    "stageChildren": [
+      ":SystemBackground",
+      ":UIAreaIndicator",
+      "uiGroup:UiActor"
+    ],
+    "windowGroupAttached": true,
+    "generation": 0,
+    "failures": 0,
+    "active": true,
+    "busy": false,
+    "actorsCreated": 1,
+    "actorsDestroyed": 0,
+    "liveOwnedActors": 1,
+    "panelEntryMatches": true,
+    "themeReloads": 0,
+    "shellState": {
+      "overview": true,
+      "modalCount": 0,
+      "startingUp": true,
+      "mode": "user"
+    },
+    "panel": {
+      "supported": true,
+      "realms": null,
+      "dateMenuRealms": null,
+      "transfer": {
+        "pending": false,
+        "retired": []
+      },
+      "lifecycle": {
+        "generation": 0,
+        "destroyed": 0,
+        "scope": "panel actor/layout/gestures/menu manager; indicator instances survive"
+      },
+      "replaced": false,
+      "containerCount": 1,
+      "focusGroupCount": 1,
+      "totalFocusGroups": 6,
+      "menuCount": 7,
+      "retainedIndicators": true
+    },
+    "desktop": {
+      "windows": [],
+      "focus": null,
+      "monitors": [
+        [
+          0,
+          0,
+          1280,
+          720
+        ]
+      ],
+      "workspace": 0
+    },
+    "shellRestartSupported": false,
+    "extensionCodeReloadSupported": false,
+    "desktopUiReloadSupported": false
+  },
+  "busOwner": ":1.11",
+  "privateDebugger": 3426308,
+  "desktopBefore": {
+    "windows": [
+      {
+        "id": 1,
+        "title": "Tgnome persistent connection probe",
+        "workspace": 0,
+        "frame": [
+          473,
+          328,
+          334,
+          96
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Tgnome persistent connection probe",
+        "workspace": 0,
+        "frame": [
+          551,
+          329,
+          178,
+          94
+        ]
+      }
+    ],
+    "focus": 2,
+    "monitors": [
+      [
+        0,
+        0,
+        1280,
+        720
+      ]
+    ],
+    "workspace": 0
+  },
+  "xwaylandBefore": [
+    {
+      "pid": 3426346,
+      "exe": "/nix/store/8irpj5qxxxjnr98lh3dcx83xa26qf44p-xwayland-24.1.14/bin/Xwayland",
+      "startTime": "17735011"
+    }
+  ],
+  "shellExecutable": "/nix/store/mpsw5568mhr6jihacfnkxir04hb9ira7-gnome-shell-50.5/bin/.gnome-shell-wrapped",
+  "panelMenusAfterRollback": {
+    "menusChecked": [
+      "dateMenu",
+      "quickSettings"
+    ],
+    "modalCount": 0
+  },
+  "panelReload": {
+    "supported": true,
+    "realms": null,
+    "dateMenuRealms": null,
+    "transfer": {
+      "pending": false,
+      "retired": [
+        {
+          "phase": "adopting",
+          "entries": 9,
+          "adoptedBeforeRecovery": 1,
+          "recovered": true,
+          "oldPanelRestored": true,
+          "destroyed": true,
+          "collected": false,
+          "interrupted": false
+        }
+      ]
+    },
+    "lifecycle": {
+      "generation": 10,
+      "destroyed": 10,
+      "scope": "panel actor/layout/gestures/menu manager; indicator instances survive"
+    },
+    "replaced": true,
+    "containerCount": 1,
+    "focusGroupCount": 1,
+    "totalFocusGroups": 6,
+    "menuCount": 7,
+    "retainedIndicators": true
+  },
+  "reloadAfter": {
+    "classification": "SHELL RELOAD",
+    "scope": "panel actor reinitialized; indicator instances, GJS and compositor retained",
+    "pid": 3425990,
+    "runtimeEpoch": "9040d4f1-033c-4743-93ba-99a2e73e1c13",
+    "backendScopeDepth": null,
+    "nativeBackendScopeDepth": null,
+    "protectedBackendFixture": null,
+    "uiGeneration": 0,
+    "uiReloadState": null,
+    "uiFailures": [],
+    "uiBuildSerial": 0,
+    "lateUiOutcomes": [],
+    "cleanupWait": null,
+    "preparationFailures": [],
+    "latePreparationCompletions": 0,
+    "timeLimits": {
+      "nativeAddress": "0x555557b19890",
+      "retained": false,
+      "shutdownCalls": null,
+      "state": 1,
+      "transitions": [
+        {
+          "oldState": 0,
+          "newState": 1,
+          "wallTimeSecs": 1792566459
+        }
+      ],
+      "loginUserReady": true,
+      "clockSourceActive": true
+    },
+    "retiredUi": null,
+    "uiRegistrations": null,
+    "lastReleasedRegistrations": null,
+    "windowManagerPreserved": true,
+    "stageActions": [
+      "OSK show bottom drag",
+      "Overview swipe tracker",
+      "Window unfullscreen top drag",
+      "WorkspaceAnimation swipe tracker"
+    ],
+    "stageChildren": [
+      ":UIAreaIndicator",
+      "uiGroup:UiActor"
+    ],
+    "windowGroupAttached": true,
+    "generation": 21,
+    "failures": 1,
+    "active": true,
+    "busy": false,
+    "actorsCreated": 23,
+    "actorsDestroyed": 22,
+    "liveOwnedActors": 1,
+    "panelEntryMatches": true,
+    "themeReloads": 1,
+    "shellState": {
+      "overview": false,
+      "modalCount": 0,
+      "startingUp": false,
+      "mode": "user"
+    },
+    "panel": {
+      "supported": true,
+      "realms": null,
+      "dateMenuRealms": null,
+      "transfer": {
+        "pending": false,
+        "retired": [
+          {
+            "phase": "adopting",
+            "entries": 9,
+            "adoptedBeforeRecovery": 1,
+            "recovered": true,
+            "oldPanelRestored": true,
+            "destroyed": true,
+            "collected": false,
+            "interrupted": false
+          }
+        ]
+      },
+      "lifecycle": {
+        "generation": 10,
+        "destroyed": 10,
+        "scope": "panel actor/layout/gestures/menu manager; indicator instances survive"
+      },
+      "replaced": true,
+      "containerCount": 1,
+      "focusGroupCount": 1,
+      "totalFocusGroups": 6,
+      "menuCount": 7,
+      "retainedIndicators": false
+    },
+    "desktop": {
+      "windows": [
+        {
+          "id": 1,
+          "title": "Tgnome persistent connection probe",
+          "workspace": 0,
+          "frame": [
+            473,
+            328,
+            334,
+            96
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Tgnome persistent connection probe",
+          "workspace": 0,
+          "frame": [
+            551,
+            329,
+            178,
+            94
+          ]
+        }
+      ],
+      "focus": 2,
+      "monitors": [
+        [
+          0,
+          0,
+          1280,
+          720
+        ]
+      ],
+      "workspace": 0
+    },
+    "shellRestartSupported": false,
+    "extensionCodeReloadSupported": false,
+    "desktopUiReloadSupported": false
+  },
+  "extensionStateTransitions": [
+    {
+      "method": "DisableExtension",
+      "before": {
+        "state": 1,
+        "enabled": true
+      },
+      "after": {
+        "state": 2,
+        "enabled": false
+      }
+    },
+    {
+      "method": "EnableExtension",
+      "before": {
+        "state": 2,
+        "enabled": false
+      },
+      "after": {
+        "state": 1,
+        "enabled": true
+      }
+    },
+    {
+      "method": "DisableExtension",
+      "before": {
+        "state": 1,
+        "enabled": true
+      },
+      "after": {
+        "state": 2,
+        "enabled": false
+      }
+    },
+    {
+      "method": "EnableExtension",
+      "before": {
+        "state": 2,
+        "enabled": false
+      },
+      "after": {
+        "state": 1,
+        "enabled": true
+      }
+    },
+    {
+      "method": "DisableExtension",
+      "before": {
+        "state": 1,
+        "enabled": true
+      },
+      "after": {
+        "state": 2,
+        "enabled": false
+      }
+    },
+    {
+      "method": "EnableExtension",
+      "before": {
+        "state": 2,
+        "enabled": false
+      },
+      "after": {
+        "state": 1,
+        "enabled": true
+      }
+    }
+  ],
+  "extensionLifecycleCycles": 3,
+  "wayland": {
+    "before": {
+      "pid": 3426328,
+      "backend": "wayland",
+      "fd": 3,
+      "inode": 9021037,
+      "windowId": 10,
+      "tick": 3,
+      "unsavedTextSha256": "dbc45630efcfbdd4c921892999f6a08c1c64a34a8d5bac8e795d4f01357e46d7",
+      "expectedTypedSha256": "474cedef1f33ebf0b37877374b9e577731123b2d7a7ae977a769e24496aa5817"
+    },
+    "after": {
+      "pid": 3426328,
+      "backend": "wayland",
+      "fd": 3,
+      "inode": 9021037,
+      "windowId": 10,
+      "tick": 24,
+      "unsavedTextSha256": "dbc45630efcfbdd4c921892999f6a08c1c64a34a8d5bac8e795d4f01357e46d7",
+      "expectedTypedSha256": "474cedef1f33ebf0b37877374b9e577731123b2d7a7ae977a769e24496aa5817"
+    },
+    "originalConnectionRoundTrips": true
+  },
+  "x11": {
+    "before": {
+      "pid": 3426343,
+      "backend": "x11",
+      "fd": 3,
+      "inode": 9030044,
+      "windowId": 2097156,
+      "tick": 1,
+      "unsavedTextSha256": "f5c3182d1ca37ae39d4b13d587068d50843263e756338f98febb2f6b98686d55",
+      "expectedTypedSha256": "cd96703f6f9cb5f85f1d051de12cebdb0932ee147fcdf5fc8ec3af5acf874f23"
+    },
+    "after": {
+      "pid": 3426343,
+      "backend": "x11",
+      "fd": 3,
+      "inode": 9030044,
+      "windowId": 2097156,
+      "tick": 22,
+      "unsavedTextSha256": "f5c3182d1ca37ae39d4b13d587068d50843263e756338f98febb2f6b98686d55",
+      "expectedTypedSha256": "cd96703f6f9cb5f85f1d051de12cebdb0932ee147fcdf5fc8ec3af5acf874f23"
+    },
+    "originalConnectionRoundTrips": true
+  },
+  "shellAfter": {
+    "classification": "SHELL RELOAD",
+    "scope": "panel actor reinitialized; indicator instances, GJS and compositor retained",
+    "pid": 3425990,
+    "runtimeEpoch": "9040d4f1-033c-4743-93ba-99a2e73e1c13",
+    "backendScopeDepth": null,
+    "nativeBackendScopeDepth": null,
+    "protectedBackendFixture": null,
+    "uiGeneration": 0,
+    "uiReloadState": null,
+    "uiFailures": [],
+    "uiBuildSerial": 0,
+    "lateUiOutcomes": [],
+    "cleanupWait": null,
+    "preparationFailures": [],
+    "latePreparationCompletions": 0,
+    "timeLimits": {
+      "nativeAddress": "0x555557b19890",
+      "retained": false,
+      "shutdownCalls": null,
+      "state": 1,
+      "transitions": [
+        {
+          "oldState": 0,
+          "newState": 1,
+          "wallTimeSecs": 1792566459
+        }
+      ],
+      "loginUserReady": true,
+      "clockSourceActive": true
+    },
+    "retiredUi": null,
+    "uiRegistrations": null,
+    "lastReleasedRegistrations": null,
+    "windowManagerPreserved": true,
+    "stageActions": [
+      "OSK show bottom drag",
+      "Overview swipe tracker",
+      "Window unfullscreen top drag",
+      "WorkspaceAnimation swipe tracker"
+    ],
+    "stageChildren": [
+      ":UIAreaIndicator",
+      "uiGroup:UiActor"
+    ],
+    "windowGroupAttached": true,
+    "generation": 0,
+    "failures": 0,
+    "active": true,
+    "busy": false,
+    "actorsCreated": 26,
+    "actorsDestroyed": 25,
+    "liveOwnedActors": 1,
+    "panelEntryMatches": true,
+    "themeReloads": 0,
+    "shellState": {
+      "overview": false,
+      "modalCount": 0,
+      "startingUp": false,
+      "mode": "user"
+    },
+    "panel": {
+      "supported": true,
+      "realms": null,
+      "dateMenuRealms": null,
+      "transfer": {
+        "pending": false,
+        "retired": [
+          {
+            "phase": "adopting",
+            "entries": 9,
+            "adoptedBeforeRecovery": 1,
+            "recovered": true,
+            "oldPanelRestored": true,
+            "destroyed": true,
+            "collected": false,
+            "interrupted": false
+          }
+        ]
+      },
+      "lifecycle": {
+        "generation": 10,
+        "destroyed": 10,
+        "scope": "panel actor/layout/gestures/menu manager; indicator instances survive"
+      },
+      "replaced": false,
+      "containerCount": 1,
+      "focusGroupCount": 1,
+      "totalFocusGroups": 6,
+      "menuCount": 7,
+      "retainedIndicators": true
+    },
+    "desktop": {
+      "windows": [
+        {
+          "id": 1,
+          "title": "Tgnome persistent connection probe",
+          "workspace": 0,
+          "frame": [
+            473,
+            328,
+            334,
+            96
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Tgnome persistent connection probe",
+          "workspace": 0,
+          "frame": [
+            551,
+            329,
+            178,
+            94
+          ]
+        }
+      ],
+      "focus": 2,
+      "monitors": [
+        [
+          0,
+          0,
+          1280,
+          720
+        ]
+      ],
+      "workspace": 0
+    },
+    "shellRestartSupported": false,
+    "extensionCodeReloadSupported": false,
+    "desktopUiReloadSupported": false
+  },
+  "xwaylandAfter": [
+    {
+      "pid": 3426346,
+      "exe": "/nix/store/8irpj5qxxxjnr98lh3dcx83xa26qf44p-xwayland-24.1.14/bin/Xwayland",
+      "startTime": "17735011"
+    }
+  ],
+  "xwaylandTested": true,
+  "reloadScope": "entire Shell GJS context and module graph; original Mutter process retained",
+  "nativeLoop": {
+    "callbacks": {
+      "latestEpoch": 1,
+      "epochs": {
+        "1": {
+          "AsyncReadyCallback": 117,
+          "BindingTransformFunc": 34,
+          "Callback": 1,
+          "EventListenerCB": 1,
+          "IdleMonitorWatchFunc": 1,
+          "KeyHandlerFunc": 85,
+          "SourceFunc": 5,
+          "allocate": 36,
+          "build_pipeline": 3,
+          "button_press_event": 1,
+          "button_release_event": 1,
+          "captured_event": 6,
+          "child_added": 1,
+          "child_removed": 1,
+          "clicked": 15,
+          "enter_event": 1,
+          "event": 1,
+          "filter_key_event": 1,
+          "focus": 1,
+          "focus_in": 1,
+          "focus_out": 1,
+          "get_child_meta_type": 1,
+          "get_focus_chain": 3,
+          "get_preferred_height": 26,
+          "get_preferred_size": 1,
+          "get_preferred_width": 26,
+          "has_overlaps": 1,
+          "hide": 6,
+          "key_focus_in": 5,
+          "key_focus_out": 4,
+          "key_press_event": 16,
+          "key_release_event": 5,
+          "leave_event": 3,
+          "map": 9,
+          "motion_event": 3,
+          "navigate_focus": 2,
+          "paint": 2,
+          "paint_content": 1,
+          "paint_node": 1,
+          "paint_target": 1,
+          "pick": 1,
+          "repaint": 4,
+          "reset": 1,
+          "scroll_event": 5,
+          "set_actor": 2,
+          "set_adjustments": 1,
+          "set_container": 7,
+          "set_cursor_location": 1,
+          "set_surrounding": 1,
+          "show": 2,
+          "style_changed": 7,
+          "touch_event": 1,
+          "unmap": 7,
+          "update_allocation": 1,
+          "update_content_hints": 1,
+          "update_content_purpose": 1
+        }
+      }
+    },
+    "vfuncBridges": 229,
+    "pid": 3425990,
+    "publishedUiGeneration": 0,
+    "attempts": 0,
+    "contextsFinalized": 0,
+    "state": "ready",
+    "registeredProbeTypes": 0,
+    "registeredObjectTypes": 985,
+    "newObjectTypes": [],
+    "uiFailures": 0,
+    "uiRetryAttempts": 0,
+    "uiCommits": 0,
+    "uiBuildSerial": 0,
+    "uiTimeouts": 0,
+    "uiQuarantined": false,
+    "uiQuarantines": 0,
+    "preparationFailures": 0,
+    "preparationTimeouts": 0,
+    "uiActive": false,
+    "securityVm": false,
+    "securityBoundaryBits": 0,
+    "researchOnly": true
+  },
+  "fullContextRecovery": {
+    "cycles": [
+      {
+        "number": 1,
+        "beforeEpoch": "9040d4f1-033c-4743-93ba-99a2e73e1c13",
+        "command": {
+          "classification": "COMPLETE SHELL CONTEXT REPLACEMENT",
+          "wholeShellRestarted": true,
+          "compositorPreserved": true,
+          "pid": 3425990,
+          "beforeEpoch": "9040d4f1-033c-4743-93ba-99a2e73e1c13",
+          "afterEpoch": "be26ac97-1e90-4295-b6b4-ff4806994f86",
+          "preparation": {
+            "prepared": true,
+            "releasedKeybindings": 37,
+            "forwardRecovered": false
+          },
+          "requested": {
+            "callbacks": {
+              "latestEpoch": 1,
+              "epochs": {
+                "1": {
+                  "AsyncReadyCallback": 119,
+                  "BindingTransformFunc": 34,
+                  "Callback": 1,
+                  "EventListenerCB": 1,
+                  "KeyHandlerFunc": 48,
+                  "SourceFunc": 5,
+                  "allocate": 36,
+                  "build_pipeline": 3,
+                  "button_press_event": 1,
+                  "button_release_event": 1,
+                  "captured_event": 6,
+                  "child_added": 1,
+                  "child_removed": 1,
+                  "clicked": 15,
+                  "enter_event": 1,
+                  "event": 1,
+                  "filter_key_event": 1,
+                  "focus": 1,
+                  "focus_in": 1,
+                  "focus_out": 1,
+                  "get_child_meta_type": 1,
+                  "get_focus_chain": 3,
+                  "get_preferred_height": 26,
+                  "get_preferred_size": 1,
+                  "get_preferred_width": 26,
+                  "has_overlaps": 1,
+                  "hide": 6,
+                  "key_focus_in": 5,
+                  "key_focus_out": 4,
+                  "key_press_event": 16,
+                  "key_release_event": 5,
+                  "leave_event": 3,
+                  "map": 9,
+                  "motion_event": 3,
+                  "navigate_focus": 2,
+                  "paint": 2,
+                  "paint_content": 1,
+                  "paint_node": 1,
+                  "paint_target": 1,
+                  "pick": 1,
+                  "repaint": 4,
+                  "reset": 1,
+                  "scroll_event": 5,
+                  "set_actor": 2,
+                  "set_adjustments": 1,
+                  "set_container": 7,
+                  "set_cursor_location": 1,
+                  "set_surrounding": 1,
+                  "show": 2,
+                  "style_changed": 7,
+                  "touch_event": 1,
+                  "unmap": 7,
+                  "update_allocation": 1,
+                  "update_content_hints": 1,
+                  "update_content_purpose": 1
+                }
+              }
+            },
+            "vfuncBridges": 229,
+            "pid": 3425990,
+            "publishedUiGeneration": 0,
+            "attempts": 1,
+            "contextsFinalized": 0,
+            "state": "scheduled",
+            "registeredProbeTypes": 0,
+            "registeredObjectTypes": 988,
+            "newObjectTypes": [
+              "ClutterVirtualInputDevice",
+              "CoglPixelBuffer",
+              "MetaVirtualInputDeviceNative"
+            ],
+            "uiFailures": 0,
+            "uiRetryAttempts": 0,
+            "uiCommits": 0,
+            "uiBuildSerial": 0,
+            "uiTimeouts": 0,
+            "uiQuarantined": false,
+            "uiQuarantines": 0,
+            "preparationFailures": 0,
+            "preparationTimeouts": 0,
+            "uiActive": false,
+            "securityVm": false,
+            "securityBoundaryBits": 0,
+            "researchOnly": true
+          },
+          "native": {
+            "callbacks": {
+              "latestEpoch": 2,
+              "epochs": {
+                "1": {
+                  "EventListenerCB": 1
+                },
+                "2": {
+                  "AsyncReadyCallback": 56,
+                  "BindingTransformFunc": 32,
+                  "Callback": 1,
+                  "EventListenerCB": 1,
+                  "KeyHandlerFunc": 85,
+                  "SourceFunc": 7,
+                  "allocate": 36,
+                  "build_pipeline": 3,
+                  "button_press_event": 1,
+                  "button_release_event": 1,
+                  "captured_event": 6,
+                  "child_added": 1,
+                  "child_removed": 1,
+                  "clicked": 15,
+                  "enter_event": 1,
+                  "event": 1,
+                  "filter_key_event": 1,
+                  "focus": 1,
+                  "focus_in": 1,
+                  "focus_out": 1,
+                  "get_child_meta_type": 1,
+                  "get_focus_chain": 3,
+                  "get_preferred_height": 26,
+                  "get_preferred_size": 1,
+                  "get_preferred_width": 26,
+                  "has_overlaps": 1,
+                  "hide": 6,
+                  "key_focus_in": 5,
+                  "key_focus_out": 4,
+                  "key_press_event": 16,
+                  "key_release_event": 5,
+                  "leave_event": 3,
+                  "map": 9,
+                  "motion_event": 3,
+                  "navigate_focus": 2,
+                  "paint": 2,
+                  "paint_content": 1,
+                  "paint_node": 1,
+                  "paint_target": 1,
+                  "pick": 1,
+                  "repaint": 4,
+                  "reset": 1,
+                  "scroll_event": 5,
+                  "set_actor": 2,
+                  "set_adjustments": 1,
+                  "set_container": 7,
+                  "set_cursor_location": 1,
+                  "set_surrounding": 1,
+                  "show": 2,
+                  "style_changed": 7,
+                  "touch_event": 1,
+                  "unmap": 7,
+                  "update_allocation": 1,
+                  "update_content_hints": 1,
+                  "update_content_purpose": 1
+                }
+              }
+            },
+            "vfuncBridges": 229,
+            "pid": 3425990,
+            "publishedUiGeneration": 0,
+            "attempts": 1,
+            "contextsFinalized": 1,
+            "state": "new-context-created",
+            "registeredProbeTypes": 0,
+            "registeredObjectTypes": 989,
+            "newObjectTypes": [
+              "ClutterVirtualInputDevice",
+              "CoglPixelBuffer",
+              "GVfsMetadataProxy",
+              "MetaVirtualInputDeviceNative"
+            ],
+            "uiFailures": 0,
+            "uiRetryAttempts": 0,
+            "uiCommits": 0,
+            "uiBuildSerial": 0,
+            "uiTimeouts": 0,
+            "uiQuarantined": false,
+            "uiQuarantines": 0,
+            "preparationFailures": 0,
+            "preparationTimeouts": 0,
+            "uiActive": false,
+            "securityVm": false,
+            "securityBoundaryBits": 0,
+            "researchOnly": true
+          }
+        },
+        "afterEpoch": "be26ac97-1e90-4295-b6b4-ff4806994f86",
+        "menus": {
+          "menusChecked": [
+            "dateMenu",
+            "quickSettings"
+          ],
+          "modalCount": 0
+        },
+        "overview": {
+          "opened": true,
+          "closed": true,
+          "nativeAddress": "0x5555564a2ce0",
+          "path": "/tmp/nix-shell.etgymk/tgnome-0nsw7i93/data/gnome-shell/tgnome-frame.png"
+        },
+        "overviewFrame": "full-overview-1.png",
+        "windowMenu": {
+          "opened": true,
+          "closed": true
+        },
+        "native": {
+          "callbacks": {
+            "latestEpoch": 2,
+            "epochs": {
+              "1": {
+                "EventListenerCB": 1
+              },
+              "2": {
+                "AsyncReadyCallback": 61,
+                "BindingTransformFunc": 32,
+                "Callback": 1,
+                "EventListenerCB": 1,
+                "KeyHandlerFunc": 85,
+                "SourceFunc": 4,
+                "allocate": 36,
+                "build_pipeline": 3,
+                "button_press_event": 1,
+                "button_release_event": 1,
+                "captured_event": 6,
+                "child_added": 1,
+                "child_removed": 1,
+                "clicked": 15,
+                "enter_event": 1,
+                "event": 1,
+                "filter_key_event": 1,
+                "focus": 1,
+                "focus_in": 1,
+                "focus_out": 1,
+                "get_child_meta_type": 1,
+                "get_focus_chain": 3,
+                "get_preferred_height": 26,
+                "get_preferred_size": 1,
+                "get_preferred_width": 26,
+                "has_overlaps": 1,
+                "hide": 6,
+                "key_focus_in": 5,
+                "key_focus_out": 4,
+                "key_press_event": 16,
+                "key_release_event": 5,
+                "leave_event": 3,
+                "map": 9,
+                "motion_event": 3,
+                "navigate_focus": 2,
+                "paint": 2,
+                "paint_content": 1,
+                "paint_node": 1,
+                "paint_target": 1,
+                "pick": 1,
+                "repaint": 4,
+                "reset": 1,
+                "scroll_event": 5,
+                "set_actor": 2,
+                "set_adjustments": 1,
+                "set_container": 7,
+                "set_cursor_location": 1,
+                "set_surrounding": 1,
+                "show": 2,
+                "style_changed": 7,
+                "touch_event": 1,
+                "unmap": 7,
+                "update_allocation": 1,
+                "update_content_hints": 1,
+                "update_content_purpose": 1
+              }
+            }
+          },
+          "vfuncBridges": 229,
+          "pid": 3425990,
+          "publishedUiGeneration": 0,
+          "attempts": 1,
+          "contextsFinalized": 1,
+          "state": "new-context-created",
+          "registeredProbeTypes": 0,
+          "registeredObjectTypes": 989,
+          "newObjectTypes": [
+            "ClutterVirtualInputDevice",
+            "CoglPixelBuffer",
+            "GVfsMetadataProxy",
+            "MetaVirtualInputDeviceNative"
+          ],
+          "uiFailures": 0,
+          "uiRetryAttempts": 0,
+          "uiCommits": 0,
+          "uiBuildSerial": 0,
+          "uiTimeouts": 0,
+          "uiQuarantined": false,
+          "uiQuarantines": 0,
+          "preparationFailures": 0,
+          "preparationTimeouts": 0,
+          "uiActive": false,
+          "securityVm": false,
+          "securityBoundaryBits": 0,
+          "researchOnly": true
+        },
+        "clients": {
+          "wayland": {
+            "pid": 3426328,
+            "backend": "wayland",
+            "fd": 3,
+            "inode": 9021037,
+            "windowId": 10,
+            "tick": 38,
+            "unsavedTextSha256": "dbc45630efcfbdd4c921892999f6a08c1c64a34a8d5bac8e795d4f01357e46d7",
+            "expectedTypedSha256": "474cedef1f33ebf0b37877374b9e577731123b2d7a7ae977a769e24496aa5817"
+          },
+          "x11": {
+            "pid": 3426343,
+            "backend": "x11",
+            "fd": 3,
+            "inode": 9030044,
+            "windowId": 2097156,
+            "tick": 36,
+            "unsavedTextSha256": "f5c3182d1ca37ae39d4b13d587068d50843263e756338f98febb2f6b98686d55",
+            "expectedTypedSha256": "cd96703f6f9cb5f85f1d051de12cebdb0932ee147fcdf5fc8ec3af5acf874f23"
+          }
+        }
+      },
+      {
+        "number": 2,
+        "beforeEpoch": "be26ac97-1e90-4295-b6b4-ff4806994f86",
+        "command": {
+          "classification": "COMPLETE SHELL CONTEXT REPLACEMENT",
+          "wholeShellRestarted": true,
+          "compositorPreserved": true,
+          "pid": 3425990,
+          "beforeEpoch": "be26ac97-1e90-4295-b6b4-ff4806994f86",
+          "afterEpoch": "d2da4699-e0a7-42a5-931a-42a5df6a104d",
+          "preparation": {
+            "prepared": true,
+            "releasedKeybindings": 37,
+            "forwardRecovered": false
+          },
+          "requested": {
+            "callbacks": {
+              "latestEpoch": 2,
+              "epochs": {
+                "1": {
+                  "EventListenerCB": 1
+                },
+                "2": {
+                  "AsyncReadyCallback": 61,
+                  "BindingTransformFunc": 32,
+                  "Callback": 1,
+                  "EventListenerCB": 1,
+                  "KeyHandlerFunc": 48,
+                  "SourceFunc": 3,
+                  "allocate": 36,
+                  "build_pipeline": 3,
+                  "button_press_event": 1,
+                  "button_release_event": 1,
+                  "captured_event": 6,
+                  "child_added": 1,
+                  "child_removed": 1,
+                  "clicked": 15,
+                  "enter_event": 1,
+                  "event": 1,
+                  "filter_key_event": 1,
+                  "focus": 1,
+                  "focus_in": 1,
+                  "focus_out": 1,
+                  "get_child_meta_type": 1,
+                  "get_focus_chain": 3,
+                  "get_preferred_height": 26,
+                  "get_preferred_size": 1,
+                  "get_preferred_width": 26,
+                  "has_overlaps": 1,
+                  "hide": 6,
+                  "key_focus_in": 5,
+                  "key_focus_out": 4,
+                  "key_press_event": 16,
+                  "key_release_event": 5,
+                  "leave_event": 3,
+                  "map": 9,
+                  "motion_event": 3,
+                  "navigate_focus": 2,
+                  "paint": 2,
+                  "paint_content": 1,
+                  "paint_node": 1,
+                  "paint_target": 1,
+                  "pick": 1,
+                  "repaint": 4,
+                  "reset": 1,
+                  "scroll_event": 5,
+                  "set_actor": 2,
+                  "set_adjustments": 1,
+                  "set_container": 7,
+                  "set_cursor_location": 1,
+                  "set_surrounding": 1,
+                  "show": 2,
+                  "style_changed": 7,
+                  "touch_event": 1,
+                  "unmap": 7,
+                  "update_allocation": 1,
+                  "update_content_hints": 1,
+                  "update_content_purpose": 1
+                }
+              }
+            },
+            "vfuncBridges": 229,
+            "pid": 3425990,
+            "publishedUiGeneration": 0,
+            "attempts": 2,
+            "contextsFinalized": 1,
+            "state": "scheduled",
+            "registeredProbeTypes": 0,
+            "registeredObjectTypes": 989,
+            "newObjectTypes": [
+              "ClutterVirtualInputDevice",
+              "CoglPixelBuffer",
+              "GVfsMetadataProxy",
+              "MetaVirtualInputDeviceNative"
+            ],
+            "uiFailures": 0,
+            "uiRetryAttempts": 0,
+            "uiCommits": 0,
+            "uiBuildSerial": 0,
+            "uiTimeouts": 0,
+            "uiQuarantined": false,
+            "uiQuarantines": 0,
+            "preparationFailures": 0,
+            "preparationTimeouts": 0,
+            "uiActive": false,
+            "securityVm": false,
+            "securityBoundaryBits": 0,
+            "researchOnly": true
+          },
+          "native": {
+            "callbacks": {
+              "latestEpoch": 3,
+              "epochs": {
+                "1": {
+                  "EventListenerCB": 1
+                },
+                "2": {
+                  "EventListenerCB": 1
+                },
+                "3": {
+                  "AsyncReadyCallback": 56,
+                  "BindingTransformFunc": 32,
+                  "Callback": 1,
+                  "EventListenerCB": 1,
+                  "KeyHandlerFunc": 85,
+                  "SourceFunc": 5,
+                  "allocate": 36,
+                  "build_pipeline": 3,
+                  "button_press_event": 1,
+                  "button_release_event": 1,
+                  "captured_event": 6,
+                  "child_added": 1,
+                  "child_removed": 1,
+                  "clicked": 15,
+                  "enter_event": 1,
+                  "event": 1,
+                  "filter_key_event": 1,
+                  "focus": 1,
+                  "focus_in": 1,
+                  "focus_out": 1,
+                  "get_child_meta_type": 1,
+                  "get_focus_chain": 3,
+                  "get_preferred_height": 26,
+                  "get_preferred_size": 1,
+                  "get_preferred_width": 26,
+                  "has_overlaps": 1,
+                  "hide": 6,
+                  "key_focus_in": 5,
+                  "key_focus_out": 4,
+                  "key_press_event": 16,
+                  "key_release_event": 5,
+                  "leave_event": 3,
+                  "map": 9,
+                  "motion_event": 3,
+                  "navigate_focus": 2,
+                  "paint": 2,
+                  "paint_content": 1,
+                  "paint_node": 1,
+                  "paint_target": 1,
+                  "pick": 1,
+                  "repaint": 4,
+                  "reset": 1,
+                  "scroll_event": 5,
+                  "set_actor": 2,
+                  "set_adjustments": 1,
+                  "set_container": 7,
+                  "set_cursor_location": 1,
+                  "set_surrounding": 1,
+                  "show": 2,
+                  "style_changed": 7,
+                  "touch_event": 1,
+                  "unmap": 7,
+                  "update_allocation": 1,
+                  "update_content_hints": 1,
+                  "update_content_purpose": 1
+                }
+              }
+            },
+            "vfuncBridges": 229,
+            "pid": 3425990,
+            "publishedUiGeneration": 0,
+            "attempts": 2,
+            "contextsFinalized": 2,
+            "state": "new-context-created",
+            "registeredProbeTypes": 0,
+            "registeredObjectTypes": 989,
+            "newObjectTypes": [
+              "ClutterVirtualInputDevice",
+              "CoglPixelBuffer",
+              "GVfsMetadataProxy",
+              "MetaVirtualInputDeviceNative"
+            ],
+            "uiFailures": 0,
+            "uiRetryAttempts": 0,
+            "uiCommits": 0,
+            "uiBuildSerial": 0,
+            "uiTimeouts": 0,
+            "uiQuarantined": false,
+            "uiQuarantines": 0,
+            "preparationFailures": 0,
+            "preparationTimeouts": 0,
+            "uiActive": false,
+            "securityVm": false,
+            "securityBoundaryBits": 0,
+            "researchOnly": true
+          }
+        },
+        "afterEpoch": "d2da4699-e0a7-42a5-931a-42a5df6a104d",
+        "menus": {
+          "menusChecked": [
+            "dateMenu",
+            "quickSettings"
+          ],
+          "modalCount": 0
+        },
+        "overview": {
+          "opened": true,
+          "closed": true,
+          "nativeAddress": "0x55555659a970",
+          "path": "/tmp/nix-shell.etgymk/tgnome-0nsw7i93/data/gnome-shell/tgnome-frame.png"
+        },
+        "overviewFrame": "full-overview-2.png",
+        "windowMenu": {
+          "opened": true,
+          "closed": true
+        },
+        "native": {
+          "callbacks": {
+            "latestEpoch": 3,
+            "epochs": {
+              "1": {
+                "EventListenerCB": 1
+              },
+              "2": {
+                "EventListenerCB": 1
+              },
+              "3": {
+                "AsyncReadyCallback": 61,
+                "BindingTransformFunc": 32,
+                "Callback": 1,
+                "EventListenerCB": 1,
+                "KeyHandlerFunc": 85,
+                "SourceFunc": 4,
+                "allocate": 36,
+                "build_pipeline": 3,
+                "button_press_event": 1,
+                "button_release_event": 1,
+                "captured_event": 6,
+                "child_added": 1,
+                "child_removed": 1,
+                "clicked": 15,
+                "enter_event": 1,
+                "event": 1,
+                "filter_key_event": 1,
+                "focus": 1,
+                "focus_in": 1,
+                "focus_out": 1,
+                "get_child_meta_type": 1,
+                "get_focus_chain": 3,
+                "get_preferred_height": 26,
+                "get_preferred_size": 1,
+                "get_preferred_width": 26,
+                "has_overlaps": 1,
+                "hide": 6,
+                "key_focus_in": 5,
+                "key_focus_out": 4,
+                "key_press_event": 16,
+                "key_release_event": 5,
+                "leave_event": 3,
+                "map": 9,
+                "motion_event": 3,
+                "navigate_focus": 2,
+                "paint": 2,
+                "paint_content": 1,
+                "paint_node": 1,
+                "paint_target": 1,
+                "pick": 1,
+                "repaint": 4,
+                "reset": 1,
+                "scroll_event": 5,
+                "set_actor": 2,
+                "set_adjustments": 1,
+                "set_container": 7,
+                "set_cursor_location": 1,
+                "set_surrounding": 1,
+                "show": 2,
+                "style_changed": 7,
+                "touch_event": 1,
+                "unmap": 7,
+                "update_allocation": 1,
+                "update_content_hints": 1,
+                "update_content_purpose": 1
+              }
+            }
+          },
+          "vfuncBridges": 229,
+          "pid": 3425990,
+          "publishedUiGeneration": 0,
+          "attempts": 2,
+          "contextsFinalized": 2,
+          "state": "new-context-created",
+          "registeredProbeTypes": 0,
+          "registeredObjectTypes": 989,
+          "newObjectTypes": [
+            "ClutterVirtualInputDevice",
+            "CoglPixelBuffer",
+            "GVfsMetadataProxy",
+            "MetaVirtualInputDeviceNative"
+          ],
+          "uiFailures": 0,
+          "uiRetryAttempts": 0,
+          "uiCommits": 0,
+          "uiBuildSerial": 0,
+          "uiTimeouts": 0,
+          "uiQuarantined": false,
+          "uiQuarantines": 0,
+          "preparationFailures": 0,
+          "preparationTimeouts": 0,
+          "uiActive": false,
+          "securityVm": false,
+          "securityBoundaryBits": 0,
+          "researchOnly": true
+        },
+        "clients": {
+          "wayland": {
+            "pid": 3426328,
+            "backend": "wayland",
+            "fd": 3,
+            "inode": 9021037,
+            "windowId": 10,
+            "tick": 46,
+            "unsavedTextSha256": "dbc45630efcfbdd4c921892999f6a08c1c64a34a8d5bac8e795d4f01357e46d7",
+            "expectedTypedSha256": "474cedef1f33ebf0b37877374b9e577731123b2d7a7ae977a769e24496aa5817"
+          },
+          "x11": {
+            "pid": 3426343,
+            "backend": "x11",
+            "fd": 3,
+            "inode": 9030044,
+            "windowId": 2097156,
+            "tick": 45,
+            "unsavedTextSha256": "f5c3182d1ca37ae39d4b13d587068d50843263e756338f98febb2f6b98686d55",
+            "expectedTypedSha256": "cd96703f6f9cb5f85f1d051de12cebdb0932ee147fcdf5fc8ec3af5acf874f23"
+          }
+        }
+      },
+      {
+        "number": 3,
+        "beforeEpoch": "d2da4699-e0a7-42a5-931a-42a5df6a104d",
+        "command": {
+          "classification": "COMPLETE SHELL CONTEXT REPLACEMENT",
+          "wholeShellRestarted": true,
+          "compositorPreserved": true,
+          "pid": 3425990,
+          "beforeEpoch": "d2da4699-e0a7-42a5-931a-42a5df6a104d",
+          "afterEpoch": "5a0e491a-8059-401e-a622-a9e3645069c8",
+          "preparation": {
+            "prepared": true,
+            "releasedKeybindings": 37,
+            "forwardRecovered": false
+          },
+          "requested": {
+            "callbacks": {
+              "latestEpoch": 3,
+              "epochs": {
+                "1": {
+                  "EventListenerCB": 1
+                },
+                "2": {
+                  "EventListenerCB": 1
+                },
+                "3": {
+                  "AsyncReadyCallback": 61,
+                  "BindingTransformFunc": 32,
+                  "Callback": 1,
+                  "EventListenerCB": 1,
+                  "KeyHandlerFunc": 48,
+                  "SourceFunc": 3,
+                  "allocate": 36,
+                  "build_pipeline": 3,
+                  "button_press_event": 1,
+                  "button_release_event": 1,
+                  "captured_event": 6,
+                  "child_added": 1,
+                  "child_removed": 1,
+                  "clicked": 15,
+                  "enter_event": 1,
+                  "event": 1,
+                  "filter_key_event": 1,
+                  "focus": 1,
+                  "focus_in": 1,
+                  "focus_out": 1,
+                  "get_child_meta_type": 1,
+                  "get_focus_chain": 3,
+                  "get_preferred_height": 26,
+                  "get_preferred_size": 1,
+                  "get_preferred_width": 26,
+                  "has_overlaps": 1,
+                  "hide": 6,
+                  "key_focus_in": 5,
+                  "key_focus_out": 4,
+                  "key_press_event": 16,
+                  "key_release_event": 5,
+                  "leave_event": 3,
+                  "map": 9,
+                  "motion_event": 3,
+                  "navigate_focus": 2,
+                  "paint": 2,
+                  "paint_content": 1,
+                  "paint_node": 1,
+                  "paint_target": 1,
+                  "pick": 1,
+                  "repaint": 4,
+                  "reset": 1,
+                  "scroll_event": 5,
+                  "set_actor": 2,
+                  "set_adjustments": 1,
+                  "set_container": 7,
+                  "set_cursor_location": 1,
+                  "set_surrounding": 1,
+                  "show": 2,
+                  "style_changed": 7,
+                  "touch_event": 1,
+                  "unmap": 7,
+                  "update_allocation": 1,
+                  "update_content_hints": 1,
+                  "update_content_purpose": 1
+                }
+              }
+            },
+            "vfuncBridges": 229,
+            "pid": 3425990,
+            "publishedUiGeneration": 0,
+            "attempts": 3,
+            "contextsFinalized": 2,
+            "state": "scheduled",
+            "registeredProbeTypes": 0,
+            "registeredObjectTypes": 989,
+            "newObjectTypes": [
+              "ClutterVirtualInputDevice",
+              "CoglPixelBuffer",
+              "GVfsMetadataProxy",
+              "MetaVirtualInputDeviceNative"
+            ],
+            "uiFailures": 0,
+            "uiRetryAttempts": 0,
+            "uiCommits": 0,
+            "uiBuildSerial": 0,
+            "uiTimeouts": 0,
+            "uiQuarantined": false,
+            "uiQuarantines": 0,
+            "preparationFailures": 0,
+            "preparationTimeouts": 0,
+            "uiActive": false,
+            "securityVm": false,
+            "securityBoundaryBits": 0,
+            "researchOnly": true
+          },
+          "native": {
+            "callbacks": {
+              "latestEpoch": 4,
+              "epochs": {
+                "1": {
+                  "EventListenerCB": 1
+                },
+                "2": {
+                  "EventListenerCB": 1
+                },
+                "3": {
+                  "EventListenerCB": 1
+                },
+                "4": {
+                  "AsyncReadyCallback": 56,
+                  "BindingTransformFunc": 32,
+                  "Callback": 1,
+                  "EventListenerCB": 1,
+                  "KeyHandlerFunc": 85,
+                  "SourceFunc": 7,
+                  "allocate": 36,
+                  "build_pipeline": 3,
+                  "button_press_event": 1,
+                  "button_release_event": 1,
+                  "captured_event": 6,
+                  "child_added": 1,
+                  "child_removed": 1,
+                  "clicked": 15,
+                  "enter_event": 1,
+                  "event": 1,
+                  "filter_key_event": 1,
+                  "focus": 1,
+                  "focus_in": 1,
+                  "focus_out": 1,
+                  "get_child_meta_type": 1,
+                  "get_focus_chain": 3,
+                  "get_preferred_height": 26,
+                  "get_preferred_size": 1,
+                  "get_preferred_width": 26,
+                  "has_overlaps": 1,
+                  "hide": 6,
+                  "key_focus_in": 5,
+                  "key_focus_out": 4,
+                  "key_press_event": 16,
+                  "key_release_event": 5,
+                  "leave_event": 3,
+                  "map": 9,
+                  "motion_event": 3,
+                  "navigate_focus": 2,
+                  "paint": 2,
+                  "paint_content": 1,
+                  "paint_node": 1,
+                  "paint_target": 1,
+                  "pick": 1,
+                  "repaint": 4,
+                  "reset": 1,
+                  "scroll_event": 5,
+                  "set_actor": 2,
+                  "set_adjustments": 1,
+                  "set_container": 7,
+                  "set_cursor_location": 1,
+                  "set_surrounding": 1,
+                  "show": 2,
+                  "style_changed": 7,
+                  "touch_event": 1,
+                  "unmap": 7,
+                  "update_allocation": 1,
+                  "update_content_hints": 1,
+                  "update_content_purpose": 1
+                }
+              }
+            },
+            "vfuncBridges": 229,
+            "pid": 3425990,
+            "publishedUiGeneration": 0,
+            "attempts": 3,
+            "contextsFinalized": 3,
+            "state": "new-context-created",
+            "registeredProbeTypes": 0,
+            "registeredObjectTypes": 989,
+            "newObjectTypes": [
+              "ClutterVirtualInputDevice",
+              "CoglPixelBuffer",
+              "GVfsMetadataProxy",
+              "MetaVirtualInputDeviceNative"
+            ],
+            "uiFailures": 0,
+            "uiRetryAttempts": 0,
+            "uiCommits": 0,
+            "uiBuildSerial": 0,
+            "uiTimeouts": 0,
+            "uiQuarantined": false,
+            "uiQuarantines": 0,
+            "preparationFailures": 0,
+            "preparationTimeouts": 0,
+            "uiActive": false,
+            "securityVm": false,
+            "securityBoundaryBits": 0,
+            "researchOnly": true
+          }
+        },
+        "afterEpoch": "5a0e491a-8059-401e-a622-a9e3645069c8",
+        "menus": {
+          "menusChecked": [
+            "dateMenu",
+            "quickSettings"
+          ],
+          "modalCount": 0
+        },
+        "overview": {
+          "opened": true,
+          "closed": true,
+          "nativeAddress": "0x55555bfbec80",
+          "path": "/tmp/nix-shell.etgymk/tgnome-0nsw7i93/data/gnome-shell/tgnome-frame.png"
+        },
+        "overviewFrame": "full-overview-3.png",
+        "windowMenu": {
+          "opened": true,
+          "closed": true
+        },
+        "native": {
+          "callbacks": {
+            "latestEpoch": 4,
+            "epochs": {
+              "1": {
+                "EventListenerCB": 1
+              },
+              "2": {
+                "EventListenerCB": 1
+              },
+              "3": {
+                "EventListenerCB": 1
+              },
+              "4": {
+                "AsyncReadyCallback": 61,
+                "BindingTransformFunc": 32,
+                "Callback": 1,
+                "EventListenerCB": 1,
+                "KeyHandlerFunc": 85,
+                "SourceFunc": 4,
+                "allocate": 36,
+                "build_pipeline": 3,
+                "button_press_event": 1,
+                "button_release_event": 1,
+                "captured_event": 6,
+                "child_added": 1,
+                "child_removed": 1,
+                "clicked": 15,
+                "enter_event": 1,
+                "event": 1,
+                "filter_key_event": 1,
+                "focus": 1,
+                "focus_in": 1,
+                "focus_out": 1,
+                "get_child_meta_type": 1,
+                "get_focus_chain": 3,
+                "get_preferred_height": 26,
+                "get_preferred_size": 1,
+                "get_preferred_width": 26,
+                "has_overlaps": 1,
+                "hide": 6,
+                "key_focus_in": 5,
+                "key_focus_out": 4,
+                "key_press_event": 16,
+                "key_release_event": 5,
+                "leave_event": 3,
+                "map": 9,
+                "motion_event": 3,
+                "navigate_focus": 2,
+                "paint": 2,
+                "paint_content": 1,
+                "paint_node": 1,
+                "paint_target": 1,
+                "pick": 1,
+                "repaint": 4,
+                "reset": 1,
+                "scroll_event": 5,
+                "set_actor": 2,
+                "set_adjustments": 1,
+                "set_container": 7,
+                "set_cursor_location": 1,
+                "set_surrounding": 1,
+                "show": 2,
+                "style_changed": 7,
+                "touch_event": 1,
+                "unmap": 7,
+                "update_allocation": 1,
+                "update_content_hints": 1,
+                "update_content_purpose": 1
+              }
+            }
+          },
+          "vfuncBridges": 229,
+          "pid": 3425990,
+          "publishedUiGeneration": 0,
+          "attempts": 3,
+          "contextsFinalized": 3,
+          "state": "new-context-created",
+          "registeredProbeTypes": 0,
+          "registeredObjectTypes": 989,
+          "newObjectTypes": [
+            "ClutterVirtualInputDevice",
+            "CoglPixelBuffer",
+            "GVfsMetadataProxy",
+            "MetaVirtualInputDeviceNative"
+          ],
+          "uiFailures": 0,
+          "uiRetryAttempts": 0,
+          "uiCommits": 0,
+          "uiBuildSerial": 0,
+          "uiTimeouts": 0,
+          "uiQuarantined": false,
+          "uiQuarantines": 0,
+          "preparationFailures": 0,
+          "preparationTimeouts": 0,
+          "uiActive": false,
+          "securityVm": false,
+          "securityBoundaryBits": 0,
+          "researchOnly": true
+        },
+        "clients": {
+          "wayland": {
+            "pid": 3426328,
+            "backend": "wayland",
+            "fd": 3,
+            "inode": 9021037,
+            "windowId": 10,
+            "tick": 54,
+            "unsavedTextSha256": "dbc45630efcfbdd4c921892999f6a08c1c64a34a8d5bac8e795d4f01357e46d7",
+            "expectedTypedSha256": "474cedef1f33ebf0b37877374b9e577731123b2d7a7ae977a769e24496aa5817"
+          },
+          "x11": {
+            "pid": 3426343,
+            "backend": "x11",
+            "fd": 3,
+            "inode": 9030044,
+            "windowId": 2097156,
+            "tick": 54,
+            "unsavedTextSha256": "f5c3182d1ca37ae39d4b13d587068d50843263e756338f98febb2f6b98686d55",
+            "expectedTypedSha256": "cd96703f6f9cb5f85f1d051de12cebdb0932ee147fcdf5fc8ec3af5acf874f23"
+          }
+        }
+      }
+    ],
+    "originalObjectiveAchieved": false,
+    "desktopBefore": {
+      "windows": [
+        {
+          "id": 1,
+          "title": "Tgnome persistent connection probe",
+          "workspace": 0,
+          "frame": [
+            40,
+            180,
+            500,
+            160
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Tgnome persistent connection probe",
+          "workspace": 0,
+          "frame": [
+            640,
+            180,
+            500,
+            160
+          ]
+        }
+      ],
+      "focus": 2,
+      "monitors": [
+        [
+          0,
+          0,
+          1280,
+          720
+        ]
+      ],
+      "workspace": 0
+    },
+    "frameBefore": "full-desktop-before.png",
+    "nativeBefore": {
+      "callbacks": {
+        "latestEpoch": 1,
+        "epochs": {
+          "1": {
+            "AsyncReadyCallback": 119,
+            "BindingTransformFunc": 34,
+            "Callback": 1,
+            "EventListenerCB": 1,
+            "KeyHandlerFunc": 85,
+            "SourceFunc": 6,
+            "allocate": 36,
+            "build_pipeline": 3,
+            "button_press_event": 1,
+            "button_release_event": 1,
+            "captured_event": 6,
+            "child_added": 1,
+            "child_removed": 1,
+            "clicked": 15,
+            "enter_event": 1,
+            "event": 1,
+            "filter_key_event": 1,
+            "focus": 1,
+            "focus_in": 1,
+            "focus_out": 1,
+            "get_child_meta_type": 1,
+            "get_focus_chain": 3,
+            "get_preferred_height": 26,
+            "get_preferred_size": 1,
+            "get_preferred_width": 26,
+            "has_overlaps": 1,
+            "hide": 6,
+            "key_focus_in": 5,
+            "key_focus_out": 4,
+            "key_press_event": 16,
+            "key_release_event": 5,
+            "leave_event": 3,
+            "map": 9,
+            "motion_event": 3,
+            "navigate_focus": 2,
+            "paint": 2,
+            "paint_content": 1,
+            "paint_node": 1,
+            "paint_target": 1,
+            "pick": 1,
+            "repaint": 4,
+            "reset": 1,
+            "scroll_event": 5,
+            "set_actor": 2,
+            "set_adjustments": 1,
+            "set_container": 7,
+            "set_cursor_location": 1,
+            "set_surrounding": 1,
+            "show": 2,
+            "style_changed": 7,
+            "touch_event": 1,
+            "unmap": 7,
+            "update_allocation": 1,
+            "update_content_hints": 1,
+            "update_content_purpose": 1
+          }
+        }
+      },
+      "vfuncBridges": 229,
+      "pid": 3425990,
+      "publishedUiGeneration": 0,
+      "attempts": 0,
+      "contextsFinalized": 0,
+      "state": "ready",
+      "registeredProbeTypes": 0,
+      "registeredObjectTypes": 988,
+      "newObjectTypes": [
+        "ClutterVirtualInputDevice",
+        "CoglPixelBuffer",
+        "MetaVirtualInputDeviceNative"
+      ],
+      "uiFailures": 0,
+      "uiRetryAttempts": 0,
+      "uiCommits": 0,
+      "uiBuildSerial": 0,
+      "uiTimeouts": 0,
+      "uiQuarantined": false,
+      "uiQuarantines": 0,
+      "preparationFailures": 0,
+      "preparationTimeouts": 0,
+      "uiActive": false,
+      "securityVm": false,
+      "securityBoundaryBits": 0,
+      "researchOnly": true
+    },
+    "observationSeconds": 65,
+    "lateClients": {
+      "wayland": [
+        3
+      ],
+      "x11": [
+        4
+      ]
+    },
+    "input": {
+      "wayland": {
+        "before": {
+          "pid": 3426328,
+          "backend": "wayland",
+          "fd": 3,
+          "inode": 9021037,
+          "windowId": 10,
+          "tick": 385,
+          "unsavedTextSha256": "dbc45630efcfbdd4c921892999f6a08c1c64a34a8d5bac8e795d4f01357e46d7",
+          "expectedTypedSha256": "474cedef1f33ebf0b37877374b9e577731123b2d7a7ae977a769e24496aa5817"
+        },
+        "after": {
+          "pid": 3426328,
+          "backend": "wayland",
+          "fd": 3,
+          "inode": 9021037,
+          "windowId": 10,
+          "tick": 387,
+          "unsavedTextSha256": "474cedef1f33ebf0b37877374b9e577731123b2d7a7ae977a769e24496aa5817",
+          "expectedTypedSha256": "474cedef1f33ebf0b37877374b9e577731123b2d7a7ae977a769e24496aa5817"
+        },
+        "sent": {
+          "pid": 3426328,
+          "nativeAddress": "0x55555bfbec80",
+          "sent": true
+        }
+      },
+      "x11": {
+        "before": {
+          "pid": 3426343,
+          "backend": "x11",
+          "fd": 3,
+          "inode": 9030044,
+          "windowId": 2097156,
+          "tick": 387,
+          "unsavedTextSha256": "f5c3182d1ca37ae39d4b13d587068d50843263e756338f98febb2f6b98686d55",
+          "expectedTypedSha256": "cd96703f6f9cb5f85f1d051de12cebdb0932ee147fcdf5fc8ec3af5acf874f23"
+        },
+        "after": {
+          "pid": 3426343,
+          "backend": "x11",
+          "fd": 3,
+          "inode": 9030044,
+          "windowId": 2097156,
+          "tick": 389,
+          "unsavedTextSha256": "cd96703f6f9cb5f85f1d051de12cebdb0932ee147fcdf5fc8ec3af5acf874f23",
+          "expectedTypedSha256": "cd96703f6f9cb5f85f1d051de12cebdb0932ee147fcdf5fc8ec3af5acf874f23"
+        },
+        "sent": {
+          "pid": 3426343,
+          "nativeAddress": "0x55555bfbec80",
+          "sent": true
+        }
+      }
+    },
+    "frameAfter": "full-desktop-after.png",
+    "nativeAfter": {
+      "callbacks": {
+        "latestEpoch": 4,
+        "epochs": {
+          "1": {
+            "EventListenerCB": 1
+          },
+          "2": {
+            "EventListenerCB": 1
+          },
+          "3": {
+            "EventListenerCB": 1
+          },
+          "4": {
+            "AsyncReadyCallback": 1,
+            "BindingTransformFunc": 34,
+            "EventListenerCB": 1,
+            "KeyHandlerFunc": 85,
+            "SourceFunc": 4,
+            "allocate": 36,
+            "build_pipeline": 3,
+            "button_press_event": 1,
+            "button_release_event": 1,
+            "captured_event": 6,
+            "child_added": 1,
+            "child_removed": 1,
+            "clicked": 15,
+            "enter_event": 1,
+            "event": 1,
+            "filter_key_event": 1,
+            "focus": 1,
+            "focus_in": 1,
+            "focus_out": 1,
+            "get_child_meta_type": 1,
+            "get_focus_chain": 3,
+            "get_preferred_height": 26,
+            "get_preferred_size": 1,
+            "get_preferred_width": 26,
+            "has_overlaps": 1,
+            "hide": 6,
+            "key_focus_in": 5,
+            "key_focus_out": 4,
+            "key_press_event": 16,
+            "key_release_event": 5,
+            "leave_event": 3,
+            "map": 9,
+            "motion_event": 3,
+            "navigate_focus": 2,
+            "paint": 2,
+            "paint_content": 1,
+            "paint_node": 1,
+            "paint_target": 1,
+            "pick": 1,
+            "repaint": 4,
+            "reset": 1,
+            "scroll_event": 5,
+            "set_actor": 2,
+            "set_adjustments": 1,
+            "set_container": 7,
+            "set_cursor_location": 1,
+            "set_surrounding": 1,
+            "show": 2,
+            "style_changed": 7,
+            "touch_event": 1,
+            "unmap": 7,
+            "update_allocation": 1,
+            "update_content_hints": 1,
+            "update_content_purpose": 1
+          }
+        }
+      },
+      "vfuncBridges": 229,
+      "pid": 3425990,
+      "publishedUiGeneration": 0,
+      "attempts": 3,
+      "contextsFinalized": 3,
+      "state": "new-context-created",
+      "registeredProbeTypes": 0,
+      "registeredObjectTypes": 989,
+      "newObjectTypes": [
+        "ClutterVirtualInputDevice",
+        "CoglPixelBuffer",
+        "GVfsMetadataProxy",
+        "MetaVirtualInputDeviceNative"
+      ],
+      "uiFailures": 0,
+      "uiRetryAttempts": 0,
+      "uiCommits": 0,
+      "uiBuildSerial": 0,
+      "uiTimeouts": 0,
+      "uiQuarantined": false,
+      "uiQuarantines": 0,
+      "preparationFailures": 0,
+      "preparationTimeouts": 0,
+      "uiActive": false,
+      "securityVm": false,
+      "securityBoundaryBits": 0,
+      "researchOnly": true
+    },
+    "retiredCallbacks": {
+      "1": {
+        "EventListenerCB": 1
+      },
+      "2": {
+        "EventListenerCB": 1
+      },
+      "3": {
+        "EventListenerCB": 1
+      }
+    },
+    "error": "AssertionError: {'1': {'EventListenerCB': 1}, '2': {'EventListenerCB': 1}, '3': {'EventListenerCB': 1}}",
+    "nativeFinal": {
+      "callbacks": {
+        "latestEpoch": 4,
+        "epochs": {
+          "1": {
+            "EventListenerCB": 1
+          },
+          "2": {
+            "EventListenerCB": 1
+          },
+          "3": {
+            "EventListenerCB": 1
+          },
+          "4": {
+            "AsyncReadyCallback": 1,
+            "BindingTransformFunc": 34,
+            "EventListenerCB": 1,
+            "KeyHandlerFunc": 85,
+            "SourceFunc": 4,
+            "allocate": 36,
+            "build_pipeline": 3,
+            "button_press_event": 1,
+            "button_release_event": 1,
+            "captured_event": 6,
+            "child_added": 1,
+            "child_removed": 1,
+            "clicked": 15,
+            "enter_event": 1,
+            "event": 1,
+            "filter_key_event": 1,
+            "focus": 1,
+            "focus_in": 1,
+            "focus_out": 1,
+            "get_child_meta_type": 1,
+            "get_focus_chain": 3,
+            "get_preferred_height": 26,
+            "get_preferred_size": 1,
+            "get_preferred_width": 26,
+            "has_overlaps": 1,
+            "hide": 6,
+            "key_focus_in": 5,
+            "key_focus_out": 4,
+            "key_press_event": 16,
+            "key_release_event": 5,
+            "leave_event": 3,
+            "map": 9,
+            "motion_event": 3,
+            "navigate_focus": 2,
+            "paint": 2,
+            "paint_content": 1,
+            "paint_node": 1,
+            "paint_target": 1,
+            "pick": 1,
+            "repaint": 4,
+            "reset": 1,
+            "scroll_event": 5,
+            "set_actor": 2,
+            "set_adjustments": 1,
+            "set_container": 7,
+            "set_cursor_location": 1,
+            "set_surrounding": 1,
+            "show": 2,
+            "style_changed": 7,
+            "touch_event": 1,
+            "unmap": 7,
+            "update_allocation": 1,
+            "update_content_hints": 1,
+            "update_content_purpose": 1
+          }
+        }
+      },
+      "vfuncBridges": 229,
+      "pid": 3425990,
+      "publishedUiGeneration": 0,
+      "attempts": 3,
+      "contextsFinalized": 3,
+      "state": "new-context-created",
+      "registeredProbeTypes": 0,
+      "registeredObjectTypes": 989,
+      "newObjectTypes": [
+        "ClutterVirtualInputDevice",
+        "CoglPixelBuffer",
+        "GVfsMetadataProxy",
+        "MetaVirtualInputDeviceNative"
+      ],
+      "uiFailures": 0,
+      "uiRetryAttempts": 0,
+      "uiCommits": 0,
+      "uiBuildSerial": 0,
+      "uiTimeouts": 0,
+      "uiQuarantined": false,
+      "uiQuarantines": 0,
+      "preparationFailures": 0,
+      "preparationTimeouts": 0,
+      "uiActive": false,
+      "securityVm": false,
+      "securityBoundaryBits": 0,
+      "researchOnly": true
+    },
+    "diagnosticProblems": [],
+    "shellProcessSurvived": true
+  },
+  "shellProcessRestarted": false,
+  "completeShellReinitializationDemonstrated": false,
+  "originalObjectiveAchieved": false,
+  "error": "Complete context replacement did not pass its end-to-end checks",
+  "supervisor": {
+    "workerExitCode": 1,
+    "descendants": {
+      "terminated": [],
+      "killed": [],
+      "exitCodes": {
+        "3425971": -15,
+        "3425977": 1,
+        "3426056": 1,
+        "3426113": 1,
+        "3426087": 0,
+        "3426125": 20,
+        "3426078": 0,
+        "3426152": 0,
+        "3426058": -15,
+        "3426132": -15,
+        "3426181": -15,
+        "3426165": 0,
+        "3426206": 0,
+        "3426203": -15,
+        "3426220": -15,
+        "3426228": -15,
+        "3426237": -15,
+        "3426217": 0,
+        "3426246": -15,
+        "3426278": 0,
+        "3426150": 1,
+        "3426286": 1,
+        "3426295": 0,
+        "3426115": -15,
+        "3426050": 0,
+        "3426396": 1,
+        "3426400": 0,
+        "3426914": 0,
+        "3427186": 0,
+        "3426127": -9,
+        "3426379": 0,
+        "3425946": 0,
+        "3426141": 0
+      }
+    },
+    "privateProfileRemoved": true
+  }
+}

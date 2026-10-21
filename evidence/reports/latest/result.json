@@ -1,0 +1,46 @@
+{
+  "classification": "RESEARCH PROTOTYPE",
+  "passed": true,
+  "trueRestartDemonstrated": false,
+  "wholeShellReloadDemonstrated": false,
+  "shellBefore": {
+    "classification": "RESEARCH PROTOTYPE",
+    "scope": "extension-owned panel indicator only",
+    "pid": 1626808,
+    "generation": 0,
+    "failures": 0,
+    "active": true,
+    "busy": false,
+    "shellRestartSupported": false,
+    "extensionCodeReloadSupported": false
+  },
+  "wayland": {
+    "before": {
+      "pid": 1627180,
+      "backend": "wayland",
+      "fd": 3,
+      "inode": 5730450,
+      "tick": 1
+    },
+    "after": {
+      "pid": 1627180,
+      "backend": "wayland",
+      "fd": 3,
+      "inode": 5730450,
+      "tick": 8
+    },
+    "originalConnectionRoundTrips": true
+  },
+  "shellAfter": {
+    "classification": "RESEARCH PROTOTYPE",
+    "scope": "extension-owned panel indicator only",
+    "pid": 1626808,
+    "generation": 21,
+    "failures": 1,
+    "active": true,
+    "busy": false,
+    "shellRestartSupported": false,
+    "extensionCodeReloadSupported": false
+  },
+  "xwaylandTested": false
+}

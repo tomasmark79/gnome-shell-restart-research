@@ -1,0 +1,57 @@
+--- a/js/ui/main.js
++++ b/js/ui/main.js
+@@ -268,26 +268,10 @@
+ 
+     // Set up the global default break reminder manager and its D-Bus interface
+     breakManager = new BreakManager.BreakManager();
+-    timeLimitsManager = new TimeLimitsManager.TimeLimitsManager();
++    timeLimitsManager ??= TimeLimitsManager.createTgnomeBackendManager();
+     screenTimeDBus = new ShellDBus.ScreenTimeDBus(breakManager);
+     breakManagerDispatcher = new BreakManager.BreakDispatcher(breakManager);
+     timeLimitsDispatcher = new TimeLimitsManager.TimeLimitsDispatcher(timeLimitsManager);
+-
+-    global.connect('tgnome-ui-reset', () => {
+-        if (global._tgnomeResetPrepared)
+-            return;
+-        // Block shutdown until the session history file has been written
+-        const loop = new GLib.MainLoop(null, false);
+-        const source = GLib.idle_source_new();
+-        source.set_callback(() => {
+-            timeLimitsManager.shutdown()
+-                .catch(e => console.warn(`Failed to stop time limits manager: ${e.message}`))
+-                .finally(() => loop.quit());
+-            return GLib.SOURCE_REMOVE;
+-        });
+-        source.attach(loop.get_context());
+-        loop.run();
+-    });
+ 
+     layoutManager.init();
+     overview.init();
+--- a/js/ui/messageTray.js
++++ b/js/ui/messageTray.js
+@@ -141,6 +141,7 @@
+ // A notification without a policy object will inherit the default one.
+ export const NotificationPolicy = GObject.registerClass({
+     GTypeFlags: GObject.TypeFlags.ABSTRACT,
++    Signals: {destroy: {}},
+     Properties: {
+         'enable': GObject.ParamSpec.boolean(
+             'enable', null, null, GObject.ParamFlags.READABLE, true),
+@@ -184,6 +185,7 @@
+     store() { }
+ 
+     destroy() {
++        this.emit('destroy');
+         this.run_dispose();
+     }
+ 
+@@ -211,6 +213,8 @@
+         return false;
+     }
+ });
++
++SignalTracker.registerDestroyableType(NotificationPolicy);
+ 
+ export const NotificationGenericPolicy = GObject.registerClass({
+ }, class NotificationGenericPolicy extends NotificationPolicy {

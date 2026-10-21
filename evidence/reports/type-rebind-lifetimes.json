@@ -1,0 +1,98 @@
+{
+  "classification": "REATTACHED JS-REGISTERED GTYPE; NOT SHELL RESTART",
+  "passed": true,
+  "cases": [
+    {
+      "mode": "native",
+      "passed": true,
+      "privateProfileRemoved": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "events": [
+        {
+          "generation": 1,
+          "contextsFinalized": 1,
+          "released": true,
+          "native": "0x55555576c540",
+          "gtype": 93824994592544,
+          "objectTypes": 94,
+          "bridges": 2,
+          "gapCalls": 1
+        },
+        {
+          "generation": 2,
+          "contextsFinalized": 2,
+          "released": true,
+          "native": "0x55555576c540",
+          "gtype": 93824994592544,
+          "objectTypes": 94,
+          "bridges": 2,
+          "gapCalls": 2
+        },
+        {
+          "generation": 3,
+          "contextsFinalized": 3,
+          "released": true,
+          "native": "0x55555576c540",
+          "gtype": 93824994592544,
+          "objectTypes": 94,
+          "bridges": 2,
+          "gapCalls": 3
+        },
+        {
+          "passed": true,
+          "contextsFinalized": 3,
+          "nativeFinalized": 1
+        }
+      ],
+      "stdout": "{\"generation\":1,\"contextsFinalized\":1,\"released\":true,\"native\":\"0x55555576c540\",\"gtype\":93824994592544,\"objectTypes\":94,\"bridges\":2,\"gapCalls\":1}\n{\"generation\":2,\"contextsFinalized\":2,\"released\":true,\"native\":\"0x55555576c540\",\"gtype\":93824994592544,\"objectTypes\":94,\"bridges\":2,\"gapCalls\":2}\n{\"generation\":3,\"contextsFinalized\":3,\"released\":true,\"native\":\"0x55555576c540\",\"gtype\":93824994592544,\"objectTypes\":94,\"bridges\":2,\"gapCalls\":3}\n{\"passed\":true,\"contextsFinalized\":3,\"nativeFinalized\":1}\n",
+      "stderr": ""
+    },
+    {
+      "mode": "valgrind",
+      "passed": true,
+      "privateProfileRemoved": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "events": [
+        {
+          "generation": 1,
+          "contextsFinalized": 1,
+          "released": true,
+          "native": "0xcdbb040",
+          "gtype": 215628368,
+          "objectTypes": 94,
+          "bridges": 2,
+          "gapCalls": 1
+        },
+        {
+          "generation": 2,
+          "contextsFinalized": 2,
+          "released": true,
+          "native": "0xcdbb040",
+          "gtype": 215628368,
+          "objectTypes": 94,
+          "bridges": 2,
+          "gapCalls": 2
+        },
+        {
+          "generation": 3,
+          "contextsFinalized": 3,
+          "released": true,
+          "native": "0xcdbb040",
+          "gtype": 215628368,
+          "objectTypes": 94,
+          "bridges": 2,
+          "gapCalls": 3
+        },
+        {
+          "passed": true,
+          "contextsFinalized": 3,
+          "nativeFinalized": 1
+        }
+      ],
+      "stdout": "{\"generation\":1,\"contextsFinalized\":1,\"released\":true,\"native\":\"0xcdbb040\",\"gtype\":215628368,\"objectTypes\":94,\"bridges\":2,\"gapCalls\":1}\n{\"generation\":2,\"contextsFinalized\":2,\"released\":true,\"native\":\"0xcdbb040\",\"gtype\":215628368,\"objectTypes\":94,\"bridges\":2,\"gapCalls\":2}\n{\"generation\":3,\"contextsFinalized\":3,\"released\":true,\"native\":\"0xcdbb040\",\"gtype\":215628368,\"objectTypes\":94,\"bridges\":2,\"gapCalls\":3}\n{\"passed\":true,\"contextsFinalized\":3,\"nativeFinalized\":1}\n",
+      "stderr": ""
+    }
+  ]
+}

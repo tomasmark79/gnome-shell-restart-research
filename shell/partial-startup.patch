@@ -1,0 +1,112 @@
+--- a/js/misc/inputMethod.js
++++ b/js/misc/inputMethod.js
+@@ -24,6 +24,8 @@
+ }, class InputMethod extends Clutter.InputMethod {
+     _init() {
+         super._init();
++        this._tgnomeDisposed = false;
++        global.connect('tgnome-ui-reset', () => this.disposeTgnomeUi());
+         this._hints = 0;
+         this._purpose = 0;
+         this._currentFocus = null;
+@@ -59,7 +61,7 @@
+         if (this._surroundingText !== null)
+             caps |= IBus.Capabilite.SURROUNDING_TEXT;
+ 
+-        if (Main.keyboard.visible)
++        if (Main.keyboard?.visible)
+             caps |= IBus.Capabilite.OSK;
+ 
+         if (this._context)
+@@ -71,10 +73,18 @@
+     }
+ 
+     async _onConnected() {
+-        this._cancellable = new Gio.Cancellable();
++        if (this._tgnomeDisposed)
++            return;
++        const cancellable = new Gio.Cancellable();
++        this._cancellable = cancellable;
+         try {
+-            this._context = await this._ibus.create_input_context_async(
+-                'gnome-shell', -1, this._cancellable);
++            const context = await this._ibus.create_input_context_async(
++                'gnome-shell', -1, cancellable);
++            if (this._tgnomeDisposed || cancellable.is_cancelled()) {
++                context.destroy();
++                return;
++            }
++            this._context = context;
+         } catch (e) {
+             if (logErrorUnlessCancelled(e))
+                 this._clear();
+@@ -93,15 +103,14 @@
+         if (HAVE_REQUIRE_SURROUNDING_TEXT)
+             this._context.connect('require-surrounding-text', this._onRequireSurroundingText.bind(this));
+ 
+-        Main.keyboard.connectObject(
+-            'visibility-changed', () => this._updateCapabilities(),
+-            this);
++        this.rebindTgnomeKeyboard();
+ 
+         this._updateCapabilities();
+     }
+ 
+     _clear() {
+-        Main.keyboard.disconnectObject(this);
++        this._tgnomeKeyboard?.disconnectObject(this);
++        this._tgnomeKeyboard = null;
+ 
+         if (this._cancellable) {
+             this._cancellable.cancel();
+--- a/js/ui/ibusCandidatePopup.js
++++ b/js/ui/ibusCandidatePopup.js
+@@ -291,14 +291,14 @@
+             for (let i = 0; (indexLabel = lookupTable.get_label(i)); ++i)
+                 indexes.push(indexLabel.get_text());
+ 
+-            Main.keyboard.resetSuggestions();
+-            Main.keyboard.setSuggestionsVisible(visible);
++            Main.keyboard?.resetSuggestions();
++            Main.keyboard?.setSuggestionsVisible(visible);
+ 
+             const candidates = [];
+             for (let i = startIndex; i < endIndex; ++i) {
+                 candidates.push(lookupTable.get_candidate(i).get_text());
+ 
+-                Main.keyboard.addSuggestion(lookupTable.get_candidate(i).get_text(), () => {
++                Main.keyboard?.addSuggestion(lookupTable.get_candidate(i).get_text(), () => {
+                     const index = i;
+                     this._panelService.candidate_clicked(index, 1, 0);
+                 });
+@@ -312,18 +312,18 @@
+             this._candidateArea.updateButtons(lookupTable.is_round(), page, nPages);
+         });
+         panelService.connect('show-lookup-table', () => {
+-            Main.keyboard.setSuggestionsVisible(true);
++            Main.keyboard?.setSuggestionsVisible(true);
+             this._candidateArea.show();
+             this._updateVisibility();
+         });
+         panelService.connect('hide-lookup-table', () => {
+-            Main.keyboard.setSuggestionsVisible(false);
++            Main.keyboard?.setSuggestionsVisible(false);
+             this._candidateArea.hide();
+             this._updateVisibility();
+         });
+         panelService.connect('focus-out', () => {
+             this.close(BoxPointer.PopupAnimation.NONE);
+-            Main.keyboard.resetSuggestions();
++            Main.keyboard?.resetSuggestions();
+         });
+     }
+ 
+@@ -336,7 +336,7 @@
+     }
+ 
+     _updateVisibility() {
+-        const isVisible = !Main.keyboard.visible &&
++        const isVisible = Main.keyboard !== null && !Main.keyboard.visible &&
+                          (this._preeditText.visible ||
+                           this._auxText.visible ||
+                           this._candidateArea.visible);

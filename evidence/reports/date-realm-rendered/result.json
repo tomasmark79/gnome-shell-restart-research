@@ -1,0 +1,3222 @@
+{
+  "classification": "RESEARCH PROTOTYPE",
+  "passed": false,
+  "trueRestartDemonstrated": false,
+  "wholeShellReloadDemonstrated": false,
+  "privateSystemBus": true,
+  "mockLogind": true,
+  "welcomeTourAlreadyShown": true,
+  "timeTrackingEnabled": true,
+  "shellBefore": {
+    "classification": "RESEARCH PROTOTYPE",
+    "scope": "extension-owned panel indicator only",
+    "pid": 3078414,
+    "runtimeEpoch": "3df49309-bd53-4c70-8599-8dac72996f4e",
+    "backendScopeDepth": 0,
+    "nativeBackendScopeDepth": 0,
+    "protectedBackendFixture": null,
+    "uiGeneration": 0,
+    "uiReloadState": null,
+    "uiFailures": [],
+    "uiBuildSerial": 0,
+    "lateUiOutcomes": [],
+    "cleanupWait": null,
+    "preparationFailures": [],
+    "latePreparationCompletions": 0,
+    "timeLimits": {
+      "nativeAddress": "0x555557bd2c60",
+      "retained": true,
+      "shutdownCalls": 0,
+      "state": 1,
+      "transitions": [
+        {
+          "oldState": 0,
+          "newState": 1,
+          "wallTimeSecs": 1792558070
+        }
+      ],
+      "loginUserReady": true,
+      "clockSourceActive": true
+    },
+    "retiredUi": [],
+    "uiRegistrations": {
+      "exports": 14,
+      "ownedNames": 8,
+      "signals": {
+        "total": 98,
+        "permanent": 37,
+        "inventory": [
+          "GSettings:changed::always-show-log-out:backend",
+          "GSettings:changed::app-picker-layout:ui",
+          "GSettings:changed::disable-extension-version-validation:ui",
+          "GSettings:changed::disable-user-extensions:ui",
+          "GSettings:changed::disable-user-extensions:ui",
+          "GSettings:changed::disabled-extensions:ui",
+          "GSettings:changed::enabled-extensions:ui",
+          "GSettings:changed::favorite-apps:backend",
+          "GSettings:writable-changed::disabled-extensions:ui",
+          "GSettings:writable-changed::enabled-extensions:ui",
+          "MetaContextMain:notify::unsafe-mode:ui",
+          "MetaDisplay:accelerator-activated:ui",
+          "MetaDisplay:accelerator-deactivated:ui",
+          "MetaDisplay:gl-video-memory-purged:ui",
+          "MetaDisplay:in-fullscreen-changed:backend",
+          "MetaDisplay:in-fullscreen-changed:ui",
+          "MetaDisplay:in-fullscreen-changed:ui",
+          "MetaDisplay:init-xserver:backend",
+          "MetaDisplay:modifiers-accelerator-activated:backend",
+          "MetaDisplay:notify::focus-window:backend",
+          "MetaDisplay:overlay-key:ui",
+          "MetaDisplay:restacked:ui",
+          "MetaDisplay:show-osd:backend",
+          "MetaDisplay:show-pad-osd:backend",
+          "MetaDisplay:show-resize-popup:backend",
+          "MetaDisplay:window-demands-attention:ui",
+          "MetaDisplay:window-entered-monitor:backend",
+          "MetaDisplay:window-entered-monitor:ui",
+          "MetaDisplay:window-entered-monitor:ui",
+          "MetaDisplay:window-entered-monitor:ui",
+          "MetaDisplay:window-entered-monitor:ui",
+          "MetaDisplay:window-left-monitor:backend",
+          "MetaDisplay:window-left-monitor:ui",
+          "MetaDisplay:window-left-monitor:ui",
+          "MetaDisplay:window-left-monitor:ui",
+          "MetaDisplay:window-left-monitor:ui",
+          "MetaDisplay:window-marked-urgent:ui",
+          "MetaDisplay:workareas-changed:ui:_init@resource:///org/gnome/shell/ui/overviewControls.js:59:24",
+          "MetaDisplay:workareas-changed:ui:_init@resource:///org/gnome/shell/ui/tgnomePanelRealm.js:50:24",
+          "MetaDisplay:workareas-changed:ui:_init@resource:///org/gnome/shell/ui/workspace.js:990:24",
+          "MetaDisplay:workareas-changed:ui:_init@resource:///org/gnome/shell/ui/workspace.js:990:24",
+          "MetaDisplay:workareas-changed:ui:_init@resource:///org/gnome/shell/ui/workspaceThumbnail.js:664:24",
+          "MetaDisplay:workareas-changed:ui:_syncWorkareaTracking@resource:///org/gnome/shell/ui/workspace.js:591:32",
+          "MetaDisplay:workareas-changed:ui:_syncWorkareaTracking@resource:///org/gnome/shell/ui/workspace.js:591:32",
+          "MetaDisplay:workareas-changed:ui:_syncWorkareaTracking@resource:///org/gnome/shell/ui/workspace.js:591:32",
+          "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+          "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+          "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+          "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+          "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+          "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+          "MetaDisplay:x11-display-closing:backend",
+          "MetaStage:destroy:backend",
+          "MetaStage:event::touchpad:backend",
+          "MetaStage:event::touchpad:ui",
+          "MetaStage:key-press-event:ui",
+          "MetaStage:key-press-event:ui",
+          "MetaStage:key-press-event:ui",
+          "MetaStage:notify::key-focus:ui",
+          "MetaStage:scroll-event:backend",
+          "MetaStage:scroll-event:backend",
+          "MetaWindowGroup:destroy:ui",
+          "SessionMode:updated:backend",
+          "SessionMode:updated:backend",
+          "SessionMode:updated:backend",
+          "SessionMode:updated:ui",
+          "SessionMode:updated:ui",
+          "SessionMode:updated:ui",
+          "SessionMode:updated:ui",
+          "ShellGlobal:locate-pointer:ui",
+          "ShellGlobal:notify-error:ui",
+          "ShellGlobal:notify::force-animations:ui",
+          "ShellGlobal:shutdown:backend",
+          "ShellGlobal:tgnome-ui-reset:ui",
+          "ShellGlobal:tgnome-ui-reset:ui",
+          "ShellGlobal:tgnome-ui-reset:ui",
+          "ShellGlobal:tgnome-ui-reset:ui",
+          "ShellGlobal:tgnome-ui-reset:ui",
+          "ShellGlobal:tgnome-ui-reset:ui",
+          "ShellWM:confirm-display-change:backend",
+          "ShellWM:create-close-dialog:backend",
+          "ShellWM:create-inhibit-shortcuts-dialog:backend",
+          "ShellWM:destroy:backend",
+          "ShellWM:filter-keybinding:backend",
+          "ShellWM:hide-tile-preview:backend",
+          "ShellWM:kill-switch-workspace:backend",
+          "ShellWM:kill-window-effects:backend",
+          "ShellWM:map:backend",
+          "ShellWM:minimize:backend",
+          "ShellWM:show-tile-preview:backend",
+          "ShellWM:show-window-menu:backend",
+          "ShellWM:size-change:backend",
+          "ShellWM:size-changed:backend",
+          "ShellWM:switch-workspace:backend",
+          "ShellWM:switch-workspace:backend",
+          "ShellWM:switch-workspace:ui",
+          "ShellWM:switch-workspace:ui",
+          "ShellWM:unminimize:backend"
+        ]
+      },
+      "permanentExports": 1,
+      "stageActions": 5,
+      "watchedNames": 1,
+      "exportInventory": [
+        "/org/freedesktop/Notifications:org.freedesktop.Notifications",
+        "/org/freedesktop/portal/desktop:org.freedesktop.impl.portal.Access",
+        "/org/gnome/SessionManager/EndSessionDialog:org.gnome.SessionManager.EndSessionDialog",
+        "/org/gnome/Shell/AudioDeviceSelection:org.gnome.Shell.AudioDeviceSelection",
+        "/org/gnome/Shell/Brightness:org.gnome.Shell.Brightness",
+        "/org/gnome/Shell/Extensions/Tgnome:org.gnome.Shell.Extensions.Tgnome",
+        "/org/gnome/Shell/Introspect:org.gnome.Shell.Introspect",
+        "/org/gnome/Shell/ScreenTime:org.gnome.Shell.ScreenTime",
+        "/org/gnome/Shell/Screenshot:org.gnome.Shell.Screenshot",
+        "/org/gnome/Shell/Wacom:org.gnome.Shell.Wacom.PadOsd",
+        "/org/gnome/Shell:org.gnome.Shell",
+        "/org/gnome/Shell:org.gnome.Shell.Extensions",
+        "/org/gtk/MountOperationHandler:org.Gtk.MountOperationHandler",
+        "/org/gtk/Notifications:org.gtk.Notifications"
+      ],
+      "nameInventory": [
+        "org.gnome.Shell.AudioDeviceSelection",
+        "org.gnome.Shell.Brightness",
+        "org.gnome.Shell.Introspect",
+        "org.gnome.Shell.Screenshot",
+        "org.gnome.Shell.Wacom.PadOsd",
+        "org.gnome.keyring.SystemPrompter",
+        "org.gtk.MountOperationHandler",
+        "org.gtk.Notifications"
+      ],
+      "watchInventory": [
+        "org.freedesktop.GeoClue2"
+      ]
+    },
+    "lastReleasedRegistrations": null,
+    "windowManagerPreserved": true,
+    "stageActions": [
+      "OSK show bottom drag",
+      "Overview swipe tracker",
+      "Window unfullscreen top drag",
+      "WorkspaceAnimation swipe tracker",
+      "reset-search"
+    ],
+    "stageChildren": [
+      ":SystemBackground",
+      ":UIAreaIndicator",
+      "uiGroup:UiActor"
+    ],
+    "windowGroupAttached": true,
+    "generation": 0,
+    "failures": 0,
+    "active": true,
+    "busy": false,
+    "actorsCreated": 1,
+    "actorsDestroyed": 0,
+    "liveOwnedActors": 1,
+    "panelEntryMatches": true,
+    "themeReloads": 0,
+    "shellState": {
+      "overview": true,
+      "modalCount": 0,
+      "startingUp": true,
+      "mode": "user"
+    },
+    "panel": {
+      "supported": true,
+      "realms": {
+        "scope": "panel behavior in disposable globals; canonical GType retained",
+        "records": [
+          {
+            "generation": 1,
+            "disposed": false,
+            "globalCollected": false,
+            "implementationCollected": false,
+            "allocations": 3,
+            "preferredWidths": 6,
+            "keyEvents": 0
+          }
+        ]
+      },
+      "dateMenuRealms": {
+        "scope": "dateMenu.js class behavior; canonical types and parent classes retained",
+        "records": [
+          {
+            "generation": 1,
+            "retired": false,
+            "globalCollected": false,
+            "implementationCollected": false,
+            "failed": false,
+            "instances": 8,
+            "releasedInstances": 0,
+            "classes": {
+              "DateMenuButton": 1,
+              "MessagesIndicator": 1,
+              "FreezableBinLayout": 1,
+              "TodayButton": 1,
+              "CalendarColumnLayout": 1,
+              "EventsSection": 1,
+              "WorldClocksSection": 1,
+              "WeatherSection": 1
+            },
+            "calls": {
+              "MessagesIndicator._sync": 1,
+              "EventsSection._appInstalledChanged": 1,
+              "EventsSection._sync": 7,
+              "WorldClocksSection._clocksChanged": 1,
+              "WorldClocksSection._sync": 1,
+              "WeatherSection._sync": 1,
+              "WeatherSection._updateForecasts": 1,
+              "DateMenuButton._sessionUpdated": 1,
+              "DateMenuButton._getEventSource": 1,
+              "DateMenuButton._setEventSource": 1,
+              "EventsSection.setEventSource": 1,
+              "WorldClocksSection._onProxyReady": 1,
+              "WorldClocksSection._onClocksPropertiesChanged": 1,
+              "EventsSection._reloadEvents": 2,
+              "FreezableBinLayout.vfunc_get_preferred_width": 1,
+              "CalendarColumnLayout.vfunc_get_preferred_width": 1,
+              "FreezableBinLayout.vfunc_get_preferred_height": 1
+            },
+            "retiredCalls": 0
+          }
+        ]
+      },
+      "transfer": {
+        "pending": false,
+        "retired": []
+      },
+      "lifecycle": {
+        "generation": 0,
+        "destroyed": 0,
+        "scope": "panel actor/layout/gestures/menu manager; indicator instances survive"
+      },
+      "replaced": false,
+      "containerCount": 1,
+      "focusGroupCount": 1,
+      "totalFocusGroups": 6,
+      "menuCount": 7,
+      "retainedIndicators": true
+    },
+    "desktop": {
+      "windows": [],
+      "focus": null,
+      "monitors": [
+        [
+          0,
+          0,
+          1280,
+          720
+        ]
+      ],
+      "workspace": 0
+    },
+    "shellRestartSupported": false,
+    "extensionCodeReloadSupported": false,
+    "desktopUiReloadSupported": true
+  },
+  "busOwner": ":1.13",
+  "desktopBefore": {
+    "windows": [
+      {
+        "id": 1,
+        "title": "Tgnome persistent connection probe",
+        "workspace": 0,
+        "frame": [
+          473,
+          328,
+          334,
+          96
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Tgnome persistent connection probe",
+        "workspace": 0,
+        "frame": [
+          551,
+          329,
+          178,
+          94
+        ]
+      }
+    ],
+    "focus": 2,
+    "monitors": [
+      [
+        0,
+        0,
+        1280,
+        720
+      ]
+    ],
+    "workspace": 0
+  },
+  "xwaylandBefore": [
+    {
+      "pid": 3078757,
+      "exe": "/nix/store/8irpj5qxxxjnr98lh3dcx83xa26qf44p-xwayland-24.1.14/bin/Xwayland",
+      "startTime": "16896004"
+    }
+  ],
+  "shellExecutable": "/nix/store/hnp6cgvlxdj1k25ql2nqz41h38jmx5gj-gnome-shell-50.5/bin/.gnome-shell-wrapped",
+  "panelTypeWarmup": {
+    "menusChecked": [
+      "dateMenu",
+      "quickSettings"
+    ],
+    "modalCount": 0
+  },
+  "dateMenuExerciseBefore": {
+    "frame": "date-menu-before.png",
+    "mapped": true,
+    "allocation": [
+      754,
+      621
+    ],
+    "nativeType": "Gjs_ui_dateMenu_DateMenuButton",
+    "parentType": "Gjs_ui_panelMenu_PanelMenuButton",
+    "correctParent": true,
+    "realms": {
+      "scope": "dateMenu.js class behavior; canonical types and parent classes retained",
+      "records": [
+        {
+          "generation": 1,
+          "retired": false,
+          "globalCollected": false,
+          "implementationCollected": false,
+          "failed": false,
+          "instances": 8,
+          "releasedInstances": 0,
+          "classes": {
+            "DateMenuButton": 1,
+            "MessagesIndicator": 1,
+            "FreezableBinLayout": 1,
+            "TodayButton": 1,
+            "CalendarColumnLayout": 1,
+            "EventsSection": 1,
+            "WorldClocksSection": 1,
+            "WeatherSection": 1
+          },
+          "calls": {
+            "MessagesIndicator._sync": 6,
+            "EventsSection._appInstalledChanged": 1,
+            "EventsSection._sync": 7,
+            "WorldClocksSection._clocksChanged": 1,
+            "WorldClocksSection._sync": 1,
+            "WeatherSection._sync": 1,
+            "WeatherSection._updateForecasts": 1,
+            "DateMenuButton._sessionUpdated": 1,
+            "DateMenuButton._getEventSource": 1,
+            "DateMenuButton._setEventSource": 1,
+            "EventsSection.setEventSource": 1,
+            "WorldClocksSection._onProxyReady": 1,
+            "WorldClocksSection._onClocksPropertiesChanged": 1,
+            "EventsSection._reloadEvents": 2,
+            "FreezableBinLayout.vfunc_get_preferred_width": 4,
+            "CalendarColumnLayout.vfunc_get_preferred_width": 4,
+            "FreezableBinLayout.vfunc_get_preferred_height": 4,
+            "MessagesIndicator._onSourceAdded": 1,
+            "MessagesIndicator._updateCount": 5,
+            "WeatherSection.vfunc_map": 2,
+            "TodayButton.setDate": 2,
+            "FreezableBinLayout.vfunc_allocate": 1
+          },
+          "retiredCalls": 0
+        }
+      ]
+    }
+  },
+  "dateMenuRealmBefore": {
+    "generation": 1,
+    "retired": false,
+    "globalCollected": false,
+    "implementationCollected": false,
+    "failed": false,
+    "instances": 8,
+    "releasedInstances": 0,
+    "classes": {
+      "DateMenuButton": 1,
+      "MessagesIndicator": 1,
+      "FreezableBinLayout": 1,
+      "TodayButton": 1,
+      "CalendarColumnLayout": 1,
+      "EventsSection": 1,
+      "WorldClocksSection": 1,
+      "WeatherSection": 1
+    },
+    "calls": {
+      "MessagesIndicator._sync": 6,
+      "EventsSection._appInstalledChanged": 1,
+      "EventsSection._sync": 7,
+      "WorldClocksSection._clocksChanged": 1,
+      "WorldClocksSection._sync": 1,
+      "WeatherSection._sync": 1,
+      "WeatherSection._updateForecasts": 1,
+      "DateMenuButton._sessionUpdated": 1,
+      "DateMenuButton._getEventSource": 1,
+      "DateMenuButton._setEventSource": 1,
+      "EventsSection.setEventSource": 1,
+      "WorldClocksSection._onProxyReady": 1,
+      "WorldClocksSection._onClocksPropertiesChanged": 1,
+      "EventsSection._reloadEvents": 2,
+      "FreezableBinLayout.vfunc_get_preferred_width": 5,
+      "CalendarColumnLayout.vfunc_get_preferred_width": 5,
+      "FreezableBinLayout.vfunc_get_preferred_height": 5,
+      "MessagesIndicator._onSourceAdded": 1,
+      "MessagesIndicator._updateCount": 5,
+      "WeatherSection.vfunc_map": 2,
+      "TodayButton.setDate": 2,
+      "FreezableBinLayout.vfunc_allocate": 1
+    },
+    "retiredCalls": 0
+  },
+  "panelNativeBefore": {
+    "attempts": 0,
+    "contextsFinalized": 0,
+    "state": "ready",
+    "registeredProbeTypes": 0,
+    "registeredObjectTypes": 986,
+    "newObjectTypes": [],
+    "uiFailures": 0,
+    "uiRetryAttempts": 0,
+    "uiCommits": 0,
+    "uiBuildSerial": 0,
+    "uiTimeouts": 0,
+    "uiQuarantined": false,
+    "uiQuarantines": 0,
+    "preparationFailures": 0,
+    "preparationTimeouts": 0,
+    "uiActive": false,
+    "securityVm": false,
+    "securityBoundaryBits": 0,
+    "researchOnly": true
+  },
+  "panelMenusAfterRollback": {
+    "menusChecked": [
+      "dateMenu",
+      "quickSettings"
+    ],
+    "modalCount": 0
+  },
+  "panelReload": {
+    "supported": true,
+    "realms": {
+      "scope": "panel behavior in disposable globals; canonical GType retained",
+      "records": [
+        {
+          "generation": 1,
+          "disposed": true,
+          "globalCollected": false,
+          "implementationCollected": false,
+          "allocations": 5,
+          "preferredWidths": 10,
+          "keyEvents": 0
+        },
+        {
+          "generation": 2,
+          "disposed": true,
+          "globalCollected": false,
+          "implementationCollected": false,
+          "allocations": 1,
+          "preferredWidths": 2,
+          "keyEvents": 0
+        },
+        {
+          "generation": 3,
+          "disposed": true,
+          "globalCollected": false,
+          "implementationCollected": false,
+          "allocations": 1,
+          "preferredWidths": 2,
+          "keyEvents": 0
+        },
+        {
+          "generation": 4,
+          "disposed": true,
+          "globalCollected": false,
+          "implementationCollected": false,
+          "allocations": 1,
+          "preferredWidths": 2,
+          "keyEvents": 0
+        },
+        {
+          "generation": 5,
+          "disposed": true,
+          "globalCollected": false,
+          "implementationCollected": false,
+          "allocations": 1,
+          "preferredWidths": 2,
+          "keyEvents": 0
+        },
+        {
+          "generation": 6,
+          "disposed": true,
+          "globalCollected": false,
+          "implementationCollected": false,
+          "allocations": 1,
+          "preferredWidths": 2,
+          "keyEvents": 0
+        },
+        {
+          "generation": 7,
+          "disposed": true,
+          "globalCollected": false,
+          "implementationCollected": false,
+          "allocations": 1,
+          "preferredWidths": 2,
+          "keyEvents": 0
+        },
+        {
+          "generation": 8,
+          "disposed": true,
+          "globalCollected": false,
+          "implementationCollected": false,
+          "allocations": 1,
+          "preferredWidths": 2,
+          "keyEvents": 0
+        },
+        {
+          "generation": 9,
+          "disposed": true,
+          "globalCollected": false,
+          "implementationCollected": false,
+          "allocations": 1,
+          "preferredWidths": 2,
+          "keyEvents": 0
+        },
+        {
+          "generation": 10,
+          "disposed": true,
+          "globalCollected": false,
+          "implementationCollected": false,
+          "allocations": 1,
+          "preferredWidths": 2,
+          "keyEvents": 0
+        },
+        {
+          "generation": 11,
+          "disposed": false,
+          "globalCollected": false,
+          "implementationCollected": false,
+          "allocations": 2,
+          "preferredWidths": 4,
+          "keyEvents": 0
+        },
+        {
+          "generation": 12,
+          "disposed": true,
+          "globalCollected": false,
+          "implementationCollected": false,
+          "allocations": 0,
+          "preferredWidths": 0,
+          "keyEvents": 0
+        }
+      ]
+    },
+    "dateMenuRealms": {
+      "scope": "dateMenu.js class behavior; canonical types and parent classes retained",
+      "records": [
+        {
+          "generation": 1,
+          "retired": false,
+          "globalCollected": false,
+          "implementationCollected": false,
+          "failed": false,
+          "instances": 8,
+          "releasedInstances": 0,
+          "classes": {
+            "DateMenuButton": 1,
+            "MessagesIndicator": 1,
+            "FreezableBinLayout": 1,
+            "TodayButton": 1,
+            "CalendarColumnLayout": 1,
+            "EventsSection": 1,
+            "WorldClocksSection": 1,
+            "WeatherSection": 1
+          },
+          "calls": {
+            "MessagesIndicator._sync": 6,
+            "EventsSection._appInstalledChanged": 1,
+            "EventsSection._sync": 7,
+            "WorldClocksSection._clocksChanged": 1,
+            "WorldClocksSection._sync": 1,
+            "WeatherSection._sync": 1,
+            "WeatherSection._updateForecasts": 1,
+            "DateMenuButton._sessionUpdated": 1,
+            "DateMenuButton._getEventSource": 1,
+            "DateMenuButton._setEventSource": 1,
+            "EventsSection.setEventSource": 1,
+            "WorldClocksSection._onProxyReady": 1,
+            "WorldClocksSection._onClocksPropertiesChanged": 1,
+            "EventsSection._reloadEvents": 2,
+            "FreezableBinLayout.vfunc_get_preferred_width": 15,
+            "CalendarColumnLayout.vfunc_get_preferred_width": 15,
+            "FreezableBinLayout.vfunc_get_preferred_height": 15,
+            "MessagesIndicator._onSourceAdded": 1,
+            "MessagesIndicator._updateCount": 5,
+            "WeatherSection.vfunc_map": 12,
+            "TodayButton.setDate": 12,
+            "FreezableBinLayout.vfunc_allocate": 1
+          },
+          "retiredCalls": 0
+        }
+      ]
+    },
+    "transfer": {
+      "pending": false,
+      "retired": [
+        {
+          "phase": "adopting",
+          "entries": 9,
+          "adoptedBeforeRecovery": 1,
+          "recovered": true,
+          "oldPanelRestored": true,
+          "destroyed": true,
+          "collected": false,
+          "interrupted": false
+        }
+      ]
+    },
+    "lifecycle": {
+      "generation": 10,
+      "destroyed": 10,
+      "scope": "panel actor/layout/gestures/menu manager; indicator instances survive"
+    },
+    "replaced": true,
+    "containerCount": 1,
+    "focusGroupCount": 1,
+    "totalFocusGroups": 6,
+    "menuCount": 7,
+    "retainedIndicators": true
+  },
+  "panelRealmGc": {
+    "cycles": 1,
+    "seconds": 0.14561946100729983
+  },
+  "panelRealms": [
+    {
+      "generation": 1,
+      "disposed": true,
+      "globalCollected": true,
+      "implementationCollected": true,
+      "allocations": 5,
+      "preferredWidths": 10,
+      "keyEvents": 0
+    },
+    {
+      "generation": 2,
+      "disposed": true,
+      "globalCollected": true,
+      "implementationCollected": true,
+      "allocations": 1,
+      "preferredWidths": 2,
+      "keyEvents": 0
+    },
+    {
+      "generation": 3,
+      "disposed": true,
+      "globalCollected": true,
+      "implementationCollected": true,
+      "allocations": 1,
+      "preferredWidths": 2,
+      "keyEvents": 0
+    },
+    {
+      "generation": 4,
+      "disposed": true,
+      "globalCollected": true,
+      "implementationCollected": true,
+      "allocations": 1,
+      "preferredWidths": 2,
+      "keyEvents": 0
+    },
+    {
+      "generation": 5,
+      "disposed": true,
+      "globalCollected": true,
+      "implementationCollected": true,
+      "allocations": 1,
+      "preferredWidths": 2,
+      "keyEvents": 0
+    },
+    {
+      "generation": 6,
+      "disposed": true,
+      "globalCollected": true,
+      "implementationCollected": true,
+      "allocations": 1,
+      "preferredWidths": 2,
+      "keyEvents": 0
+    },
+    {
+      "generation": 7,
+      "disposed": true,
+      "globalCollected": true,
+      "implementationCollected": true,
+      "allocations": 1,
+      "preferredWidths": 2,
+      "keyEvents": 0
+    },
+    {
+      "generation": 8,
+      "disposed": true,
+      "globalCollected": true,
+      "implementationCollected": true,
+      "allocations": 1,
+      "preferredWidths": 2,
+      "keyEvents": 0
+    },
+    {
+      "generation": 9,
+      "disposed": true,
+      "globalCollected": true,
+      "implementationCollected": true,
+      "allocations": 1,
+      "preferredWidths": 2,
+      "keyEvents": 0
+    },
+    {
+      "generation": 10,
+      "disposed": true,
+      "globalCollected": true,
+      "implementationCollected": true,
+      "allocations": 1,
+      "preferredWidths": 2,
+      "keyEvents": 0
+    },
+    {
+      "generation": 11,
+      "disposed": false,
+      "globalCollected": false,
+      "implementationCollected": false,
+      "allocations": 2,
+      "preferredWidths": 4,
+      "keyEvents": 0
+    },
+    {
+      "generation": 12,
+      "disposed": true,
+      "globalCollected": true,
+      "implementationCollected": true,
+      "allocations": 0,
+      "preferredWidths": 0,
+      "keyEvents": 0
+    }
+  ],
+  "panelNativeAfter": {
+    "attempts": 0,
+    "contextsFinalized": 0,
+    "state": "ready",
+    "registeredProbeTypes": 0,
+    "registeredObjectTypes": 986,
+    "newObjectTypes": [],
+    "uiFailures": 0,
+    "uiRetryAttempts": 0,
+    "uiCommits": 0,
+    "uiBuildSerial": 0,
+    "uiTimeouts": 0,
+    "uiQuarantined": false,
+    "uiQuarantines": 0,
+    "preparationFailures": 0,
+    "preparationTimeouts": 0,
+    "uiActive": false,
+    "securityVm": false,
+    "securityBoundaryBits": 0,
+    "researchOnly": true
+  },
+  "dateMenuRealmAfterPanelReload": {
+    "generation": 1,
+    "retired": false,
+    "globalCollected": false,
+    "implementationCollected": false,
+    "failed": false,
+    "instances": 8,
+    "releasedInstances": 0,
+    "classes": {
+      "DateMenuButton": 1,
+      "MessagesIndicator": 1,
+      "FreezableBinLayout": 1,
+      "TodayButton": 1,
+      "CalendarColumnLayout": 1,
+      "EventsSection": 1,
+      "WorldClocksSection": 1,
+      "WeatherSection": 1
+    },
+    "calls": {
+      "MessagesIndicator._sync": 6,
+      "EventsSection._appInstalledChanged": 1,
+      "EventsSection._sync": 7,
+      "WorldClocksSection._clocksChanged": 1,
+      "WorldClocksSection._sync": 1,
+      "WeatherSection._sync": 1,
+      "WeatherSection._updateForecasts": 1,
+      "DateMenuButton._sessionUpdated": 1,
+      "DateMenuButton._getEventSource": 1,
+      "DateMenuButton._setEventSource": 1,
+      "EventsSection.setEventSource": 1,
+      "WorldClocksSection._onProxyReady": 1,
+      "WorldClocksSection._onClocksPropertiesChanged": 1,
+      "EventsSection._reloadEvents": 2,
+      "FreezableBinLayout.vfunc_get_preferred_width": 16,
+      "CalendarColumnLayout.vfunc_get_preferred_width": 16,
+      "FreezableBinLayout.vfunc_get_preferred_height": 16,
+      "MessagesIndicator._onSourceAdded": 1,
+      "MessagesIndicator._updateCount": 5,
+      "WeatherSection.vfunc_map": 13,
+      "TodayButton.setDate": 13,
+      "FreezableBinLayout.vfunc_allocate": 1
+    },
+    "retiredCalls": 0
+  },
+  "reloadAfter": {
+    "classification": "SHELL RELOAD",
+    "scope": "panel actor reinitialized; indicator instances, GJS and compositor retained",
+    "pid": 3078414,
+    "runtimeEpoch": "3df49309-bd53-4c70-8599-8dac72996f4e",
+    "backendScopeDepth": 0,
+    "nativeBackendScopeDepth": 0,
+    "protectedBackendFixture": null,
+    "uiGeneration": 0,
+    "uiReloadState": null,
+    "uiFailures": [],
+    "uiBuildSerial": 0,
+    "lateUiOutcomes": [],
+    "cleanupWait": null,
+    "preparationFailures": [],
+    "latePreparationCompletions": 0,
+    "timeLimits": {
+      "nativeAddress": "0x555557bd2c60",
+      "retained": true,
+      "shutdownCalls": 0,
+      "state": 1,
+      "transitions": [
+        {
+          "oldState": 0,
+          "newState": 1,
+          "wallTimeSecs": 1792558070
+        }
+      ],
+      "loginUserReady": true,
+      "clockSourceActive": true
+    },
+    "retiredUi": [],
+    "uiRegistrations": {
+      "exports": 14,
+      "ownedNames": 8,
+      "signals": {
+        "total": 83,
+        "permanent": 37,
+        "inventory": [
+          "GSettings:changed::always-show-log-out:backend",
+          "GSettings:changed::app-picker-layout:ui",
+          "GSettings:changed::disable-extension-version-validation:ui",
+          "GSettings:changed::disable-user-extensions:ui",
+          "GSettings:changed::disable-user-extensions:ui",
+          "GSettings:changed::disabled-extensions:ui",
+          "GSettings:changed::enabled-extensions:ui",
+          "GSettings:changed::favorite-apps:backend",
+          "GSettings:writable-changed::disabled-extensions:ui",
+          "GSettings:writable-changed::enabled-extensions:ui",
+          "MetaContextMain:notify::unsafe-mode:ui",
+          "MetaDisplay:accelerator-activated:ui",
+          "MetaDisplay:accelerator-deactivated:ui",
+          "MetaDisplay:gl-video-memory-purged:ui",
+          "MetaDisplay:in-fullscreen-changed:backend",
+          "MetaDisplay:in-fullscreen-changed:ui",
+          "MetaDisplay:in-fullscreen-changed:ui",
+          "MetaDisplay:init-xserver:backend",
+          "MetaDisplay:modifiers-accelerator-activated:backend",
+          "MetaDisplay:notify::focus-window:backend",
+          "MetaDisplay:overlay-key:ui",
+          "MetaDisplay:restacked:ui",
+          "MetaDisplay:show-osd:backend",
+          "MetaDisplay:show-pad-osd:backend",
+          "MetaDisplay:show-resize-popup:backend",
+          "MetaDisplay:window-demands-attention:ui",
+          "MetaDisplay:window-entered-monitor:backend",
+          "MetaDisplay:window-left-monitor:backend",
+          "MetaDisplay:window-marked-urgent:ui",
+          "MetaDisplay:workareas-changed:ui:_init@resource:///org/gnome/shell/ui/overviewControls.js:59:24",
+          "MetaDisplay:workareas-changed:ui:_init@resource:///org/gnome/shell/ui/tgnomePanelRealm.js:50:24",
+          "MetaDisplay:workareas-changed:ui:_init@resource:///org/gnome/shell/ui/workspaceThumbnail.js:664:24",
+          "MetaDisplay:workareas-changed:ui:_syncWorkareaTracking@resource:///org/gnome/shell/ui/workspace.js:591:32",
+          "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+          "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+          "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+          "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+          "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+          "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+          "MetaDisplay:x11-display-closing:backend",
+          "MetaStage:destroy:backend",
+          "MetaStage:event::touchpad:backend",
+          "MetaStage:event::touchpad:ui",
+          "MetaStage:key-press-event:ui",
+          "MetaStage:notify::key-focus:ui",
+          "MetaStage:scroll-event:backend",
+          "MetaStage:scroll-event:backend",
+          "MetaWindowGroup:destroy:ui",
+          "SessionMode:updated:backend",
+          "SessionMode:updated:backend",
+          "SessionMode:updated:backend",
+          "SessionMode:updated:ui",
+          "SessionMode:updated:ui",
+          "SessionMode:updated:ui",
+          "SessionMode:updated:ui",
+          "ShellGlobal:locate-pointer:ui",
+          "ShellGlobal:notify-error:ui",
+          "ShellGlobal:notify::force-animations:ui",
+          "ShellGlobal:shutdown:backend",
+          "ShellGlobal:tgnome-ui-reset:ui",
+          "ShellGlobal:tgnome-ui-reset:ui",
+          "ShellGlobal:tgnome-ui-reset:ui",
+          "ShellGlobal:tgnome-ui-reset:ui",
+          "ShellGlobal:tgnome-ui-reset:ui",
+          "ShellGlobal:tgnome-ui-reset:ui",
+          "ShellWM:confirm-display-change:backend",
+          "ShellWM:create-close-dialog:backend",
+          "ShellWM:create-inhibit-shortcuts-dialog:backend",
+          "ShellWM:destroy:backend",
+          "ShellWM:filter-keybinding:backend",
+          "ShellWM:hide-tile-preview:backend",
+          "ShellWM:kill-switch-workspace:backend",
+          "ShellWM:kill-window-effects:backend",
+          "ShellWM:map:backend",
+          "ShellWM:minimize:backend",
+          "ShellWM:show-tile-preview:backend",
+          "ShellWM:show-window-menu:backend",
+          "ShellWM:size-change:backend",
+          "ShellWM:size-changed:backend",
+          "ShellWM:switch-workspace:backend",
+          "ShellWM:switch-workspace:backend",
+          "ShellWM:switch-workspace:ui",
+          "ShellWM:unminimize:backend"
+        ]
+      },
+      "permanentExports": 1,
+      "stageActions": 4,
+      "watchedNames": 1,
+      "exportInventory": [
+        "/org/freedesktop/Notifications:org.freedesktop.Notifications",
+        "/org/freedesktop/portal/desktop:org.freedesktop.impl.portal.Access",
+        "/org/gnome/SessionManager/EndSessionDialog:org.gnome.SessionManager.EndSessionDialog",
+        "/org/gnome/Shell/AudioDeviceSelection:org.gnome.Shell.AudioDeviceSelection",
+        "/org/gnome/Shell/Brightness:org.gnome.Shell.Brightness",
+        "/org/gnome/Shell/Extensions/Tgnome:org.gnome.Shell.Extensions.Tgnome",
+        "/org/gnome/Shell/Introspect:org.gnome.Shell.Introspect",
+        "/org/gnome/Shell/ScreenTime:org.gnome.Shell.ScreenTime",
+        "/org/gnome/Shell/Screenshot:org.gnome.Shell.Screenshot",
+        "/org/gnome/Shell/Wacom:org.gnome.Shell.Wacom.PadOsd",
+        "/org/gnome/Shell:org.gnome.Shell",
+        "/org/gnome/Shell:org.gnome.Shell.Extensions",
+        "/org/gtk/MountOperationHandler:org.Gtk.MountOperationHandler",
+        "/org/gtk/Notifications:org.gtk.Notifications"
+      ],
+      "nameInventory": [
+        "org.gnome.Shell.AudioDeviceSelection",
+        "org.gnome.Shell.Brightness",
+        "org.gnome.Shell.Introspect",
+        "org.gnome.Shell.Screenshot",
+        "org.gnome.Shell.Wacom.PadOsd",
+        "org.gnome.keyring.SystemPrompter",
+        "org.gtk.MountOperationHandler",
+        "org.gtk.Notifications"
+      ],
+      "watchInventory": [
+        "org.freedesktop.GeoClue2"
+      ]
+    },
+    "lastReleasedRegistrations": null,
+    "windowManagerPreserved": true,
+    "stageActions": [
+      "OSK show bottom drag",
+      "Overview swipe tracker",
+      "Window unfullscreen top drag",
+      "WorkspaceAnimation swipe tracker"
+    ],
+    "stageChildren": [
+      ":UIAreaIndicator",
+      "uiGroup:UiActor"
+    ],
+    "windowGroupAttached": true,
+    "generation": 21,
+    "failures": 1,
+    "active": true,
+    "busy": false,
+    "actorsCreated": 23,
+    "actorsDestroyed": 22,
+    "liveOwnedActors": 1,
+    "panelEntryMatches": true,
+    "themeReloads": 1,
+    "shellState": {
+      "overview": false,
+      "modalCount": 0,
+      "startingUp": false,
+      "mode": "user"
+    },
+    "panel": {
+      "supported": true,
+      "realms": {
+        "scope": "panel behavior in disposable globals; canonical GType retained",
+        "records": [
+          {
+            "generation": 1,
+            "disposed": true,
+            "globalCollected": true,
+            "implementationCollected": true,
+            "allocations": 5,
+            "preferredWidths": 10,
+            "keyEvents": 0
+          },
+          {
+            "generation": 2,
+            "disposed": true,
+            "globalCollected": true,
+            "implementationCollected": true,
+            "allocations": 1,
+            "preferredWidths": 2,
+            "keyEvents": 0
+          },
+          {
+            "generation": 3,
+            "disposed": true,
+            "globalCollected": true,
+            "implementationCollected": true,
+            "allocations": 1,
+            "preferredWidths": 2,
+            "keyEvents": 0
+          },
+          {
+            "generation": 4,
+            "disposed": true,
+            "globalCollected": true,
+            "implementationCollected": true,
+            "allocations": 1,
+            "preferredWidths": 2,
+            "keyEvents": 0
+          },
+          {
+            "generation": 5,
+            "disposed": true,
+            "globalCollected": true,
+            "implementationCollected": true,
+            "allocations": 1,
+            "preferredWidths": 2,
+            "keyEvents": 0
+          },
+          {
+            "generation": 6,
+            "disposed": true,
+            "globalCollected": true,
+            "implementationCollected": true,
+            "allocations": 1,
+            "preferredWidths": 2,
+            "keyEvents": 0
+          },
+          {
+            "generation": 7,
+            "disposed": true,
+            "globalCollected": true,
+            "implementationCollected": true,
+            "allocations": 1,
+            "preferredWidths": 2,
+            "keyEvents": 0
+          },
+          {
+            "generation": 8,
+            "disposed": true,
+            "globalCollected": true,
+            "implementationCollected": true,
+            "allocations": 1,
+            "preferredWidths": 2,
+            "keyEvents": 0
+          },
+          {
+            "generation": 9,
+            "disposed": true,
+            "globalCollected": true,
+            "implementationCollected": true,
+            "allocations": 1,
+            "preferredWidths": 2,
+            "keyEvents": 0
+          },
+          {
+            "generation": 10,
+            "disposed": true,
+            "globalCollected": true,
+            "implementationCollected": true,
+            "allocations": 1,
+            "preferredWidths": 2,
+            "keyEvents": 0
+          },
+          {
+            "generation": 11,
+            "disposed": false,
+            "globalCollected": false,
+            "implementationCollected": false,
+            "allocations": 11,
+            "preferredWidths": 22,
+            "keyEvents": 0
+          },
+          {
+            "generation": 12,
+            "disposed": true,
+            "globalCollected": true,
+            "implementationCollected": true,
+            "allocations": 0,
+            "preferredWidths": 0,
+            "keyEvents": 0
+          }
+        ]
+      },
+      "dateMenuRealms": {
+        "scope": "dateMenu.js class behavior; canonical types and parent classes retained",
+        "records": [
+          {
+            "generation": 1,
+            "retired": false,
+            "globalCollected": false,
+            "implementationCollected": false,
+            "failed": false,
+            "instances": 8,
+            "releasedInstances": 0,
+            "classes": {
+              "DateMenuButton": 1,
+              "MessagesIndicator": 1,
+              "FreezableBinLayout": 1,
+              "TodayButton": 1,
+              "CalendarColumnLayout": 1,
+              "EventsSection": 1,
+              "WorldClocksSection": 1,
+              "WeatherSection": 1
+            },
+            "calls": {
+              "MessagesIndicator._sync": 6,
+              "EventsSection._appInstalledChanged": 2,
+              "EventsSection._sync": 8,
+              "WorldClocksSection._clocksChanged": 1,
+              "WorldClocksSection._sync": 2,
+              "WeatherSection._sync": 1,
+              "WeatherSection._updateForecasts": 1,
+              "DateMenuButton._sessionUpdated": 1,
+              "DateMenuButton._getEventSource": 1,
+              "DateMenuButton._setEventSource": 1,
+              "EventsSection.setEventSource": 1,
+              "WorldClocksSection._onProxyReady": 1,
+              "WorldClocksSection._onClocksPropertiesChanged": 1,
+              "EventsSection._reloadEvents": 2,
+              "FreezableBinLayout.vfunc_get_preferred_width": 16,
+              "CalendarColumnLayout.vfunc_get_preferred_width": 16,
+              "FreezableBinLayout.vfunc_get_preferred_height": 16,
+              "MessagesIndicator._onSourceAdded": 1,
+              "MessagesIndicator._updateCount": 5,
+              "WeatherSection.vfunc_map": 13,
+              "TodayButton.setDate": 13,
+              "FreezableBinLayout.vfunc_allocate": 1
+            },
+            "retiredCalls": 0
+          }
+        ]
+      },
+      "transfer": {
+        "pending": false,
+        "retired": [
+          {
+            "phase": "adopting",
+            "entries": 9,
+            "adoptedBeforeRecovery": 1,
+            "recovered": true,
+            "oldPanelRestored": true,
+            "destroyed": true,
+            "collected": true,
+            "interrupted": false
+          }
+        ]
+      },
+      "lifecycle": {
+        "generation": 10,
+        "destroyed": 10,
+        "scope": "panel actor/layout/gestures/menu manager; indicator instances survive"
+      },
+      "replaced": true,
+      "containerCount": 1,
+      "focusGroupCount": 1,
+      "totalFocusGroups": 6,
+      "menuCount": 7,
+      "retainedIndicators": false
+    },
+    "desktop": {
+      "windows": [
+        {
+          "id": 1,
+          "title": "Tgnome persistent connection probe",
+          "workspace": 0,
+          "frame": [
+            473,
+            328,
+            334,
+            96
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Tgnome persistent connection probe",
+          "workspace": 0,
+          "frame": [
+            551,
+            329,
+            178,
+            94
+          ]
+        }
+      ],
+      "focus": 2,
+      "monitors": [
+        [
+          0,
+          0,
+          1280,
+          720
+        ]
+      ],
+      "workspace": 0
+    },
+    "shellRestartSupported": false,
+    "extensionCodeReloadSupported": false,
+    "desktopUiReloadSupported": true
+  },
+  "extensionStateTransitions": [
+    {
+      "method": "DisableExtension",
+      "before": {
+        "state": 1,
+        "enabled": true
+      },
+      "after": {
+        "state": 2,
+        "enabled": false
+      }
+    },
+    {
+      "method": "EnableExtension",
+      "before": {
+        "state": 2,
+        "enabled": false
+      },
+      "after": {
+        "state": 1,
+        "enabled": true
+      }
+    },
+    {
+      "method": "DisableExtension",
+      "before": {
+        "state": 1,
+        "enabled": true
+      },
+      "after": {
+        "state": 2,
+        "enabled": false
+      }
+    },
+    {
+      "method": "EnableExtension",
+      "before": {
+        "state": 2,
+        "enabled": false
+      },
+      "after": {
+        "state": 1,
+        "enabled": true
+      }
+    },
+    {
+      "method": "DisableExtension",
+      "before": {
+        "state": 1,
+        "enabled": true
+      },
+      "after": {
+        "state": 2,
+        "enabled": false
+      }
+    },
+    {
+      "method": "EnableExtension",
+      "before": {
+        "state": 2,
+        "enabled": false
+      },
+      "after": {
+        "state": 1,
+        "enabled": true
+      }
+    }
+  ],
+  "extensionLifecycleCycles": 3,
+  "wayland": {
+    "before": {
+      "pid": 3078744,
+      "backend": "wayland",
+      "fd": 3,
+      "inode": 8403635,
+      "windowId": 10,
+      "tick": 3,
+      "unsavedTextSha256": "9f48fe67c662abfcfdd039c6425771ca5f5393d50a00e8b83bf1acd5138b1f28",
+      "expectedTypedSha256": "69f544418eb2d3fc764b26cd691a9d9e8331d1a26b7dde2f54a4312f7da87780"
+    },
+    "after": {
+      "pid": 3078744,
+      "backend": "wayland",
+      "fd": 3,
+      "inode": 8403635,
+      "windowId": 10,
+      "tick": 27,
+      "unsavedTextSha256": "9f48fe67c662abfcfdd039c6425771ca5f5393d50a00e8b83bf1acd5138b1f28",
+      "expectedTypedSha256": "69f544418eb2d3fc764b26cd691a9d9e8331d1a26b7dde2f54a4312f7da87780"
+    },
+    "originalConnectionRoundTrips": true
+  },
+  "x11": {
+    "before": {
+      "pid": 3078755,
+      "backend": "x11",
+      "fd": 3,
+      "inode": 8404199,
+      "windowId": 2097156,
+      "tick": 1,
+      "unsavedTextSha256": "e07c54dbddc09356dfae7225ac342af0e518a8bf5281dd8e102b19086d871508",
+      "expectedTypedSha256": "85debdb989678765cd012ca374debc8f8d73c54f4647ae74ca5bf2f2f59f934c"
+    },
+    "after": {
+      "pid": 3078755,
+      "backend": "x11",
+      "fd": 3,
+      "inode": 8404199,
+      "windowId": 2097156,
+      "tick": 24,
+      "unsavedTextSha256": "e07c54dbddc09356dfae7225ac342af0e518a8bf5281dd8e102b19086d871508",
+      "expectedTypedSha256": "85debdb989678765cd012ca374debc8f8d73c54f4647ae74ca5bf2f2f59f934c"
+    },
+    "originalConnectionRoundTrips": true
+  },
+  "shellAfter": {
+    "classification": "SHELL RELOAD",
+    "scope": "panel actor reinitialized; indicator instances, GJS and compositor retained",
+    "pid": 3078414,
+    "runtimeEpoch": "3df49309-bd53-4c70-8599-8dac72996f4e",
+    "backendScopeDepth": 0,
+    "nativeBackendScopeDepth": 0,
+    "protectedBackendFixture": null,
+    "uiGeneration": 0,
+    "uiReloadState": null,
+    "uiFailures": [],
+    "uiBuildSerial": 0,
+    "lateUiOutcomes": [],
+    "cleanupWait": null,
+    "preparationFailures": [],
+    "latePreparationCompletions": 0,
+    "timeLimits": {
+      "nativeAddress": "0x555557bd2c60",
+      "retained": true,
+      "shutdownCalls": 0,
+      "state": 1,
+      "transitions": [
+        {
+          "oldState": 0,
+          "newState": 1,
+          "wallTimeSecs": 1792558070
+        }
+      ],
+      "loginUserReady": true,
+      "clockSourceActive": true
+    },
+    "retiredUi": [],
+    "uiRegistrations": {
+      "exports": 14,
+      "ownedNames": 8,
+      "signals": {
+        "total": 83,
+        "permanent": 37,
+        "inventory": [
+          "GSettings:changed::always-show-log-out:backend",
+          "GSettings:changed::app-picker-layout:ui",
+          "GSettings:changed::disable-extension-version-validation:ui",
+          "GSettings:changed::disable-user-extensions:ui",
+          "GSettings:changed::disable-user-extensions:ui",
+          "GSettings:changed::disabled-extensions:ui",
+          "GSettings:changed::enabled-extensions:ui",
+          "GSettings:changed::favorite-apps:backend",
+          "GSettings:writable-changed::disabled-extensions:ui",
+          "GSettings:writable-changed::enabled-extensions:ui",
+          "MetaContextMain:notify::unsafe-mode:ui",
+          "MetaDisplay:accelerator-activated:ui",
+          "MetaDisplay:accelerator-deactivated:ui",
+          "MetaDisplay:gl-video-memory-purged:ui",
+          "MetaDisplay:in-fullscreen-changed:backend",
+          "MetaDisplay:in-fullscreen-changed:ui",
+          "MetaDisplay:in-fullscreen-changed:ui",
+          "MetaDisplay:init-xserver:backend",
+          "MetaDisplay:modifiers-accelerator-activated:backend",
+          "MetaDisplay:notify::focus-window:backend",
+          "MetaDisplay:overlay-key:ui",
+          "MetaDisplay:restacked:ui",
+          "MetaDisplay:show-osd:backend",
+          "MetaDisplay:show-pad-osd:backend",
+          "MetaDisplay:show-resize-popup:backend",
+          "MetaDisplay:window-demands-attention:ui",
+          "MetaDisplay:window-entered-monitor:backend",
+          "MetaDisplay:window-left-monitor:backend",
+          "MetaDisplay:window-marked-urgent:ui",
+          "MetaDisplay:workareas-changed:ui:_init@resource:///org/gnome/shell/ui/overviewControls.js:59:24",
+          "MetaDisplay:workareas-changed:ui:_init@resource:///org/gnome/shell/ui/tgnomePanelRealm.js:50:24",
+          "MetaDisplay:workareas-changed:ui:_init@resource:///org/gnome/shell/ui/workspaceThumbnail.js:664:24",
+          "MetaDisplay:workareas-changed:ui:_syncWorkareaTracking@resource:///org/gnome/shell/ui/workspace.js:591:32",
+          "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+          "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+          "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+          "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+          "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+          "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+          "MetaDisplay:x11-display-closing:backend",
+          "MetaStage:destroy:backend",
+          "MetaStage:event::touchpad:backend",
+          "MetaStage:event::touchpad:ui",
+          "MetaStage:key-press-event:ui",
+          "MetaStage:notify::key-focus:ui",
+          "MetaStage:scroll-event:backend",
+          "MetaStage:scroll-event:backend",
+          "MetaWindowGroup:destroy:ui",
+          "SessionMode:updated:backend",
+          "SessionMode:updated:backend",
+          "SessionMode:updated:backend",
+          "SessionMode:updated:ui",
+          "SessionMode:updated:ui",
+          "SessionMode:updated:ui",
+          "SessionMode:updated:ui",
+          "ShellGlobal:locate-pointer:ui",
+          "ShellGlobal:notify-error:ui",
+          "ShellGlobal:notify::force-animations:ui",
+          "ShellGlobal:shutdown:backend",
+          "ShellGlobal:tgnome-ui-reset:ui",
+          "ShellGlobal:tgnome-ui-reset:ui",
+          "ShellGlobal:tgnome-ui-reset:ui",
+          "ShellGlobal:tgnome-ui-reset:ui",
+          "ShellGlobal:tgnome-ui-reset:ui",
+          "ShellGlobal:tgnome-ui-reset:ui",
+          "ShellWM:confirm-display-change:backend",
+          "ShellWM:create-close-dialog:backend",
+          "ShellWM:create-inhibit-shortcuts-dialog:backend",
+          "ShellWM:destroy:backend",
+          "ShellWM:filter-keybinding:backend",
+          "ShellWM:hide-tile-preview:backend",
+          "ShellWM:kill-switch-workspace:backend",
+          "ShellWM:kill-window-effects:backend",
+          "ShellWM:map:backend",
+          "ShellWM:minimize:backend",
+          "ShellWM:show-tile-preview:backend",
+          "ShellWM:show-window-menu:backend",
+          "ShellWM:size-change:backend",
+          "ShellWM:size-changed:backend",
+          "ShellWM:switch-workspace:backend",
+          "ShellWM:switch-workspace:backend",
+          "ShellWM:switch-workspace:ui",
+          "ShellWM:unminimize:backend"
+        ]
+      },
+      "permanentExports": 1,
+      "stageActions": 4,
+      "watchedNames": 1,
+      "exportInventory": [
+        "/org/freedesktop/Notifications:org.freedesktop.Notifications",
+        "/org/freedesktop/portal/desktop:org.freedesktop.impl.portal.Access",
+        "/org/gnome/SessionManager/EndSessionDialog:org.gnome.SessionManager.EndSessionDialog",
+        "/org/gnome/Shell/AudioDeviceSelection:org.gnome.Shell.AudioDeviceSelection",
+        "/org/gnome/Shell/Brightness:org.gnome.Shell.Brightness",
+        "/org/gnome/Shell/Extensions/Tgnome:org.gnome.Shell.Extensions.Tgnome",
+        "/org/gnome/Shell/Introspect:org.gnome.Shell.Introspect",
+        "/org/gnome/Shell/ScreenTime:org.gnome.Shell.ScreenTime",
+        "/org/gnome/Shell/Screenshot:org.gnome.Shell.Screenshot",
+        "/org/gnome/Shell/Wacom:org.gnome.Shell.Wacom.PadOsd",
+        "/org/gnome/Shell:org.gnome.Shell",
+        "/org/gnome/Shell:org.gnome.Shell.Extensions",
+        "/org/gtk/MountOperationHandler:org.Gtk.MountOperationHandler",
+        "/org/gtk/Notifications:org.gtk.Notifications"
+      ],
+      "nameInventory": [
+        "org.gnome.Shell.AudioDeviceSelection",
+        "org.gnome.Shell.Brightness",
+        "org.gnome.Shell.Introspect",
+        "org.gnome.Shell.Screenshot",
+        "org.gnome.Shell.Wacom.PadOsd",
+        "org.gnome.keyring.SystemPrompter",
+        "org.gtk.MountOperationHandler",
+        "org.gtk.Notifications"
+      ],
+      "watchInventory": [
+        "org.freedesktop.GeoClue2"
+      ]
+    },
+    "lastReleasedRegistrations": null,
+    "windowManagerPreserved": true,
+    "stageActions": [
+      "OSK show bottom drag",
+      "Overview swipe tracker",
+      "Window unfullscreen top drag",
+      "WorkspaceAnimation swipe tracker"
+    ],
+    "stageChildren": [
+      ":UIAreaIndicator",
+      "uiGroup:UiActor"
+    ],
+    "windowGroupAttached": true,
+    "generation": 0,
+    "failures": 0,
+    "active": true,
+    "busy": false,
+    "actorsCreated": 26,
+    "actorsDestroyed": 25,
+    "liveOwnedActors": 1,
+    "panelEntryMatches": true,
+    "themeReloads": 0,
+    "shellState": {
+      "overview": false,
+      "modalCount": 0,
+      "startingUp": false,
+      "mode": "user"
+    },
+    "panel": {
+      "supported": true,
+      "realms": {
+        "scope": "panel behavior in disposable globals; canonical GType retained",
+        "records": [
+          {
+            "generation": 1,
+            "disposed": true,
+            "globalCollected": true,
+            "implementationCollected": true,
+            "allocations": 5,
+            "preferredWidths": 10,
+            "keyEvents": 0
+          },
+          {
+            "generation": 2,
+            "disposed": true,
+            "globalCollected": true,
+            "implementationCollected": true,
+            "allocations": 1,
+            "preferredWidths": 2,
+            "keyEvents": 0
+          },
+          {
+            "generation": 3,
+            "disposed": true,
+            "globalCollected": true,
+            "implementationCollected": true,
+            "allocations": 1,
+            "preferredWidths": 2,
+            "keyEvents": 0
+          },
+          {
+            "generation": 4,
+            "disposed": true,
+            "globalCollected": true,
+            "implementationCollected": true,
+            "allocations": 1,
+            "preferredWidths": 2,
+            "keyEvents": 0
+          },
+          {
+            "generation": 5,
+            "disposed": true,
+            "globalCollected": true,
+            "implementationCollected": true,
+            "allocations": 1,
+            "preferredWidths": 2,
+            "keyEvents": 0
+          },
+          {
+            "generation": 6,
+            "disposed": true,
+            "globalCollected": true,
+            "implementationCollected": true,
+            "allocations": 1,
+            "preferredWidths": 2,
+            "keyEvents": 0
+          },
+          {
+            "generation": 7,
+            "disposed": true,
+            "globalCollected": true,
+            "implementationCollected": true,
+            "allocations": 1,
+            "preferredWidths": 2,
+            "keyEvents": 0
+          },
+          {
+            "generation": 8,
+            "disposed": true,
+            "globalCollected": true,
+            "implementationCollected": true,
+            "allocations": 1,
+            "preferredWidths": 2,
+            "keyEvents": 0
+          },
+          {
+            "generation": 9,
+            "disposed": true,
+            "globalCollected": true,
+            "implementationCollected": true,
+            "allocations": 1,
+            "preferredWidths": 2,
+            "keyEvents": 0
+          },
+          {
+            "generation": 10,
+            "disposed": true,
+            "globalCollected": true,
+            "implementationCollected": true,
+            "allocations": 1,
+            "preferredWidths": 2,
+            "keyEvents": 0
+          },
+          {
+            "generation": 11,
+            "disposed": false,
+            "globalCollected": false,
+            "implementationCollected": false,
+            "allocations": 18,
+            "preferredWidths": 36,
+            "keyEvents": 0
+          },
+          {
+            "generation": 12,
+            "disposed": true,
+            "globalCollected": true,
+            "implementationCollected": true,
+            "allocations": 0,
+            "preferredWidths": 0,
+            "keyEvents": 0
+          }
+        ]
+      },
+      "dateMenuRealms": {
+        "scope": "dateMenu.js class behavior; canonical types and parent classes retained",
+        "records": [
+          {
+            "generation": 1,
+            "retired": false,
+            "globalCollected": false,
+            "implementationCollected": false,
+            "failed": false,
+            "instances": 8,
+            "releasedInstances": 0,
+            "classes": {
+              "DateMenuButton": 1,
+              "MessagesIndicator": 1,
+              "FreezableBinLayout": 1,
+              "TodayButton": 1,
+              "CalendarColumnLayout": 1,
+              "EventsSection": 1,
+              "WorldClocksSection": 1,
+              "WeatherSection": 1
+            },
+            "calls": {
+              "MessagesIndicator._sync": 6,
+              "EventsSection._appInstalledChanged": 2,
+              "EventsSection._sync": 8,
+              "WorldClocksSection._clocksChanged": 1,
+              "WorldClocksSection._sync": 2,
+              "WeatherSection._sync": 1,
+              "WeatherSection._updateForecasts": 1,
+              "DateMenuButton._sessionUpdated": 1,
+              "DateMenuButton._getEventSource": 1,
+              "DateMenuButton._setEventSource": 1,
+              "EventsSection.setEventSource": 1,
+              "WorldClocksSection._onProxyReady": 1,
+              "WorldClocksSection._onClocksPropertiesChanged": 1,
+              "EventsSection._reloadEvents": 2,
+              "FreezableBinLayout.vfunc_get_preferred_width": 16,
+              "CalendarColumnLayout.vfunc_get_preferred_width": 16,
+              "FreezableBinLayout.vfunc_get_preferred_height": 16,
+              "MessagesIndicator._onSourceAdded": 1,
+              "MessagesIndicator._updateCount": 5,
+              "WeatherSection.vfunc_map": 13,
+              "TodayButton.setDate": 13,
+              "FreezableBinLayout.vfunc_allocate": 1
+            },
+            "retiredCalls": 0
+          }
+        ]
+      },
+      "transfer": {
+        "pending": false,
+        "retired": [
+          {
+            "phase": "adopting",
+            "entries": 9,
+            "adoptedBeforeRecovery": 1,
+            "recovered": true,
+            "oldPanelRestored": true,
+            "destroyed": true,
+            "collected": true,
+            "interrupted": false
+          }
+        ]
+      },
+      "lifecycle": {
+        "generation": 10,
+        "destroyed": 10,
+        "scope": "panel actor/layout/gestures/menu manager; indicator instances survive"
+      },
+      "replaced": false,
+      "containerCount": 1,
+      "focusGroupCount": 1,
+      "totalFocusGroups": 6,
+      "menuCount": 7,
+      "retainedIndicators": true
+    },
+    "desktop": {
+      "windows": [
+        {
+          "id": 1,
+          "title": "Tgnome persistent connection probe",
+          "workspace": 0,
+          "frame": [
+            473,
+            328,
+            334,
+            96
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Tgnome persistent connection probe",
+          "workspace": 0,
+          "frame": [
+            551,
+            329,
+            178,
+            94
+          ]
+        }
+      ],
+      "focus": 2,
+      "monitors": [
+        [
+          0,
+          0,
+          1280,
+          720
+        ]
+      ],
+      "workspace": 0
+    },
+    "shellRestartSupported": false,
+    "extensionCodeReloadSupported": false,
+    "desktopUiReloadSupported": true
+  },
+  "xwaylandAfter": [
+    {
+      "pid": 3078757,
+      "exe": "/nix/store/8irpj5qxxxjnr98lh3dcx83xa26qf44p-xwayland-24.1.14/bin/Xwayland",
+      "startTime": "16896004"
+    }
+  ],
+  "xwaylandTested": true,
+  "reloadScope": "panel actor/layout/gestures/menu manager; indicators, GJS and Mutter survive",
+  "nativeLoop": {
+    "attempts": 0,
+    "contextsFinalized": 0,
+    "state": "ready",
+    "registeredProbeTypes": 0,
+    "registeredObjectTypes": 986,
+    "newObjectTypes": [],
+    "uiFailures": 0,
+    "uiRetryAttempts": 0,
+    "uiCommits": 0,
+    "uiBuildSerial": 0,
+    "uiTimeouts": 0,
+    "uiQuarantined": false,
+    "uiQuarantines": 0,
+    "preparationFailures": 0,
+    "preparationTimeouts": 0,
+    "uiActive": false,
+    "securityVm": false,
+    "securityBoundaryBits": 0,
+    "researchOnly": true
+  },
+  "baselinePassed": true,
+  "inPlaceReload": {
+    "before": {
+      "classification": "SHELL RELOAD",
+      "scope": "panel actor reinitialized; indicator instances, GJS and compositor retained",
+      "pid": 3078414,
+      "runtimeEpoch": "3df49309-bd53-4c70-8599-8dac72996f4e",
+      "backendScopeDepth": 0,
+      "nativeBackendScopeDepth": 0,
+      "protectedBackendFixture": null,
+      "uiGeneration": 0,
+      "uiReloadState": null,
+      "uiFailures": [],
+      "uiBuildSerial": 0,
+      "lateUiOutcomes": [],
+      "cleanupWait": null,
+      "preparationFailures": [],
+      "latePreparationCompletions": 0,
+      "timeLimits": {
+        "nativeAddress": "0x555557bd2c60",
+        "retained": true,
+        "shutdownCalls": 0,
+        "state": 1,
+        "transitions": [
+          {
+            "oldState": 0,
+            "newState": 1,
+            "wallTimeSecs": 1792558070
+          }
+        ],
+        "loginUserReady": true,
+        "clockSourceActive": true
+      },
+      "retiredUi": [],
+      "uiRegistrations": {
+        "exports": 14,
+        "ownedNames": 8,
+        "signals": {
+          "total": 83,
+          "permanent": 37,
+          "inventory": [
+            "GSettings:changed::always-show-log-out:backend",
+            "GSettings:changed::app-picker-layout:ui",
+            "GSettings:changed::disable-extension-version-validation:ui",
+            "GSettings:changed::disable-user-extensions:ui",
+            "GSettings:changed::disable-user-extensions:ui",
+            "GSettings:changed::disabled-extensions:ui",
+            "GSettings:changed::enabled-extensions:ui",
+            "GSettings:changed::favorite-apps:backend",
+            "GSettings:writable-changed::disabled-extensions:ui",
+            "GSettings:writable-changed::enabled-extensions:ui",
+            "MetaContextMain:notify::unsafe-mode:ui",
+            "MetaDisplay:accelerator-activated:ui",
+            "MetaDisplay:accelerator-deactivated:ui",
+            "MetaDisplay:gl-video-memory-purged:ui",
+            "MetaDisplay:in-fullscreen-changed:backend",
+            "MetaDisplay:in-fullscreen-changed:ui",
+            "MetaDisplay:in-fullscreen-changed:ui",
+            "MetaDisplay:init-xserver:backend",
+            "MetaDisplay:modifiers-accelerator-activated:backend",
+            "MetaDisplay:notify::focus-window:backend",
+            "MetaDisplay:overlay-key:ui",
+            "MetaDisplay:restacked:ui",
+            "MetaDisplay:show-osd:backend",
+            "MetaDisplay:show-pad-osd:backend",
+            "MetaDisplay:show-resize-popup:backend",
+            "MetaDisplay:window-demands-attention:ui",
+            "MetaDisplay:window-entered-monitor:backend",
+            "MetaDisplay:window-left-monitor:backend",
+            "MetaDisplay:window-marked-urgent:ui",
+            "MetaDisplay:workareas-changed:ui:_init@resource:///org/gnome/shell/ui/overviewControls.js:59:24",
+            "MetaDisplay:workareas-changed:ui:_init@resource:///org/gnome/shell/ui/tgnomePanelRealm.js:50:24",
+            "MetaDisplay:workareas-changed:ui:_init@resource:///org/gnome/shell/ui/workspaceThumbnail.js:664:24",
+            "MetaDisplay:workareas-changed:ui:_syncWorkareaTracking@resource:///org/gnome/shell/ui/workspace.js:591:32",
+            "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+            "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+            "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+            "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+            "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+            "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+            "MetaDisplay:x11-display-closing:backend",
+            "MetaStage:destroy:backend",
+            "MetaStage:event::touchpad:backend",
+            "MetaStage:event::touchpad:ui",
+            "MetaStage:key-press-event:ui",
+            "MetaStage:notify::key-focus:ui",
+            "MetaStage:scroll-event:backend",
+            "MetaStage:scroll-event:backend",
+            "MetaWindowGroup:destroy:ui",
+            "SessionMode:updated:backend",
+            "SessionMode:updated:backend",
+            "SessionMode:updated:backend",
+            "SessionMode:updated:ui",
+            "SessionMode:updated:ui",
+            "SessionMode:updated:ui",
+            "SessionMode:updated:ui",
+            "ShellGlobal:locate-pointer:ui",
+            "ShellGlobal:notify-error:ui",
+            "ShellGlobal:notify::force-animations:ui",
+            "ShellGlobal:shutdown:backend",
+            "ShellGlobal:tgnome-ui-reset:ui",
+            "ShellGlobal:tgnome-ui-reset:ui",
+            "ShellGlobal:tgnome-ui-reset:ui",
+            "ShellGlobal:tgnome-ui-reset:ui",
+            "ShellGlobal:tgnome-ui-reset:ui",
+            "ShellGlobal:tgnome-ui-reset:ui",
+            "ShellWM:confirm-display-change:backend",
+            "ShellWM:create-close-dialog:backend",
+            "ShellWM:create-inhibit-shortcuts-dialog:backend",
+            "ShellWM:destroy:backend",
+            "ShellWM:filter-keybinding:backend",
+            "ShellWM:hide-tile-preview:backend",
+            "ShellWM:kill-switch-workspace:backend",
+            "ShellWM:kill-window-effects:backend",
+            "ShellWM:map:backend",
+            "ShellWM:minimize:backend",
+            "ShellWM:show-tile-preview:backend",
+            "ShellWM:show-window-menu:backend",
+            "ShellWM:size-change:backend",
+            "ShellWM:size-changed:backend",
+            "ShellWM:switch-workspace:backend",
+            "ShellWM:switch-workspace:backend",
+            "ShellWM:switch-workspace:ui",
+            "ShellWM:unminimize:backend"
+          ]
+        },
+        "permanentExports": 1,
+        "stageActions": 4,
+        "watchedNames": 1,
+        "exportInventory": [
+          "/org/freedesktop/Notifications:org.freedesktop.Notifications",
+          "/org/freedesktop/portal/desktop:org.freedesktop.impl.portal.Access",
+          "/org/gnome/SessionManager/EndSessionDialog:org.gnome.SessionManager.EndSessionDialog",
+          "/org/gnome/Shell/AudioDeviceSelection:org.gnome.Shell.AudioDeviceSelection",
+          "/org/gnome/Shell/Brightness:org.gnome.Shell.Brightness",
+          "/org/gnome/Shell/Extensions/Tgnome:org.gnome.Shell.Extensions.Tgnome",
+          "/org/gnome/Shell/Introspect:org.gnome.Shell.Introspect",
+          "/org/gnome/Shell/ScreenTime:org.gnome.Shell.ScreenTime",
+          "/org/gnome/Shell/Screenshot:org.gnome.Shell.Screenshot",
+          "/org/gnome/Shell/Wacom:org.gnome.Shell.Wacom.PadOsd",
+          "/org/gnome/Shell:org.gnome.Shell",
+          "/org/gnome/Shell:org.gnome.Shell.Extensions",
+          "/org/gtk/MountOperationHandler:org.Gtk.MountOperationHandler",
+          "/org/gtk/Notifications:org.gtk.Notifications"
+        ],
+        "nameInventory": [
+          "org.gnome.Shell.AudioDeviceSelection",
+          "org.gnome.Shell.Brightness",
+          "org.gnome.Shell.Introspect",
+          "org.gnome.Shell.Screenshot",
+          "org.gnome.Shell.Wacom.PadOsd",
+          "org.gnome.keyring.SystemPrompter",
+          "org.gtk.MountOperationHandler",
+          "org.gtk.Notifications"
+        ],
+        "watchInventory": [
+          "org.freedesktop.GeoClue2"
+        ]
+      },
+      "lastReleasedRegistrations": null,
+      "windowManagerPreserved": true,
+      "stageActions": [
+        "OSK show bottom drag",
+        "Overview swipe tracker",
+        "Window unfullscreen top drag",
+        "WorkspaceAnimation swipe tracker"
+      ],
+      "stageChildren": [
+        ":UIAreaIndicator",
+        "uiGroup:UiActor"
+      ],
+      "windowGroupAttached": true,
+      "generation": 0,
+      "failures": 0,
+      "active": true,
+      "busy": false,
+      "actorsCreated": 26,
+      "actorsDestroyed": 25,
+      "liveOwnedActors": 1,
+      "panelEntryMatches": true,
+      "themeReloads": 0,
+      "shellState": {
+        "overview": false,
+        "modalCount": 0,
+        "startingUp": false,
+        "mode": "user"
+      },
+      "panel": {
+        "supported": true,
+        "realms": {
+          "scope": "panel behavior in disposable globals; canonical GType retained",
+          "records": [
+            {
+              "generation": 1,
+              "disposed": true,
+              "globalCollected": true,
+              "implementationCollected": true,
+              "allocations": 5,
+              "preferredWidths": 10,
+              "keyEvents": 0
+            },
+            {
+              "generation": 2,
+              "disposed": true,
+              "globalCollected": true,
+              "implementationCollected": true,
+              "allocations": 1,
+              "preferredWidths": 2,
+              "keyEvents": 0
+            },
+            {
+              "generation": 3,
+              "disposed": true,
+              "globalCollected": true,
+              "implementationCollected": true,
+              "allocations": 1,
+              "preferredWidths": 2,
+              "keyEvents": 0
+            },
+            {
+              "generation": 4,
+              "disposed": true,
+              "globalCollected": true,
+              "implementationCollected": true,
+              "allocations": 1,
+              "preferredWidths": 2,
+              "keyEvents": 0
+            },
+            {
+              "generation": 5,
+              "disposed": true,
+              "globalCollected": true,
+              "implementationCollected": true,
+              "allocations": 1,
+              "preferredWidths": 2,
+              "keyEvents": 0
+            },
+            {
+              "generation": 6,
+              "disposed": true,
+              "globalCollected": true,
+              "implementationCollected": true,
+              "allocations": 1,
+              "preferredWidths": 2,
+              "keyEvents": 0
+            },
+            {
+              "generation": 7,
+              "disposed": true,
+              "globalCollected": true,
+              "implementationCollected": true,
+              "allocations": 1,
+              "preferredWidths": 2,
+              "keyEvents": 0
+            },
+            {
+              "generation": 8,
+              "disposed": true,
+              "globalCollected": true,
+              "implementationCollected": true,
+              "allocations": 1,
+              "preferredWidths": 2,
+              "keyEvents": 0
+            },
+            {
+              "generation": 9,
+              "disposed": true,
+              "globalCollected": true,
+              "implementationCollected": true,
+              "allocations": 1,
+              "preferredWidths": 2,
+              "keyEvents": 0
+            },
+            {
+              "generation": 10,
+              "disposed": true,
+              "globalCollected": true,
+              "implementationCollected": true,
+              "allocations": 1,
+              "preferredWidths": 2,
+              "keyEvents": 0
+            },
+            {
+              "generation": 11,
+              "disposed": false,
+              "globalCollected": false,
+              "implementationCollected": false,
+              "allocations": 22,
+              "preferredWidths": 44,
+              "keyEvents": 0
+            },
+            {
+              "generation": 12,
+              "disposed": true,
+              "globalCollected": true,
+              "implementationCollected": true,
+              "allocations": 0,
+              "preferredWidths": 0,
+              "keyEvents": 0
+            }
+          ]
+        },
+        "dateMenuRealms": {
+          "scope": "dateMenu.js class behavior; canonical types and parent classes retained",
+          "records": [
+            {
+              "generation": 1,
+              "retired": false,
+              "globalCollected": false,
+              "implementationCollected": false,
+              "failed": false,
+              "instances": 8,
+              "releasedInstances": 0,
+              "classes": {
+                "DateMenuButton": 1,
+                "MessagesIndicator": 1,
+                "FreezableBinLayout": 1,
+                "TodayButton": 1,
+                "CalendarColumnLayout": 1,
+                "EventsSection": 1,
+                "WorldClocksSection": 1,
+                "WeatherSection": 1
+              },
+              "calls": {
+                "MessagesIndicator._sync": 6,
+                "EventsSection._appInstalledChanged": 2,
+                "EventsSection._sync": 8,
+                "WorldClocksSection._clocksChanged": 1,
+                "WorldClocksSection._sync": 2,
+                "WeatherSection._sync": 1,
+                "WeatherSection._updateForecasts": 1,
+                "DateMenuButton._sessionUpdated": 1,
+                "DateMenuButton._getEventSource": 1,
+                "DateMenuButton._setEventSource": 1,
+                "EventsSection.setEventSource": 1,
+                "WorldClocksSection._onProxyReady": 1,
+                "WorldClocksSection._onClocksPropertiesChanged": 1,
+                "EventsSection._reloadEvents": 2,
+                "FreezableBinLayout.vfunc_get_preferred_width": 16,
+                "CalendarColumnLayout.vfunc_get_preferred_width": 16,
+                "FreezableBinLayout.vfunc_get_preferred_height": 16,
+                "MessagesIndicator._onSourceAdded": 1,
+                "MessagesIndicator._updateCount": 5,
+                "WeatherSection.vfunc_map": 13,
+                "TodayButton.setDate": 13,
+                "FreezableBinLayout.vfunc_allocate": 1
+              },
+              "retiredCalls": 0
+            }
+          ]
+        },
+        "transfer": {
+          "pending": false,
+          "retired": [
+            {
+              "phase": "adopting",
+              "entries": 9,
+              "adoptedBeforeRecovery": 1,
+              "recovered": true,
+              "oldPanelRestored": true,
+              "destroyed": true,
+              "collected": true,
+              "interrupted": false
+            }
+          ]
+        },
+        "lifecycle": {
+          "generation": 10,
+          "destroyed": 10,
+          "scope": "panel actor/layout/gestures/menu manager; indicator instances survive"
+        },
+        "replaced": false,
+        "containerCount": 1,
+        "focusGroupCount": 1,
+        "totalFocusGroups": 6,
+        "menuCount": 7,
+        "retainedIndicators": true
+      },
+      "desktop": {
+        "windows": [
+          {
+            "id": 1,
+            "title": "Tgnome persistent connection probe",
+            "workspace": 0,
+            "frame": [
+              40,
+              180,
+              500,
+              160
+            ]
+          },
+          {
+            "id": 2,
+            "title": "Tgnome persistent connection probe",
+            "workspace": 0,
+            "frame": [
+              640,
+              180,
+              500,
+              160
+            ]
+          }
+        ],
+        "focus": 2,
+        "monitors": [
+          [
+            0,
+            0,
+            1280,
+            720
+          ]
+        ],
+        "workspace": 0
+      },
+      "shellRestartSupported": false,
+      "extensionCodeReloadSupported": false,
+      "desktopUiReloadSupported": true
+    },
+    "nativeBefore": {
+      "attempts": 0,
+      "contextsFinalized": 0,
+      "state": "ready",
+      "registeredProbeTypes": 0,
+      "registeredObjectTypes": 988,
+      "newObjectTypes": [
+        "ClutterVirtualInputDevice",
+        "MetaVirtualInputDeviceNative"
+      ],
+      "uiFailures": 0,
+      "uiRetryAttempts": 0,
+      "uiCommits": 0,
+      "uiBuildSerial": 0,
+      "uiTimeouts": 0,
+      "uiQuarantined": false,
+      "uiQuarantines": 0,
+      "preparationFailures": 0,
+      "preparationTimeouts": 0,
+      "uiActive": false,
+      "securityVm": false,
+      "securityBoundaryBits": 0,
+      "researchOnly": true
+    },
+    "cycles": [
+      {
+        "generation": 1,
+        "preparation": {
+          "prepared": true,
+          "releasedKeybindings": 15,
+          "forwardRecovered": false,
+          "native": {
+            "attempts": 1,
+            "contextsFinalized": 0,
+            "state": "scheduled",
+            "registeredProbeTypes": 0,
+            "registeredObjectTypes": 988,
+            "newObjectTypes": [
+              "ClutterVirtualInputDevice",
+              "MetaVirtualInputDeviceNative"
+            ],
+            "uiFailures": 0,
+            "uiRetryAttempts": 0,
+            "uiCommits": 0,
+            "uiBuildSerial": 0,
+            "uiTimeouts": 0,
+            "uiQuarantined": false,
+            "uiQuarantines": 0,
+            "preparationFailures": 0,
+            "preparationTimeouts": 0,
+            "uiActive": true,
+            "securityVm": false,
+            "securityBoundaryBits": 0,
+            "researchOnly": true
+          }
+        },
+        "requested": {
+          "attempts": 1,
+          "contextsFinalized": 0,
+          "state": "scheduled",
+          "registeredProbeTypes": 0,
+          "registeredObjectTypes": 988,
+          "newObjectTypes": [
+            "ClutterVirtualInputDevice",
+            "MetaVirtualInputDeviceNative"
+          ],
+          "uiFailures": 0,
+          "uiRetryAttempts": 0,
+          "uiCommits": 0,
+          "uiBuildSerial": 0,
+          "uiTimeouts": 0,
+          "uiQuarantined": false,
+          "uiQuarantines": 0,
+          "preparationFailures": 0,
+          "preparationTimeouts": 0,
+          "uiActive": true,
+          "securityVm": false,
+          "securityBoundaryBits": 0,
+          "researchOnly": true
+        },
+        "menus": {
+          "menusChecked": [
+            "dateMenu",
+            "quickSettings"
+          ],
+          "modalCount": 0
+        },
+        "windowMenu": {
+          "opened": true,
+          "closed": true
+        },
+        "after": {
+          "classification": "SHELL RELOAD",
+          "scope": "desktop UI instances reinitialized; GJS, backend models and compositor retained",
+          "pid": 3078414,
+          "runtimeEpoch": "3df49309-bd53-4c70-8599-8dac72996f4e",
+          "backendScopeDepth": 0,
+          "nativeBackendScopeDepth": 0,
+          "protectedBackendFixture": null,
+          "uiGeneration": 1,
+          "uiReloadState": "started",
+          "uiFailures": [],
+          "uiBuildSerial": 1,
+          "lateUiOutcomes": [],
+          "cleanupWait": null,
+          "preparationFailures": [],
+          "latePreparationCompletions": 0,
+          "timeLimits": {
+            "nativeAddress": "0x555557bd2c60",
+            "retained": true,
+            "shutdownCalls": 0,
+            "state": 1,
+            "transitions": [
+              {
+                "oldState": 0,
+                "newState": 1,
+                "wallTimeSecs": 1792558070
+              }
+            ],
+            "loginUserReady": true,
+            "clockSourceActive": true
+          },
+          "retiredUi": [
+            {
+              "generation": 0,
+              "name": "unreferenced-control",
+              "collected": false,
+              "destroyed": null,
+              "expectedCollected": true
+            },
+            {
+              "generation": 0,
+              "name": "retained-backend-control",
+              "collected": false,
+              "destroyed": null,
+              "expectedCollected": false
+            },
+            {
+              "generation": 0,
+              "name": "panel",
+              "collected": false,
+              "destroyed": true,
+              "expectedCollected": true
+            },
+            {
+              "generation": 0,
+              "name": "layoutManager",
+              "collected": false,
+              "destroyed": null,
+              "expectedCollected": true
+            },
+            {
+              "generation": 0,
+              "name": "overview",
+              "collected": false,
+              "destroyed": null,
+              "expectedCollected": true
+            },
+            {
+              "generation": 0,
+              "name": "extensionManager",
+              "collected": false,
+              "destroyed": null,
+              "expectedCollected": true
+            },
+            {
+              "generation": 0,
+              "name": "inputMethod",
+              "collected": false,
+              "destroyed": null,
+              "expectedCollected": true
+            },
+            {
+              "generation": 0,
+              "name": "keyboard",
+              "collected": false,
+              "destroyed": null,
+              "expectedCollected": true
+            },
+            {
+              "generation": 0,
+              "name": "xdndHandler",
+              "collected": false,
+              "destroyed": null,
+              "expectedCollected": true
+            },
+            {
+              "generation": 0,
+              "name": "screenshotUI",
+              "collected": false,
+              "destroyed": true,
+              "expectedCollected": true
+            },
+            {
+              "generation": 0,
+              "name": "messageTray",
+              "collected": false,
+              "destroyed": true,
+              "expectedCollected": true
+            },
+            {
+              "generation": 0,
+              "name": "timeLimitsDispatcher",
+              "collected": false,
+              "destroyed": null,
+              "expectedCollected": true
+            },
+            {
+              "generation": 0,
+              "name": "screencastAreaIndicator",
+              "collected": false,
+              "destroyed": true,
+              "expectedCollected": true
+            },
+            {
+              "generation": 0,
+              "name": "quickSettings",
+              "collected": false,
+              "destroyed": true,
+              "expectedCollected": true
+            }
+          ],
+          "uiRegistrations": {
+            "exports": 14,
+            "ownedNames": 8,
+            "signals": {
+              "total": 83,
+              "permanent": 37,
+              "inventory": [
+                "GSettings:changed::always-show-log-out:backend",
+                "GSettings:changed::app-picker-layout:ui",
+                "GSettings:changed::disable-extension-version-validation:ui",
+                "GSettings:changed::disable-user-extensions:ui",
+                "GSettings:changed::disable-user-extensions:ui",
+                "GSettings:changed::disabled-extensions:ui",
+                "GSettings:changed::enabled-extensions:ui",
+                "GSettings:changed::favorite-apps:backend",
+                "GSettings:writable-changed::disabled-extensions:ui",
+                "GSettings:writable-changed::enabled-extensions:ui",
+                "MetaContextMain:notify::unsafe-mode:ui",
+                "MetaDisplay:accelerator-activated:ui",
+                "MetaDisplay:accelerator-deactivated:ui",
+                "MetaDisplay:gl-video-memory-purged:ui",
+                "MetaDisplay:in-fullscreen-changed:backend",
+                "MetaDisplay:in-fullscreen-changed:ui",
+                "MetaDisplay:in-fullscreen-changed:ui",
+                "MetaDisplay:init-xserver:backend",
+                "MetaDisplay:modifiers-accelerator-activated:backend",
+                "MetaDisplay:notify::focus-window:backend",
+                "MetaDisplay:overlay-key:ui",
+                "MetaDisplay:restacked:ui",
+                "MetaDisplay:show-osd:backend",
+                "MetaDisplay:show-pad-osd:backend",
+                "MetaDisplay:show-resize-popup:backend",
+                "MetaDisplay:window-demands-attention:ui",
+                "MetaDisplay:window-entered-monitor:backend",
+                "MetaDisplay:window-left-monitor:backend",
+                "MetaDisplay:window-marked-urgent:ui",
+                "MetaDisplay:workareas-changed:ui:_init@resource:///org/gnome/shell/ui/overviewControls.js:59:24",
+                "MetaDisplay:workareas-changed:ui:_init@resource:///org/gnome/shell/ui/tgnomePanelRealm.js:50:24",
+                "MetaDisplay:workareas-changed:ui:_init@resource:///org/gnome/shell/ui/workspaceThumbnail.js:664:24",
+                "MetaDisplay:workareas-changed:ui:_syncWorkareaTracking@resource:///org/gnome/shell/ui/workspace.js:591:32",
+                "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+                "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+                "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+                "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+                "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+                "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+                "MetaDisplay:x11-display-closing:backend",
+                "MetaStage:destroy:backend",
+                "MetaStage:event::touchpad:backend",
+                "MetaStage:event::touchpad:ui",
+                "MetaStage:key-press-event:ui",
+                "MetaStage:notify::key-focus:ui",
+                "MetaStage:scroll-event:backend",
+                "MetaStage:scroll-event:backend",
+                "MetaWindowGroup:destroy:ui",
+                "SessionMode:updated:backend",
+                "SessionMode:updated:backend",
+                "SessionMode:updated:backend",
+                "SessionMode:updated:ui",
+                "SessionMode:updated:ui",
+                "SessionMode:updated:ui",
+                "SessionMode:updated:ui",
+                "ShellGlobal:locate-pointer:ui",
+                "ShellGlobal:notify-error:ui",
+                "ShellGlobal:notify::force-animations:ui",
+                "ShellGlobal:shutdown:backend",
+                "ShellGlobal:tgnome-ui-reset:ui",
+                "ShellGlobal:tgnome-ui-reset:ui",
+                "ShellGlobal:tgnome-ui-reset:ui",
+                "ShellGlobal:tgnome-ui-reset:ui",
+                "ShellGlobal:tgnome-ui-reset:ui",
+                "ShellGlobal:tgnome-ui-reset:ui",
+                "ShellWM:confirm-display-change:backend",
+                "ShellWM:create-close-dialog:backend",
+                "ShellWM:create-inhibit-shortcuts-dialog:backend",
+                "ShellWM:destroy:backend",
+                "ShellWM:filter-keybinding:backend",
+                "ShellWM:hide-tile-preview:backend",
+                "ShellWM:kill-switch-workspace:backend",
+                "ShellWM:kill-window-effects:backend",
+                "ShellWM:map:backend",
+                "ShellWM:minimize:backend",
+                "ShellWM:show-tile-preview:backend",
+                "ShellWM:show-window-menu:backend",
+                "ShellWM:size-change:backend",
+                "ShellWM:size-changed:backend",
+                "ShellWM:switch-workspace:backend",
+                "ShellWM:switch-workspace:backend",
+                "ShellWM:switch-workspace:ui",
+                "ShellWM:unminimize:backend"
+              ]
+            },
+            "permanentExports": 1,
+            "stageActions": 4,
+            "watchedNames": 1,
+            "exportInventory": [
+              "/org/freedesktop/Notifications:org.freedesktop.Notifications",
+              "/org/freedesktop/portal/desktop:org.freedesktop.impl.portal.Access",
+              "/org/gnome/SessionManager/EndSessionDialog:org.gnome.SessionManager.EndSessionDialog",
+              "/org/gnome/Shell/AudioDeviceSelection:org.gnome.Shell.AudioDeviceSelection",
+              "/org/gnome/Shell/Brightness:org.gnome.Shell.Brightness",
+              "/org/gnome/Shell/Extensions/Tgnome:org.gnome.Shell.Extensions.Tgnome",
+              "/org/gnome/Shell/Introspect:org.gnome.Shell.Introspect",
+              "/org/gnome/Shell/ScreenTime:org.gnome.Shell.ScreenTime",
+              "/org/gnome/Shell/Screenshot:org.gnome.Shell.Screenshot",
+              "/org/gnome/Shell/Wacom:org.gnome.Shell.Wacom.PadOsd",
+              "/org/gnome/Shell:org.gnome.Shell",
+              "/org/gnome/Shell:org.gnome.Shell.Extensions",
+              "/org/gtk/MountOperationHandler:org.Gtk.MountOperationHandler",
+              "/org/gtk/Notifications:org.gtk.Notifications"
+            ],
+            "nameInventory": [
+              "org.gnome.Shell.AudioDeviceSelection",
+              "org.gnome.Shell.Brightness",
+              "org.gnome.Shell.Introspect",
+              "org.gnome.Shell.Screenshot",
+              "org.gnome.Shell.Wacom.PadOsd",
+              "org.gnome.keyring.SystemPrompter",
+              "org.gtk.MountOperationHandler",
+              "org.gtk.Notifications"
+            ],
+            "watchInventory": [
+              "org.freedesktop.GeoClue2"
+            ]
+          },
+          "lastReleasedRegistrations": {
+            "exports": 13,
+            "ownedNames": 8,
+            "signals": {
+              "total": 60,
+              "permanent": 37,
+              "inventory": [
+                "GSettings:changed::always-show-log-out:backend",
+                "GSettings:changed::app-picker-layout:ui",
+                "GSettings:changed::disable-extension-version-validation:ui",
+                "GSettings:changed::disable-user-extensions:ui",
+                "GSettings:changed::disable-user-extensions:ui",
+                "GSettings:changed::disabled-extensions:ui",
+                "GSettings:changed::enabled-extensions:ui",
+                "GSettings:changed::favorite-apps:backend",
+                "GSettings:writable-changed::disabled-extensions:ui",
+                "GSettings:writable-changed::enabled-extensions:ui",
+                "MetaContextMain:notify::unsafe-mode:ui",
+                "MetaDisplay:accelerator-activated:ui",
+                "MetaDisplay:accelerator-deactivated:ui",
+                "MetaDisplay:gl-video-memory-purged:ui",
+                "MetaDisplay:in-fullscreen-changed:backend",
+                "MetaDisplay:in-fullscreen-changed:ui",
+                "MetaDisplay:init-xserver:backend",
+                "MetaDisplay:modifiers-accelerator-activated:backend",
+                "MetaDisplay:notify::focus-window:backend",
+                "MetaDisplay:restacked:ui",
+                "MetaDisplay:show-osd:backend",
+                "MetaDisplay:show-pad-osd:backend",
+                "MetaDisplay:show-resize-popup:backend",
+                "MetaDisplay:window-entered-monitor:backend",
+                "MetaDisplay:window-left-monitor:backend",
+                "MetaDisplay:x11-display-closing:backend",
+                "MetaStage:destroy:backend",
+                "MetaStage:event::touchpad:backend",
+                "MetaStage:key-press-event:ui",
+                "MetaStage:scroll-event:backend",
+                "MetaStage:scroll-event:backend",
+                "MetaWindowGroup:destroy:ui",
+                "SessionMode:updated:backend",
+                "SessionMode:updated:backend",
+                "SessionMode:updated:backend",
+                "SessionMode:updated:ui",
+                "SessionMode:updated:ui",
+                "SessionMode:updated:ui",
+                "SessionMode:updated:ui",
+                "ShellGlobal:locate-pointer:ui",
+                "ShellGlobal:notify-error:ui",
+                "ShellGlobal:notify::force-animations:ui",
+                "ShellGlobal:shutdown:backend",
+                "ShellWM:confirm-display-change:backend",
+                "ShellWM:create-close-dialog:backend",
+                "ShellWM:create-inhibit-shortcuts-dialog:backend",
+                "ShellWM:destroy:backend",
+                "ShellWM:filter-keybinding:backend",
+                "ShellWM:hide-tile-preview:backend",
+                "ShellWM:kill-switch-workspace:backend",
+                "ShellWM:kill-window-effects:backend",
+                "ShellWM:map:backend",
+                "ShellWM:minimize:backend",
+                "ShellWM:show-tile-preview:backend",
+                "ShellWM:show-window-menu:backend",
+                "ShellWM:size-change:backend",
+                "ShellWM:size-changed:backend",
+                "ShellWM:switch-workspace:backend",
+                "ShellWM:switch-workspace:backend",
+                "ShellWM:unminimize:backend"
+              ]
+            },
+            "stageActions": 2,
+            "watchedNames": 1
+          },
+          "windowManagerPreserved": true,
+          "stageActions": [
+            "OSK show bottom drag",
+            "Overview swipe tracker",
+            "Window unfullscreen top drag",
+            "WorkspaceAnimation swipe tracker"
+          ],
+          "stageChildren": [
+            ":UIAreaIndicator",
+            "uiGroup:UiActor"
+          ],
+          "windowGroupAttached": true,
+          "generation": 0,
+          "failures": 0,
+          "active": true,
+          "busy": false,
+          "actorsCreated": 27,
+          "actorsDestroyed": 26,
+          "liveOwnedActors": 1,
+          "panelEntryMatches": true,
+          "themeReloads": 0,
+          "shellState": {
+            "overview": false,
+            "modalCount": 0,
+            "startingUp": false,
+            "mode": "user"
+          },
+          "panel": {
+            "supported": true,
+            "realms": {
+              "scope": "panel behavior in disposable globals; canonical GType retained",
+              "records": [
+                {
+                  "generation": 1,
+                  "disposed": true,
+                  "globalCollected": true,
+                  "implementationCollected": true,
+                  "allocations": 5,
+                  "preferredWidths": 10,
+                  "keyEvents": 0
+                },
+                {
+                  "generation": 2,
+                  "disposed": true,
+                  "globalCollected": true,
+                  "implementationCollected": true,
+                  "allocations": 1,
+                  "preferredWidths": 2,
+                  "keyEvents": 0
+                },
+                {
+                  "generation": 3,
+                  "disposed": true,
+                  "globalCollected": true,
+                  "implementationCollected": true,
+                  "allocations": 1,
+                  "preferredWidths": 2,
+                  "keyEvents": 0
+                },
+                {
+                  "generation": 4,
+                  "disposed": true,
+                  "globalCollected": true,
+                  "implementationCollected": true,
+                  "allocations": 1,
+                  "preferredWidths": 2,
+                  "keyEvents": 0
+                },
+                {
+                  "generation": 5,
+                  "disposed": true,
+                  "globalCollected": true,
+                  "implementationCollected": true,
+                  "allocations": 1,
+                  "preferredWidths": 2,
+                  "keyEvents": 0
+                },
+                {
+                  "generation": 6,
+                  "disposed": true,
+                  "globalCollected": true,
+                  "implementationCollected": true,
+                  "allocations": 1,
+                  "preferredWidths": 2,
+                  "keyEvents": 0
+                },
+                {
+                  "generation": 7,
+                  "disposed": true,
+                  "globalCollected": true,
+                  "implementationCollected": true,
+                  "allocations": 1,
+                  "preferredWidths": 2,
+                  "keyEvents": 0
+                },
+                {
+                  "generation": 8,
+                  "disposed": true,
+                  "globalCollected": true,
+                  "implementationCollected": true,
+                  "allocations": 1,
+                  "preferredWidths": 2,
+                  "keyEvents": 0
+                },
+                {
+                  "generation": 9,
+                  "disposed": true,
+                  "globalCollected": true,
+                  "implementationCollected": true,
+                  "allocations": 1,
+                  "preferredWidths": 2,
+                  "keyEvents": 0
+                },
+                {
+                  "generation": 10,
+                  "disposed": true,
+                  "globalCollected": true,
+                  "implementationCollected": true,
+                  "allocations": 1,
+                  "preferredWidths": 2,
+                  "keyEvents": 0
+                },
+                {
+                  "generation": 11,
+                  "disposed": true,
+                  "globalCollected": false,
+                  "implementationCollected": false,
+                  "allocations": 23,
+                  "preferredWidths": 46,
+                  "keyEvents": 0
+                },
+                {
+                  "generation": 12,
+                  "disposed": true,
+                  "globalCollected": true,
+                  "implementationCollected": true,
+                  "allocations": 0,
+                  "preferredWidths": 0,
+                  "keyEvents": 0
+                },
+                {
+                  "generation": 13,
+                  "disposed": false,
+                  "globalCollected": false,
+                  "implementationCollected": false,
+                  "allocations": 4,
+                  "preferredWidths": 8,
+                  "keyEvents": 0
+                }
+              ]
+            },
+            "dateMenuRealms": {
+              "scope": "dateMenu.js class behavior; canonical types and parent classes retained",
+              "records": [
+                {
+                  "generation": 1,
+                  "retired": true,
+                  "globalCollected": false,
+                  "implementationCollected": false,
+                  "failed": false,
+                  "instances": 8,
+                  "releasedInstances": 8,
+                  "classes": {
+                    "DateMenuButton": 1,
+                    "MessagesIndicator": 1,
+                    "FreezableBinLayout": 1,
+                    "TodayButton": 1,
+                    "CalendarColumnLayout": 1,
+                    "EventsSection": 1,
+                    "WorldClocksSection": 1,
+                    "WeatherSection": 1
+                  },
+                  "calls": {
+                    "MessagesIndicator._sync": 6,
+                    "EventsSection._appInstalledChanged": 2,
+                    "EventsSection._sync": 8,
+                    "WorldClocksSection._clocksChanged": 1,
+                    "WorldClocksSection._sync": 2,
+                    "WeatherSection._sync": 1,
+                    "WeatherSection._updateForecasts": 1,
+                    "DateMenuButton._sessionUpdated": 1,
+                    "DateMenuButton._getEventSource": 1,
+                    "DateMenuButton._setEventSource": 1,
+                    "EventsSection.setEventSource": 1,
+                    "WorldClocksSection._onProxyReady": 1,
+                    "WorldClocksSection._onClocksPropertiesChanged": 1,
+                    "EventsSection._reloadEvents": 2,
+                    "FreezableBinLayout.vfunc_get_preferred_width": 16,
+                    "CalendarColumnLayout.vfunc_get_preferred_width": 16,
+                    "FreezableBinLayout.vfunc_get_preferred_height": 16,
+                    "MessagesIndicator._onSourceAdded": 1,
+                    "MessagesIndicator._updateCount": 5,
+                    "WeatherSection.vfunc_map": 13,
+                    "TodayButton.setDate": 13,
+                    "FreezableBinLayout.vfunc_allocate": 1
+                  },
+                  "retiredCalls": 0
+                },
+                {
+                  "generation": 2,
+                  "retired": false,
+                  "globalCollected": false,
+                  "implementationCollected": false,
+                  "failed": false,
+                  "instances": 8,
+                  "releasedInstances": 0,
+                  "classes": {
+                    "DateMenuButton": 1,
+                    "MessagesIndicator": 1,
+                    "FreezableBinLayout": 1,
+                    "TodayButton": 1,
+                    "CalendarColumnLayout": 1,
+                    "EventsSection": 1,
+                    "WorldClocksSection": 1,
+                    "WeatherSection": 1
+                  },
+                  "calls": {
+                    "MessagesIndicator._sync": 1,
+                    "EventsSection._appInstalledChanged": 1,
+                    "EventsSection._sync": 5,
+                    "WorldClocksSection._clocksChanged": 1,
+                    "WorldClocksSection._sync": 1,
+                    "WeatherSection._sync": 1,
+                    "WeatherSection._updateForecasts": 1,
+                    "DateMenuButton._sessionUpdated": 1,
+                    "DateMenuButton._getEventSource": 1,
+                    "DateMenuButton._setEventSource": 1,
+                    "EventsSection.setEventSource": 1,
+                    "WorldClocksSection._onProxyReady": 1,
+                    "WorldClocksSection._onClocksPropertiesChanged": 1,
+                    "EventsSection._reloadEvents": 2,
+                    "FreezableBinLayout.vfunc_get_preferred_width": 2,
+                    "CalendarColumnLayout.vfunc_get_preferred_width": 2,
+                    "FreezableBinLayout.vfunc_get_preferred_height": 2,
+                    "WeatherSection.vfunc_map": 1,
+                    "TodayButton.setDate": 1
+                  },
+                  "retiredCalls": 0
+                }
+              ]
+            },
+            "transfer": {
+              "pending": false,
+              "retired": [
+                {
+                  "phase": "adopting",
+                  "entries": 9,
+                  "adoptedBeforeRecovery": 1,
+                  "recovered": true,
+                  "oldPanelRestored": true,
+                  "destroyed": true,
+                  "collected": true,
+                  "interrupted": false
+                }
+              ]
+            },
+            "lifecycle": {
+              "generation": 10,
+              "destroyed": 10,
+              "scope": "panel actor/layout/gestures/menu manager; indicator instances survive"
+            },
+            "replaced": false,
+            "containerCount": 1,
+            "focusGroupCount": 1,
+            "totalFocusGroups": 6,
+            "menuCount": 7,
+            "retainedIndicators": true
+          },
+          "desktop": {
+            "windows": [
+              {
+                "id": 1,
+                "title": "Tgnome persistent connection probe",
+                "workspace": 0,
+                "frame": [
+                  40,
+                  180,
+                  500,
+                  160
+                ]
+              },
+              {
+                "id": 2,
+                "title": "Tgnome persistent connection probe",
+                "workspace": 0,
+                "frame": [
+                  640,
+                  180,
+                  500,
+                  160
+                ]
+              }
+            ],
+            "focus": 2,
+            "monitors": [
+              [
+                0,
+                0,
+                1280,
+                720
+              ]
+            ],
+            "workspace": 0
+          },
+          "shellRestartSupported": false,
+          "extensionCodeReloadSupported": false,
+          "desktopUiReloadSupported": true
+        },
+        "nativeAfter": {
+          "attempts": 1,
+          "contextsFinalized": 0,
+          "state": "ui-ready",
+          "registeredProbeTypes": 0,
+          "registeredObjectTypes": 989,
+          "newObjectTypes": [
+            "ClutterVirtualInputDevice",
+            "GVfsMetadataProxy",
+            "MetaVirtualInputDeviceNative"
+          ],
+          "uiFailures": 0,
+          "uiRetryAttempts": 0,
+          "uiCommits": 1,
+          "uiBuildSerial": 1,
+          "uiTimeouts": 0,
+          "uiQuarantined": false,
+          "uiQuarantines": 0,
+          "preparationFailures": 0,
+          "preparationTimeouts": 0,
+          "uiActive": false,
+          "securityVm": false,
+          "securityBoundaryBits": 0,
+          "researchOnly": true
+        },
+        "panelRealms": [
+          {
+            "generation": 1,
+            "disposed": true,
+            "globalCollected": true,
+            "implementationCollected": true,
+            "allocations": 5,
+            "preferredWidths": 10,
+            "keyEvents": 0
+          },
+          {
+            "generation": 2,
+            "disposed": true,
+            "globalCollected": true,
+            "implementationCollected": true,
+            "allocations": 1,
+            "preferredWidths": 2,
+            "keyEvents": 0
+          },
+          {
+            "generation": 3,
+            "disposed": true,
+            "globalCollected": true,
+            "implementationCollected": true,
+            "allocations": 1,
+            "preferredWidths": 2,
+            "keyEvents": 0
+          },
+          {
+            "generation": 4,
+            "disposed": true,
+            "globalCollected": true,
+            "implementationCollected": true,
+            "allocations": 1,
+            "preferredWidths": 2,
+            "keyEvents": 0
+          },
+          {
+            "generation": 5,
+            "disposed": true,
+            "globalCollected": true,
+            "implementationCollected": true,
+            "allocations": 1,
+            "preferredWidths": 2,
+            "keyEvents": 0
+          },
+          {
+            "generation": 6,
+            "disposed": true,
+            "globalCollected": true,
+            "implementationCollected": true,
+            "allocations": 1,
+            "preferredWidths": 2,
+            "keyEvents": 0
+          },
+          {
+            "generation": 7,
+            "disposed": true,
+            "globalCollected": true,
+            "implementationCollected": true,
+            "allocations": 1,
+            "preferredWidths": 2,
+            "keyEvents": 0
+          },
+          {
+            "generation": 8,
+            "disposed": true,
+            "globalCollected": true,
+            "implementationCollected": true,
+            "allocations": 1,
+            "preferredWidths": 2,
+            "keyEvents": 0
+          },
+          {
+            "generation": 9,
+            "disposed": true,
+            "globalCollected": true,
+            "implementationCollected": true,
+            "allocations": 1,
+            "preferredWidths": 2,
+            "keyEvents": 0
+          },
+          {
+            "generation": 10,
+            "disposed": true,
+            "globalCollected": true,
+            "implementationCollected": true,
+            "allocations": 1,
+            "preferredWidths": 2,
+            "keyEvents": 0
+          },
+          {
+            "generation": 11,
+            "disposed": true,
+            "globalCollected": true,
+            "implementationCollected": true,
+            "allocations": 23,
+            "preferredWidths": 46,
+            "keyEvents": 0
+          },
+          {
+            "generation": 12,
+            "disposed": true,
+            "globalCollected": true,
+            "implementationCollected": true,
+            "allocations": 0,
+            "preferredWidths": 0,
+            "keyEvents": 0
+          },
+          {
+            "generation": 13,
+            "disposed": false,
+            "globalCollected": false,
+            "implementationCollected": false,
+            "allocations": 4,
+            "preferredWidths": 8,
+            "keyEvents": 0
+          }
+        ]
+      }
+    ],
+    "policyRetirement": {
+      "policyDisposed": true,
+      "ownerDestroyed": true
+    },
+    "frames": {
+      "before": "desktop-before.png",
+      "overviewBefore": "overview-before.png"
+    },
+    "overviewInputBefore": {
+      "opened": true,
+      "closed": true,
+      "nativeAddress": "0x5555560d5d70",
+      "path": "/tmp/nix-shell.a5hCZz/tgnome-2ruwo10x/data/gnome-shell/tgnome-frame.png"
+    },
+    "ownedRequest": true,
+    "failureStage": "post-construction",
+    "nativeWarmupTypes": [
+      "GVfsMetadataProxy"
+    ]
+  },
+  "error": "RuntimeError: Timed out: None",
+  "failureDiagnostics": {
+    "extension": {
+      "exitCode": 0,
+      "stdout": "({'uuid': <'<redacted-email>'>, 'name': <'Restartable UI Island Experiment'>, 'description': <'Isolated lifecycle experiment; does not restart GNOME Shell'>, 'shell-version': <[<'50'>]>, 'version': <1.0>, 'type': <2.0>, 'state': <1.0>, 'enabled': <true>, 'path': <'/tmp/nix-shell.a5hCZz/tgnome-2ruwo10x/data/gnome-shell/extensions/<redacted-email>'>, 'error': <''>, 'hasPrefs': <false>, 'hasUpdate': <false>, 'canChange': <true>, 'sessionModes': <[<'user'>]>},)\n",
+      "stderr": ""
+    },
+    "enabled": {
+      "exitCode": 0,
+      "stdout": "['<redacted-email>']\n",
+      "stderr": ""
+    }
+  },
+  "supervisor": {
+    "workerExitCode": 1,
+    "descendants": {
+      "terminated": [
+        3078362,
+        3078387,
+        3078393,
+        3078488,
+        3078490,
+        3078501,
+        3078536,
+        3078544,
+        3078560,
+        3078586,
+        3078605,
+        3078624,
+        3078635,
+        3078637,
+        3078646,
+        3078649,
+        3078655,
+        3078665,
+        3078723
+      ],
+      "killed": [],
+      "exitCodes": {
+        "3078542": 1,
+        "3078515": 0,
+        "3078576": 0,
+        "3078706": 1,
+        "3078563": 1,
+        "3078714": 1,
+        "3078472": 0,
+        "3078787": 1,
+        "3078792": 0,
+        "3079390": 0,
+        "3078562": -9,
+        "3078770": 0,
+        "3078387": -15,
+        "3078393": 15,
+        "3078488": 1,
+        "3078544": 20,
+        "3078501": 0,
+        "3078490": -15,
+        "3078560": -15,
+        "3078605": -15,
+        "3078586": -15,
+        "3078624": -15,
+        "3078635": -15,
+        "3078637": -15,
+        "3078649": -15,
+        "3078655": -15,
+        "3078646": -15,
+        "3078665": -15,
+        "3078723": 0,
+        "3078536": -15,
+        "3078362": 0,
+        "3078553": 0
+      }
+    },
+    "privateProfileRemoved": true
+  }
+}

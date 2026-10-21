@@ -1,0 +1,1178 @@
+{
+  "classification": "RESEARCH PROTOTYPE",
+  "passed": false,
+  "trueRestartDemonstrated": false,
+  "wholeShellReloadDemonstrated": false,
+  "privateSystemBus": true,
+  "mockLogind": true,
+  "shellBefore": {
+    "classification": "RESEARCH PROTOTYPE",
+    "scope": "extension-owned panel indicator only",
+    "pid": 1887143,
+    "runtimeEpoch": "a53c4856-5b37-4f69-9a38-960d93e290ba",
+    "uiGeneration": 0,
+    "uiReloadState": null,
+    "uiRegistrations": {
+      "exports": 14,
+      "ownedNames": 8,
+      "signals": {
+        "total": 79,
+        "permanent": 31,
+        "inventory": [
+          "MetaDisplay:accelerator-activated:ui:GnomeShell@resource:///org/gnome/shell/ui/shellDBus.js:40:24",
+          "MetaDisplay:accelerator-deactivated:ui:GnomeShell@resource:///org/gnome/shell/ui/shellDBus.js:44:24",
+          "MetaDisplay:gl-video-memory-purged:ui:_initializeUI@resource:///org/gnome/shell/ui/main.js:297:20",
+          "MetaDisplay:in-fullscreen-changed:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:929:24",
+          "MetaDisplay:in-fullscreen-changed:ui:_init@resource:///org/gnome/shell/ui/layout.js:325:17",
+          "MetaDisplay:in-fullscreen-changed:ui:_init@resource:///org/gnome/shell/ui/messageTray.js:776:24",
+          "MetaDisplay:init-xserver:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:891:24",
+          "MetaDisplay:modifiers-accelerator-activated:backend:InputSourceManager@resource:///org/gnome/shell/ui/status/keyboard.js:380:24",
+          "MetaDisplay:notify::focus-window:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:928:24",
+          "MetaDisplay:overlay-key:ui:_init@resource:///org/gnome/shell/ui/overviewControls.js:420:24",
+          "MetaDisplay:restacked:ui:_createOverview@resource:///org/gnome/shell/ui/overview.js:182:24",
+          "MetaDisplay:show-osd:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:886:24",
+          "MetaDisplay:show-pad-osd:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:885:24",
+          "MetaDisplay:show-resize-popup:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:884:24",
+          "MetaDisplay:window-demands-attention:ui:WindowAttentionHandler@resource:///org/gnome/shell/ui/windowAttentionHandler.js:10:24",
+          "MetaDisplay:window-entered-monitor:backend:WorkspaceTracker@resource:///org/gnome/shell/ui/windowManager.js:202:24",
+          "MetaDisplay:window-entered-monitor:ui:_init@resource:///org/gnome/shell/ui/workspace.js:1102:24",
+          "MetaDisplay:window-entered-monitor:ui:_init@resource:///org/gnome/shell/ui/workspace.js:1102:24",
+          "MetaDisplay:window-entered-monitor:ui:_init@resource:///org/gnome/shell/ui/workspaceThumbnail.js:287:24",
+          "MetaDisplay:window-entered-monitor:ui:_init@resource:///org/gnome/shell/ui/workspaceThumbnail.js:287:24",
+          "MetaDisplay:window-left-monitor:backend:WorkspaceTracker@resource:///org/gnome/shell/ui/windowManager.js:204:24",
+          "MetaDisplay:window-left-monitor:ui:_init@resource:///org/gnome/shell/ui/workspace.js:1102:24",
+          "MetaDisplay:window-left-monitor:ui:_init@resource:///org/gnome/shell/ui/workspace.js:1102:24",
+          "MetaDisplay:window-left-monitor:ui:_init@resource:///org/gnome/shell/ui/workspaceThumbnail.js:287:24",
+          "MetaDisplay:window-left-monitor:ui:_init@resource:///org/gnome/shell/ui/workspaceThumbnail.js:287:24",
+          "MetaDisplay:window-marked-urgent:ui:WindowAttentionHandler@resource:///org/gnome/shell/ui/windowAttentionHandler.js:10:24",
+          "MetaDisplay:workareas-changed:ui:_init@resource:///org/gnome/shell/ui/overviewControls.js:59:24",
+          "MetaDisplay:workareas-changed:ui:_init@resource:///org/gnome/shell/ui/panel.js:479:24",
+          "MetaDisplay:workareas-changed:ui:_init@resource:///org/gnome/shell/ui/workspace.js:990:24",
+          "MetaDisplay:workareas-changed:ui:_init@resource:///org/gnome/shell/ui/workspace.js:990:24",
+          "MetaDisplay:workareas-changed:ui:_init@resource:///org/gnome/shell/ui/workspaceThumbnail.js:664:24",
+          "MetaDisplay:workareas-changed:ui:_syncWorkareaTracking@resource:///org/gnome/shell/ui/workspace.js:591:32",
+          "MetaDisplay:workareas-changed:ui:_syncWorkareaTracking@resource:///org/gnome/shell/ui/workspace.js:591:32",
+          "MetaDisplay:workareas-changed:ui:_syncWorkareaTracking@resource:///org/gnome/shell/ui/workspace.js:591:32",
+          "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+          "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+          "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+          "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+          "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+          "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+          "MetaDisplay:x11-display-closing:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:898:24",
+          "MetaStage:destroy:backend:_init@resource:///org/gnome/shell/ui/swipeTracker.js:116:15",
+          "MetaStage:event::touchpad:backend:_init@resource:///org/gnome/shell/ui/swipeTracker.js:116:15",
+          "MetaStage:event::touchpad:ui:_init@resource:///org/gnome/shell/ui/swipeTracker.js:116:15",
+          "MetaStage:key-press-event:ui:_init/<@resource:///org/gnome/shell/ui/searchController.js:102:30",
+          "MetaStage:key-press-event:ui:_init@resource:///org/gnome/shell/ui/overviewControls.js:442:22",
+          "MetaStage:key-press-event:ui:prepareToEnterOverview@resource:///org/gnome/shell/ui/workspacesView.js:1005:22",
+          "MetaStage:notify::key-focus:ui:_init@resource:///org/gnome/shell/ui/searchController.js:70:22",
+          "MetaStage:scroll-event:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:869:22",
+          "MetaStage:scroll-event:backend:_init@resource:///org/gnome/shell/ui/swipeTracker.js:238:15",
+          "MetaWindowGroup:destroy:ui:addGroup@resource:///org/gnome/shell/ui/ctrlAltTab.js:42:14",
+          "ShellGlobal:locate-pointer:ui:_initializeUI@resource:///org/gnome/shell/ui/main.js:293:12",
+          "ShellGlobal:notify-error:ui:start@resource:///org/gnome/shell/ui/main.js:165:12",
+          "ShellGlobal:notify::force-animations:ui:AnimationsSettings@resource:///org/gnome/shell/ui/main.js:1023:16",
+          "ShellGlobal:tgnome-ui-reset:ui:_init@resource:///org/gnome/shell/ui/layout.js:217:16",
+          "ShellGlobal:tgnome-ui-reset:ui:_initializeUI@resource:///org/gnome/shell/ui/main.js:248:12",
+          "ShellGlobal:tgnome-ui-reset:ui:_initializeUI@resource:///org/gnome/shell/ui/main.js:272:12",
+          "ShellGlobal:tgnome-ui-reset:ui:init@resource:///org/gnome/shell/ui/extensionSystem.js:65:35",
+          "ShellGlobal:tgnome-ui-reset:ui:unknown",
+          "ShellGlobal:tgnome-ui-reset:ui:unknown",
+          "ShellWM:confirm-display-change:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:535:23",
+          "ShellWM:create-close-dialog:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:536:23",
+          "ShellWM:create-inhibit-shortcuts-dialog:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:537:23",
+          "ShellWM:destroy:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:533:23",
+          "ShellWM:filter-keybinding:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:534:23",
+          "ShellWM:hide-tile-preview:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:526:23",
+          "ShellWM:kill-switch-workspace:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:937:23",
+          "ShellWM:kill-window-effects:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:517:23",
+          "ShellWM:map:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:532:23",
+          "ShellWM:minimize:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:528:23",
+          "ShellWM:show-tile-preview:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:525:23",
+          "ShellWM:show-window-menu:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:527:23",
+          "ShellWM:size-change:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:530:23",
+          "ShellWM:size-changed:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:531:23",
+          "ShellWM:switch-workspace:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:524:23",
+          "ShellWM:switch-workspace:backend:WorkspaceTracker@resource:///org/gnome/shell/ui/windowManager.js:199:31",
+          "ShellWM:switch-workspace:ui:_init@resource:///org/gnome/shell/ui/workspacesView.js:124:31",
+          "ShellWM:switch-workspace:ui:_init@resource:///org/gnome/shell/ui/workspacesView.js:836:31",
+          "ShellWM:unminimize:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:529:23"
+        ]
+      },
+      "permanentExports": 1,
+      "stageActions": 5,
+      "watchedNames": 1,
+      "exportInventory": [
+        "/org/freedesktop/Notifications:org.freedesktop.Notifications",
+        "/org/freedesktop/portal/desktop:org.freedesktop.impl.portal.Access",
+        "/org/gnome/SessionManager/EndSessionDialog:org.gnome.SessionManager.EndSessionDialog",
+        "/org/gnome/Shell/AudioDeviceSelection:org.gnome.Shell.AudioDeviceSelection",
+        "/org/gnome/Shell/Brightness:org.gnome.Shell.Brightness",
+        "/org/gnome/Shell/Extensions/Tgnome:org.gnome.Shell.Extensions.Tgnome",
+        "/org/gnome/Shell/Introspect:org.gnome.Shell.Introspect",
+        "/org/gnome/Shell/ScreenTime:org.gnome.Shell.ScreenTime",
+        "/org/gnome/Shell/Screenshot:org.gnome.Shell.Screenshot",
+        "/org/gnome/Shell/Wacom:org.gnome.Shell.Wacom.PadOsd",
+        "/org/gnome/Shell:org.gnome.Shell",
+        "/org/gnome/Shell:org.gnome.Shell.Extensions",
+        "/org/gtk/MountOperationHandler:org.Gtk.MountOperationHandler",
+        "/org/gtk/Notifications:org.gtk.Notifications"
+      ],
+      "nameInventory": [
+        "org.gnome.Shell.AudioDeviceSelection",
+        "org.gnome.Shell.Brightness",
+        "org.gnome.Shell.Introspect",
+        "org.gnome.Shell.Screenshot",
+        "org.gnome.Shell.Wacom.PadOsd",
+        "org.gnome.keyring.SystemPrompter",
+        "org.gtk.MountOperationHandler",
+        "org.gtk.Notifications"
+      ],
+      "watchInventory": [
+        "org.freedesktop.GeoClue2"
+      ]
+    },
+    "lastReleasedRegistrations": null,
+    "windowManagerPreserved": true,
+    "stageActions": [
+      "OSK show bottom drag",
+      "Overview swipe tracker",
+      "Window unfullscreen top drag",
+      "WorkspaceAnimation swipe tracker",
+      "reset-search"
+    ],
+    "windowGroupAttached": true,
+    "generation": 0,
+    "failures": 0,
+    "active": true,
+    "busy": false,
+    "actorsCreated": 1,
+    "actorsDestroyed": 0,
+    "liveOwnedActors": 1,
+    "panelEntryMatches": true,
+    "themeReloads": 0,
+    "shellState": {
+      "overview": true,
+      "modalCount": 0,
+      "startingUp": true,
+      "mode": "user"
+    },
+    "panel": {
+      "supported": true,
+      "lifecycle": {
+        "generation": 0,
+        "destroyed": 0,
+        "scope": "panel actor/layout/gestures/menu manager; indicator instances survive"
+      },
+      "replaced": false,
+      "containerCount": 1,
+      "focusGroupCount": 1,
+      "totalFocusGroups": 6,
+      "menuCount": 7,
+      "retainedIndicators": true
+    },
+    "desktop": {
+      "windows": [],
+      "focus": null,
+      "monitors": [
+        [
+          0,
+          0,
+          1280,
+          720
+        ]
+      ],
+      "workspace": 0
+    },
+    "shellRestartSupported": false,
+    "extensionCodeReloadSupported": false
+  },
+  "busOwner": ":1.10",
+  "desktopBefore": {
+    "windows": [
+      {
+        "id": 1,
+        "title": "Tgnome persistent connection probe",
+        "workspace": 0,
+        "frame": [
+          473,
+          348,
+          334,
+          56
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Tgnome persistent connection probe",
+        "workspace": 0,
+        "frame": [
+          551,
+          349,
+          178,
+          54
+        ]
+      }
+    ],
+    "focus": 2,
+    "monitors": [
+      [
+        0,
+        0,
+        1280,
+        720
+      ]
+    ],
+    "workspace": 0
+  },
+  "xwaylandBefore": [
+    {
+      "pid": 1887477,
+      "exe": "/nix/store/8irpj5qxxxjnr98lh3dcx83xa26qf44p-xwayland-24.1.14/bin/Xwayland",
+      "startTime": "14095398"
+    }
+  ],
+  "shellExecutable": "/nix/store/380pnyib6zx28mf8ks3pyxgi8cq6qbds-gnome-shell-50.5/bin/.gnome-shell-wrapped",
+  "panelMenusAfterRollback": {
+    "menusChecked": [
+      "dateMenu",
+      "quickSettings"
+    ],
+    "modalCount": 0
+  },
+  "panelReload": {
+    "supported": true,
+    "lifecycle": {
+      "generation": 10,
+      "destroyed": 10,
+      "scope": "panel actor/layout/gestures/menu manager; indicator instances survive"
+    },
+    "replaced": true,
+    "containerCount": 1,
+    "focusGroupCount": 1,
+    "totalFocusGroups": 6,
+    "menuCount": 7,
+    "retainedIndicators": true
+  },
+  "reloadAfter": {
+    "classification": "SHELL RELOAD",
+    "scope": "panel actor reinitialized; indicator instances, GJS and compositor retained",
+    "pid": 1887143,
+    "runtimeEpoch": "a53c4856-5b37-4f69-9a38-960d93e290ba",
+    "uiGeneration": 0,
+    "uiReloadState": null,
+    "uiRegistrations": {
+      "exports": 14,
+      "ownedNames": 8,
+      "signals": {
+        "total": 65,
+        "permanent": 31,
+        "inventory": [
+          "MetaDisplay:accelerator-activated:ui:GnomeShell@resource:///org/gnome/shell/ui/shellDBus.js:40:24",
+          "MetaDisplay:accelerator-deactivated:ui:GnomeShell@resource:///org/gnome/shell/ui/shellDBus.js:44:24",
+          "MetaDisplay:gl-video-memory-purged:ui:_initializeUI@resource:///org/gnome/shell/ui/main.js:297:20",
+          "MetaDisplay:in-fullscreen-changed:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:929:24",
+          "MetaDisplay:in-fullscreen-changed:ui:_init@resource:///org/gnome/shell/ui/layout.js:325:17",
+          "MetaDisplay:in-fullscreen-changed:ui:_init@resource:///org/gnome/shell/ui/messageTray.js:776:24",
+          "MetaDisplay:init-xserver:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:891:24",
+          "MetaDisplay:modifiers-accelerator-activated:backend:InputSourceManager@resource:///org/gnome/shell/ui/status/keyboard.js:380:24",
+          "MetaDisplay:notify::focus-window:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:928:24",
+          "MetaDisplay:overlay-key:ui:_init@resource:///org/gnome/shell/ui/overviewControls.js:420:24",
+          "MetaDisplay:restacked:ui:_createOverview@resource:///org/gnome/shell/ui/overview.js:182:24",
+          "MetaDisplay:show-osd:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:886:24",
+          "MetaDisplay:show-pad-osd:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:885:24",
+          "MetaDisplay:show-resize-popup:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:884:24",
+          "MetaDisplay:window-demands-attention:ui:WindowAttentionHandler@resource:///org/gnome/shell/ui/windowAttentionHandler.js:10:24",
+          "MetaDisplay:window-entered-monitor:backend:WorkspaceTracker@resource:///org/gnome/shell/ui/windowManager.js:202:24",
+          "MetaDisplay:window-left-monitor:backend:WorkspaceTracker@resource:///org/gnome/shell/ui/windowManager.js:204:24",
+          "MetaDisplay:window-marked-urgent:ui:WindowAttentionHandler@resource:///org/gnome/shell/ui/windowAttentionHandler.js:10:24",
+          "MetaDisplay:workareas-changed:ui:_init@resource:///org/gnome/shell/ui/overviewControls.js:59:24",
+          "MetaDisplay:workareas-changed:ui:_init@resource:///org/gnome/shell/ui/panel.js:479:24",
+          "MetaDisplay:workareas-changed:ui:_init@resource:///org/gnome/shell/ui/workspaceThumbnail.js:664:24",
+          "MetaDisplay:workareas-changed:ui:_syncWorkareaTracking@resource:///org/gnome/shell/ui/workspace.js:591:32",
+          "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+          "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+          "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+          "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+          "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+          "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+          "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+          "MetaDisplay:x11-display-closing:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:898:24",
+          "MetaStage:destroy:backend:_init@resource:///org/gnome/shell/ui/swipeTracker.js:116:15",
+          "MetaStage:event::touchpad:backend:_init@resource:///org/gnome/shell/ui/swipeTracker.js:116:15",
+          "MetaStage:event::touchpad:ui:_init@resource:///org/gnome/shell/ui/swipeTracker.js:116:15",
+          "MetaStage:key-press-event:ui:_init@resource:///org/gnome/shell/ui/overviewControls.js:442:22",
+          "MetaStage:notify::key-focus:ui:_init@resource:///org/gnome/shell/ui/searchController.js:70:22",
+          "MetaStage:scroll-event:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:869:22",
+          "MetaStage:scroll-event:backend:_init@resource:///org/gnome/shell/ui/swipeTracker.js:238:15",
+          "MetaWindowGroup:destroy:ui:addGroup@resource:///org/gnome/shell/ui/ctrlAltTab.js:42:14",
+          "ShellGlobal:locate-pointer:ui:_initializeUI@resource:///org/gnome/shell/ui/main.js:293:12",
+          "ShellGlobal:notify-error:ui:start@resource:///org/gnome/shell/ui/main.js:165:12",
+          "ShellGlobal:notify::force-animations:ui:AnimationsSettings@resource:///org/gnome/shell/ui/main.js:1023:16",
+          "ShellGlobal:tgnome-ui-reset:ui:_init@resource:///org/gnome/shell/ui/layout.js:217:16",
+          "ShellGlobal:tgnome-ui-reset:ui:_initializeUI@resource:///org/gnome/shell/ui/main.js:248:12",
+          "ShellGlobal:tgnome-ui-reset:ui:_initializeUI@resource:///org/gnome/shell/ui/main.js:272:12",
+          "ShellGlobal:tgnome-ui-reset:ui:init@resource:///org/gnome/shell/ui/extensionSystem.js:65:35",
+          "ShellGlobal:tgnome-ui-reset:ui:unknown",
+          "ShellGlobal:tgnome-ui-reset:ui:unknown",
+          "ShellWM:confirm-display-change:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:535:23",
+          "ShellWM:create-close-dialog:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:536:23",
+          "ShellWM:create-inhibit-shortcuts-dialog:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:537:23",
+          "ShellWM:destroy:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:533:23",
+          "ShellWM:filter-keybinding:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:534:23",
+          "ShellWM:hide-tile-preview:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:526:23",
+          "ShellWM:kill-switch-workspace:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:937:23",
+          "ShellWM:kill-window-effects:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:517:23",
+          "ShellWM:map:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:532:23",
+          "ShellWM:minimize:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:528:23",
+          "ShellWM:show-tile-preview:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:525:23",
+          "ShellWM:show-window-menu:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:527:23",
+          "ShellWM:size-change:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:530:23",
+          "ShellWM:size-changed:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:531:23",
+          "ShellWM:switch-workspace:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:524:23",
+          "ShellWM:switch-workspace:backend:WorkspaceTracker@resource:///org/gnome/shell/ui/windowManager.js:199:31",
+          "ShellWM:switch-workspace:ui:_init@resource:///org/gnome/shell/ui/workspacesView.js:836:31",
+          "ShellWM:unminimize:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:529:23"
+        ]
+      },
+      "permanentExports": 1,
+      "stageActions": 4,
+      "watchedNames": 1,
+      "exportInventory": [
+        "/org/freedesktop/Notifications:org.freedesktop.Notifications",
+        "/org/freedesktop/portal/desktop:org.freedesktop.impl.portal.Access",
+        "/org/gnome/SessionManager/EndSessionDialog:org.gnome.SessionManager.EndSessionDialog",
+        "/org/gnome/Shell/AudioDeviceSelection:org.gnome.Shell.AudioDeviceSelection",
+        "/org/gnome/Shell/Brightness:org.gnome.Shell.Brightness",
+        "/org/gnome/Shell/Extensions/Tgnome:org.gnome.Shell.Extensions.Tgnome",
+        "/org/gnome/Shell/Introspect:org.gnome.Shell.Introspect",
+        "/org/gnome/Shell/ScreenTime:org.gnome.Shell.ScreenTime",
+        "/org/gnome/Shell/Screenshot:org.gnome.Shell.Screenshot",
+        "/org/gnome/Shell/Wacom:org.gnome.Shell.Wacom.PadOsd",
+        "/org/gnome/Shell:org.gnome.Shell",
+        "/org/gnome/Shell:org.gnome.Shell.Extensions",
+        "/org/gtk/MountOperationHandler:org.Gtk.MountOperationHandler",
+        "/org/gtk/Notifications:org.gtk.Notifications"
+      ],
+      "nameInventory": [
+        "org.gnome.Shell.AudioDeviceSelection",
+        "org.gnome.Shell.Brightness",
+        "org.gnome.Shell.Introspect",
+        "org.gnome.Shell.Screenshot",
+        "org.gnome.Shell.Wacom.PadOsd",
+        "org.gnome.keyring.SystemPrompter",
+        "org.gtk.MountOperationHandler",
+        "org.gtk.Notifications"
+      ],
+      "watchInventory": [
+        "org.freedesktop.GeoClue2"
+      ]
+    },
+    "lastReleasedRegistrations": null,
+    "windowManagerPreserved": true,
+    "stageActions": [
+      "OSK show bottom drag",
+      "Overview swipe tracker",
+      "Window unfullscreen top drag",
+      "WorkspaceAnimation swipe tracker"
+    ],
+    "windowGroupAttached": true,
+    "generation": 21,
+    "failures": 1,
+    "active": true,
+    "busy": false,
+    "actorsCreated": 23,
+    "actorsDestroyed": 22,
+    "liveOwnedActors": 1,
+    "panelEntryMatches": true,
+    "themeReloads": 1,
+    "shellState": {
+      "overview": false,
+      "modalCount": 0,
+      "startingUp": false,
+      "mode": "user"
+    },
+    "panel": {
+      "supported": true,
+      "lifecycle": {
+        "generation": 10,
+        "destroyed": 10,
+        "scope": "panel actor/layout/gestures/menu manager; indicator instances survive"
+      },
+      "replaced": true,
+      "containerCount": 1,
+      "focusGroupCount": 1,
+      "totalFocusGroups": 6,
+      "menuCount": 7,
+      "retainedIndicators": false
+    },
+    "desktop": {
+      "windows": [
+        {
+          "id": 1,
+          "title": "Tgnome persistent connection probe",
+          "workspace": 0,
+          "frame": [
+            473,
+            348,
+            334,
+            56
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Tgnome persistent connection probe",
+          "workspace": 0,
+          "frame": [
+            551,
+            349,
+            178,
+            54
+          ]
+        }
+      ],
+      "focus": 2,
+      "monitors": [
+        [
+          0,
+          0,
+          1280,
+          720
+        ]
+      ],
+      "workspace": 0
+    },
+    "shellRestartSupported": false,
+    "extensionCodeReloadSupported": false
+  },
+  "extensionLifecycleCycles": 3,
+  "wayland": {
+    "before": {
+      "pid": 1887460,
+      "backend": "wayland",
+      "fd": 3,
+      "inode": 6235429,
+      "windowId": 10,
+      "tick": 3
+    },
+    "after": {
+      "pid": 1887460,
+      "backend": "wayland",
+      "fd": 3,
+      "inode": 6235429,
+      "windowId": 10,
+      "tick": 24
+    },
+    "originalConnectionRoundTrips": true
+  },
+  "x11": {
+    "before": {
+      "pid": 1887475,
+      "backend": "x11",
+      "fd": 3,
+      "inode": 6233980,
+      "windowId": 2097156,
+      "tick": 1
+    },
+    "after": {
+      "pid": 1887475,
+      "backend": "x11",
+      "fd": 3,
+      "inode": 6233980,
+      "windowId": 2097156,
+      "tick": 22
+    },
+    "originalConnectionRoundTrips": true
+  },
+  "shellAfter": {
+    "classification": "SHELL RELOAD",
+    "scope": "panel actor reinitialized; indicator instances, GJS and compositor retained",
+    "pid": 1887143,
+    "runtimeEpoch": "a53c4856-5b37-4f69-9a38-960d93e290ba",
+    "uiGeneration": 0,
+    "uiReloadState": null,
+    "uiRegistrations": {
+      "exports": 14,
+      "ownedNames": 8,
+      "signals": {
+        "total": 65,
+        "permanent": 31,
+        "inventory": [
+          "MetaDisplay:accelerator-activated:ui:GnomeShell@resource:///org/gnome/shell/ui/shellDBus.js:40:24",
+          "MetaDisplay:accelerator-deactivated:ui:GnomeShell@resource:///org/gnome/shell/ui/shellDBus.js:44:24",
+          "MetaDisplay:gl-video-memory-purged:ui:_initializeUI@resource:///org/gnome/shell/ui/main.js:297:20",
+          "MetaDisplay:in-fullscreen-changed:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:929:24",
+          "MetaDisplay:in-fullscreen-changed:ui:_init@resource:///org/gnome/shell/ui/layout.js:325:17",
+          "MetaDisplay:in-fullscreen-changed:ui:_init@resource:///org/gnome/shell/ui/messageTray.js:776:24",
+          "MetaDisplay:init-xserver:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:891:24",
+          "MetaDisplay:modifiers-accelerator-activated:backend:InputSourceManager@resource:///org/gnome/shell/ui/status/keyboard.js:380:24",
+          "MetaDisplay:notify::focus-window:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:928:24",
+          "MetaDisplay:overlay-key:ui:_init@resource:///org/gnome/shell/ui/overviewControls.js:420:24",
+          "MetaDisplay:restacked:ui:_createOverview@resource:///org/gnome/shell/ui/overview.js:182:24",
+          "MetaDisplay:show-osd:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:886:24",
+          "MetaDisplay:show-pad-osd:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:885:24",
+          "MetaDisplay:show-resize-popup:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:884:24",
+          "MetaDisplay:window-demands-attention:ui:WindowAttentionHandler@resource:///org/gnome/shell/ui/windowAttentionHandler.js:10:24",
+          "MetaDisplay:window-entered-monitor:backend:WorkspaceTracker@resource:///org/gnome/shell/ui/windowManager.js:202:24",
+          "MetaDisplay:window-left-monitor:backend:WorkspaceTracker@resource:///org/gnome/shell/ui/windowManager.js:204:24",
+          "MetaDisplay:window-marked-urgent:ui:WindowAttentionHandler@resource:///org/gnome/shell/ui/windowAttentionHandler.js:10:24",
+          "MetaDisplay:workareas-changed:ui:_init@resource:///org/gnome/shell/ui/overviewControls.js:59:24",
+          "MetaDisplay:workareas-changed:ui:_init@resource:///org/gnome/shell/ui/panel.js:479:24",
+          "MetaDisplay:workareas-changed:ui:_init@resource:///org/gnome/shell/ui/workspaceThumbnail.js:664:24",
+          "MetaDisplay:workareas-changed:ui:_syncWorkareaTracking@resource:///org/gnome/shell/ui/workspace.js:591:32",
+          "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+          "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+          "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+          "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+          "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+          "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+          "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+          "MetaDisplay:x11-display-closing:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:898:24",
+          "MetaStage:destroy:backend:_init@resource:///org/gnome/shell/ui/swipeTracker.js:116:15",
+          "MetaStage:event::touchpad:backend:_init@resource:///org/gnome/shell/ui/swipeTracker.js:116:15",
+          "MetaStage:event::touchpad:ui:_init@resource:///org/gnome/shell/ui/swipeTracker.js:116:15",
+          "MetaStage:key-press-event:ui:_init@resource:///org/gnome/shell/ui/overviewControls.js:442:22",
+          "MetaStage:notify::key-focus:ui:_init@resource:///org/gnome/shell/ui/searchController.js:70:22",
+          "MetaStage:scroll-event:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:869:22",
+          "MetaStage:scroll-event:backend:_init@resource:///org/gnome/shell/ui/swipeTracker.js:238:15",
+          "MetaWindowGroup:destroy:ui:addGroup@resource:///org/gnome/shell/ui/ctrlAltTab.js:42:14",
+          "ShellGlobal:locate-pointer:ui:_initializeUI@resource:///org/gnome/shell/ui/main.js:293:12",
+          "ShellGlobal:notify-error:ui:start@resource:///org/gnome/shell/ui/main.js:165:12",
+          "ShellGlobal:notify::force-animations:ui:AnimationsSettings@resource:///org/gnome/shell/ui/main.js:1023:16",
+          "ShellGlobal:tgnome-ui-reset:ui:_init@resource:///org/gnome/shell/ui/layout.js:217:16",
+          "ShellGlobal:tgnome-ui-reset:ui:_initializeUI@resource:///org/gnome/shell/ui/main.js:248:12",
+          "ShellGlobal:tgnome-ui-reset:ui:_initializeUI@resource:///org/gnome/shell/ui/main.js:272:12",
+          "ShellGlobal:tgnome-ui-reset:ui:init@resource:///org/gnome/shell/ui/extensionSystem.js:65:35",
+          "ShellGlobal:tgnome-ui-reset:ui:unknown",
+          "ShellGlobal:tgnome-ui-reset:ui:unknown",
+          "ShellWM:confirm-display-change:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:535:23",
+          "ShellWM:create-close-dialog:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:536:23",
+          "ShellWM:create-inhibit-shortcuts-dialog:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:537:23",
+          "ShellWM:destroy:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:533:23",
+          "ShellWM:filter-keybinding:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:534:23",
+          "ShellWM:hide-tile-preview:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:526:23",
+          "ShellWM:kill-switch-workspace:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:937:23",
+          "ShellWM:kill-window-effects:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:517:23",
+          "ShellWM:map:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:532:23",
+          "ShellWM:minimize:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:528:23",
+          "ShellWM:show-tile-preview:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:525:23",
+          "ShellWM:show-window-menu:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:527:23",
+          "ShellWM:size-change:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:530:23",
+          "ShellWM:size-changed:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:531:23",
+          "ShellWM:switch-workspace:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:524:23",
+          "ShellWM:switch-workspace:backend:WorkspaceTracker@resource:///org/gnome/shell/ui/windowManager.js:199:31",
+          "ShellWM:switch-workspace:ui:_init@resource:///org/gnome/shell/ui/workspacesView.js:836:31",
+          "ShellWM:unminimize:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:529:23"
+        ]
+      },
+      "permanentExports": 1,
+      "stageActions": 4,
+      "watchedNames": 1,
+      "exportInventory": [
+        "/org/freedesktop/Notifications:org.freedesktop.Notifications",
+        "/org/freedesktop/portal/desktop:org.freedesktop.impl.portal.Access",
+        "/org/gnome/SessionManager/EndSessionDialog:org.gnome.SessionManager.EndSessionDialog",
+        "/org/gnome/Shell/AudioDeviceSelection:org.gnome.Shell.AudioDeviceSelection",
+        "/org/gnome/Shell/Brightness:org.gnome.Shell.Brightness",
+        "/org/gnome/Shell/Extensions/Tgnome:org.gnome.Shell.Extensions.Tgnome",
+        "/org/gnome/Shell/Introspect:org.gnome.Shell.Introspect",
+        "/org/gnome/Shell/ScreenTime:org.gnome.Shell.ScreenTime",
+        "/org/gnome/Shell/Screenshot:org.gnome.Shell.Screenshot",
+        "/org/gnome/Shell/Wacom:org.gnome.Shell.Wacom.PadOsd",
+        "/org/gnome/Shell:org.gnome.Shell",
+        "/org/gnome/Shell:org.gnome.Shell.Extensions",
+        "/org/gtk/MountOperationHandler:org.Gtk.MountOperationHandler",
+        "/org/gtk/Notifications:org.gtk.Notifications"
+      ],
+      "nameInventory": [
+        "org.gnome.Shell.AudioDeviceSelection",
+        "org.gnome.Shell.Brightness",
+        "org.gnome.Shell.Introspect",
+        "org.gnome.Shell.Screenshot",
+        "org.gnome.Shell.Wacom.PadOsd",
+        "org.gnome.keyring.SystemPrompter",
+        "org.gtk.MountOperationHandler",
+        "org.gtk.Notifications"
+      ],
+      "watchInventory": [
+        "org.freedesktop.GeoClue2"
+      ]
+    },
+    "lastReleasedRegistrations": null,
+    "windowManagerPreserved": true,
+    "stageActions": [
+      "OSK show bottom drag",
+      "Overview swipe tracker",
+      "Window unfullscreen top drag",
+      "WorkspaceAnimation swipe tracker"
+    ],
+    "windowGroupAttached": true,
+    "generation": 0,
+    "failures": 0,
+    "active": true,
+    "busy": false,
+    "actorsCreated": 26,
+    "actorsDestroyed": 25,
+    "liveOwnedActors": 1,
+    "panelEntryMatches": true,
+    "themeReloads": 0,
+    "shellState": {
+      "overview": false,
+      "modalCount": 0,
+      "startingUp": false,
+      "mode": "user"
+    },
+    "panel": {
+      "supported": true,
+      "lifecycle": {
+        "generation": 10,
+        "destroyed": 10,
+        "scope": "panel actor/layout/gestures/menu manager; indicator instances survive"
+      },
+      "replaced": false,
+      "containerCount": 1,
+      "focusGroupCount": 1,
+      "totalFocusGroups": 6,
+      "menuCount": 7,
+      "retainedIndicators": true
+    },
+    "desktop": {
+      "windows": [
+        {
+          "id": 1,
+          "title": "Tgnome persistent connection probe",
+          "workspace": 0,
+          "frame": [
+            473,
+            348,
+            334,
+            56
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Tgnome persistent connection probe",
+          "workspace": 0,
+          "frame": [
+            551,
+            349,
+            178,
+            54
+          ]
+        }
+      ],
+      "focus": 2,
+      "monitors": [
+        [
+          0,
+          0,
+          1280,
+          720
+        ]
+      ],
+      "workspace": 0
+    },
+    "shellRestartSupported": false,
+    "extensionCodeReloadSupported": false
+  },
+  "xwaylandAfter": [
+    {
+      "pid": 1887477,
+      "exe": "/nix/store/8irpj5qxxxjnr98lh3dcx83xa26qf44p-xwayland-24.1.14/bin/Xwayland",
+      "startTime": "14095398"
+    }
+  ],
+  "xwaylandTested": true,
+  "reloadScope": "panel actor/layout/gestures/menu manager; indicators, GJS and Mutter survive",
+  "nativeLoop": {
+    "attempts": 0,
+    "contextsFinalized": 0,
+    "state": "ready",
+    "registeredProbeTypes": 0,
+    "registeredObjectTypes": 981,
+    "newObjectTypes": [],
+    "researchOnly": true
+  },
+  "baselinePassed": true,
+  "inPlaceReload": {
+    "before": {
+      "classification": "SHELL RELOAD",
+      "scope": "panel actor reinitialized; indicator instances, GJS and compositor retained",
+      "pid": 1887143,
+      "runtimeEpoch": "a53c4856-5b37-4f69-9a38-960d93e290ba",
+      "uiGeneration": 0,
+      "uiReloadState": null,
+      "uiRegistrations": {
+        "exports": 14,
+        "ownedNames": 8,
+        "signals": {
+          "total": 65,
+          "permanent": 31,
+          "inventory": [
+            "MetaDisplay:accelerator-activated:ui:GnomeShell@resource:///org/gnome/shell/ui/shellDBus.js:40:24",
+            "MetaDisplay:accelerator-deactivated:ui:GnomeShell@resource:///org/gnome/shell/ui/shellDBus.js:44:24",
+            "MetaDisplay:gl-video-memory-purged:ui:_initializeUI@resource:///org/gnome/shell/ui/main.js:297:20",
+            "MetaDisplay:in-fullscreen-changed:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:929:24",
+            "MetaDisplay:in-fullscreen-changed:ui:_init@resource:///org/gnome/shell/ui/layout.js:325:17",
+            "MetaDisplay:in-fullscreen-changed:ui:_init@resource:///org/gnome/shell/ui/messageTray.js:776:24",
+            "MetaDisplay:init-xserver:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:891:24",
+            "MetaDisplay:modifiers-accelerator-activated:backend:InputSourceManager@resource:///org/gnome/shell/ui/status/keyboard.js:380:24",
+            "MetaDisplay:notify::focus-window:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:928:24",
+            "MetaDisplay:overlay-key:ui:_init@resource:///org/gnome/shell/ui/overviewControls.js:420:24",
+            "MetaDisplay:restacked:ui:_createOverview@resource:///org/gnome/shell/ui/overview.js:182:24",
+            "MetaDisplay:show-osd:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:886:24",
+            "MetaDisplay:show-pad-osd:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:885:24",
+            "MetaDisplay:show-resize-popup:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:884:24",
+            "MetaDisplay:window-demands-attention:ui:WindowAttentionHandler@resource:///org/gnome/shell/ui/windowAttentionHandler.js:10:24",
+            "MetaDisplay:window-entered-monitor:backend:WorkspaceTracker@resource:///org/gnome/shell/ui/windowManager.js:202:24",
+            "MetaDisplay:window-left-monitor:backend:WorkspaceTracker@resource:///org/gnome/shell/ui/windowManager.js:204:24",
+            "MetaDisplay:window-marked-urgent:ui:WindowAttentionHandler@resource:///org/gnome/shell/ui/windowAttentionHandler.js:10:24",
+            "MetaDisplay:workareas-changed:ui:_init@resource:///org/gnome/shell/ui/overviewControls.js:59:24",
+            "MetaDisplay:workareas-changed:ui:_init@resource:///org/gnome/shell/ui/panel.js:479:24",
+            "MetaDisplay:workareas-changed:ui:_init@resource:///org/gnome/shell/ui/workspaceThumbnail.js:664:24",
+            "MetaDisplay:workareas-changed:ui:_syncWorkareaTracking@resource:///org/gnome/shell/ui/workspace.js:591:32",
+            "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+            "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+            "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+            "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+            "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+            "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+            "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+            "MetaDisplay:x11-display-closing:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:898:24",
+            "MetaStage:destroy:backend:_init@resource:///org/gnome/shell/ui/swipeTracker.js:116:15",
+            "MetaStage:event::touchpad:backend:_init@resource:///org/gnome/shell/ui/swipeTracker.js:116:15",
+            "MetaStage:event::touchpad:ui:_init@resource:///org/gnome/shell/ui/swipeTracker.js:116:15",
+            "MetaStage:key-press-event:ui:_init@resource:///org/gnome/shell/ui/overviewControls.js:442:22",
+            "MetaStage:notify::key-focus:ui:_init@resource:///org/gnome/shell/ui/searchController.js:70:22",
+            "MetaStage:scroll-event:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:869:22",
+            "MetaStage:scroll-event:backend:_init@resource:///org/gnome/shell/ui/swipeTracker.js:238:15",
+            "MetaWindowGroup:destroy:ui:addGroup@resource:///org/gnome/shell/ui/ctrlAltTab.js:42:14",
+            "ShellGlobal:locate-pointer:ui:_initializeUI@resource:///org/gnome/shell/ui/main.js:293:12",
+            "ShellGlobal:notify-error:ui:start@resource:///org/gnome/shell/ui/main.js:165:12",
+            "ShellGlobal:notify::force-animations:ui:AnimationsSettings@resource:///org/gnome/shell/ui/main.js:1023:16",
+            "ShellGlobal:tgnome-ui-reset:ui:_init@resource:///org/gnome/shell/ui/layout.js:217:16",
+            "ShellGlobal:tgnome-ui-reset:ui:_initializeUI@resource:///org/gnome/shell/ui/main.js:248:12",
+            "ShellGlobal:tgnome-ui-reset:ui:_initializeUI@resource:///org/gnome/shell/ui/main.js:272:12",
+            "ShellGlobal:tgnome-ui-reset:ui:init@resource:///org/gnome/shell/ui/extensionSystem.js:65:35",
+            "ShellGlobal:tgnome-ui-reset:ui:unknown",
+            "ShellGlobal:tgnome-ui-reset:ui:unknown",
+            "ShellWM:confirm-display-change:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:535:23",
+            "ShellWM:create-close-dialog:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:536:23",
+            "ShellWM:create-inhibit-shortcuts-dialog:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:537:23",
+            "ShellWM:destroy:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:533:23",
+            "ShellWM:filter-keybinding:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:534:23",
+            "ShellWM:hide-tile-preview:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:526:23",
+            "ShellWM:kill-switch-workspace:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:937:23",
+            "ShellWM:kill-window-effects:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:517:23",
+            "ShellWM:map:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:532:23",
+            "ShellWM:minimize:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:528:23",
+            "ShellWM:show-tile-preview:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:525:23",
+            "ShellWM:show-window-menu:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:527:23",
+            "ShellWM:size-change:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:530:23",
+            "ShellWM:size-changed:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:531:23",
+            "ShellWM:switch-workspace:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:524:23",
+            "ShellWM:switch-workspace:backend:WorkspaceTracker@resource:///org/gnome/shell/ui/windowManager.js:199:31",
+            "ShellWM:switch-workspace:ui:_init@resource:///org/gnome/shell/ui/workspacesView.js:836:31",
+            "ShellWM:unminimize:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:529:23"
+          ]
+        },
+        "permanentExports": 1,
+        "stageActions": 4,
+        "watchedNames": 1,
+        "exportInventory": [
+          "/org/freedesktop/Notifications:org.freedesktop.Notifications",
+          "/org/freedesktop/portal/desktop:org.freedesktop.impl.portal.Access",
+          "/org/gnome/SessionManager/EndSessionDialog:org.gnome.SessionManager.EndSessionDialog",
+          "/org/gnome/Shell/AudioDeviceSelection:org.gnome.Shell.AudioDeviceSelection",
+          "/org/gnome/Shell/Brightness:org.gnome.Shell.Brightness",
+          "/org/gnome/Shell/Extensions/Tgnome:org.gnome.Shell.Extensions.Tgnome",
+          "/org/gnome/Shell/Introspect:org.gnome.Shell.Introspect",
+          "/org/gnome/Shell/ScreenTime:org.gnome.Shell.ScreenTime",
+          "/org/gnome/Shell/Screenshot:org.gnome.Shell.Screenshot",
+          "/org/gnome/Shell/Wacom:org.gnome.Shell.Wacom.PadOsd",
+          "/org/gnome/Shell:org.gnome.Shell",
+          "/org/gnome/Shell:org.gnome.Shell.Extensions",
+          "/org/gtk/MountOperationHandler:org.Gtk.MountOperationHandler",
+          "/org/gtk/Notifications:org.gtk.Notifications"
+        ],
+        "nameInventory": [
+          "org.gnome.Shell.AudioDeviceSelection",
+          "org.gnome.Shell.Brightness",
+          "org.gnome.Shell.Introspect",
+          "org.gnome.Shell.Screenshot",
+          "org.gnome.Shell.Wacom.PadOsd",
+          "org.gnome.keyring.SystemPrompter",
+          "org.gtk.MountOperationHandler",
+          "org.gtk.Notifications"
+        ],
+        "watchInventory": [
+          "org.freedesktop.GeoClue2"
+        ]
+      },
+      "lastReleasedRegistrations": null,
+      "windowManagerPreserved": true,
+      "stageActions": [
+        "OSK show bottom drag",
+        "Overview swipe tracker",
+        "Window unfullscreen top drag",
+        "WorkspaceAnimation swipe tracker"
+      ],
+      "windowGroupAttached": true,
+      "generation": 0,
+      "failures": 0,
+      "active": true,
+      "busy": false,
+      "actorsCreated": 26,
+      "actorsDestroyed": 25,
+      "liveOwnedActors": 1,
+      "panelEntryMatches": true,
+      "themeReloads": 0,
+      "shellState": {
+        "overview": false,
+        "modalCount": 0,
+        "startingUp": false,
+        "mode": "user"
+      },
+      "panel": {
+        "supported": true,
+        "lifecycle": {
+          "generation": 10,
+          "destroyed": 10,
+          "scope": "panel actor/layout/gestures/menu manager; indicator instances survive"
+        },
+        "replaced": false,
+        "containerCount": 1,
+        "focusGroupCount": 1,
+        "totalFocusGroups": 6,
+        "menuCount": 7,
+        "retainedIndicators": true
+      },
+      "desktop": {
+        "windows": [
+          {
+            "id": 1,
+            "title": "Tgnome persistent connection probe",
+            "workspace": 0,
+            "frame": [
+              473,
+              348,
+              334,
+              56
+            ]
+          },
+          {
+            "id": 2,
+            "title": "Tgnome persistent connection probe",
+            "workspace": 0,
+            "frame": [
+              551,
+              349,
+              178,
+              54
+            ]
+          }
+        ],
+        "focus": 2,
+        "monitors": [
+          [
+            0,
+            0,
+            1280,
+            720
+          ]
+        ],
+        "workspace": 0
+      },
+      "shellRestartSupported": false,
+      "extensionCodeReloadSupported": false
+    },
+    "nativeBefore": {
+      "attempts": 0,
+      "contextsFinalized": 0,
+      "state": "ready",
+      "registeredProbeTypes": 0,
+      "registeredObjectTypes": 981,
+      "newObjectTypes": [],
+      "researchOnly": true
+    },
+    "cycles": [
+      {
+        "generation": 1,
+        "preparation": {
+          "prepared": true,
+          "releasedKeybindings": 15
+        },
+        "requested": {
+          "attempts": 1,
+          "contextsFinalized": 0,
+          "state": "scheduled",
+          "registeredProbeTypes": 0,
+          "registeredObjectTypes": 981,
+          "newObjectTypes": [],
+          "researchOnly": true
+        },
+        "menus": {
+          "menusChecked": [
+            "dateMenu",
+            "quickSettings"
+          ],
+          "modalCount": 0
+        },
+        "after": {
+          "classification": "SHELL RELOAD",
+          "scope": "panel actor reinitialized; indicator instances, GJS and compositor retained",
+          "pid": 1887143,
+          "runtimeEpoch": "a53c4856-5b37-4f69-9a38-960d93e290ba",
+          "uiGeneration": 1,
+          "uiReloadState": "started",
+          "uiRegistrations": {
+            "exports": 14,
+            "ownedNames": 8,
+            "signals": {
+              "total": 64,
+              "permanent": 31,
+              "inventory": [
+                "MetaDisplay:accelerator-activated:ui:GnomeShell@resource:///org/gnome/shell/ui/shellDBus.js:40:24",
+                "MetaDisplay:accelerator-deactivated:ui:GnomeShell@resource:///org/gnome/shell/ui/shellDBus.js:44:24",
+                "MetaDisplay:gl-video-memory-purged:ui:_initializeUI@resource:///org/gnome/shell/ui/main.js:297:20",
+                "MetaDisplay:in-fullscreen-changed:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:929:24",
+                "MetaDisplay:in-fullscreen-changed:ui:_init@resource:///org/gnome/shell/ui/layout.js:325:17",
+                "MetaDisplay:in-fullscreen-changed:ui:_init@resource:///org/gnome/shell/ui/messageTray.js:776:24",
+                "MetaDisplay:init-xserver:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:891:24",
+                "MetaDisplay:modifiers-accelerator-activated:backend:InputSourceManager@resource:///org/gnome/shell/ui/status/keyboard.js:380:24",
+                "MetaDisplay:notify::focus-window:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:928:24",
+                "MetaDisplay:overlay-key:ui:_init@resource:///org/gnome/shell/ui/overviewControls.js:420:24",
+                "MetaDisplay:restacked:ui:_createOverview@resource:///org/gnome/shell/ui/overview.js:182:24",
+                "MetaDisplay:show-osd:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:886:24",
+                "MetaDisplay:show-pad-osd:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:885:24",
+                "MetaDisplay:show-resize-popup:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:884:24",
+                "MetaDisplay:window-demands-attention:ui:WindowAttentionHandler@resource:///org/gnome/shell/ui/windowAttentionHandler.js:10:24",
+                "MetaDisplay:window-entered-monitor:backend:WorkspaceTracker@resource:///org/gnome/shell/ui/windowManager.js:202:24",
+                "MetaDisplay:window-left-monitor:backend:WorkspaceTracker@resource:///org/gnome/shell/ui/windowManager.js:204:24",
+                "MetaDisplay:window-marked-urgent:ui:WindowAttentionHandler@resource:///org/gnome/shell/ui/windowAttentionHandler.js:10:24",
+                "MetaDisplay:workareas-changed:ui:_init@resource:///org/gnome/shell/ui/overviewControls.js:59:24",
+                "MetaDisplay:workareas-changed:ui:_init@resource:///org/gnome/shell/ui/panel.js:479:24",
+                "MetaDisplay:workareas-changed:ui:_init@resource:///org/gnome/shell/ui/workspaceThumbnail.js:664:24",
+                "MetaDisplay:workareas-changed:ui:_syncWorkareaTracking@resource:///org/gnome/shell/ui/workspace.js:591:32",
+                "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+                "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+                "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+                "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+                "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+                "MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36",
+                "MetaDisplay:x11-display-closing:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:898:24",
+                "MetaStage:destroy:backend:_init@resource:///org/gnome/shell/ui/swipeTracker.js:116:15",
+                "MetaStage:event::touchpad:backend:_init@resource:///org/gnome/shell/ui/swipeTracker.js:116:15",
+                "MetaStage:event::touchpad:ui:_init@resource:///org/gnome/shell/ui/swipeTracker.js:116:15",
+                "MetaStage:key-press-event:ui:_init@resource:///org/gnome/shell/ui/overviewControls.js:442:22",
+                "MetaStage:notify::key-focus:ui:_init@resource:///org/gnome/shell/ui/searchController.js:70:22",
+                "MetaStage:scroll-event:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:869:22",
+                "MetaStage:scroll-event:backend:_init@resource:///org/gnome/shell/ui/swipeTracker.js:238:15",
+                "MetaWindowGroup:destroy:ui:addGroup@resource:///org/gnome/shell/ui/ctrlAltTab.js:42:14",
+                "ShellGlobal:locate-pointer:ui:_initializeUI@resource:///org/gnome/shell/ui/main.js:293:12",
+                "ShellGlobal:notify-error:ui:start@resource:///org/gnome/shell/ui/main.js:165:12",
+                "ShellGlobal:notify::force-animations:ui:AnimationsSettings@resource:///org/gnome/shell/ui/main.js:1023:16",
+                "ShellGlobal:tgnome-ui-reset:ui:_init@resource:///org/gnome/shell/ui/layout.js:217:16",
+                "ShellGlobal:tgnome-ui-reset:ui:_initializeUI@resource:///org/gnome/shell/ui/main.js:248:12",
+                "ShellGlobal:tgnome-ui-reset:ui:_initializeUI@resource:///org/gnome/shell/ui/main.js:272:12",
+                "ShellGlobal:tgnome-ui-reset:ui:init@resource:///org/gnome/shell/ui/extensionSystem.js:65:35",
+                "ShellGlobal:tgnome-ui-reset:ui:restartTgnomeUiInPlace@resource:///org/gnome/shell/ui/main.js:1097:21",
+                "ShellGlobal:tgnome-ui-reset:ui:restartTgnomeUiInPlace@resource:///org/gnome/shell/ui/main.js:1097:21",
+                "ShellWM:confirm-display-change:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:535:23",
+                "ShellWM:create-close-dialog:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:536:23",
+                "ShellWM:create-inhibit-shortcuts-dialog:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:537:23",
+                "ShellWM:destroy:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:533:23",
+                "ShellWM:filter-keybinding:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:534:23",
+                "ShellWM:hide-tile-preview:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:526:23",
+                "ShellWM:kill-switch-workspace:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:937:23",
+                "ShellWM:kill-window-effects:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:517:23",
+                "ShellWM:map:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:532:23",
+                "ShellWM:minimize:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:528:23",
+                "ShellWM:show-tile-preview:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:525:23",
+                "ShellWM:show-window-menu:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:527:23",
+                "ShellWM:size-change:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:530:23",
+                "ShellWM:size-changed:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:531:23",
+                "ShellWM:switch-workspace:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:524:23",
+                "ShellWM:switch-workspace:backend:WorkspaceTracker@resource:///org/gnome/shell/ui/windowManager.js:199:31",
+                "ShellWM:switch-workspace:ui:_init@resource:///org/gnome/shell/ui/workspacesView.js:836:31",
+                "ShellWM:unminimize:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:529:23"
+              ]
+            },
+            "permanentExports": 1,
+            "stageActions": 4,
+            "watchedNames": 1,
+            "exportInventory": [
+              "/org/freedesktop/Notifications:org.freedesktop.Notifications",
+              "/org/freedesktop/portal/desktop:org.freedesktop.impl.portal.Access",
+              "/org/gnome/SessionManager/EndSessionDialog:org.gnome.SessionManager.EndSessionDialog",
+              "/org/gnome/Shell/AudioDeviceSelection:org.gnome.Shell.AudioDeviceSelection",
+              "/org/gnome/Shell/Brightness:org.gnome.Shell.Brightness",
+              "/org/gnome/Shell/Extensions/Tgnome:org.gnome.Shell.Extensions.Tgnome",
+              "/org/gnome/Shell/Introspect:org.gnome.Shell.Introspect",
+              "/org/gnome/Shell/ScreenTime:org.gnome.Shell.ScreenTime",
+              "/org/gnome/Shell/Screenshot:org.gnome.Shell.Screenshot",
+              "/org/gnome/Shell/Wacom:org.gnome.Shell.Wacom.PadOsd",
+              "/org/gnome/Shell:org.gnome.Shell",
+              "/org/gnome/Shell:org.gnome.Shell.Extensions",
+              "/org/gtk/MountOperationHandler:org.Gtk.MountOperationHandler",
+              "/org/gtk/Notifications:org.gtk.Notifications"
+            ],
+            "nameInventory": [
+              "org.gnome.Shell.AudioDeviceSelection",
+              "org.gnome.Shell.Brightness",
+              "org.gnome.Shell.Introspect",
+              "org.gnome.Shell.Screenshot",
+              "org.gnome.Shell.Wacom.PadOsd",
+              "org.gnome.keyring.SystemPrompter",
+              "org.gtk.MountOperationHandler",
+              "org.gtk.Notifications"
+            ],
+            "watchInventory": [
+              "org.freedesktop.GeoClue2"
+            ]
+          },
+          "lastReleasedRegistrations": {
+            "exports": 13,
+            "ownedNames": 8,
+            "signals": {
+              "total": 41,
+              "permanent": 31,
+              "inventory": [
+                "MetaDisplay:accelerator-activated:ui:GnomeShell@resource:///org/gnome/shell/ui/shellDBus.js:40:24",
+                "MetaDisplay:accelerator-deactivated:ui:GnomeShell@resource:///org/gnome/shell/ui/shellDBus.js:44:24",
+                "MetaDisplay:gl-video-memory-purged:ui:_initializeUI@resource:///org/gnome/shell/ui/main.js:297:20",
+                "MetaDisplay:in-fullscreen-changed:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:929:24",
+                "MetaDisplay:in-fullscreen-changed:ui:_init@resource:///org/gnome/shell/ui/layout.js:325:17",
+                "MetaDisplay:init-xserver:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:891:24",
+                "MetaDisplay:modifiers-accelerator-activated:backend:InputSourceManager@resource:///org/gnome/shell/ui/status/keyboard.js:380:24",
+                "MetaDisplay:notify::focus-window:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:928:24",
+                "MetaDisplay:restacked:ui:_createOverview@resource:///org/gnome/shell/ui/overview.js:182:24",
+                "MetaDisplay:show-osd:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:886:24",
+                "MetaDisplay:show-pad-osd:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:885:24",
+                "MetaDisplay:show-resize-popup:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:884:24",
+                "MetaDisplay:window-entered-monitor:backend:WorkspaceTracker@resource:///org/gnome/shell/ui/windowManager.js:202:24",
+                "MetaDisplay:window-left-monitor:backend:WorkspaceTracker@resource:///org/gnome/shell/ui/windowManager.js:204:24",
+                "MetaDisplay:x11-display-closing:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:898:24",
+                "MetaStage:destroy:backend:_init@resource:///org/gnome/shell/ui/swipeTracker.js:116:15",
+                "MetaStage:event::touchpad:backend:_init@resource:///org/gnome/shell/ui/swipeTracker.js:116:15",
+                "MetaStage:key-press-event:ui:_init@resource:///org/gnome/shell/ui/overviewControls.js:442:22",
+                "MetaStage:scroll-event:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:869:22",
+                "MetaStage:scroll-event:backend:_init@resource:///org/gnome/shell/ui/swipeTracker.js:238:15",
+                "MetaWindowGroup:destroy:ui:addGroup@resource:///org/gnome/shell/ui/ctrlAltTab.js:42:14",
+                "ShellGlobal:locate-pointer:ui:_initializeUI@resource:///org/gnome/shell/ui/main.js:293:12",
+                "ShellGlobal:notify-error:ui:start@resource:///org/gnome/shell/ui/main.js:165:12",
+                "ShellGlobal:notify::force-animations:ui:AnimationsSettings@resource:///org/gnome/shell/ui/main.js:1023:16",
+                "ShellWM:confirm-display-change:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:535:23",
+                "ShellWM:create-close-dialog:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:536:23",
+                "ShellWM:create-inhibit-shortcuts-dialog:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:537:23",
+                "ShellWM:destroy:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:533:23",
+                "ShellWM:filter-keybinding:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:534:23",
+                "ShellWM:hide-tile-preview:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:526:23",
+                "ShellWM:kill-switch-workspace:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:937:23",
+                "ShellWM:kill-window-effects:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:517:23",
+                "ShellWM:map:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:532:23",
+                "ShellWM:minimize:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:528:23",
+                "ShellWM:show-tile-preview:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:525:23",
+                "ShellWM:show-window-menu:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:527:23",
+                "ShellWM:size-change:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:530:23",
+                "ShellWM:size-changed:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:531:23",
+                "ShellWM:switch-workspace:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:524:23",
+                "ShellWM:switch-workspace:backend:WorkspaceTracker@resource:///org/gnome/shell/ui/windowManager.js:199:31",
+                "ShellWM:unminimize:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:529:23"
+              ]
+            },
+            "stageActions": 2,
+            "watchedNames": 1
+          },
+          "windowManagerPreserved": true,
+          "stageActions": [
+            "OSK show bottom drag",
+            "Overview swipe tracker",
+            "Window unfullscreen top drag",
+            "WorkspaceAnimation swipe tracker"
+          ],
+          "windowGroupAttached": true,
+          "generation": 0,
+          "failures": 0,
+          "active": true,
+          "busy": false,
+          "actorsCreated": 27,
+          "actorsDestroyed": 26,
+          "liveOwnedActors": 1,
+          "panelEntryMatches": true,
+          "themeReloads": 0,
+          "shellState": {
+            "overview": false,
+            "modalCount": 0,
+            "startingUp": false,
+            "mode": "user"
+          },
+          "panel": {
+            "supported": true,
+            "lifecycle": {
+              "generation": 10,
+              "destroyed": 10,
+              "scope": "panel actor/layout/gestures/menu manager; indicator instances survive"
+            },
+            "replaced": false,
+            "containerCount": 1,
+            "focusGroupCount": 1,
+            "totalFocusGroups": 6,
+            "menuCount": 7,
+            "retainedIndicators": true
+          },
+          "desktop": {
+            "windows": [
+              {
+                "id": 1,
+                "title": "Tgnome persistent connection probe",
+                "workspace": 0,
+                "frame": [
+                  473,
+                  348,
+                  334,
+                  56
+                ]
+              },
+              {
+                "id": 2,
+                "title": "Tgnome persistent connection probe",
+                "workspace": 0,
+                "frame": [
+                  551,
+                  349,
+                  178,
+                  54
+                ]
+              }
+            ],
+            "focus": 2,
+            "monitors": [
+              [
+                0,
+                0,
+                1280,
+                720
+              ]
+            ],
+            "workspace": 0
+          },
+          "shellRestartSupported": false,
+          "extensionCodeReloadSupported": false
+        },
+        "nativeAfter": {
+          "attempts": 1,
+          "contextsFinalized": 0,
+          "state": "same-context-ui-starting",
+          "registeredProbeTypes": 0,
+          "registeredObjectTypes": 982,
+          "newObjectTypes": [
+            "GVfsMetadataProxy"
+          ],
+          "researchOnly": true
+        }
+      }
+    ]
+  },
+  "error": "AssertionError: {'before': {'exports': 14, 'ownedNames': 8, 'signals': {'total': 65, 'permanent': 31, 'inventory': ['MetaDisplay:accelerator-activated:ui:GnomeShell@resource:///org/gnome/shell/ui/shellDBus.js:40:24', 'MetaDisplay:accelerator-deactivated:ui:GnomeShell@resource:///org/gnome/shell/ui/shellDBus.js:44:24', 'MetaDisplay:gl-video-memory-purged:ui:_initializeUI@resource:///org/gnome/shell/ui/main.js:297:20', 'MetaDisplay:in-fullscreen-changed:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:929:24', 'MetaDisplay:in-fullscreen-changed:ui:_init@resource:///org/gnome/shell/ui/layout.js:325:17', 'MetaDisplay:in-fullscreen-changed:ui:_init@resource:///org/gnome/shell/ui/messageTray.js:776:24', 'MetaDisplay:init-xserver:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:891:24', 'MetaDisplay:modifiers-accelerator-activated:backend:InputSourceManager@resource:///org/gnome/shell/ui/status/keyboard.js:380:24', 'MetaDisplay:notify::focus-window:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:928:24', 'MetaDisplay:overlay-key:ui:_init@resource:///org/gnome/shell/ui/overviewControls.js:420:24', 'MetaDisplay:restacked:ui:_createOverview@resource:///org/gnome/shell/ui/overview.js:182:24', 'MetaDisplay:show-osd:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:886:24', 'MetaDisplay:show-pad-osd:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:885:24', 'MetaDisplay:show-resize-popup:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:884:24', 'MetaDisplay:window-demands-attention:ui:WindowAttentionHandler@resource:///org/gnome/shell/ui/windowAttentionHandler.js:10:24', 'MetaDisplay:window-entered-monitor:backend:WorkspaceTracker@resource:///org/gnome/shell/ui/windowManager.js:202:24', 'MetaDisplay:window-left-monitor:backend:WorkspaceTracker@resource:///org/gnome/shell/ui/windowManager.js:204:24', 'MetaDisplay:window-marked-urgent:ui:WindowAttentionHandler@resource:///org/gnome/shell/ui/windowAttentionHandler.js:10:24', 'MetaDisplay:workareas-changed:ui:_init@resource:///org/gnome/shell/ui/overviewControls.js:59:24', 'MetaDisplay:workareas-changed:ui:_init@resource:///org/gnome/shell/ui/panel.js:479:24', 'MetaDisplay:workareas-changed:ui:_init@resource:///org/gnome/shell/ui/workspaceThumbnail.js:664:24', 'MetaDisplay:workareas-changed:ui:_syncWorkareaTracking@resource:///org/gnome/shell/ui/workspace.js:591:32', 'MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36', 'MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36', 'MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36', 'MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36', 'MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36', 'MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36', 'MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36', 'MetaDisplay:x11-display-closing:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:898:24', 'MetaStage:destroy:backend:_init@resource:///org/gnome/shell/ui/swipeTracker.js:116:15', 'MetaStage:event::touchpad:backend:_init@resource:///org/gnome/shell/ui/swipeTracker.js:116:15', 'MetaStage:event::touchpad:ui:_init@resource:///org/gnome/shell/ui/swipeTracker.js:116:15', 'MetaStage:key-press-event:ui:_init@resource:///org/gnome/shell/ui/overviewControls.js:442:22', 'MetaStage:notify::key-focus:ui:_init@resource:///org/gnome/shell/ui/searchController.js:70:22', 'MetaStage:scroll-event:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:869:22', 'MetaStage:scroll-event:backend:_init@resource:///org/gnome/shell/ui/swipeTracker.js:238:15', 'MetaWindowGroup:destroy:ui:addGroup@resource:///org/gnome/shell/ui/ctrlAltTab.js:42:14', 'ShellGlobal:locate-pointer:ui:_initializeUI@resource:///org/gnome/shell/ui/main.js:293:12', 'ShellGlobal:notify-error:ui:start@resource:///org/gnome/shell/ui/main.js:165:12', 'ShellGlobal:notify::force-animations:ui:AnimationsSettings@resource:///org/gnome/shell/ui/main.js:1023:16', 'ShellGlobal:tgnome-ui-reset:ui:_init@resource:///org/gnome/shell/ui/layout.js:217:16', 'ShellGlobal:tgnome-ui-reset:ui:_initializeUI@resource:///org/gnome/shell/ui/main.js:248:12', 'ShellGlobal:tgnome-ui-reset:ui:_initializeUI@resource:///org/gnome/shell/ui/main.js:272:12', 'ShellGlobal:tgnome-ui-reset:ui:init@resource:///org/gnome/shell/ui/extensionSystem.js:65:35', 'ShellGlobal:tgnome-ui-reset:ui:unknown', 'ShellGlobal:tgnome-ui-reset:ui:unknown', 'ShellWM:confirm-display-change:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:535:23', 'ShellWM:create-close-dialog:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:536:23', 'ShellWM:create-inhibit-shortcuts-dialog:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:537:23', 'ShellWM:destroy:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:533:23', 'ShellWM:filter-keybinding:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:534:23', 'ShellWM:hide-tile-preview:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:526:23', 'ShellWM:kill-switch-workspace:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:937:23', 'ShellWM:kill-window-effects:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:517:23', 'ShellWM:map:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:532:23', 'ShellWM:minimize:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:528:23', 'ShellWM:show-tile-preview:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:525:23', 'ShellWM:show-window-menu:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:527:23', 'ShellWM:size-change:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:530:23', 'ShellWM:size-changed:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:531:23', 'ShellWM:switch-workspace:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:524:23', 'ShellWM:switch-workspace:backend:WorkspaceTracker@resource:///org/gnome/shell/ui/windowManager.js:199:31', 'ShellWM:switch-workspace:ui:_init@resource:///org/gnome/shell/ui/workspacesView.js:836:31', 'ShellWM:unminimize:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:529:23']}, 'permanentExports': 1, 'stageActions': 4, 'watchedNames': 1, 'exportInventory': ['/org/freedesktop/Notifications:org.freedesktop.Notifications', '/org/freedesktop/portal/desktop:org.freedesktop.impl.portal.Access', '/org/gnome/SessionManager/EndSessionDialog:org.gnome.SessionManager.EndSessionDialog', '/org/gnome/Shell/AudioDeviceSelection:org.gnome.Shell.AudioDeviceSelection', '/org/gnome/Shell/Brightness:org.gnome.Shell.Brightness', '/org/gnome/Shell/Extensions/Tgnome:org.gnome.Shell.Extensions.Tgnome', '/org/gnome/Shell/Introspect:org.gnome.Shell.Introspect', '/org/gnome/Shell/ScreenTime:org.gnome.Shell.ScreenTime', '/org/gnome/Shell/Screenshot:org.gnome.Shell.Screenshot', '/org/gnome/Shell/Wacom:org.gnome.Shell.Wacom.PadOsd', '/org/gnome/Shell:org.gnome.Shell', '/org/gnome/Shell:org.gnome.Shell.Extensions', '/org/gtk/MountOperationHandler:org.Gtk.MountOperationHandler', '/org/gtk/Notifications:org.gtk.Notifications'], 'nameInventory': ['org.gnome.Shell.AudioDeviceSelection', 'org.gnome.Shell.Brightness', 'org.gnome.Shell.Introspect', 'org.gnome.Shell.Screenshot', 'org.gnome.Shell.Wacom.PadOsd', 'org.gnome.keyring.SystemPrompter', 'org.gtk.MountOperationHandler', 'org.gtk.Notifications'], 'watchInventory': ['org.freedesktop.GeoClue2']}, 'after': {'exports': 14, 'ownedNames': 8, 'signals': {'total': 64, 'permanent': 31, 'inventory': ['MetaDisplay:accelerator-activated:ui:GnomeShell@resource:///org/gnome/shell/ui/shellDBus.js:40:24', 'MetaDisplay:accelerator-deactivated:ui:GnomeShell@resource:///org/gnome/shell/ui/shellDBus.js:44:24', 'MetaDisplay:gl-video-memory-purged:ui:_initializeUI@resource:///org/gnome/shell/ui/main.js:297:20', 'MetaDisplay:in-fullscreen-changed:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:929:24', 'MetaDisplay:in-fullscreen-changed:ui:_init@resource:///org/gnome/shell/ui/layout.js:325:17', 'MetaDisplay:in-fullscreen-changed:ui:_init@resource:///org/gnome/shell/ui/messageTray.js:776:24', 'MetaDisplay:init-xserver:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:891:24', 'MetaDisplay:modifiers-accelerator-activated:backend:InputSourceManager@resource:///org/gnome/shell/ui/status/keyboard.js:380:24', 'MetaDisplay:notify::focus-window:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:928:24', 'MetaDisplay:overlay-key:ui:_init@resource:///org/gnome/shell/ui/overviewControls.js:420:24', 'MetaDisplay:restacked:ui:_createOverview@resource:///org/gnome/shell/ui/overview.js:182:24', 'MetaDisplay:show-osd:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:886:24', 'MetaDisplay:show-pad-osd:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:885:24', 'MetaDisplay:show-resize-popup:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:884:24', 'MetaDisplay:window-demands-attention:ui:WindowAttentionHandler@resource:///org/gnome/shell/ui/windowAttentionHandler.js:10:24', 'MetaDisplay:window-entered-monitor:backend:WorkspaceTracker@resource:///org/gnome/shell/ui/windowManager.js:202:24', 'MetaDisplay:window-left-monitor:backend:WorkspaceTracker@resource:///org/gnome/shell/ui/windowManager.js:204:24', 'MetaDisplay:window-marked-urgent:ui:WindowAttentionHandler@resource:///org/gnome/shell/ui/windowAttentionHandler.js:10:24', 'MetaDisplay:workareas-changed:ui:_init@resource:///org/gnome/shell/ui/overviewControls.js:59:24', 'MetaDisplay:workareas-changed:ui:_init@resource:///org/gnome/shell/ui/panel.js:479:24', 'MetaDisplay:workareas-changed:ui:_init@resource:///org/gnome/shell/ui/workspaceThumbnail.js:664:24', 'MetaDisplay:workareas-changed:ui:_syncWorkareaTracking@resource:///org/gnome/shell/ui/workspace.js:591:32', 'MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36', 'MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36', 'MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36', 'MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36', 'MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36', 'MetaDisplay:workareas-changed:ui:vfunc_set_actor@resource:///org/gnome/shell/ui/layout.js:103:36', 'MetaDisplay:x11-display-closing:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:898:24', 'MetaStage:destroy:backend:_init@resource:///org/gnome/shell/ui/swipeTracker.js:116:15', 'MetaStage:event::touchpad:backend:_init@resource:///org/gnome/shell/ui/swipeTracker.js:116:15', 'MetaStage:event::touchpad:ui:_init@resource:///org/gnome/shell/ui/swipeTracker.js:116:15', 'MetaStage:key-press-event:ui:_init@resource:///org/gnome/shell/ui/overviewControls.js:442:22', 'MetaStage:notify::key-focus:ui:_init@resource:///org/gnome/shell/ui/searchController.js:70:22', 'MetaStage:scroll-event:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:869:22', 'MetaStage:scroll-event:backend:_init@resource:///org/gnome/shell/ui/swipeTracker.js:238:15', 'MetaWindowGroup:destroy:ui:addGroup@resource:///org/gnome/shell/ui/ctrlAltTab.js:42:14', 'ShellGlobal:locate-pointer:ui:_initializeUI@resource:///org/gnome/shell/ui/main.js:293:12', 'ShellGlobal:notify-error:ui:start@resource:///org/gnome/shell/ui/main.js:165:12', 'ShellGlobal:notify::force-animations:ui:AnimationsSettings@resource:///org/gnome/shell/ui/main.js:1023:16', 'ShellGlobal:tgnome-ui-reset:ui:_init@resource:///org/gnome/shell/ui/layout.js:217:16', 'ShellGlobal:tgnome-ui-reset:ui:_initializeUI@resource:///org/gnome/shell/ui/main.js:248:12', 'ShellGlobal:tgnome-ui-reset:ui:_initializeUI@resource:///org/gnome/shell/ui/main.js:272:12', 'ShellGlobal:tgnome-ui-reset:ui:init@resource:///org/gnome/shell/ui/extensionSystem.js:65:35', 'ShellGlobal:tgnome-ui-reset:ui:restartTgnomeUiInPlace@resource:///org/gnome/shell/ui/main.js:1097:21', 'ShellGlobal:tgnome-ui-reset:ui:restartTgnomeUiInPlace@resource:///org/gnome/shell/ui/main.js:1097:21', 'ShellWM:confirm-display-change:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:535:23', 'ShellWM:create-close-dialog:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:536:23', 'ShellWM:create-inhibit-shortcuts-dialog:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:537:23', 'ShellWM:destroy:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:533:23', 'ShellWM:filter-keybinding:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:534:23', 'ShellWM:hide-tile-preview:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:526:23', 'ShellWM:kill-switch-workspace:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:937:23', 'ShellWM:kill-window-effects:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:517:23', 'ShellWM:map:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:532:23', 'ShellWM:minimize:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:528:23', 'ShellWM:show-tile-preview:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:525:23', 'ShellWM:show-window-menu:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:527:23', 'ShellWM:size-change:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:530:23', 'ShellWM:size-changed:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:531:23', 'ShellWM:switch-workspace:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:524:23', 'ShellWM:switch-workspace:backend:WorkspaceTracker@resource:///org/gnome/shell/ui/windowManager.js:199:31', 'ShellWM:switch-workspace:ui:_init@resource:///org/gnome/shell/ui/workspacesView.js:836:31', 'ShellWM:unminimize:backend:WindowManager@resource:///org/gnome/shell/ui/windowManager.js:529:23']}, 'permanentExports': 1, 'stageActions': 4, 'watchedNames': 1, 'exportInventory': ['/org/freedesktop/Notifications:org.freedesktop.Notifications', '/org/freedesktop/portal/desktop:org.freedesktop.impl.portal.Access', '/org/gnome/SessionManager/EndSessionDialog:org.gnome.SessionManager.EndSessionDialog', '/org/gnome/Shell/AudioDeviceSelection:org.gnome.Shell.AudioDeviceSelection', '/org/gnome/Shell/Brightness:org.gnome.Shell.Brightness', '/org/gnome/Shell/Extensions/Tgnome:org.gnome.Shell.Extensions.Tgnome', '/org/gnome/Shell/Introspect:org.gnome.Shell.Introspect', '/org/gnome/Shell/ScreenTime:org.gnome.Shell.ScreenTime', '/org/gnome/Shell/Screenshot:org.gnome.Shell.Screenshot', '/org/gnome/Shell/Wacom:org.gnome.Shell.Wacom.PadOsd', '/org/gnome/Shell:org.gnome.Shell', '/org/gnome/Shell:org.gnome.Shell.Extensions', '/org/gtk/MountOperationHandler:org.Gtk.MountOperationHandler', '/org/gtk/Notifications:org.gtk.Notifications'], 'nameInventory': ['org.gnome.Shell.AudioDeviceSelection', 'org.gnome.Shell.Brightness', 'org.gnome.Shell.Introspect', 'org.gnome.Shell.Screenshot', 'org.gnome.Shell.Wacom.PadOsd', 'org.gnome.keyring.SystemPrompter', 'org.gtk.MountOperationHandler', 'org.gtk.Notifications'], 'watchInventory': ['org.freedesktop.GeoClue2']}}"
+}

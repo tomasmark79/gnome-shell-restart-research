@@ -1,0 +1,303 @@
+--- a/gjs/context.h
++++ b/gjs/context.h
+@@ -85,6 +85,15 @@
+ void* gjs_context_get_native_context(GjsContext* self);
+ 
+ GJS_EXPORT
++gboolean gjs_context_tgnome_mark_interrupt(GjsContext* self);
++GJS_EXPORT
++gboolean gjs_context_tgnome_take_interrupt(GjsContext* self);
++GJS_EXPORT
++gboolean gjs_context_tgnome_protect_scope(GjsContext* self, gboolean entering);
++GJS_EXPORT
++guint gjs_context_tgnome_protected_depth(GjsContext* self);
++
++GJS_EXPORT
+ void gjs_context_run_in_realm(GjsContext* self, GjsContextInRealmFunc func,
+                               void* user_data);
+ 
+--- a/gjs/context.cpp
++++ b/gjs/context.cpp
+@@ -1031,6 +1031,7 @@
+     if (m_draining_job_queue || m_should_exit)
+         return true;
+ 
++    Gjs::AutoTgnomeInterruptBoundary boundary{this, false};
+     m_draining_job_queue = true;  // Ignore reentrant calls
+ 
+     JS::RootedObject job(m_cx);
+@@ -1279,6 +1280,86 @@
+     return gjs->context();
+ }
+ 
++/**
++ * gjs_context_tgnome_mark_interrupt: (skip)
++ * @self: the embedding context
++ *
++ * Private experiment: called on the JS thread by an embedding's deliberate
++ * interrupt hook, immediately before returning false. Never marks OOM or
++ * system.exit(). Rejects nested, job and module entries. The embedding owns
++ * the outer native dispatch boundary and must honor a FALSE result.
++ */
++gboolean gjs_context_tgnome_mark_interrupt(GjsContext* self) {
++    g_return_val_if_fail(GJS_IS_CONTEXT(self), FALSE);
++    auto* gjs = GjsContextPrivate::from_object(self);
++    if (!gjs->is_owner_thread() || !gjs->tgnome_interrupt_permitted() ||
++        g_object_get_data(G_OBJECT(self), "tgnome-protected-scope-depth") ||
++        g_object_get_data(G_OBJECT(self), "tgnome-protection-fault") ||
++        g_object_get_data(G_OBJECT(self), "tgnome-explicit-interrupt"))
++        return FALSE;
++    g_object_set_data(G_OBJECT(self), "tgnome-explicit-interrupt", GINT_TO_POINTER(1));
++    return TRUE;
++}
++
++/**
++ * gjs_context_tgnome_take_interrupt: (skip)
++ * @self: the embedding context
++ *
++ * Consume exactly one explicit-interruption marker. Native synchronous eval
++ * callers must consume unused markers after eval returns.
++ */
++gboolean gjs_context_tgnome_take_interrupt(GjsContext* self) {
++    g_return_val_if_fail(GJS_IS_CONTEXT(self), FALSE);
++    return g_object_steal_data(G_OBJECT(self), "tgnome-explicit-interrupt") != nullptr;
++}
++
++/**
++ * gjs_context_tgnome_protect_scope: (skip)
++ * @self: the embedding context
++ * @entering: push rather than pop a protected native ownership scope
++ *
++ * The embedding brackets operations whose JS finally must run. Only the owner
++ * thread may mutate this counter. An invalid pop/overflow leaves it unchanged.
++ */
++gboolean gjs_context_tgnome_protect_scope(GjsContext* self, gboolean entering) {
++    g_return_val_if_fail(GJS_IS_CONTEXT(self), FALSE);
++    if (!GjsContextPrivate::from_object(self)->is_owner_thread())
++        return FALSE;
++    guint depth = GPOINTER_TO_UINT(g_object_get_data(
++        G_OBJECT(self), "tgnome-protected-scope-depth"));
++    if ((entering && depth == G_MAXUINT) || (!entering && depth == 0))
++        return FALSE;
++    depth = entering ? depth + 1 : depth - 1;
++    g_object_set_data(G_OBJECT(self), "tgnome-protected-scope-depth",
++                      GUINT_TO_POINTER(depth));
++    return TRUE;
++}
++
++/**
++ * gjs_context_tgnome_protected_depth: (skip)
++ * @self: the embedding context
++ *
++ * Returns: the owner-thread scope depth, or G_MAXUINT for an invalid caller
++ */
++guint gjs_context_tgnome_protected_depth(GjsContext* self) {
++    g_return_val_if_fail(GJS_IS_CONTEXT(self), G_MAXUINT);
++    if (!GjsContextPrivate::from_object(self)->is_owner_thread())
++        return G_MAXUINT;
++    return GPOINTER_TO_UINT(g_object_get_data(
++        G_OBJECT(self), "tgnome-protected-scope-depth"));
++}
++
++Gjs::AutoTgnomeInterruptBoundary::AutoTgnomeInterruptBoundary(
++    GjsContextPrivate* gjs, bool eligible) : m_gjs(gjs) {
++    JS::AutoFilename filename;
++    const bool has_caller = JS::DescribeScriptedCaller(&filename, gjs->context());
++    m_previous = gjs->tgnome_push_interrupt_boundary(eligible && !has_caller);
++}
++
++Gjs::AutoTgnomeInterruptBoundary::~AutoTgnomeInterruptBoundary() {
++    m_gjs->tgnome_pop_interrupt_boundary(m_previous);
++}
++
+ static inline bool result_to_c(GErrorResult<> result, GError** error_out) {
+     if (result.isOk())
+         return true;
+@@ -1412,6 +1493,7 @@
+ }
+ 
+ bool GjsContextPrivate::run_main_loop_hook() {
++    Gjs::AutoTgnomeInterruptBoundary boundary{this, false};
+     JS::RootedObject hook(m_cx, m_main_loop_hook.get());
+     m_main_loop_hook = nullptr;
+     gjs_debug(GJS_DEBUG_MAINLOOP, "Running and clearing main loop hook");
+@@ -1457,6 +1539,7 @@
+ GErrorResult<> GjsContextPrivate::eval(const char* script, size_t script_len,
+                                        const char* filename,
+                                        int* exit_status_p) {
++    Gjs::AutoTgnomeInterruptBoundary boundary{this, true};
+     AutoResetExit reset(this);
+ 
+     bool auto_profile = auto_profile_enter();
+@@ -1523,6 +1606,7 @@
+ 
+ GErrorResult<> GjsContextPrivate::eval_module(const char* identifier,
+                                               uint8_t* exit_code_p) {
++    Gjs::AutoTgnomeInterruptBoundary boundary{this, false};
+     AutoResetExit reset(this);
+ 
+     bool auto_profile = auto_profile_enter();
+--- a/gi/function.cpp
++++ b/gi/function.cpp
+@@ -387,10 +387,16 @@
+             if (gjs->should_exit(&code))
+                 gjs->exit_immediately(code);
+ 
+-            // Some other uncatchable exception, e.g. out of memory
+-            g_error("Call to %s (%s.%s) terminated with uncatchable exception",
+-                    gjs_debug_callable(callable()).c_str(), m_info.ns(),
+-                    m_info.name());
++            if (gjs_context_tgnome_take_interrupt(gjs->public_context())) {
++                // The JS stack has already unwound. Preserve the ordinary GI
++                // exception/error-return path at an owned native boundary.
++                JS_ReportErrorASCII(cx, "TGNOME explicit interruption at native boundary");
++            } else {
++                // Unmarked failures (including OOM) retain their fatal policy.
++                g_error("Call to %s (%s.%s) terminated with uncatchable exception",
++                        gjs_debug_callable(callable()).c_str(), m_info.ns(),
++                        m_info.name());
++            }
+         }
+ 
+         // If the callback has a GError** argument, then make a GError from the
+--- a/gi/value.cpp
++++ b/gi/value.cpp
+@@ -392,9 +392,14 @@
+             if (gjs->should_exit(&code))
+                 gjs->exit_immediately(code);
+ 
+-            // Some other uncatchable exception, e.g. out of memory
+-            g_error("Call to %s terminated with uncatchable exception",
+-                    gjs_debug_callable(callable()).c_str());
++            if (gjs_context_tgnome_take_interrupt(gjs->public_context())) {
++                JS_ReportErrorASCII(m_cx, "TGNOME explicit interruption at native boundary");
++                gjs_log_exception_uncaught(m_cx);
++            } else {
++                // Unmarked failures (including OOM) retain their fatal policy.
++                g_error("Call to %s terminated with uncatchable exception",
++                        gjs_debug_callable(callable()).c_str());
++            }
+         }
+     }
+ 
+--- a/gjs/context-private.h
++++ b/gjs/context-private.h
+@@ -78,6 +78,8 @@
+     JS::Heap<JSObject*> m_global;
+     JS::Heap<JSObject*> m_internal_global;
+     std::thread::id m_owner_thread;
++    unsigned m_tgnome_interrupt_depth = 0;
++    bool m_tgnome_interrupt_boundary = false;
+ 
+     char* m_program_name;
+     char* m_program_path;
+@@ -193,6 +195,20 @@
+     [[nodiscard]] bool set_main_loop_hook(JSObject* callable);
+     [[nodiscard]] bool has_main_loop_hook() { return !!m_main_loop_hook; }
+     [[nodiscard]] JSContext* context() const { return m_cx; }
++    bool tgnome_interrupt_permitted() const {
++        return m_tgnome_interrupt_boundary && m_tgnome_interrupt_depth == 1;
++    }
++    bool tgnome_push_interrupt_boundary(bool eligible) {
++        const bool previous = m_tgnome_interrupt_boundary;
++        m_tgnome_interrupt_depth++;
++        m_tgnome_interrupt_boundary = eligible && m_tgnome_interrupt_depth == 1;
++        return previous;
++    }
++    void tgnome_pop_interrupt_boundary(bool previous) {
++        g_assert(m_tgnome_interrupt_depth > 0);
++        m_tgnome_interrupt_depth--;
++        m_tgnome_interrupt_boundary = previous;
++    }
+     [[nodiscard]] JSObject* global() const { return m_global.get(); }
+     [[nodiscard]]
+     JSObject* internal_global() const {
+@@ -324,4 +340,14 @@
+     explicit AutoInternalRealm(GjsContextPrivate*);
+     explicit AutoInternalRealm(JSContext*);
+ };
++class AutoTgnomeInterruptBoundary {
++    GjsContextPrivate* m_gjs;
++    bool m_previous = false;
++
++ public:
++    AutoTgnomeInterruptBoundary(GjsContextPrivate*, bool eligible);
++    ~AutoTgnomeInterruptBoundary();
++    AutoTgnomeInterruptBoundary(const AutoTgnomeInterruptBoundary&) = delete;
++    AutoTgnomeInterruptBoundary& operator=(const AutoTgnomeInterruptBoundary&) = delete;
++};
+ }  // namespace Gjs
+--- a/gi/closure.cpp
++++ b/gi/closure.cpp
+@@ -23,9 +23,45 @@
+ 
+ namespace Gjs {
+ 
++namespace {
++// Only native state is retained. No extra callable/context roots or a change
++// to GJS's existing closure invalidation and finalization policy.
++class AutoTgnomeCallbackProtection {
++    GjsContext* m_context;
++    bool m_active = false;
++    bool m_valid = true;
++
++ public:
++    AutoTgnomeCallbackProtection(GjsContext* context, bool required)
++        : m_context(context) {
++        if (!required)
++            return;
++        m_active = gjs_context_tgnome_protect_scope(m_context, true);
++        m_valid = m_active;
++        if (!m_valid)
++            g_object_set_data(G_OBJECT(m_context), "tgnome-protection-fault",
++                              GINT_TO_POINTER(1));
++    }
++    ~AutoTgnomeCallbackProtection() {
++        if (m_active && !gjs_context_tgnome_protect_scope(m_context, false)) {
++            g_object_set_data(G_OBJECT(m_context), "tgnome-protection-fault",
++                              GINT_TO_POINTER(1));
++            g_warning("TGNOME callback protection could not be left");
++        }
++    }
++    bool valid() const { return m_valid; }
++    AutoTgnomeCallbackProtection(const AutoTgnomeCallbackProtection&) = delete;
++    AutoTgnomeCallbackProtection& operator=(const AutoTgnomeCallbackProtection&) = delete;
++};
++}  // namespace
++
++
++
+ Closure::Closure(JSContext* cx, JSObject* callable, bool root,
+                  const char* description GJS_USED_VERBOSE_GCLOSURE)
+     : m_cx(cx) {
++    m_tgnome_registered_protected = gjs_context_tgnome_protected_depth(
++        GjsContextPrivate::from_cx(cx)->public_context()) > 0;
+     GJS_INC_COUNTER(closure);
+     GClosureNotify closure_notify;
+ 
+@@ -169,7 +205,15 @@
+         return false;
+     }
+ 
++    auto* context = GjsContextPrivate::from_cx(m_cx);
++    AutoTgnomeCallbackProtection protection{context->public_context(),
++                                             m_tgnome_registered_protected};
++    AutoTgnomeInterruptBoundary boundary{context, true};
+     JSAutoRealm ar{m_cx, m_callable.get()};
++    if (!protection.valid()) {
++        JS_ReportErrorASCII(m_cx, "TGNOME callback protection entry failed");
++        return false;
++    }
+ 
+     if (gjs_log_exception(m_cx)) {
+         gjs_debug_closure(
+--- a/gi/closure.h
++++ b/gi/closure.h
+@@ -133,6 +133,7 @@
+     //  using if we wanted the closure to survive the context that created it.
+     JSContext* m_cx;
+     GjsMaybeOwned m_callable;
++    bool m_tgnome_registered_protected = false;
+ };
+ 
+ }  // namespace Gjs

@@ -1,0 +1,73 @@
+{
+  "classification": "RESEARCH PROTOTYPE",
+  "passed": true,
+  "trueRestartDemonstrated": false,
+  "wholeShellReloadDemonstrated": false,
+  "shellBefore": {
+    "classification": "RESEARCH PROTOTYPE",
+    "scope": "extension-owned panel indicator only",
+    "pid": 1628110,
+    "generation": 0,
+    "failures": 0,
+    "active": true,
+    "busy": false,
+    "actorsCreated": 1,
+    "actorsDestroyed": 0,
+    "liveOwnedActors": 1,
+    "panelEntryMatches": true,
+    "themeReloads": 0,
+    "shellRestartSupported": false,
+    "extensionCodeReloadSupported": false
+  },
+  "wayland": {
+    "before": {
+      "pid": 1628452,
+      "backend": "wayland",
+      "fd": 3,
+      "inode": 5730042,
+      "tick": 3
+    },
+    "after": {
+      "pid": 1628452,
+      "backend": "wayland",
+      "fd": 3,
+      "inode": 5730042,
+      "tick": 10
+    },
+    "originalConnectionRoundTrips": true
+  },
+  "x11": {
+    "before": {
+      "pid": 1628459,
+      "backend": "x11",
+      "fd": 3,
+      "inode": 5731195,
+      "tick": 1
+    },
+    "after": {
+      "pid": 1628459,
+      "backend": "x11",
+      "fd": 3,
+      "inode": 5731195,
+      "tick": 7
+    },
+    "originalConnectionRoundTrips": true
+  },
+  "shellAfter": {
+    "classification": "RESEARCH PROTOTYPE",
+    "scope": "extension-owned panel indicator only",
+    "pid": 1628110,
+    "generation": 21,
+    "failures": 1,
+    "active": true,
+    "busy": false,
+    "actorsCreated": 23,
+    "actorsDestroyed": 22,
+    "liveOwnedActors": 1,
+    "panelEntryMatches": true,
+    "themeReloads": 1,
+    "shellRestartSupported": false,
+    "extensionCodeReloadSupported": false
+  },
+  "xwaylandTested": true
+}

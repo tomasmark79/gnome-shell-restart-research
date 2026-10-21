@@ -1,0 +1,928 @@
+{
+  "classification": "RESEARCH PROTOTYPE",
+  "passed": false,
+  "trueRestartDemonstrated": false,
+  "wholeShellReloadDemonstrated": false,
+  "privateSystemBus": true,
+  "mockLogind": true,
+  "welcomeTourAlreadyShown": true,
+  "shellBefore": {
+    "classification": "RESEARCH PROTOTYPE",
+    "scope": "extension-owned panel indicator only",
+    "pid": 3370118,
+    "runtimeEpoch": "27e92562-d8cb-4d8a-b51c-d8c684b40b02",
+    "backendScopeDepth": null,
+    "nativeBackendScopeDepth": null,
+    "protectedBackendFixture": null,
+    "uiGeneration": 0,
+    "uiReloadState": null,
+    "uiFailures": [],
+    "uiBuildSerial": 0,
+    "lateUiOutcomes": [],
+    "cleanupWait": null,
+    "preparationFailures": [],
+    "latePreparationCompletions": 0,
+    "timeLimits": {
+      "nativeAddress": "0x555557b0d690",
+      "retained": false,
+      "shutdownCalls": null,
+      "state": 1,
+      "transitions": [
+        {
+          "oldState": 0,
+          "newState": 1,
+          "wallTimeSecs": 1792565679
+        }
+      ],
+      "loginUserReady": true,
+      "clockSourceActive": true
+    },
+    "retiredUi": null,
+    "uiRegistrations": null,
+    "lastReleasedRegistrations": null,
+    "windowManagerPreserved": true,
+    "stageActions": [
+      "OSK show bottom drag",
+      "Overview swipe tracker",
+      "Window unfullscreen top drag",
+      "WorkspaceAnimation swipe tracker",
+      "reset-search"
+    ],
+    "stageChildren": [
+      ":SystemBackground",
+      ":UIAreaIndicator",
+      "uiGroup:UiActor"
+    ],
+    "windowGroupAttached": true,
+    "generation": 0,
+    "failures": 0,
+    "active": true,
+    "busy": false,
+    "actorsCreated": 1,
+    "actorsDestroyed": 0,
+    "liveOwnedActors": 1,
+    "panelEntryMatches": true,
+    "themeReloads": 0,
+    "shellState": {
+      "overview": true,
+      "modalCount": 0,
+      "startingUp": true,
+      "mode": "user"
+    },
+    "panel": {
+      "supported": true,
+      "realms": null,
+      "dateMenuRealms": null,
+      "transfer": {
+        "pending": false,
+        "retired": []
+      },
+      "lifecycle": {
+        "generation": 0,
+        "destroyed": 0,
+        "scope": "panel actor/layout/gestures/menu manager; indicator instances survive"
+      },
+      "replaced": false,
+      "containerCount": 1,
+      "focusGroupCount": 1,
+      "totalFocusGroups": 6,
+      "menuCount": 7,
+      "retainedIndicators": true
+    },
+    "desktop": {
+      "windows": [],
+      "focus": null,
+      "monitors": [
+        [
+          0,
+          0,
+          1280,
+          720
+        ]
+      ],
+      "workspace": 0
+    },
+    "shellRestartSupported": false,
+    "extensionCodeReloadSupported": false,
+    "desktopUiReloadSupported": false
+  },
+  "busOwner": ":1.11",
+  "privateDebugger": 3370430,
+  "desktopBefore": {
+    "windows": [
+      {
+        "id": 1,
+        "title": "Tgnome persistent connection probe",
+        "workspace": 0,
+        "frame": [
+          473,
+          328,
+          334,
+          96
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Tgnome persistent connection probe",
+        "workspace": 0,
+        "frame": [
+          551,
+          329,
+          178,
+          94
+        ]
+      }
+    ],
+    "focus": 2,
+    "monitors": [
+      [
+        0,
+        0,
+        1280,
+        720
+      ]
+    ],
+    "workspace": 0
+  },
+  "xwaylandBefore": [
+    {
+      "pid": 3370465,
+      "exe": "/nix/store/8irpj5qxxxjnr98lh3dcx83xa26qf44p-xwayland-24.1.14/bin/Xwayland",
+      "startTime": "17656955"
+    }
+  ],
+  "shellExecutable": "/nix/store/hbvkn5fhmkz5fqdnyadvxdix01nz1vbd-gnome-shell-50.5/bin/.gnome-shell-wrapped",
+  "panelMenusAfterRollback": {
+    "menusChecked": [
+      "dateMenu",
+      "quickSettings"
+    ],
+    "modalCount": 0
+  },
+  "panelReload": {
+    "supported": true,
+    "realms": null,
+    "dateMenuRealms": null,
+    "transfer": {
+      "pending": false,
+      "retired": [
+        {
+          "phase": "adopting",
+          "entries": 9,
+          "adoptedBeforeRecovery": 1,
+          "recovered": true,
+          "oldPanelRestored": true,
+          "destroyed": true,
+          "collected": false,
+          "interrupted": false
+        }
+      ]
+    },
+    "lifecycle": {
+      "generation": 10,
+      "destroyed": 10,
+      "scope": "panel actor/layout/gestures/menu manager; indicator instances survive"
+    },
+    "replaced": true,
+    "containerCount": 1,
+    "focusGroupCount": 1,
+    "totalFocusGroups": 6,
+    "menuCount": 7,
+    "retainedIndicators": true
+  },
+  "reloadAfter": {
+    "classification": "SHELL RELOAD",
+    "scope": "panel actor reinitialized; indicator instances, GJS and compositor retained",
+    "pid": 3370118,
+    "runtimeEpoch": "27e92562-d8cb-4d8a-b51c-d8c684b40b02",
+    "backendScopeDepth": null,
+    "nativeBackendScopeDepth": null,
+    "protectedBackendFixture": null,
+    "uiGeneration": 0,
+    "uiReloadState": null,
+    "uiFailures": [],
+    "uiBuildSerial": 0,
+    "lateUiOutcomes": [],
+    "cleanupWait": null,
+    "preparationFailures": [],
+    "latePreparationCompletions": 0,
+    "timeLimits": {
+      "nativeAddress": "0x555557b0d690",
+      "retained": false,
+      "shutdownCalls": null,
+      "state": 1,
+      "transitions": [
+        {
+          "oldState": 0,
+          "newState": 1,
+          "wallTimeSecs": 1792565679
+        }
+      ],
+      "loginUserReady": true,
+      "clockSourceActive": true
+    },
+    "retiredUi": null,
+    "uiRegistrations": null,
+    "lastReleasedRegistrations": null,
+    "windowManagerPreserved": true,
+    "stageActions": [
+      "OSK show bottom drag",
+      "Overview swipe tracker",
+      "Window unfullscreen top drag",
+      "WorkspaceAnimation swipe tracker"
+    ],
+    "stageChildren": [
+      ":UIAreaIndicator",
+      "uiGroup:UiActor"
+    ],
+    "windowGroupAttached": true,
+    "generation": 21,
+    "failures": 1,
+    "active": true,
+    "busy": false,
+    "actorsCreated": 23,
+    "actorsDestroyed": 22,
+    "liveOwnedActors": 1,
+    "panelEntryMatches": true,
+    "themeReloads": 1,
+    "shellState": {
+      "overview": false,
+      "modalCount": 0,
+      "startingUp": false,
+      "mode": "user"
+    },
+    "panel": {
+      "supported": true,
+      "realms": null,
+      "dateMenuRealms": null,
+      "transfer": {
+        "pending": false,
+        "retired": [
+          {
+            "phase": "adopting",
+            "entries": 9,
+            "adoptedBeforeRecovery": 1,
+            "recovered": true,
+            "oldPanelRestored": true,
+            "destroyed": true,
+            "collected": false,
+            "interrupted": false
+          }
+        ]
+      },
+      "lifecycle": {
+        "generation": 10,
+        "destroyed": 10,
+        "scope": "panel actor/layout/gestures/menu manager; indicator instances survive"
+      },
+      "replaced": true,
+      "containerCount": 1,
+      "focusGroupCount": 1,
+      "totalFocusGroups": 6,
+      "menuCount": 7,
+      "retainedIndicators": false
+    },
+    "desktop": {
+      "windows": [
+        {
+          "id": 1,
+          "title": "Tgnome persistent connection probe",
+          "workspace": 0,
+          "frame": [
+            473,
+            328,
+            334,
+            96
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Tgnome persistent connection probe",
+          "workspace": 0,
+          "frame": [
+            551,
+            329,
+            178,
+            94
+          ]
+        }
+      ],
+      "focus": 2,
+      "monitors": [
+        [
+          0,
+          0,
+          1280,
+          720
+        ]
+      ],
+      "workspace": 0
+    },
+    "shellRestartSupported": false,
+    "extensionCodeReloadSupported": false,
+    "desktopUiReloadSupported": false
+  },
+  "extensionStateTransitions": [
+    {
+      "method": "DisableExtension",
+      "before": {
+        "state": 1,
+        "enabled": true
+      },
+      "after": {
+        "state": 2,
+        "enabled": false
+      }
+    },
+    {
+      "method": "EnableExtension",
+      "before": {
+        "state": 2,
+        "enabled": false
+      },
+      "after": {
+        "state": 1,
+        "enabled": true
+      }
+    },
+    {
+      "method": "DisableExtension",
+      "before": {
+        "state": 1,
+        "enabled": true
+      },
+      "after": {
+        "state": 2,
+        "enabled": false
+      }
+    },
+    {
+      "method": "EnableExtension",
+      "before": {
+        "state": 2,
+        "enabled": false
+      },
+      "after": {
+        "state": 1,
+        "enabled": true
+      }
+    },
+    {
+      "method": "DisableExtension",
+      "before": {
+        "state": 1,
+        "enabled": true
+      },
+      "after": {
+        "state": 2,
+        "enabled": false
+      }
+    },
+    {
+      "method": "EnableExtension",
+      "before": {
+        "state": 2,
+        "enabled": false
+      },
+      "after": {
+        "state": 1,
+        "enabled": true
+      }
+    }
+  ],
+  "extensionLifecycleCycles": 3,
+  "wayland": {
+    "before": {
+      "pid": 3370442,
+      "backend": "wayland",
+      "fd": 3,
+      "inode": 8926205,
+      "windowId": 10,
+      "tick": 3,
+      "unsavedTextSha256": "469f0833cd28f2463f5e7f0809fdc298fe55b3e7ea27229240c95f405551157c",
+      "expectedTypedSha256": "c9f32d5e01763bdd79c3942a0405bd5fce2560d9fd43867d56db7a0d858c15f8"
+    },
+    "after": {
+      "pid": 3370442,
+      "backend": "wayland",
+      "fd": 3,
+      "inode": 8926205,
+      "windowId": 10,
+      "tick": 24,
+      "unsavedTextSha256": "469f0833cd28f2463f5e7f0809fdc298fe55b3e7ea27229240c95f405551157c",
+      "expectedTypedSha256": "c9f32d5e01763bdd79c3942a0405bd5fce2560d9fd43867d56db7a0d858c15f8"
+    },
+    "originalConnectionRoundTrips": true
+  },
+  "x11": {
+    "before": {
+      "pid": 3370463,
+      "backend": "x11",
+      "fd": 3,
+      "inode": 8934759,
+      "windowId": 2097156,
+      "tick": 1,
+      "unsavedTextSha256": "181bceb05a728916b4084230207603ed3218282509a0d659cdc033d24f10a2a7",
+      "expectedTypedSha256": "5f41ff9b6defa31eb72a15554295ef682d56e98b944875ebb027c21076bcd0e6"
+    },
+    "after": {
+      "pid": 3370463,
+      "backend": "x11",
+      "fd": 3,
+      "inode": 8934759,
+      "windowId": 2097156,
+      "tick": 22,
+      "unsavedTextSha256": "181bceb05a728916b4084230207603ed3218282509a0d659cdc033d24f10a2a7",
+      "expectedTypedSha256": "5f41ff9b6defa31eb72a15554295ef682d56e98b944875ebb027c21076bcd0e6"
+    },
+    "originalConnectionRoundTrips": true
+  },
+  "shellAfter": {
+    "classification": "SHELL RELOAD",
+    "scope": "panel actor reinitialized; indicator instances, GJS and compositor retained",
+    "pid": 3370118,
+    "runtimeEpoch": "27e92562-d8cb-4d8a-b51c-d8c684b40b02",
+    "backendScopeDepth": null,
+    "nativeBackendScopeDepth": null,
+    "protectedBackendFixture": null,
+    "uiGeneration": 0,
+    "uiReloadState": null,
+    "uiFailures": [],
+    "uiBuildSerial": 0,
+    "lateUiOutcomes": [],
+    "cleanupWait": null,
+    "preparationFailures": [],
+    "latePreparationCompletions": 0,
+    "timeLimits": {
+      "nativeAddress": "0x555557b0d690",
+      "retained": false,
+      "shutdownCalls": null,
+      "state": 1,
+      "transitions": [
+        {
+          "oldState": 0,
+          "newState": 1,
+          "wallTimeSecs": 1792565679
+        }
+      ],
+      "loginUserReady": true,
+      "clockSourceActive": true
+    },
+    "retiredUi": null,
+    "uiRegistrations": null,
+    "lastReleasedRegistrations": null,
+    "windowManagerPreserved": true,
+    "stageActions": [
+      "OSK show bottom drag",
+      "Overview swipe tracker",
+      "Window unfullscreen top drag",
+      "WorkspaceAnimation swipe tracker"
+    ],
+    "stageChildren": [
+      ":UIAreaIndicator",
+      "uiGroup:UiActor"
+    ],
+    "windowGroupAttached": true,
+    "generation": 0,
+    "failures": 0,
+    "active": true,
+    "busy": false,
+    "actorsCreated": 26,
+    "actorsDestroyed": 25,
+    "liveOwnedActors": 1,
+    "panelEntryMatches": true,
+    "themeReloads": 0,
+    "shellState": {
+      "overview": false,
+      "modalCount": 0,
+      "startingUp": false,
+      "mode": "user"
+    },
+    "panel": {
+      "supported": true,
+      "realms": null,
+      "dateMenuRealms": null,
+      "transfer": {
+        "pending": false,
+        "retired": [
+          {
+            "phase": "adopting",
+            "entries": 9,
+            "adoptedBeforeRecovery": 1,
+            "recovered": true,
+            "oldPanelRestored": true,
+            "destroyed": true,
+            "collected": false,
+            "interrupted": false
+          }
+        ]
+      },
+      "lifecycle": {
+        "generation": 10,
+        "destroyed": 10,
+        "scope": "panel actor/layout/gestures/menu manager; indicator instances survive"
+      },
+      "replaced": false,
+      "containerCount": 1,
+      "focusGroupCount": 1,
+      "totalFocusGroups": 6,
+      "menuCount": 7,
+      "retainedIndicators": true
+    },
+    "desktop": {
+      "windows": [
+        {
+          "id": 1,
+          "title": "Tgnome persistent connection probe",
+          "workspace": 0,
+          "frame": [
+            473,
+            328,
+            334,
+            96
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Tgnome persistent connection probe",
+          "workspace": 0,
+          "frame": [
+            551,
+            329,
+            178,
+            94
+          ]
+        }
+      ],
+      "focus": 2,
+      "monitors": [
+        [
+          0,
+          0,
+          1280,
+          720
+        ]
+      ],
+      "workspace": 0
+    },
+    "shellRestartSupported": false,
+    "extensionCodeReloadSupported": false,
+    "desktopUiReloadSupported": false
+  },
+  "xwaylandAfter": [
+    {
+      "pid": 3370465,
+      "exe": "/nix/store/8irpj5qxxxjnr98lh3dcx83xa26qf44p-xwayland-24.1.14/bin/Xwayland",
+      "startTime": "17656955"
+    }
+  ],
+  "xwaylandTested": true,
+  "reloadScope": "panel actor/layout/gestures/menu manager; indicators, GJS and Mutter survive",
+  "nativeLoop": {
+    "pid": 3370118,
+    "publishedUiGeneration": 0,
+    "attempts": 0,
+    "contextsFinalized": 0,
+    "state": "ready",
+    "registeredProbeTypes": 0,
+    "registeredObjectTypes": 985,
+    "newObjectTypes": [],
+    "uiFailures": 0,
+    "uiRetryAttempts": 0,
+    "uiCommits": 0,
+    "uiBuildSerial": 0,
+    "uiTimeouts": 0,
+    "uiQuarantined": false,
+    "uiQuarantines": 0,
+    "preparationFailures": 0,
+    "preparationTimeouts": 0,
+    "uiActive": false,
+    "securityVm": false,
+    "securityBoundaryBits": 0,
+    "researchOnly": true
+  },
+  "baselinePassed": true,
+  "runtimeReset": {
+    "requested": {
+      "pid": 3370118,
+      "publishedUiGeneration": 0,
+      "attempts": 1,
+      "contextsFinalized": 0,
+      "state": "scheduled",
+      "registeredProbeTypes": 0,
+      "registeredObjectTypes": 985,
+      "newObjectTypes": [],
+      "uiFailures": 0,
+      "uiRetryAttempts": 0,
+      "uiCommits": 0,
+      "uiBuildSerial": 0,
+      "uiTimeouts": 0,
+      "uiQuarantined": false,
+      "uiQuarantines": 0,
+      "preparationFailures": 0,
+      "preparationTimeouts": 0,
+      "uiActive": false,
+      "securityVm": false,
+      "securityBoundaryBits": 0,
+      "researchOnly": true
+    },
+    "preparation": {
+      "prepared": true,
+      "releasedKeybindings": 37,
+      "forwardRecovered": false
+    },
+    "beforeEpoch": "27e92562-d8cb-4d8a-b51c-d8c684b40b02",
+    "requiredBehaviorDemonstrated": false,
+    "afterStatus": {
+      "classification": "RESEARCH PROTOTYPE",
+      "scope": "extension-owned panel indicator only",
+      "pid": 3370118,
+      "runtimeEpoch": "8b165148-6e99-49be-8958-ab52b412bbbd",
+      "backendScopeDepth": null,
+      "nativeBackendScopeDepth": null,
+      "protectedBackendFixture": null,
+      "uiGeneration": 0,
+      "uiReloadState": null,
+      "uiFailures": [],
+      "uiBuildSerial": 0,
+      "lateUiOutcomes": [],
+      "cleanupWait": null,
+      "preparationFailures": [],
+      "latePreparationCompletions": 0,
+      "timeLimits": {
+        "nativeAddress": "0x555557c08ef0",
+        "retained": false,
+        "shutdownCalls": null,
+        "state": 1,
+        "transitions": [
+          {
+            "oldState": 0,
+            "newState": 1,
+            "wallTimeSecs": 1792565679
+          },
+          {
+            "oldState": 1,
+            "newState": 0,
+            "wallTimeSecs": 1792565685
+          },
+          {
+            "oldState": 0,
+            "newState": 1,
+            "wallTimeSecs": 1792565686
+          }
+        ],
+        "loginUserReady": true,
+        "clockSourceActive": true
+      },
+      "retiredUi": null,
+      "uiRegistrations": null,
+      "lastReleasedRegistrations": null,
+      "windowManagerPreserved": true,
+      "stageActions": [
+        "OSK show bottom drag",
+        "OSK show bottom drag",
+        "Overview swipe tracker",
+        "Overview swipe tracker",
+        "Window unfullscreen top drag",
+        "Window unfullscreen top drag",
+        "WorkspaceAnimation swipe tracker",
+        "WorkspaceAnimation swipe tracker"
+      ],
+      "stageChildren": [
+        ":UIAreaIndicator",
+        ":UIAreaIndicator",
+        "uiGroup:UiActor"
+      ],
+      "windowGroupAttached": true,
+      "generation": 0,
+      "failures": 0,
+      "active": true,
+      "busy": false,
+      "actorsCreated": 1,
+      "actorsDestroyed": 0,
+      "liveOwnedActors": 1,
+      "panelEntryMatches": true,
+      "themeReloads": 0,
+      "shellState": {
+        "overview": false,
+        "modalCount": 0,
+        "startingUp": false,
+        "mode": "user"
+      },
+      "panel": {
+        "supported": true,
+        "realms": null,
+        "dateMenuRealms": null,
+        "transfer": {
+          "pending": false,
+          "retired": []
+        },
+        "lifecycle": {
+          "generation": 0,
+          "destroyed": 0,
+          "scope": "panel actor/layout/gestures/menu manager; indicator instances survive"
+        },
+        "replaced": false,
+        "containerCount": 1,
+        "focusGroupCount": 1,
+        "totalFocusGroups": 6,
+        "menuCount": 7,
+        "retainedIndicators": true
+      },
+      "desktop": {
+        "windows": [
+          {
+            "id": 1,
+            "title": "Tgnome persistent connection probe",
+            "workspace": 0,
+            "frame": [
+              473,
+              328,
+              334,
+              96
+            ]
+          },
+          {
+            "id": 2,
+            "title": "Tgnome persistent connection probe",
+            "workspace": 0,
+            "frame": [
+              551,
+              329,
+              178,
+              94
+            ]
+          }
+        ],
+        "focus": 2,
+        "monitors": [
+          [
+            0,
+            0,
+            1280,
+            720
+          ]
+        ],
+        "workspace": 0
+      },
+      "shellRestartSupported": false,
+      "extensionCodeReloadSupported": false,
+      "desktopUiReloadSupported": false
+    },
+    "nativeAfterBootstrap": {
+      "pid": 3370118,
+      "publishedUiGeneration": 0,
+      "attempts": 1,
+      "contextsFinalized": 1,
+      "state": "new-context-created",
+      "registeredProbeTypes": 0,
+      "registeredObjectTypes": 986,
+      "newObjectTypes": [
+        "GVfsMetadataProxy"
+      ],
+      "uiFailures": 0,
+      "uiRetryAttempts": 0,
+      "uiCommits": 0,
+      "uiBuildSerial": 0,
+      "uiTimeouts": 0,
+      "uiQuarantined": false,
+      "uiQuarantines": 0,
+      "preparationFailures": 0,
+      "preparationTimeouts": 0,
+      "uiActive": false,
+      "securityVm": false,
+      "securityBoundaryBits": 0,
+      "researchOnly": true
+    },
+    "menusAfterReset": {
+      "menusChecked": [
+        "dateMenu",
+        "quickSettings"
+      ],
+      "modalCount": 0
+    },
+    "registeredTypesBefore": 0,
+    "registeredTypesAfter": 0,
+    "observationSeconds": 65,
+    "testedUiChecksPassed": false,
+    "nativeAfter": {
+      "pid": 3370118,
+      "publishedUiGeneration": 0,
+      "attempts": 1,
+      "contextsFinalized": 1,
+      "state": "new-context-created",
+      "registeredProbeTypes": 0,
+      "registeredObjectTypes": 986,
+      "newObjectTypes": [
+        "GVfsMetadataProxy"
+      ],
+      "uiFailures": 0,
+      "uiRetryAttempts": 0,
+      "uiCommits": 0,
+      "uiBuildSerial": 0,
+      "uiTimeouts": 0,
+      "uiQuarantined": false,
+      "uiQuarantines": 0,
+      "preparationFailures": 0,
+      "preparationTimeouts": 0,
+      "uiActive": false,
+      "securityVm": false,
+      "securityBoundaryBits": 0,
+      "researchOnly": true
+    },
+    "repeatSafelyRejected": true,
+    "nativeAfterRejectedRepeat": {
+      "pid": 3370118,
+      "publishedUiGeneration": 0,
+      "attempts": 1,
+      "contextsFinalized": 1,
+      "state": "new-context-created",
+      "registeredProbeTypes": 0,
+      "registeredObjectTypes": 986,
+      "newObjectTypes": [
+        "GVfsMetadataProxy"
+      ],
+      "uiFailures": 0,
+      "uiRetryAttempts": 0,
+      "uiCommits": 0,
+      "uiBuildSerial": 0,
+      "uiTimeouts": 0,
+      "uiQuarantined": false,
+      "uiQuarantines": 0,
+      "preparationFailures": 0,
+      "preparationTimeouts": 0,
+      "uiActive": false,
+      "securityVm": false,
+      "securityBoundaryBits": 0,
+      "researchOnly": true
+    },
+    "shellProcessSurvived": true,
+    "shellExitCode": null,
+    "clientsAfterReset": {
+      "wayland": {
+        "pid": 3370442,
+        "backend": "wayland",
+        "fd": 3,
+        "inode": 8926205,
+        "windowId": 10,
+        "tick": 357,
+        "unsavedTextSha256": "469f0833cd28f2463f5e7f0809fdc298fe55b3e7ea27229240c95f405551157c",
+        "expectedTypedSha256": "c9f32d5e01763bdd79c3942a0405bd5fce2560d9fd43867d56db7a0d858c15f8"
+      },
+      "x11": {
+        "pid": 3370463,
+        "backend": "x11",
+        "fd": 3,
+        "inode": 8934759,
+        "windowId": 2097156,
+        "tick": 355,
+        "unsavedTextSha256": "181bceb05a728916b4084230207603ed3218282509a0d659cdc033d24f10a2a7",
+        "expectedTypedSha256": "5f41ff9b6defa31eb72a15554295ef682d56e98b944875ebb027c21076bcd0e6"
+      }
+    },
+    "diagnosticProblemCount": 3
+  },
+  "error": "Native GJS reset probe did not demonstrate a complete safe Shell reload",
+  "supervisor": {
+    "workerExitCode": 1,
+    "descendants": {
+      "terminated": [],
+      "killed": [],
+      "exitCodes": {
+        "3370099": -15,
+        "3370105": 1,
+        "3370170": 1,
+        "3370225": 1,
+        "3370235": 20,
+        "3370201": 0,
+        "3370192": 0,
+        "3370172": -15,
+        "3370262": 0,
+        "3370238": -15,
+        "3370290": -15,
+        "3370270": 0,
+        "3370319": 0,
+        "3370314": -15,
+        "3370331": -15,
+        "3370339": -15,
+        "3370348": -15,
+        "3370328": 0,
+        "3370355": -15,
+        "3370388": 0,
+        "3370257": 1,
+        "3370396": 1,
+        "3370409": 0,
+        "3370224": -15,
+        "3370164": 0,
+        "3370495": 1,
+        "3370500": 0,
+        "3370910": 0,
+        "3370239": -9,
+        "3370478": 0,
+        "3370064": 0,
+        "3370246": 0
+      }
+    },
+    "privateProfileRemoved": true
+  }
+}

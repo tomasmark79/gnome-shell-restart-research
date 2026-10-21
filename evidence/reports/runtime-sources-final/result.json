@@ -1,0 +1,467 @@
+{
+  "classification": "RESEARCH PROTOTYPE",
+  "passed": false,
+  "trueRestartDemonstrated": false,
+  "wholeShellReloadDemonstrated": false,
+  "shellBefore": {
+    "classification": "RESEARCH PROTOTYPE",
+    "scope": "extension-owned panel indicator only",
+    "pid": 1734961,
+    "runtimeEpoch": "1dc1d034-4555-4348-b9f7-c411a5b7684c",
+    "generation": 0,
+    "failures": 0,
+    "active": true,
+    "busy": false,
+    "actorsCreated": 1,
+    "actorsDestroyed": 0,
+    "liveOwnedActors": 1,
+    "panelEntryMatches": true,
+    "themeReloads": 0,
+    "shellState": {
+      "overview": true,
+      "modalCount": 0,
+      "startingUp": true,
+      "mode": "user"
+    },
+    "panel": {
+      "supported": true,
+      "lifecycle": {
+        "generation": 0,
+        "destroyed": 0,
+        "scope": "panel actor/layout/gestures/menu manager; indicator instances survive"
+      },
+      "replaced": false,
+      "containerCount": 1,
+      "focusGroupCount": 1,
+      "totalFocusGroups": 6,
+      "menuCount": 7,
+      "retainedIndicators": true
+    },
+    "desktop": {
+      "windows": [],
+      "focus": null,
+      "monitors": [
+        [
+          0,
+          0,
+          1280,
+          720
+        ]
+      ],
+      "workspace": 0
+    },
+    "shellRestartSupported": false,
+    "extensionCodeReloadSupported": false
+  },
+  "busOwner": ":1.4",
+  "desktopBefore": {
+    "windows": [
+      {
+        "id": 1,
+        "title": "Tgnome persistent connection probe",
+        "workspace": 0,
+        "frame": [
+          473,
+          348,
+          334,
+          56
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Tgnome persistent connection probe",
+        "workspace": 0,
+        "frame": [
+          551,
+          349,
+          178,
+          54
+        ]
+      }
+    ],
+    "focus": 2,
+    "monitors": [
+      [
+        0,
+        0,
+        1280,
+        720
+      ]
+    ],
+    "workspace": 0
+  },
+  "xwaylandBefore": [
+    {
+      "pid": 1735337,
+      "exe": "/nix/store/8irpj5qxxxjnr98lh3dcx83xa26qf44p-xwayland-24.1.14/bin/Xwayland",
+      "startTime": "13678442"
+    }
+  ],
+  "shellExecutable": "/nix/store/m9l6dsy29k6ki5v3k8gyqh2srg11m7w2-gnome-shell-50.5/bin/.gnome-shell-wrapped",
+  "panelMenusAfterRollback": {
+    "menusChecked": [
+      "dateMenu",
+      "quickSettings"
+    ],
+    "modalCount": 0
+  },
+  "panelReload": {
+    "supported": true,
+    "lifecycle": {
+      "generation": 10,
+      "destroyed": 10,
+      "scope": "panel actor/layout/gestures/menu manager; indicator instances survive"
+    },
+    "replaced": true,
+    "containerCount": 1,
+    "focusGroupCount": 1,
+    "totalFocusGroups": 6,
+    "menuCount": 7,
+    "retainedIndicators": true
+  },
+  "reloadAfter": {
+    "classification": "SHELL RELOAD",
+    "scope": "panel actor reinitialized; indicator instances, GJS and compositor retained",
+    "pid": 1734961,
+    "runtimeEpoch": "1dc1d034-4555-4348-b9f7-c411a5b7684c",
+    "generation": 21,
+    "failures": 1,
+    "active": true,
+    "busy": false,
+    "actorsCreated": 23,
+    "actorsDestroyed": 22,
+    "liveOwnedActors": 1,
+    "panelEntryMatches": true,
+    "themeReloads": 1,
+    "shellState": {
+      "overview": false,
+      "modalCount": 0,
+      "startingUp": false,
+      "mode": "user"
+    },
+    "panel": {
+      "supported": true,
+      "lifecycle": {
+        "generation": 10,
+        "destroyed": 10,
+        "scope": "panel actor/layout/gestures/menu manager; indicator instances survive"
+      },
+      "replaced": true,
+      "containerCount": 1,
+      "focusGroupCount": 1,
+      "totalFocusGroups": 6,
+      "menuCount": 7,
+      "retainedIndicators": false
+    },
+    "desktop": {
+      "windows": [
+        {
+          "id": 1,
+          "title": "Tgnome persistent connection probe",
+          "workspace": 0,
+          "frame": [
+            473,
+            348,
+            334,
+            56
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Tgnome persistent connection probe",
+          "workspace": 0,
+          "frame": [
+            551,
+            349,
+            178,
+            54
+          ]
+        }
+      ],
+      "focus": 2,
+      "monitors": [
+        [
+          0,
+          0,
+          1280,
+          720
+        ]
+      ],
+      "workspace": 0
+    },
+    "shellRestartSupported": false,
+    "extensionCodeReloadSupported": false
+  },
+  "extensionLifecycleCycles": 3,
+  "wayland": {
+    "before": {
+      "pid": 1735315,
+      "backend": "wayland",
+      "fd": 3,
+      "inode": 5957411,
+      "windowId": 10,
+      "tick": 3
+    },
+    "after": {
+      "pid": 1735315,
+      "backend": "wayland",
+      "fd": 3,
+      "inode": 5957411,
+      "windowId": 10,
+      "tick": 24
+    },
+    "originalConnectionRoundTrips": true
+  },
+  "x11": {
+    "before": {
+      "pid": 1735335,
+      "backend": "x11",
+      "fd": 3,
+      "inode": 5960458,
+      "windowId": 2097156,
+      "tick": 1
+    },
+    "after": {
+      "pid": 1735335,
+      "backend": "x11",
+      "fd": 3,
+      "inode": 5960458,
+      "windowId": 2097156,
+      "tick": 22
+    },
+    "originalConnectionRoundTrips": true
+  },
+  "shellAfter": {
+    "classification": "SHELL RELOAD",
+    "scope": "panel actor reinitialized; indicator instances, GJS and compositor retained",
+    "pid": 1734961,
+    "runtimeEpoch": "1dc1d034-4555-4348-b9f7-c411a5b7684c",
+    "generation": 0,
+    "failures": 0,
+    "active": true,
+    "busy": false,
+    "actorsCreated": 26,
+    "actorsDestroyed": 25,
+    "liveOwnedActors": 1,
+    "panelEntryMatches": true,
+    "themeReloads": 0,
+    "shellState": {
+      "overview": false,
+      "modalCount": 0,
+      "startingUp": false,
+      "mode": "user"
+    },
+    "panel": {
+      "supported": true,
+      "lifecycle": {
+        "generation": 10,
+        "destroyed": 10,
+        "scope": "panel actor/layout/gestures/menu manager; indicator instances survive"
+      },
+      "replaced": false,
+      "containerCount": 1,
+      "focusGroupCount": 1,
+      "totalFocusGroups": 6,
+      "menuCount": 7,
+      "retainedIndicators": true
+    },
+    "desktop": {
+      "windows": [
+        {
+          "id": 1,
+          "title": "Tgnome persistent connection probe",
+          "workspace": 0,
+          "frame": [
+            473,
+            348,
+            334,
+            56
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Tgnome persistent connection probe",
+          "workspace": 0,
+          "frame": [
+            551,
+            349,
+            178,
+            54
+          ]
+        }
+      ],
+      "focus": 2,
+      "monitors": [
+        [
+          0,
+          0,
+          1280,
+          720
+        ]
+      ],
+      "workspace": 0
+    },
+    "shellRestartSupported": false,
+    "extensionCodeReloadSupported": false
+  },
+  "xwaylandAfter": [
+    {
+      "pid": 1735337,
+      "exe": "/nix/store/8irpj5qxxxjnr98lh3dcx83xa26qf44p-xwayland-24.1.14/bin/Xwayland",
+      "startTime": "13678442"
+    }
+  ],
+  "xwaylandTested": true,
+  "reloadScope": "panel actor/layout/gestures/menu manager; indicators, GJS and Mutter survive",
+  "nativeLoop": {
+    "attempts": 0,
+    "contextsFinalized": 0,
+    "state": "ready",
+    "registeredProbeTypes": 359,
+    "researchOnly": true
+  },
+  "baselinePassed": true,
+  "runtimeReset": {
+    "requested": {
+      "attempts": 1,
+      "contextsFinalized": 0,
+      "state": "scheduled",
+      "registeredProbeTypes": 359,
+      "researchOnly": true
+    },
+    "preparation": {
+      "prepared": true,
+      "releasedKeybindings": 37
+    },
+    "beforeEpoch": "1dc1d034-4555-4348-b9f7-c411a5b7684c",
+    "requiredBehaviorDemonstrated": false,
+    "afterStatus": {
+      "classification": "RESEARCH PROTOTYPE",
+      "scope": "extension-owned panel indicator only",
+      "pid": 1734961,
+      "runtimeEpoch": "8519a00e-428e-43c6-809a-cd15c4916134",
+      "generation": 0,
+      "failures": 0,
+      "active": true,
+      "busy": false,
+      "actorsCreated": 1,
+      "actorsDestroyed": 0,
+      "liveOwnedActors": 1,
+      "panelEntryMatches": true,
+      "themeReloads": 0,
+      "shellState": {
+        "overview": false,
+        "modalCount": 0,
+        "startingUp": false,
+        "mode": "user"
+      },
+      "panel": {
+        "supported": true,
+        "lifecycle": {
+          "generation": 0,
+          "destroyed": 0,
+          "scope": "panel actor/layout/gestures/menu manager; indicator instances survive"
+        },
+        "replaced": false,
+        "containerCount": 1,
+        "focusGroupCount": 1,
+        "totalFocusGroups": 6,
+        "menuCount": 7,
+        "retainedIndicators": true
+      },
+      "desktop": {
+        "windows": [
+          {
+            "id": 1,
+            "title": "Tgnome persistent connection probe",
+            "workspace": 0,
+            "frame": [
+              473,
+              348,
+              334,
+              56
+            ]
+          },
+          {
+            "id": 2,
+            "title": "Tgnome persistent connection probe",
+            "workspace": 0,
+            "frame": [
+              551,
+              349,
+              178,
+              54
+            ]
+          }
+        ],
+        "focus": 2,
+        "monitors": [
+          [
+            0,
+            0,
+            1280,
+            720
+          ]
+        ],
+        "workspace": 0
+      },
+      "shellRestartSupported": false,
+      "extensionCodeReloadSupported": false
+    },
+    "nativeAfterBootstrap": {
+      "attempts": 1,
+      "contextsFinalized": 1,
+      "state": "new-context-created",
+      "registeredProbeTypes": 718,
+      "researchOnly": true
+    },
+    "menusAfterReset": {
+      "menusChecked": [
+        "dateMenu",
+        "quickSettings"
+      ],
+      "modalCount": 0
+    },
+    "registeredTypesBefore": 359,
+    "registeredTypesAfter": 718,
+    "observationSeconds": 65,
+    "testedUiChecksPassed": false,
+    "error": "Generation-specific GTypes remain registered; lifetime is not bounded across reloads",
+    "nativeAfter": {
+      "attempts": 1,
+      "contextsFinalized": 1,
+      "state": "new-context-created",
+      "registeredProbeTypes": 718,
+      "researchOnly": true
+    },
+    "repeatSafelyRejected": true,
+    "nativeAfterRejectedRepeat": {
+      "attempts": 1,
+      "contextsFinalized": 1,
+      "state": "new-context-created",
+      "registeredProbeTypes": 718,
+      "researchOnly": true
+    },
+    "shellProcessSurvived": true,
+    "clientsAfterReset": {
+      "wayland": {
+        "pid": 1735315,
+        "backend": "wayland",
+        "fd": 3,
+        "inode": 5957411,
+        "windowId": 10,
+        "tick": 357
+      },
+      "x11": {
+        "pid": 1735335,
+        "backend": "x11",
+        "fd": 3,
+        "inode": 5960458,
+        "windowId": 2097156,
+        "tick": 355
+      }
+    },
+    "diagnosticProblemCount": 4
+  },
+  "error": "Native GJS reset probe did not demonstrate a complete safe Shell reload"
+}

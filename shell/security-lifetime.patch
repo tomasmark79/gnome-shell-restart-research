@@ -1,0 +1,135 @@
+--- a/js/ui/main.js
++++ b/js/ui/main.js
+@@ -171,8 +171,9 @@
+         GioUnix.DesktopAppInfo.set_desktop_env('GNOME');
+ 
+     if (!sessionMode) {
+-        sessionMode = new SessionMode.SessionMode();
+-        sessionMode.connect('updated', _sessionUpdated);
++        sessionMode = global._tgnomeTrackRootEmitter(new SessionMode.SessionMode());
++        global._tgnomeWithBackendLifetime(() =>
++            sessionMode.connect('updated', _sessionUpdated));
+     }
+ 
+     St.Settings.get().connectObject(
+@@ -245,6 +246,8 @@
+     magnifier = new Magnifier.Magnifier();
+     locatePointer = new LocatePointer.LocatePointer();
+ 
++    await waitTgnomeSecurityGapProbe(candidate);
++    checkTgnomeUiCandidate(candidate);
+     if (LoginManager.canLock())
+         screenShield = new ScreenShield.ScreenShield();
+ 
+@@ -264,7 +267,8 @@
+     keyboard = new Keyboard.KeyboardManager();
+     notificationDaemon = new NotificationDaemon.NotificationDaemon();
+     windowAttentionHandler = new WindowAttentionHandler.WindowAttentionHandler();
+-    componentManager ??= new Components.ComponentManager();
++    componentManager ??= global._tgnomeWithBackendLifetime(
++        () => new Components.ComponentManager());
+ 
+     introspectService = new Introspect.IntrospectService();
+ 
+--- a/js/misc/loginManager.js
++++ b/js/misc/loginManager.js
+@@ -99,12 +99,12 @@
+ export function getLoginManager() {
+     if (_loginManager == null) {
+         if (haveSystemd())
+-            _loginManager = new LoginManagerSystemd();
++            _loginManager = global._tgnomeWithBackendLifetime(() => new LoginManagerSystemd());
+         else
+-            _loginManager = new LoginManagerDummy();
+-    }
+-
+-    return _loginManager;
++            _loginManager = global._tgnomeWithBackendLifetime(() => new LoginManagerDummy());
++    }
++
++    return global._tgnomeTrackRootEmitter(_loginManager);
+ }
+ 
+ class LoginManagerSystemd extends Signals.EventEmitter {
+@@ -140,7 +140,7 @@
+ 
+     async getCurrentSessionProxy() {
+         if (this._currentSession)
+-            return this._currentSession;
++            return wireTgnomeSessionSecurity(this._currentSession);
+ 
+         let sessionId = GLib.getenv('XDG_SESSION_ID');
+         if (!sessionId) {
+@@ -160,7 +160,7 @@
+             const [objectPath] = await this._proxy.GetSessionAsync(sessionId);
+             this._currentSession = await SystemdLoginSession.newAsync(
+                 Gio.DBus.system, 'org.freedesktop.login1', objectPath);
+-            return this._currentSession;
++            return wireTgnomeSessionSecurity(this._currentSession);
+         } catch (error) {
+             logError(error, `Could not get proxy for session ${sessionId}`);
+             return null;
+--- a/js/ui/screenShield.js
++++ b/js/ui/screenShield.js
+@@ -76,6 +76,8 @@
+         this.actor.add_child(this._lockDialogGroup);
+ 
+         this._presence = new GnomeSession.Presence((proxy, error) => {
++            if (this._tgnomeDisposed)
++                return;
+             if (error) {
+                 logError(error, 'Error while reading gnome-session presence');
+                 return;
+@@ -83,13 +85,14 @@
+ 
+             this._onStatusChanged(proxy.status);
+         });
+-        this._presence.connectSignal('StatusChanged', (proxy, senderName, [status]) => {
++        this._tgnomePresenceSignal = this._presence.connectSignal('StatusChanged', (proxy, senderName, [status]) => {
+             this._onStatusChanged(status);
+         });
+ 
+         this._screenSaverDBus = new ShellDBus.ScreenSaverDBus(this);
+ 
+-        this._smartcardManager = SmartcardManager.getSmartcardManager();
++        this._smartcardManager = global._tgnomeTrackRootEmitter(
++            SmartcardManager.getSmartcardManager());
+         this._smartcardManager.connect('smartcard-inserted',
+             (manager, token) => {
+                 if (this._isLocked && token.UsedToLogin)
+@@ -143,7 +146,10 @@
+     }
+ 
+     async _getLoginSession() {
+-        this._loginSession = await this._loginManager.getCurrentSessionProxy();
++        const session = await this._loginManager.getCurrentSessionProxy();
++        if (this._tgnomeDisposed)
++            return;
++        this._loginSession = session;
+         this._loginSession.connectSignal('Lock',
+             () => this.lock(false));
+         this._loginSession.connectSignal('Unlock',
+@@ -200,6 +206,8 @@
+     }
+ 
+     async _syncInhibitor() {
++        if (this._tgnomeDisposed)
++            return;
+         const lockEnabled = this._settings.get_boolean(LOCK_ENABLED_KEY);
+         const lockLocked = this._lockSettings.get_boolean(DISABLE_LOCK_KEY);
+         const inhibit = !!this._loginSession && this._loginSession.Active &&
+@@ -216,9 +224,13 @@
+ 
+         if (inhibit) {
+             try {
+-                this._inhibitor = await this._loginManager.inhibit(
++                const inhibitor = await this._loginManager.inhibit(
+                     _('GNOME needs to lock the screen'),
+                     this._inhibitCancellable);
++                if (this._tgnomeDisposed)
++                    inhibitor?.close(null);
++                else
++                    this._inhibitor = inhibitor;
+             } catch (e) {
+                 if (!e.matches(Gio.IOErrorEnum, Gio.IOErrorEnum.CANCELLED))
+                     log('Failed to inhibit suspend: %s'.format(e.message));

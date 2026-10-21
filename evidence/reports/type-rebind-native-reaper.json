@@ -1,0 +1,104 @@
+{
+  "classification": "REATTACHED JS-REGISTERED GTYPE; NOT SHELL RESTART",
+  "passed": true,
+  "cases": [
+    {
+      "mode": "native",
+      "passed": true,
+      "privateProfileRemoved": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "events": [
+        {
+          "generation": 1,
+          "contextsFinalized": 1,
+          "released": true,
+          "native": "0x555555797a80",
+          "gtype": 93824994563008,
+          "objectTypes": 95,
+          "bridges": 2,
+          "gapCalls": 1,
+          "nativeChildReaped": true
+        },
+        {
+          "generation": 2,
+          "contextsFinalized": 2,
+          "released": true,
+          "native": "0x555555797a80",
+          "gtype": 93824994563008,
+          "objectTypes": 95,
+          "bridges": 2,
+          "gapCalls": 2,
+          "nativeChildReaped": true
+        },
+        {
+          "generation": 3,
+          "contextsFinalized": 3,
+          "released": true,
+          "native": "0x555555797a80",
+          "gtype": 93824994563008,
+          "objectTypes": 95,
+          "bridges": 2,
+          "gapCalls": 3,
+          "nativeChildReaped": true
+        },
+        {
+          "passed": true,
+          "contextsFinalized": 3,
+          "nativeFinalized": 1
+        }
+      ],
+      "stdout": "{\"generation\":1,\"contextsFinalized\":1,\"released\":true,\"native\":\"0x555555797a80\",\"gtype\":93824994563008,\"objectTypes\":95,\"bridges\":2,\"gapCalls\":1,\"nativeChildReaped\":true}\n{\"generation\":2,\"contextsFinalized\":2,\"released\":true,\"native\":\"0x555555797a80\",\"gtype\":93824994563008,\"objectTypes\":95,\"bridges\":2,\"gapCalls\":2,\"nativeChildReaped\":true}\n{\"generation\":3,\"contextsFinalized\":3,\"released\":true,\"native\":\"0x555555797a80\",\"gtype\":93824994563008,\"objectTypes\":95,\"bridges\":2,\"gapCalls\":3,\"nativeChildReaped\":true}\n{\"passed\":true,\"contextsFinalized\":3,\"nativeFinalized\":1}\n",
+      "stderr": ""
+    },
+    {
+      "mode": "valgrind",
+      "passed": true,
+      "privateProfileRemoved": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "events": [
+        {
+          "generation": 1,
+          "contextsFinalized": 1,
+          "released": true,
+          "native": "0xcdbc130",
+          "gtype": 215632704,
+          "objectTypes": 95,
+          "bridges": 2,
+          "gapCalls": 1,
+          "nativeChildReaped": true
+        },
+        {
+          "generation": 2,
+          "contextsFinalized": 2,
+          "released": true,
+          "native": "0xcdbc130",
+          "gtype": 215632704,
+          "objectTypes": 95,
+          "bridges": 2,
+          "gapCalls": 2,
+          "nativeChildReaped": true
+        },
+        {
+          "generation": 3,
+          "contextsFinalized": 3,
+          "released": true,
+          "native": "0xcdbc130",
+          "gtype": 215632704,
+          "objectTypes": 95,
+          "bridges": 2,
+          "gapCalls": 3,
+          "nativeChildReaped": true
+        },
+        {
+          "passed": true,
+          "contextsFinalized": 3,
+          "nativeFinalized": 1
+        }
+      ],
+      "stdout": "{\"generation\":1,\"contextsFinalized\":1,\"released\":true,\"native\":\"0xcdbc130\",\"gtype\":215632704,\"objectTypes\":95,\"bridges\":2,\"gapCalls\":1,\"nativeChildReaped\":true}\n{\"generation\":2,\"contextsFinalized\":2,\"released\":true,\"native\":\"0xcdbc130\",\"gtype\":215632704,\"objectTypes\":95,\"bridges\":2,\"gapCalls\":2,\"nativeChildReaped\":true}\n{\"generation\":3,\"contextsFinalized\":3,\"released\":true,\"native\":\"0xcdbc130\",\"gtype\":215632704,\"objectTypes\":95,\"bridges\":2,\"gapCalls\":3,\"nativeChildReaped\":true}\n{\"passed\":true,\"contextsFinalized\":3,\"nativeFinalized\":1}\n",
+      "stderr": ""
+    }
+  ]
+}
